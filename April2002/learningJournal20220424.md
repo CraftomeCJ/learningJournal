@@ -105,8 +105,8 @@ How to set GOAL LOOP:
 <!-- Health => 1 task -->
 - [x] I will practice power exercises for FIVE minutes and brisk walk for 20min at 8am in local park today.
 <!-- Family => 1 task -->
-      <!-- [] I will kiss my wife for love at START and at END of the day in my home today -->
-      <!-- [] I will say LOVE YOU for 3 times during the whole day in my office today -->
+<!-- [] I will kiss my wife for love at START and at END of the day in my home today -->
+<!-- [] I will say LOVE YOU for 3 times during the whole day in my office today -->
 <!-- Work => 3 tasks -->
 <!-- To identify my three highest-leverage activities in my work, 
 first => make a list ==> capture all of the tasks I'm responsible for in my job od a typical month. 
@@ -114,35 +114,35 @@ second ask myself => if I could only do one thing on that list all day long, ==>
 Third ask myself => the same question ==> If I could do only one more thing on your list of key tasks, which would be the second activity that contributes the most value to my company?
 last ask myself again ==> ask yourself what the third most important task is.
  -->
-    <!-- - [] I will complete training task assigned by Anya at 9am to 6pm in the study table today -->
-    <!-- - [] I will do [most important work task here] with my laptop at 10am in the office table -->
-    <!-- - [] I will do [second important work task here] with my laptop at 2pm in the office table -->
-    <!-- - [] I will do [third important work task here] with my laptop at 4pm in the office table -->
+<!-- - [] I will complete training task assigned by Anya at 9am to 6pm in the study table today -->
+<!-- - [] I will do [most important work task here] with my laptop at 10am in the office table -->
+<!-- - [] I will do [second important work task here] with my laptop at 2pm in the office table -->
+<!-- - [] I will do [third important work task here] with my laptop at 4pm in the office table -->
 - [x] I will write Daily Journal for 90 minutes at 3pm on my study table in my bedroom today
 <!-- Home Life => 1 task -->
-      <!-- [] I will do [grocery shopping, laundry, cooking, entertainment, gardening, pay bills, travel arrangements, organizing goal, etc etc] at 9pm in my house/supermarket today -->
+<!-- [] I will do [grocery shopping, laundry, cooking, entertainment, gardening, pay bills, travel arrangements, organizing goal, etc etc] at 9pm in my house/supermarket today -->
 <!-- Friendships => 1 task -->
-      <!-- [] I will catch up with my friends for 2 hours at 10am in [location] on Sunday -->
+<!-- [] I will catch up with my friends for 2 hours at 10am in [location] on Sunday -->
 <!-- Spirituality & Belief => 2 task -->
 - [] I will meditate for 22 minutes at 12.40pm in my bedroom today
 - [x] I will read and meditate on Bible daily reading for 22min at 9am in my study table today
-    <!-- - [] I will practice "Prayer of the heart" for 15min at 9am in my bedroom today -->
+<!-- - [] I will practice "Prayer of the heart" for 15min at 9am in my bedroom today -->
 <!-- Recreation => 1 task-->
 - [x] I will read a book for 30 minutes at 2.30pm in my study table today
 - [x] I will practice mind, logic and speed read exercises for 40min at 6pm in my journey to meet my wife today
-    <!-- - [] I will watch social media for 10 minutes at 7pm in the bathroom today -->
-    <!-- - [] I will watch a movie for 3 hours at 8pm in the cinema today -->
+<!-- - [] I will watch social media for 10 minutes at 7pm in the bathroom today -->
+<!-- - [] I will watch a movie for 3 hours at 8pm in the cinema today -->
 <!-- Personal Growth => 3 tasks -->
-    <!-- - [] I will code for minimum 1hr at 10pm in my study table today -->
-    <!-- - [] I will read 1 chapter of Technical book, taking noted for 26min at 6.45pm in my study table today -->
+<!-- - [] I will code for minimum 1hr at 10pm in my study table today -->
+<!-- - [] I will read 1 chapter of Technical book, taking noted for 26min at 6.45pm in my study table today -->
 - [x] I will read 1 chapter of self growth book for 26min at 3.15pm in my study table today
 - [x] I will listen 26min of audiobook at 8.30am in my kitchen today
 <!-- Community => 1 task -->
 - [x] I will greet any neighbors and wished them well at 7am in my flat void deck today
-    <!-- - [] I will pick up the rubbish I saw during my evening walk at 8pm in my local park today -->
+<!-- - [] I will pick up the rubbish I saw during my evening walk at 8pm in my local park today -->
 <!-- Financial => 1 task -->
-    <!-- - [] I will save $520 at the end of the month into my investment account. -->
-    <!-- - [] I will [financial goal] at [TIME] in [LOCATION] this month -->
+<!-- - [] I will save $520 at the end of the month into my investment account. -->
+<!-- - [] I will [financial goal] at [TIME] in [LOCATION] this month -->
 
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
