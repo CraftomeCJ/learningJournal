@@ -56,13 +56,12 @@ I assume that when it comes to following my "gut instincts", happiness is "GOOD"
 When I consider doing something that I truly love and are invested in, I am going to feel influx of pain and fear, mostly because it will involve being vulnerable. <br/>
 Bad feelings should not always be interpreted as deterrents. They are also indicators that I am doing something frightening and worthwhile. <br/>
 Not wanting to do something would make me feel indifferent about it. <br/>
-<br/>
 (FEAR === INTEREST) <br/>
 
 <!-- for daily reflections -->
 **Questions of the day?**
-[x] How likely is this person to achieve anything substantial in life if their primary value is to feel comfortable?
-[x] How is this person going to manage a crisis that they must face?
+- [x] How likely is this person to achieve anything substantial in life if their primary value is to feel comfortable?
+- [x] How is this person going to manage a crisis that they must face?
 
 # Outcome-Based Goals
 <!-- This is where I write out my goals/to-do at work. These should be planned and written at the start of the day so I can make progress towards them by the end of the day. -->
