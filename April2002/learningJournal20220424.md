@@ -118,7 +118,7 @@ last ask myself again ==> ask yourself what the third most important task is.
 <!-- - [] I will do [most important work task here] with my laptop at 10am in the office table -->
 <!-- - [] I will do [second important work task here] with my laptop at 2pm in the office table -->
 <!-- - [] I will do [third important work task here] with my laptop at 4pm in the office table -->
-- [x] I will write Daily Journal for 90 minutes at 3pm on my study table in my bedroom today
+- [x] I will write Daily Journal for 90 minutes at 3.30pm on my study table in my bedroom today
 <!-- Home Life => 1 task -->
 <!-- [] I will do [grocery shopping, laundry, cooking, entertainment, gardening, pay bills, travel arrangements, organizing goal, etc etc] at 9pm in my house/supermarket today -->
 <!-- Friendships => 1 task -->
@@ -128,7 +128,7 @@ last ask myself again ==> ask yourself what the third most important task is.
 - [x] I will read and meditate on Bible daily reading for 22min at 9am in my study table today
 <!-- - [] I will practice "Prayer of the heart" for 15min at 9am in my bedroom today -->
 <!-- Recreation => 1 task-->
-- [x] I will read a book for 30 minutes at 2.30pm in my study table today
+- [x] I will read "Think like a Programmer" for 30 minutes at 2.30pm in my study table today
 - [x] I will practice mind, logic and speed read exercises for 40min at 6pm in my journey to meet my wife today
 <!-- - [] I will watch social media for 10 minutes at 7pm in the bathroom today -->
 <!-- - [] I will watch a movie for 3 hours at 8pm in the cinema today -->
