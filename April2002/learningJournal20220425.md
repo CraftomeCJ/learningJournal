@@ -53,17 +53,17 @@ Any mistakes I commit through audacity are easily corrected with more audacity. 
 **How to Approach my Life like the Greats:**
 Subconscious Behaviour that are Keeping Me from Having The Life I Want:
 <br/>
-I needlessly create problems and crises in my life because I am afraid of actually living it. <br/>
-
+I needlessly create problems and crises in my life because I'm afraid of actually living it. <br/>
 The pattern of unnecessarily creating crises in my life is actually an avoidance technique. <br/>
-It distracts me from actually having to be vulnerable and held accountable for whatever it is I am afraid of. <br/>
-I'm never upset for the reason I think I am: At the core of my desire to create a problem is simply the fear of being who I am and living the life I want. <br/>
+It distracts me from actually having to be vulnerable or held accountable for whatever it is I'm afraid of. <br/>
+I'm never upset for the reason I think I am: <br/>
+At the core of my desire to create a problem is simply the fear of being who I'm and living the life I want. <br/>
 
 <!-- for daily reflections -->
 **Reflection of the day?**
 
 - [x] Each choice sets a precedent -- and when I make the same wrong choice several times in a row, it becomes my standard modus operandi. <br/>
-- [x] Each time I faced with a decision between exerting self-control and taking it easy, always remind myself that the choice I'm making today does not affect the present moment alone. It can (and often will) reverberate for many years or even decades into the future. <br/>
+- [x] Each time I faced with a decision between exerting self-control and taking it easy, always remind myself that the choice I'm making today doesn't affect the present moment alone. It can (and often will) reverberate for many years or even decades into the future. <br/>
 
 # Outcome-Based Goals
 <!-- This is where I write out my goals/to-do at work. These should be planned and written at the start of the day so I can make progress towards them by the end of the day. -->
@@ -84,9 +84,8 @@ How to set GOAL LOOP:
 4. Reward: I satisfy my craving to feel relieved. ==> reading book becomes associated with feeling stalled at studying
  -->
  <!-- Apply this strategy when setting GOALs 
- I will [BEHAVIOR] at [TIME] in [LOCATION].-->
+I will [BEHAVIOR] at [TIME] in [LOCATION].-->
 ## **Long Term Goals:**
-
 <!-- Improvement with High Leverage Activities:
   1. something only I can do;
   2. Results are worth a multiple of the energy put into it (ROI) -->
@@ -130,16 +129,16 @@ last ask myself again ==> ask yourself what the third most important task is.
 <!-- - [] I will practice "Prayer of the heart" for 15min at 9am in my bedroom today -->
 <!-- Recreation => 1 task-->
 - [x] I will read a Chinese philosophy book for 15 minutes at 1.30am before sleep in my bed today
-- [x] I will practice mind, logic and speed read exercises for 40min at 9pm in my study table today
+- [x] I will practice mind, logic and speed-read exercises for 40min at 9pm in my study table today
 <!-- - [] I will watch social media for 10 minutes at 7pm in the bed today -->
 <!-- - [] I will watch a movie for 3 hours at 8pm in the cinema today -->
 <!-- Personal Growth => 3 tasks -->
-- [x] I will code for minimum 1hr at 10pm in my study table today
-- [x] I will read 1 chapter of Technical book, taking noted for 26min at 10.35pm in my study table today
+- [x] I will practice coding for minimum 1hr at 10pm in my study table today
+- [x] I will read 1 chapter of Technical book: Think like a Programmer, take notes for 26min at 10.35pm in my study table today
 - [x] I will read 1 chapter of growth book for 26min at 10.10pm in my study table today
 - [x] I will listen 26min of audiobook at 8.30am in my kitchen today
 <!-- Community => 1 task -->
-- [] I will greet any neighbors I met today and wished them well at 7am in my flat void deck today
+- [x] I will greet any neighbors I met today and wished them well at 7am in my flat void deck today
 <!-- - [] I will pick up the rubbish I saw during my evening walk at 8pm in my local park today -->
 <!-- Financial => 1 task -->
 <!-- - [] I will save $520 at the end of the month into my investment account. -->
@@ -158,22 +157,222 @@ Today will be working on Day 14 React Native State Management to learn how to ma
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-- how i can apply the below-mentioned principle to my coding and programming skills
-- 
-**Principles:**
+1. SquareScreen App works right now - we could leave it as-is! But we could make it slightly better...
+2. We have 3 separate pieces of useState
+3. For SquareScreen app, these 3 piece of state are extremely related
+4. There is a precise set of well-known ways in which we update these values
+5. This makes 3 & 4 "state" a great candidate for being managed by a 'reducer'
+6. What is 'Reducer'?? <== is actually a FunctionThatManagesChangesToAnObject
+   1. Some fancy name
+   2. Function that gets called with two objects
+   3. Argument #1 ==> object that has all of out state in it 
+      (example: {red: 0, green: 0, blue: 0})
+   4. Argument #2 ==> object that describes the update we want to make 
+      (example: {colorToChange: 'red', amount: 15})
+   5. Look at Argument #2 and use it to decide how to change Argument #1
+   6. important = Two technicalities
+      - (1) We never change Argument #1 directly
+      - (2) We must always return a value to be used as Argument #1
 
-- The Four Laws of Behavior Change: make it obvious, make it attractive, make it easy, make it satisfying
-<br/>
+**Principles: Context**
+
+- Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+1. When to Use Context
+  - Context is designed to share data that can be considered "global" for a tree of React components, such as the current authenticated user, theme, or preferred language
+  - example:
+
+```JavaScript
+//manually thread through a "theme" prop in order to style the Button component:
+class App extends React.Component {
+  render() {
+    return <Toolbar theme="dark" />;
+  }
+}
+
+function Toolbar(props) {
+  // The Toolbar component must take an extra "theme" prop
+  // and pass it to the ThemedButton. This can become painful
+  // if every single button in the app needs to know the theme
+  // because it would have to be passed through all components.
+  return (
+    <div>
+      <ThemedButton theme={props.theme} />
+    </div>
+  );
+}
+
+class ThemedButton extends React.Component {
+  render() {
+    return <Button theme={this.props.theme} />;
+  }
+}
+```
+
+- Using context, we can avoid passing props through intermediate elements:
+
+```JavaScript
+// Context lets us pass a value deep into the component tree
+// without explicitly threading it through every component.
+// Create a context for the current theme (with "light" as the default).
+const ThemeContext = React.createContext('light');
+
+class App extends React.Component {
+  render() {
+    // Use a Provider to pass the current theme to the tree below.
+    // Any component can read it, no matter how deep it is.
+    // In this example, we're passing "dark" as the current value.
+    return (
+      <ThemeContext.Provider value="dark">
+        <Toolbar />
+      </ThemeContext.Provider>
+    );
+  }
+}
+
+// A component in the middle doesn't have to
+// pass the theme down explicitly anymore.
+function Toolbar() {
+  return (
+    <div>
+      <ThemedButton />
+    </div>
+  );
+}
+
+class ThemedButton extends React.Component {
+  // Assign a contextType to read the current theme context.
+  // React will find the closest theme Provider above and use its value.
+  // In this example, the current theme is "dark".
+  static contextType = ThemeContext;
+  render() {
+    return <Button theme={this.context} />;
+  }
+}
+```
+
+2. Before You Use Context
+   - Primarily used when some data needs to be accessible by many components at different nesting levels.
+   - note Apply it sparingly because it makes component reuse more difficult.
+   - important If only want to avoid passing some props through many levels, component composition is often a simpler solution than context.
+- example
+
+```JavaScript
+//consider a Page component that passes a user 
+//and avatarSize prop several levels down so that deeply nested Link 
+//and Avatar components can read it:
+
+<Page user={user} avatarSize={avatarSize} />
+// ... which renders ...
+<PageLayout user={user} avatarSize={avatarSize} />
+// ... which renders ...
+<NavigationBar user={user} avatarSize={avatarSize} />
+// ... which renders ...
+<Link href={user.permalink}>
+  <Avatar user={user} size={avatarSize} />
+</Link>
+```
+
+- One way to solve this issue without context is to pass down the Avatar component itself so that the intermediate components don’t need to know about the user or avatarSize props:
+- example
+
+```JavaScript
+function Page(props) {
+  const user = props.user;
+  const userLink = (
+    <Link href={user.permalink}>
+      <Avatar user={user} size={props.avatarSize} />
+    </Link>
+  );
+  return <PageLayout userLink={userLink} />;
+}
+
+// Now, we have:
+<Page user={user} avatarSize={avatarSize} />
+// ... which renders ...
+<PageLayout userLink={...} />
+// ... which renders ...
+<NavigationBar userLink={...} />
+// ... which renders ...
+{props.userLink}
+```
+
+  - With this change, only the top-most Page component needs to know about the Link and Avatar components’ use of user and avatarSize.
+  - note This inversion of control can make your code cleaner in many cases by reducing the amount of props you need to pass through your application and giving more control to the root components. 
+  - Such inversion, however, isn't the right choice in every case; moving more complexity higher in the tree makes those higher-level components more complicated and forces the lower-level components to be more flexible than you may want.
+  - You’re not limited to a single child for a component. You may pass multiple children, or even have multiple separate “slots” for children
+- example
+
+```JavaScript
+function Page(props) {
+  const user = props.user;
+  const content = <Feed user={user} />;
+  const topBar = (
+    <NavigationBar>
+      <Link href={user.permalink}>
+        <Avatar user={user} size={props.avatarSize} />
+      </Link>
+    </NavigationBar>
+  );
+  return (
+    <PageLayout
+      topBar={topBar}
+      content={content}
+    />
+  );
+}
+```
+
+  - This pattern is sufficient for many cases when you need to decouple a child from its immediate parents. 
+  - You can take it even further with render props if the child needs to communicate with the parent before rendering.
+  - sometimes the same data needs to be accessible by many components in the tree, and at different nesting levels. 
+  - Context lets you “broadcast” such data, and changes to it, to all components below. 
+  - Common examples where using context might be simpler than the alternatives include managing the current locale, theme, or a data cache.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ## Exercise of the Day
 
-[x] **Challenge:** Rewrite the way I write my daily goals to make it productive and easy to read
+[x] **Challenge:** Security Awareness Training
 
-1. Challenge Questions:
-   1. write something
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/image/solutionimage.png "style=width:200 height: 200")
+- Objectives:
+   1. At the end of the session, I should be able to understand basics of ISMS and what does ISMS comprises of.
+
+1. What is Information Security?
+   - The practice of ensuring the Confidentiality, Integrity and Availability of Information.
+2. How does Security gets Compromised?
+   1. Affects individuals and organisations
+   2. can be caused by external/internal sources
+3. CIA Triad
+   1. Confidentiality: Only authorized users and processes should be ablt to accessor modify data
+   2. Integrity: Data should be maintained in a correct state and nobody should be able to improperly modify it
+   3. Availability: Authorized users should be able to access data whenever they need to do so
+4. What is Information Security Management System (ISMS)?
+   1. A documented management system with a set of security controls to protect
+5. An effective ISMS should contain:
+   1. A management approved, high level information security policy
+   2. An inventory of important information assets (data & systems) that fall within the scope
+   3. An assessment of risks to those assets
+   4. A corporate risk treatment plan
+   5. An ISMS manual that contains a Statement of Applicability
+   6. A comprehensive, inter-related suite of processes, polices, procedures, & work instructions.
+6. Why is an ISMS important?
+   1. increase attack resilience
+   2. respond to evolving security threats
+   3. protects the CIA of Information
+   4. provides Organization -- Wide Protection
+   5. Legal & Regulatory COmpliance Requirement
+7. How to create an ISMS?
+   1. Plan
+   2. Do
+   3. Check
+   4. Act
+8. What is ISO27001/ISO27002?
+   1. a document established by consensus and approved by a recognized body, that provides for common and repeated use rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context
+9. Documentation Structure
+   1.  Policy Management
+   2.  Procedures (Executives)
+   3.  Work Instructions (Operational)
+   4.  Records (all users and usages)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -187,28 +386,7 @@ Today will be working on Day 14 React Native State Management to learn how to ma
 ![Error Msg](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Screenshot1.png "style=width:200 height: 200") -->
 **Project difficulties:** <br/>
 
-1. define problem here
-   ![problemScreenshots](https://github.com/CraftomeCJ/learningJournal/blob/main/image/problemScreenshots.png "style=width:200 height: 200")
-
-- solution steps here
-   ![solutionSteps](https://github.com/CraftomeCJ/learningJournal/blob/main/image/solutionSteps.png "style=width:200 height: 200")
-<!-- can include some codes for future use -->
-```typescript
-   style = { [styles.first, styles.second ] }
-```
-
-## What other issues trying to resolve? <br/>
-
-1. define problem here
-![ErrorImagehere](https://github.com/CraftomeCJ/learningJournal/blob/main/image/errorimage.png "style=width:200 height: 200")
-  After some research, I found some solutions:
-   - define solution here
-
-  ```javascript
-  git push origin --delete showsolution/codes
-  ```
-
-<p align="center">(<a href="#top">back to top</a>)</p>
+1. A very unproductive day, due to a relapse of left shoulder tendon inflammation, only managed to finish the 'useReducers' tutorial, finished Security Awareness Training and HTX SHARE project onboarding admin work but very low in energy today didn't managed to do much coding exercises.
 
 ## Room to improve?
 <!-- This is where I write things I can do to improve my work -->
@@ -227,11 +405,13 @@ These questions will help me review and unlock areas of improvement (which will 
 
 - Continue to work on the more advance React Native concepts, its feature, workflows and how to use it.
 
-- Day 22 is to learn and practice on Day 14 & if have time Day 15 materials on React Native concepts and at the same time work on TypeScript projects.
+- Day 23 is to learn and practice on Day 14 & 15 learning materials on React Native concepts
 
-- Need more improvement on how to refactor codes within fingertips
+- required a lot improvement on refactoring codes with fingertips familiarity
 
 - research on Redux and its features and how to apply it
+
+- recover from shoulder injury, catch up on Day 14 task
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -316,5 +496,7 @@ Created by:
 [Day 14: React Native State Management ](https://docs.google.com/document/d/1u2p6RYAXM0bIEpcq3QLcvNYzZqDFWO_BHsbyUvRAuXM/edit#heading=h.sjc7nb6il2di)
 
 [Day 14 to Day 18 React Native Training Course Material](https://drive.google.com/drive/folders/1pSyVyaSJBQmHBhjEtct9Msa9ohJBvcdG)
+
+[Context](https://reactjs.org/docs/context.html)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
