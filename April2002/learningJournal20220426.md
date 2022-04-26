@@ -151,9 +151,9 @@ last ask myself again ==> ask yourself what the third most important task is.
 
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
-1. [] Attend Briefing by HTX on SHARE project @4pm
-2. [] cook beef stew for dinner
-3. [] laundry
+1. [x] Attend Briefing by HTX on SHARE project @4pm
+2. [x] cook beef stew for dinner
+3. [x] laundry
 
 ## Personal Notes
 
