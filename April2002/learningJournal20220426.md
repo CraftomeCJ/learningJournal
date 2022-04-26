@@ -157,8 +157,9 @@ last ask myself again ==> ask yourself what the third most important task is.
 
 ## Personal Notes
 
-**Day 17 (Wednesday) and today's main focus:** <br />
-Today will be working on plans and goals for the next couple of months. Summarizing what I had learned from books and put it to black & white and try to tap on high leverage activities to overcome my slow learning progress and direct easy distracted mindset to improve my focus in near future.
+**Day 23 (Tuesday) and today's main focus:** <br />
+Today will be working on Day 14 & 15 tasks: how to manage state with reducers. Practice on courses exercises, try to implement useReducer for counterScreen.
+At the same time change to TypeScript & refactor as much as possible.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
