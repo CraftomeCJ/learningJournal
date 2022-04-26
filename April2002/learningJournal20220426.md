@@ -40,7 +40,7 @@ Choosing actions that bring happiness and success to others ensures the flow of 
 **Daily Law:** <br/>
 Make my Accomplishments Seem Effortless <br/>
 My actions must seem natural and executed with ease. <br/>
-when I act, act as if I could do much more. <br/>
+When I act, act as if I could do much more. <br/>
 Avoid the temptation of revealing how hard I work -- it only raises questions. <br/>
 
 <!-- What a wise old man said -->
@@ -110,7 +110,7 @@ How to set GOAL LOOP:
 - [x] I will practice power exercises for FIVE minutes and brisk walk for 20min at 8pm in local park today.
 <!-- Family => 1 task -->
 <!-- [] I will kiss my wife for love at START and at END of the day in my home today -->
-<!-- [] I will say LOVE YOU for 3 times during the whole day in my office today --> -->
+<!-- [] I will say LOVE YOU for 3 times during the whole day in my office today -->
 <!-- Work => 3 tasks -->
 <!-- To identify my three highest-leverage activities in my work, 
 first => make a list ==> capture all of the tasks I'm responsible for in my job od a typical month. 
@@ -122,8 +122,8 @@ last ask myself again ==> ask yourself what the third most important task is.
 <!-- - [] I will do [most important work task here] with my laptop at 10am in the office table -->
 <!-- - [] I will do [second important work task here] with my laptop at 2pm in the office table -->
 <!-- - [] I will do [third important work task here] with my laptop at 4pm in the office table -->
-- [x] I will plan and write next day daily goals for 20min at 10.40pm in the study table today
-- [x] I will write Daily Journal for 70 minutes at 11pm in my study table in my bedroom today
+- [x] I will complete writing Learning Journal for 70 minutes at 11pm in my study table in my bedroom today
+- [x] I will plan and write next day daily goals for 20min at 12.10pm in the study table today
 <!-- Home Life => 1 task -->
 <!-- [] I will do [grocery shopping, laundry, cooking, entertainment, gardening, pay bills, travel arrangements, organizing goal, etc etc] at 9pm in my house/supermarket today -->
 <!-- Friendships => 1 task -->
@@ -163,22 +163,28 @@ At the same time change to TypeScript & refactor as much as possible.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-- how i can apply the below-mentioned principle to my coding and programming skills
+- The useReducer() hook in React lets you separate the state management from the rendering logic of the component.
+- useReducer also allows you to manage state and re-render a component whenever that state changes.
+- Reducer give you more concrete way to handle complex states so it give you set actions that you can perform on your state and it's going to convert your current to a new version fo the state based on the action that you send.
+- Reducer going to return an array with two portions
+  1. This first potion is state
+  2. Second things is return a function
 
-**Principles:**
+**Principles: useReducer**
 
-- The Four Laws of Behavior Change: make it obvious, make it attractive, make it easy, make it satisfying
+- Continue to do read up and understand the concept of Reducer
+- Convert counterScreen from useState to useReducer
 <br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ## Exercise of the Day
 
-[x] **Challenge:** Rewrite the way I write my daily goals to make it productive and easy to read
+[x] **Challenge:** Change to typescript + code refactor
 
 1. Challenge Questions:
-   1. write something
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/image/solutionimage.png "style=width:200 height: 200")
+   1. Change the code from js to typescript and try to refactor
+   2. Replace switch-case by ternary operator due to only two type of action
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -192,26 +198,7 @@ At the same time change to TypeScript & refactor as much as possible.
 ![Error Msg](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Screenshot1.png "style=width:200 height: 200") -->
 **Project difficulties:** <br/>
 
-1. define problem here
-   ![problemScreenshots](https://github.com/CraftomeCJ/learningJournal/blob/main/image/problemScreenshots.png "style=width:200 height: 200")
-
-- solution steps here
-   ![solutionSteps](https://github.com/CraftomeCJ/learningJournal/blob/main/image/solutionSteps.png "style=width:200 height: 200")
-<!-- can include some codes for future use -->
-```typescript
-   style = { [styles.first, styles.second ] }
-```
-
-## What other issues trying to resolve? <br/>
-
-1. define problem here
-![ErrorImagehere](https://github.com/CraftomeCJ/learningJournal/blob/main/image/errorimage.png "style=width:200 height: 200")
-  After some research, I found some solutions:
-   - define solution here
-
-  ```javascript
-  git push origin --delete showsolution/codes
-  ```
+1. useReducer a bit complex compared to useState, may need more time to understand useState before doing Reducer to avoid confusing myself further
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -228,20 +215,28 @@ ask During this time ask yourself:
 =>Did I spend time on important tasks that will help accelerate my career?
 
 These questions will help me review and unlock areas of improvement (which will be never-ending) in my life, career and work. This step can feel uncomfortable and requires self-awareness and review. -->
-- Put too much time on reading and researching on new concepts, practice to shorten the duration by time-boxing to 60 minutes.
+- Had make good progress on practice to time-boxing my task to 90 minutes per self-assigned task.
 
 - Continue to work on the more advance React Native concepts, its feature, workflows and how to use it.
 
-- Day 15 is continue to learn and practice on Day 8 & 9 notes of React Native concepts and at the same time work on TypeScript projects.
+- required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
-- more reflection here
+- Day 24 is continue to learn and practice on Day 14 & 15 & 16 notes of React Native concepts and at the same time work on TypeScript conversion, behind schedule by 1.5 days.
+
+- Practice more to have better understanding of the useState & useReducer.
+
+- Layout of working journal look good, from day 24 onwards will improve on technical writing of learning experience and daily lesson task reviews.
+
+- Add one more column for technical book's chapter summary for future reference.
+
+- To learn and use gif to showcase course project display and png for error and warning messages display.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
-## Miscellaneous
+<!-- ## Miscellaneous -->
 <!-- Sometimes the goal or task at hand has many sub-tasks and that is when I use here to write it out and track my progress towards it. -->
 
-## Monthly Experiment
+<!-- ## Monthly Experiment -->
 <!-- This is the section where I remind myself what personal growth experiment/ side hustle experiment I am focused on for this day, week, or month. For example, in the above journal entry, I was (and still am) focused on "essential-ism focus" ==> a fancy way to say to focus on one thing and one thing only. -->
 
 ## MY GOAL for learning React Native
@@ -317,5 +312,17 @@ Created by:
 [React Native Training Course Schedule](https://docs.google.com/document/d/1X1WgRPKxWwenKXswD5xHcuEZ4NFRj8EWmkCC8MLsBwg/edit#heading=h.2gbthfjx9c7r)
 
 [Day 15: React Native State Management](https://docs.google.com/document/d/1oZ-Y1BUfvoJBbGLuQL6tRokAkdU84RGOYHG8hrvq1_M/edit#heading=h.sjc7nb6il2di)
+
+[The Complete React Native + Hooks Course](https://nlbsg.udemy.com/course/the-complete-react-native-and-redux-course/learn/lecture/15706740#overview)
+
+[Learn useReducer In 20 Minutes](https://www.youtube.com/watch?v=kK_Wqx3RnHk)
+
+[An Easy Guide to React useReducer() Hook](https://dmitripavlutin.com/react-usereducer/)
+
+[How to Use useReducer with TypeScript](https://www.newline.co/@bespoyasov/how-to-use-usereducer-with-typescript--3918a332)
+
+[Typing a useReducer React hook in TypeScript](https://www.sumologic.com/blog/react-hook-typescript/)
+
+[A Simple Reducer Example with TypeScript, No Need for Redux or MobX](https://www.newline.co/@eigenjoy/a-simple-reducer-example-with-typescript-no-need-for-redux-or-mobx--968d3b35)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
