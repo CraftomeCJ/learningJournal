@@ -1,6 +1,6 @@
 <div id='top'><div>
 
-<h1 align="center">Learning Journal 26 April 2022 (Tuesday)</h1>
+<h1 align="center">Learning Journal 27 April 2022 (Wednesday)</h1>
 <p align="center">My passion to be a programmer came late in life
 <br />
 Hello, I'm CJ, now working as a Full Stack Developer intern with Activate Interactive to gain valuable job experience, always had a keen interest in User-friendly mobile applications and websites development.
@@ -33,41 +33,48 @@ Hello, I'm CJ, now working as a Full Stack Developer intern with Activate Intera
 It allows me to appreciate the small things in my life. 
 Daily Law, Law of the day, Quotes & Gratitude-->
 **Law of Life:** <br/>
-The Law of Karma: **What goes around, comes around**<br/>
-Every action generates a force of energy that returns to us in like kind. <br/>
-Choosing actions that bring happiness and success to others ensures the flow of happiness and success to me.<br/>
+The Law of Pure Potentiality: **"Maybe?" => Illustrate the wisdom of non-judgement**<br/>
+Take time to be silent, to just BE. <br/> Meditate for 30 minutes twice a day. <br/>
+Silently witness the intelligence within every living thing. Practice non-judgement. <br/>
 
 **Daily Law:** <br/>
-Make my Accomplishments Seem Effortless <br/>
-My actions must seem natural and executed with ease. <br/>
-When I act, act as if I could do much more. <br/>
-Avoid the temptation of revealing how hard I work -- it only raises questions. <br/>
+Avoid the False Alliance <br/>
+Cultivate real allies. Find those with mutual self-interests and make an alliance. <br/>
 
 <!-- What a wise old man said -->
 **Quote of the Day:** <br/>
-"Willpower is what separates us from the animals. <br/>
-It's the capacity to restrain our impulses, resist temptation -- do what's right and good for us in the long run, not what we want to do right now. <br/>
-It's central, in fact, to civilization." - Roy Baumeister
+"Life's easy when you live it the hard way... and hard if you try to live it the easy way" - Dave Kekich
 
 <!-- practice gratitude daily -->
-**I'm grateful for:** what I am and have. My thanksgiving is perpetual.
+**I'm grateful that:** to know the trick is to be grateful when my mood is high and graceful when it is low.
 
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
 Subconscious Behaviour that are Keeping Me from Having The Life I Want:
 <br/>
-I think that to change my beliefs, I have to adopt a new line of thinking, <br/>
-rather than seeking experiences that make the thinking self-evident. <br/>
-A belief is what I know to be true because experience has make it evident to me. <br/>
-If I want to change my life, change my beliefs. <br/>
-If I want to change my beliefs, go out and have experiences that make them real to me. <br/>
-Not the opposite way around. <br/>
+I assume that when it comes to following my "gut instincts", happiness is "GOOD" and fear and pain are "BAD". <br/>
+When I consider doing something that I truly love and are invested in, I am going to feel influx of pain and fear, mostly because it will involve being vulnerable. <br/>
+Bad feelings should not always be interpreted as deterrents. They are also indicators that I am doing something frightening and worthwhile. <br/>
+Not wanting to do something would make me feel indifferent about it. <br/>
+(FEAR === INTEREST) <br/>
 
 <!-- for daily reflections -->
-**Reflection of the day?**
+<!-- Critical Thinking Training:
+- ask the "5 WHYs?" 
+  1. Why the problem is occurring?
+  2. Why on answer of Qns 1
+  3. Why on answer of Qns 2
+  4. Why on answer of Qns 3
+  5. Why on answer of Qns 4
+     - Find the root cause
+- Who does this benefit?
+- What's the context?
+- When or Where would this work?
+- Why is this a problem? -->
+**Questions of the day?**
 
-- [x] Craving in to temptation whenever I feel them emerge is like giving up humanity. As a intelligent human being, I have the ability to make decisions based on rational thinking, not on instincts alone. <br/>
-- [x] Strive to be a better human and embrace humanity by exercise my "WILLPOWER MUSCLE". <br/>
+- [] How likely is this person to achieve anything substantial in life if their primary value is to feel comfortable? <br/>
+- [] How is this person going to manage a crisis that they must face? <br/>
 
 # Outcome-Based Goals
 <!-- This is where I write out my goals/to-do at work. These should be planned and written at the start of the day so I can make progress towards them by the end of the day. -->
@@ -88,7 +95,7 @@ How to set GOAL LOOP:
 4. Reward: I satisfy my craving to feel relieved. ==> reading book becomes associated with feeling stalled at studying
  -->
  <!-- Apply this strategy when setting GOALs 
- I will [BEHAVIOR] at [TIME] in [LOCATION].-->
+ After I finished [CONDITION], I will [BEHAVIOR] at [TIME] in [LOCATION].-->
 ## **Long Term Goals:**
 <!-- Improvement with High Leverage Activities:
   1. something only I can do;
@@ -97,17 +104,25 @@ How to set GOAL LOOP:
   1. Anyone can do it
   2. Energy in is less than or equal to the results -->
 <!-- Learn to combine Low Leverage Activities into High Leverage activities with unavoidable low leverage activities in your life. -->
-## I want to be 1% better than yesterday!!
 
-- [] I will complete the required training and submit my Full Time Role Application. I will also take on additional work project to demonstrate my readiness to shoulder more responsibility.
-- [] I have worked as an Full Stack Developer Intern for 4 months, and will showcase some of my work in the next month. And, my company is looking to take on another software developer at the end of 6 months internship.
-- [] I want to keep learning and challenging myself as I progress in my career.
+## **To be 1% better than yesterday!!**
+
+- [] I will complete the required training and submit my Full Time Role Application. I will also take on additional work project to demonstrate my readiness to shoulder more responsibility in 4 weeks.
+- [] I will work as Full Stack Developer Intern for 4 months, and will showcase some of my work in the next month. And, my company is looking to take on another software developer at the end of 6 months internship.
 - [] I will take on 1 additional training project every 2 weeks, complete the required training within 7 weeks, and ask for a job status conversion within 5 months.
+- [] I will stay current and to keep learning and challenging myself as I progress in my career.
+- [] I will learn at least 1 new programming language every year.
+- [] I will read 1 technical book for 2 months and write a review summary upon every completion of the book on my Daily Journal.
+- [] I will read 1 non-technical book for 2 months and write a review summary upon every completion of the book on my Daily Journal.
+<!-- - [] I will take classes and get certification continuously upgrading my soft and hard skills and record the progress on my Daily Journal. -->
+<!-- - [] I will participate in local user groups and meetings for example: Meetup app, codementor.io to observe, ask, participate and learn as much as I could. -->
+<!-- - [] I will experiment with different environments and learn different things from all level of development cycle. -->
+<!-- - [] I will learn to blog about my progress, share insights, exchange ideas, and learn from fellow developers. -->
 
 <!-- The GOAL is not about results, the GOAL is enjoy the process -->
 **Daily Goals:**
 <!-- Health => 1 task -->
-<!-- - [x] I will practice power exercises for FIVE minutes and brisk walk for 20min at 8pm in local park today. -->
+- [x] I will practice power exercises for FIVE minutes and brisk walk for 20min at 8pm/8am in local park today.
 <!-- Family => 1 task -->
 <!-- [] I will kiss my wife for love at START and at END of the day in my home today -->
 <!-- [] I will say LOVE YOU for 3 times during the whole day in my office today -->
@@ -123,27 +138,27 @@ last ask myself again ==> ask yourself what the third most important task is.
 <!-- - [] I will do [second important work task here] with my laptop at 2pm in the office table -->
 <!-- - [] I will do [third important work task here] with my laptop at 4pm in the office table -->
 - [x] I will complete writing Learning Journal for 70 minutes at 11pm in my study table in my bedroom today
-<!-- - [x] I will plan and write next day daily goals for 20min at 12.10pm in the study table today -->
+- [x] I will plan and write next day daily goals for 20min at 12.10pm in the study table today
 <!-- Home Life => 1 task -->
 <!-- [] I will do [grocery shopping, laundry, cooking, entertainment, gardening, pay bills, travel arrangements, organizing goal, etc etc] at 9pm in my house/supermarket today -->
 <!-- Friendships => 1 task -->
 <!-- [] I will catch up with my friends for 2 hours at 10am in [location] on Sunday -->
 <!-- Spirituality & Belief => 2 task -->
-<!-- - [x] I will meditate silently for 22 minutes at 1.40pm in my bedroom today -->
-<!-- - [x] I will read and meditate on Bible daily reading for 22min at 8.45am in my study table today -->
+- [] I will meditate silently for 22 minutes at 1.40pm in my bedroom today
+- [] I will read and meditate on Bible daily reading for 22min at 9am in my study table today
 <!-- - [] I will practice "Prayer of the heart" for 15min at 9am in my bedroom today -->
 <!-- Recreation => 1 task-->
-<!-- - [x] I will read a Chinese Philosophy book for 15 minutes at 12.30am before sleep in my bed today -->
-<!-- - [x] I will practice mind, logic and speed-read exercises for 40min at 7pm after away from today's work -->
+- [] I will read a Chinese Philosophy book for 15 minutes at 12.30am before sleep in my bed today
+- [] I will practice mind, logic and speed-read exercises for 40min at 7pm after away from today's work
 <!-- - [] I will watch social media for 10 minutes at 7pm in the bathroom today -->
 <!-- - [] I will watch a movie for 3 hours at 8pm in the cinema today -->
 <!-- Personal Growth => 3 tasks -->
-- [x] I will code for minimum 6hr at 10am in my study table today
-<!-- - [x] I will read 1 chapter of Technical book: Think like a Programmer, take notes for 26min at 6.45pm in my study table today -->
-<!-- - [x] I will read 1 chapter of Growth book for 26min at 7.15pm in my study table today -->
-<!-- - [x] I will listen 26min of audiobook at 8.30am in my kitchen today -->
+- [] I will code for minimum 1hr at 10pm in my study table today
+- [] I will read 1 chapter of Technical book: , take notes for 26min at 6.45pm in my study table today
+- [] I will read 1 chapter of Growth book for 26min at 7.15pm in my study table today
+- [] I will listen 26min of audiobook at 8.30am in my kitchen today
 <!-- Community => 1 task -->
-<!-- - [x] I will greet any neighbors and wished them well at 7am in my flat void deck today -->
+- [] I will greet any neighbors and wished them well at 7am in my flat void deck today
 <!-- - [] I will pick up the rubbish I saw during my evening walk at 8pm in my local park today -->
 <!-- Financial => 1 task -->
 <!-- - [] I will save $520 at the end of the month into my investment account. -->
@@ -151,40 +166,31 @@ last ask myself again ==> ask yourself what the third most important task is.
 
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
-1. [] Attend Briefing by HTX on SHARE project @4pm
-2. [] cook beef stew for dinner
-3. [] laundry
+1. [] TBC
 
 ## Personal Notes
 
-**Day 23 (Tuesday) and today's main focus:** <br />
-Today will be working on Day 14 & 15 tasks: how to manage state with reducers. Practice on courses exercises, try to implement useReducer for counterScreen.
-At the same time change to TypeScript & refactor as much as possible.
+**Day 17 (Wednesday) and today's main focus:** <br />
+Today will be working on plans and goals for the next couple of months. Summarizing what I had learned from books and put it to black & white and try to tap on high leverage activities to overcome my slow learning progress and direct easy distracted mindset to improve my focus in near future.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-- The useReducer() hook in React lets you separate the state management from the rendering logic of the component.
-- useReducer also allows you to manage state and re-render a component whenever that state changes.
-- Reducer give you more concrete way to handle complex states so it give you set actions that you can perform on your state and it's going to convert your current to a new version fo the state based on the action that you send.
-- Reducer going to return an array with two portions
-  1. This first potion is state
-  2. Second things is return a function
+- how i can apply the below-mentioned principle to my coding and programming skills
 
-**Principles: useReducer**
+**Principles:**
 
-- Continue to do read up and understand the concept of Reducer
-- Convert counterScreen from useState to useReducer
+- The Four Laws of Behavior Change: make it obvious, make it attractive, make it easy, make it satisfying
 <br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ## Exercise of the Day
 
-[x] **Challenge:** Change to typescript + code refactor
+[x] **Challenge:** Rewrite the way I write my daily goals to make it productive and easy to read
 
 1. Challenge Questions:
-   1. Change the code from js to typescript and try to refactor
-   2. Replace switch-case by ternary operator due to only two type of action
+   1. write something
+![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/image/solutionimage.png "style=width:200 height: 200")
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -198,7 +204,26 @@ At the same time change to TypeScript & refactor as much as possible.
 ![Error Msg](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Screenshot1.png "style=width:200 height: 200") -->
 **Project difficulties:** <br/>
 
-1. useReducer a bit complex compared to useState, may need more time to understand useState before doing Reducer to avoid confusing myself further
+1. define problem here
+   ![problemScreenshots](https://github.com/CraftomeCJ/learningJournal/blob/main/image/problemScreenshots.png "style=width:200 height: 200")
+
+- solution steps here
+   ![solutionSteps](https://github.com/CraftomeCJ/learningJournal/blob/main/image/solutionSteps.png "style=width:200 height: 200")
+<!-- can include some codes for future use -->
+```typescript
+   style = { [styles.first, styles.second ] }
+```
+
+## What other issues trying to resolve? <br/>
+
+1. define problem here
+![ErrorImagehere](https://github.com/CraftomeCJ/learningJournal/blob/main/image/errorimage.png "style=width:200 height: 200")
+  After some research, I found some solutions:
+   - define solution here
+
+  ```javascript
+  git push origin --delete showsolution/codes
+  ```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -215,21 +240,13 @@ ask During this time ask yourself:
 =>Did I spend time on important tasks that will help accelerate my career?
 
 These questions will help me review and unlock areas of improvement (which will be never-ending) in my life, career and work. This step can feel uncomfortable and requires self-awareness and review. -->
-- Had make good progress on practice to time-boxing my task to 90 minutes per self-assigned task.
+- Put too much time on reading and researching on new concepts, practice to shorten the duration by time-boxing to 60 minutes.
 
 - Continue to work on the more advance React Native concepts, its feature, workflows and how to use it.
 
-- required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
+- Day 15 is continue to learn and practice on Day 8 & 9 notes of React Native concepts and at the same time work on TypeScript projects.
 
-- Day 24 is continue to learn and practice on Day 14 & 15 & 16 notes of React Native concepts and at the same time work on TypeScript conversion, behind schedule by 1.5 days.
-
-- Practice more to have better understanding of the useState & useReducer.
-
-- Layout of working journal look good, from day 24 onwards will improve on technical writing of learning experience and daily lesson task reviews.
-
-- Add one more column for technical book's chapter summary for future reference.
-
-- To learn and use gif to showcase course project display and png for error and warning messages display.
+- more reflection here
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -318,11 +335,5 @@ Created by:
 [Learn useReducer In 20 Minutes](https://www.youtube.com/watch?v=kK_Wqx3RnHk)
 
 [An Easy Guide to React useReducer() Hook](https://dmitripavlutin.com/react-usereducer/)
-
-[How to Use useReducer with TypeScript](https://www.newline.co/@bespoyasov/how-to-use-usereducer-with-typescript--3918a332)
-
-[Typing a useReducer React hook in TypeScript](https://www.sumologic.com/blog/react-hook-typescript/)
-
-[A Simple Reducer Example with TypeScript, No Need for Redux or MobX](https://www.newline.co/@eigenjoy/a-simple-reducer-example-with-typescript-no-need-for-redux-or-mobx--968d3b35)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
