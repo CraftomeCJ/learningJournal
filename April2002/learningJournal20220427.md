@@ -33,30 +33,31 @@ Hello, I'm CJ, now working as a Full Stack Developer intern with Activate Intera
 It allows me to appreciate the small things in my life. 
 Daily Law, Law of the day, Quotes & Gratitude-->
 **Law of Life:** <br/>
-The Law of Pure Potentiality: **"Maybe?" => Illustrate the wisdom of non-judgement**<br/>
-Take time to be silent, to just BE. <br/> Meditate for 30 minutes twice a day. <br/>
-Silently witness the intelligence within every living thing. Practice non-judgement. <br/>
+The Law of Least Effort: **"Is that so?" Apply the Power of Non-Resistance**<br/>
+Shows the good through inner non-resistance. <br/>
+Accept people, situations and events as they occur. Take responsibility for my situation and for all events seen as problems. <br/>
+Relinquish the need to defend my point of view. <br/>
 
 **Daily Law:** <br/>
-Avoid the False Alliance <br/>
-Cultivate real allies. Find those with mutual self-interests and make an alliance. <br/>
+Despise the Free Lunch <br/>
+What has worth is worth paying for. It is often wise to pay the full price -- there is no cutting corners with excellence. <br/>
+Learn to pay and to pay well. <br/>
 
 <!-- What a wise old man said -->
 **Quote of the Day:** <br/>
-"Life's easy when you live it the hard way... and hard if you try to live it the easy way" - Dave Kekich
+"I value self-discipline, but creating systems that make it next to impossible to misbehave is more reliable than self-control." - Tim Ferriss
 
 <!-- practice gratitude daily -->
-**I'm grateful that:** to know the trick is to be grateful when my mood is high and graceful when it is low.
+**I'm grateful for:** my comfortable bed, helping me to recover my tired body and fatigue mind, as I wake up refreshed today to a brand new beautiful day.
 
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
 Subconscious Behaviour that are Keeping Me from Having The Life I Want:
 <br/>
-I assume that when it comes to following my "gut instincts", happiness is "GOOD" and fear and pain are "BAD". <br/>
-When I consider doing something that I truly love and are invested in, I am going to feel influx of pain and fear, mostly because it will involve being vulnerable. <br/>
-Bad feelings should not always be interpreted as deterrents. They are also indicators that I am doing something frightening and worthwhile. <br/>
-Not wanting to do something would make me feel indifferent about it. <br/>
-(FEAR === INTEREST) <br/>
+I think "problems" are roadblocks to achieving what I want, when in reality they are pathways. <br/>
+<br/>
+Marcus Aurelius sums this up well: "The impediment to action advances action. What stands in the way becomes the way." <br/>
+Simply, running into a "problem" forces me to take action to resolve it. That action will inevitably lead me to think differently, behave differently, and choose differently. <br/> The "problem" becomes a catalyst for me to actualize the life I always wanted. It pushed me from my comfort zone, that's all <br/>
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
@@ -71,10 +72,10 @@ Not wanting to do something would make me feel indifferent about it. <br/>
 - What's the context?
 - When or Where would this work?
 - Why is this a problem? -->
-**Questions of the day?**
+**Reflection of the day?**
 
-- [] How likely is this person to achieve anything substantial in life if their primary value is to feel comfortable? <br/>
-- [] How is this person going to manage a crisis that they must face? <br/>
+- [] To protect myself against temptations is to avoid them, plain old preparation is more valuable than self-control. <br/>
+- [] Prepare myself for difficult situation by putting up roadblocks ahead of time, when my resolve isn't being test. <br/>
 
 # Outcome-Based Goals
 <!-- This is where I write out my goals/to-do at work. These should be planned and written at the start of the day so I can make progress towards them by the end of the day. -->
@@ -97,10 +98,10 @@ How to set GOAL LOOP:
  <!-- Apply this strategy when setting GOALs 
  After I finished [CONDITION], I will [BEHAVIOR] at [TIME] in [LOCATION].-->
 ## **Long Term Goals:**
-<!-- Improvement with High Leverage Activities:
+<!--Learn Improvement with High Leverage Activities:
   1. something only I can do;
   2. Results are worth a multiple of the energy put into it (ROI) -->
-<!-- What is Low Leverage Activities:
+<!--Learn What is Low Leverage Activities:
   1. Anyone can do it
   2. Energy in is less than or equal to the results -->
 <!-- Learn to combine Low Leverage Activities into High Leverage activities with unavoidable low leverage activities in your life. -->
@@ -112,8 +113,8 @@ How to set GOAL LOOP:
 - [] I will take on 1 additional training project every 2 weeks, complete the required training within 7 weeks, and ask for a job status conversion within 5 months.
 - [] I will stay current and to keep learning and challenging myself as I progress in my career.
 - [] I will learn at least 1 new programming language every year.
-- [] I will read 1 technical book for 2 months and write a review summary upon every completion of the book on my Daily Journal.
-- [] I will read 1 non-technical book for 2 months and write a review summary upon every completion of the book on my Daily Journal.
+- [] I will read 1 technical book for 2 months and write a summary upon every completion of the book on my Daily Journal.
+- [] I will read 1 non-technical book for 2 months and write a summary upon every completion of the book on my Daily Journal.
 <!-- - [] I will take classes and get certification continuously upgrading my soft and hard skills and record the progress on my Daily Journal. -->
 <!-- - [] I will participate in local user groups and meetings for example: Meetup app, codementor.io to observe, ask, participate and learn as much as I could. -->
 <!-- - [] I will experiment with different environments and learn different things from all level of development cycle. -->
@@ -122,56 +123,57 @@ How to set GOAL LOOP:
 <!-- The GOAL is not about results, the GOAL is enjoy the process -->
 **Daily Goals:**
 <!-- Health => 1 task -->
-- [x] I will practice power exercises for FIVE minutes and brisk walk for 20min at 8pm/8am in local park today.
+<!-- note - [x] I will practice power exercises for FIVE minutes and brisk walk for 20min at 8pm/8am in local park today. -->
 <!-- Family => 1 task -->
-<!-- [] I will kiss my wife for love at START and at END of the day in my home today -->
-<!-- [] I will say LOVE YOU for 3 times during the whole day in my office today -->
+<!--note [x] I will kiss my wife for love at START and at END of the day in my home today -->
+<!-- [] I will say LOVE YOU to my wife for 3 times during the whole day in my office today -->
 <!-- Work => 3 tasks -->
-<!-- To identify my three highest-leverage activities in my work, 
+<!--learn To identify my three highest-leverage activities in my work, 
 first => make a list ==> capture all of the tasks I'm responsible for in my job od a typical month. 
 second ask myself => if I could only do one thing on that list all day long, ==> which item on the list would add the most value to my company?
 Third ask myself => the same question ==> If I could do only one more thing on your list of key tasks, which would be the second activity that contributes the most value to my company?
 last ask myself again ==> ask yourself what the third most important task is.
 -->
-- [x] I will complete Day 15 manage state with reducers -- training task assigned by Janna in study table at 10am to 6pm today
+- [x] I will complete Day 16 on how to pull state from component with exposed state -- training task assigned by Janna in study table at 10am to 6pm today
 <!-- - [] I will do [most important work task here] with my laptop at 10am in the office table -->
 <!-- - [] I will do [second important work task here] with my laptop at 2pm in the office table -->
 <!-- - [] I will do [third important work task here] with my laptop at 4pm in the office table -->
-- [x] I will complete writing Learning Journal for 70 minutes at 11pm in my study table in my bedroom today
-- [x] I will plan and write next day daily goals for 20min at 12.10pm in the study table today
+- [x] I will complete writing Learning Journal for 70 minutes at 10pm in my study table in my bedroom today
+<!--note - [x] I will plan and write next day daily goals for 20min at 12.10pm in the study table today -->
 <!-- Home Life => 1 task -->
 <!-- [] I will do [grocery shopping, laundry, cooking, entertainment, gardening, pay bills, travel arrangements, organizing goal, etc etc] at 9pm in my house/supermarket today -->
 <!-- Friendships => 1 task -->
 <!-- [] I will catch up with my friends for 2 hours at 10am in [location] on Sunday -->
 <!-- Spirituality & Belief => 2 task -->
-- [] I will meditate silently for 22 minutes at 1.40pm in my bedroom today
-- [] I will read and meditate on Bible daily reading for 22min at 9am in my study table today
-<!-- - [] I will practice "Prayer of the heart" for 15min at 9am in my bedroom today -->
+<!--note - [x] I will meditate silently for 22 minutes at 1.40pm in my bedroom today -->
+<!--note - [x] I will read and meditate on Bible daily reading for 22min at 9am in my study table today -->
+<!--note - [x] I will practice "Prayer of the heart" for 15min at 9am in my bedroom today -->
 <!-- Recreation => 1 task-->
-- [] I will read a Chinese Philosophy book for 15 minutes at 12.30am before sleep in my bed today
-- [] I will practice mind, logic and speed-read exercises for 40min at 7pm after away from today's work
+<!--note - [x] I will read a Chinese Philosophy book for 15 minutes at 12.30am before sleep in my bed today -->
+<!--note - [x] I will practice mind, logic and speed-read exercises for 40min at 7pm after away from today's work -->
 <!-- - [] I will watch social media for 10 minutes at 7pm in the bathroom today -->
 <!-- - [] I will watch a movie for 3 hours at 8pm in the cinema today -->
 <!-- Personal Growth => 3 tasks -->
-- [] I will code for minimum 1hr at 10pm in my study table today
-- [] I will read 1 chapter of Technical book: , take notes for 26min at 6.45pm in my study table today
-- [] I will read 1 chapter of Growth book for 26min at 7.15pm in my study table today
-- [] I will listen 26min of audiobook at 8.30am in my kitchen today
+- [x] I will code for minimum 6hr at 10am in my study table today
+<!--note - [x] I will read 1 chapter of Technical book: , take notes for 26min at 6.45pm in my study table today -->
+<!--note - [x] I will read 1 chapter of Growth book for 26min at 7.15pm in my study table today -->
+<!--note - [x] I will listen 26min of audiobook at 8.30am in my kitchen today -->
 <!-- Community => 1 task -->
-- [] I will greet any neighbors and wished them well at 7am in my flat void deck today
+<!--note - [] I will greet any neighbors and wished them well at 7am in my flat void deck today -->
 <!-- - [] I will pick up the rubbish I saw during my evening walk at 8pm in my local park today -->
 <!-- Financial => 1 task -->
-<!-- - [] I will save $520 at the end of the month into my investment account. -->
+<!--note - [x] I will save $520 at the end of the month into my investment account. -->
 <!-- - [] I will [financial goal] at [TIME] in [LOCATION] this month -->
 
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
-1. [] TBC
+1. [x] Meeting Mentor Kenneth for 1 hour @ 5.00pm today
+2. [x] buy cobram estate olive oil at fairprice finest 
 
 ## Personal Notes
 
-**Day 17 (Wednesday) and today's main focus:** <br />
-Today will be working on plans and goals for the next couple of months. Summarizing what I had learned from books and put it to black & white and try to tap on high leverage activities to overcome my slow learning progress and direct easy distracted mindset to improve my focus in near future.
+**Day 24 (Wednesday) and today's main focus:** <br />
+Today will be working on revision on useState, useReducer, try refactor with reducers and change to TSX and refine the code as much as possible. In the afternoon, will try to catch up and practice on Day 16 Vid 63 to 69 task.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
@@ -244,9 +246,17 @@ These questions will help me review and unlock areas of improvement (which will 
 
 - Continue to work on the more advance React Native concepts, its feature, workflows and how to use it.
 
-- Day 15 is continue to learn and practice on Day 8 & 9 notes of React Native concepts and at the same time work on TypeScript projects.
+- required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
-- more reflection here
+- Day 25 is continue to learn and practice on Day 15 & 16 & 17 notes of React Native concepts and at the same time work on TypeScript conversion, behind schedule by 1.5 days.
+
+- Practice more to have better understanding of the useState & useReducer.
+
+- Layout of working journal look good, from day 24 onwards will improve on technical writing of learning experience and daily lesson task reviews.
+
+- Add one more column for technical book's chapter summary for future reference.
+
+- To learn and use gif to showcase course project display and png for error and warning messages display.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -335,5 +345,7 @@ Created by:
 [Learn useReducer In 20 Minutes](https://www.youtube.com/watch?v=kK_Wqx3RnHk)
 
 [An Easy Guide to React useReducer() Hook](https://dmitripavlutin.com/react-usereducer/)
+
+[Take screenshots or screen recordings on Mac](https://support.apple.com/en-gb/guide/mac-help/mh26782/mac)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
