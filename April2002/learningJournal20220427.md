@@ -400,47 +400,237 @@ const Counter = () => {
 export default Counter;
 ```
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+- One important lesson when using reducers: 
+  - Always try to be explicit with your state transitions. 
+  - The latter example, with only one state transition, tries to put the entire transition logic into one block, but that's not very desireable when using a reducer. 
+  - Rather, we want to be able to reason effortlessly about our state transitions. 
+  - Having two separate state transitions instead of one allows us to reason about the business logic of the transitions more easily just by reading the action type's name.
 
-## Exercise of the Day
+- **useReducer gives us more predictable state transitions than useState.**
+- This becomes much more important when state changes are more complex and you want to have one place -- the reducer function -- to reason about them. 
+- A well designed reducer function encapsulates this logic perfectly.
 
-[x] **Challenge:** Try to add reducer logic to our CounterScreen
+- Another rule of thumb: 
+  1. When you spot multiple setState() calls in succession, try to encapsulate these changes in a reducer function that dispatches a single action.
+  2. A great advantage of having all state in one object is the possibility of using the browser's local storage to cache a slice of your state and then retrieve it as the initial state for useReducer whenever you restart your application.
 
-1. Challenge Questions:
-   1. Change to TypeScript + refactor as much as possible
+  **MULTIPLE STATE TRANSITIONS OPERATE ON ONE STATE OBJECT**
+  - Once your application grows in size, you most likely will deal with more complex state and state transitions. 
+  - One thing to notice, however, is that the state object didn't just grow in complexity; it also grew in terms of the number of state transitions that had to be performed.
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+Take, for instance, the following reducer that operates on one state object with multiple state transitions:
 
-## What difficulties did I encounter and How do I solve the issues?
-<!-- This is where I write down the problem and write down the steps for solving the issues I had encountered-->
-<!-- example 1. While setting up ios & android simulator and emulator, face a minor connectivity issue with my android phone. error message "Could not load expo Network response timed out"
-  After asking Mr Google, I found a few solutions:
-   - installed Android Studio
-   - turnoff my firewall
-   - setup Android Studio Emulator
-![Error Msg](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Screenshot1.png "style=width:200 height: 200") -->
-**Project difficulties:** <br/>
+example
 
-1. define problem here
-   ![problemScreenshots](https://github.com/CraftomeCJ/learningJournal/blob/main/image/problemScreenshots.png "style=width:200 height: 200")
-
-- solution steps here
-   ![solutionSteps](https://github.com/CraftomeCJ/learningJournal/blob/main/image/solutionSteps.png "style=width:200 height: 200")
-<!-- can include some codes for future use -->
-```typescript
-   style = { [styles.first, styles.second ] }
+```JavaScript
+const todoReducer = (state, action) => {
+  switch (action.type) {
+    case 'DO_TODO':
+      return state.map(todo => {
+        if (todo.id === action.id) {
+          return { ...todo, complete: true };
+        } else {
+          return todo;
+        }
+      });
+    case 'UNDO_TODO':
+      return state.map(todo => {
+        if (todo.id === action.id) {
+          return { ...todo, complete: false };
+        } else {
+          return todo;
+        }
+      });
+    case 'ADD_TODO':
+      return state.concat({
+        task: action.task,
+        id: action.id,
+        complete: false,
+      });
+    default:
+      throw new Error();
+  }
+};
 ```
 
-## What other issues trying to resolve? <br/>
+- It only makes sense to keep everything in one state object (e.g. a list of todo items) while operating with multiple state transitions on that object. 
+- It would be less predictable and much less maintainable to implement the same business logic with useState.
 
-1. define problem here
-![ErrorImagehere](https://github.com/CraftomeCJ/learningJournal/blob/main/image/errorimage.png "style=width:200 height: 200")
-  After some research, I found some solutions:
-   - define solution here
+- I often will begin with useState and then refactor my state management to useReducer as the state object becomes more complex or the number of state transitions adds up over time.
+- There are also other cases in which it makes sense to collect different properties into a single state object, even though they initially didn't seem to belong together. 
+- we are able to fetch data with useEffect, useState, and useReducer groups together properties that are dependent on each other into one state object:
 
-  ```javascript
-  git push origin --delete showsolution/codes
-  ```
+example
+
+```JavaScript
+const [state, dispatch] = useReducer(dataFetchReducer, {
+  isLoading: false,
+  isError: false,
+  data: initialData,
+});
+```
+
+- One could argue that isLoading and isError could be managed separately in two useState hooks, but when looking at the reducer function, one can see that it's best to put them together in one state object because they conditionally dependent on each other:
+
+example
+
+```JavaScript
+const dataFetchReducer = (state, action) => {
+  switch (action.type) {
+    case 'FETCH_INIT':
+      return {
+        ...state,
+        isLoading: true,
+        isError: false
+      };
+    case 'FETCH_SUCCESS':
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        data: action.payload,
+      };
+    case 'FETCH_FAILURE':
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+      };
+    default:
+      throw new Error();
+  }
+};
+```
+
+- It is not only a state object's complexity and the number of state transitions that are important, but how properties fit together within the context of an application's business logic also must be considered when managing state efficiently. 
+- If different parts of the logic are managed in different places of the code with useState, it quickly becomes harder to reason about the whole as a logical unit. 
+- Another important advantage is an improved developer experience: 
+  - With one code block (the reducer function) managing multiple transitions of one state object, it is far easier to debug your logic if anything should go wrong.
+- Another great advantage of having all state transitions neatly organized into one reducer function is the ability to export the reducer for unit tests. 
+  - This makes it simpler to reason about a state object with multiple state transitions if you need to test all transitions with only one function: (state, action) => newState. 
+  - You can test all state transitions by providing all available action types and various matching payloads.
+
+  **LOGIC FOR STATE CHANGES**
+  - There is a difference in where the logic for state transitions is placed when using useState or useReducer. 
+  - As we have seen in the previous useReducer examples, the logic for the state transitions is placed within the reducer function. 
+  - The action provides only the minimum information required to perform a transition on the current state: (state, action) => newState. 
+  - This is especially handy if you rely on the current state to update state.
+
+```JavaScript
+const todoReducer = (state, action) => {
+  switch (action.type) {
+    case 'DO_TODO':
+      return state.map(todo => {
+        if (todo.id === action.id) {
+          return { ...todo, complete: true };
+        } else {
+          return todo;
+        }
+      });
+    case 'UNDO_TODO':
+      return state.map(todo => {
+        if (todo.id === action.id) {
+          return { ...todo, complete: false };
+        } else {
+          return todo;
+        }
+      });
+    case 'ADD_TODO':
+      return state.concat({
+        task: action.task,
+        id: action.id,
+        complete: false,
+      });
+    default:
+      throw new Error();
+  }
+};
+```
+- Your React component is concerned with dispatching the appropriate action:
+
+example
+
+```JavaScript
+import uuid from 'uuid/v4';
+
+// Somewhere in your React components ...
+
+const handleSubmit = event => {
+  dispatch({ type: 'ADD_TODO', task, id: uuid() });
+};
+
+const handleChange = () => {
+  dispatch({
+    type: todo.complete ? 'UNDO_TODO' : 'DO_TODO',
+    id: todo.id,
+  });
+};
+```
+- Now imagine performing the same state transitions with useState. 
+- In that case, there is no single entity like the reducer that centralizes all business logic for processing. 
+- Instead, all logic relevant to state ends up in separate handlers that call state updater functions from useState. 
+- This makes it more difficult to separate state logic from view logic, thereby contributing to a component's complexity.
+- Reducers, however, are a perfect place to collect all logic that modifies state.
+
+  **TRIGGER OF THE STATE CHANGE**
+  - React's component tree naturally grows along with your application. 
+  - When state is simple and encapsulated (state + state trigger) in a component, as is the case with a search input field in a controlled component), useState may be a perfect fit:
+
+example
+```JavaScript
+import React, { useState } from 'react';
+
+const App = () => {
+  const [value, setValue] = useState('Hello React');
+
+  const handleChange = event => setValue(event.target.value);
+
+  return (
+    <div>
+      <label>
+        My Input:
+        <input type="text" value={value} onChange={handleChange} />
+      </label>
+
+      <p>
+        <strong>Output:</strong> {value}
+      </p>
+    </div>
+  );
+};
+
+export default App;
+```
+
+- However, sometimes you want to [manage state at a top-level but trigger the state changes](https://www.robinwieruch.de/react-global-state-without-redux/) somewhere deep down in your component tree.
+- It's possible to pass both the updater function from useState or the dispatch function from useReducer via props down the component tree; but using React's context API may be a better alternative to avoid prop drilling (passing props through each component level). 
+- In that case, having one dispatch function with different action types and payloads may be a better option than using multiple updater functions from useState that must be passed down individually. 
+- The dispatch function can be passed down once with React's useContext hook. 
+- A good example how this works can be seen in this [state management tutorial for React using useContext](https://www.robinwieruch.de/react-state-usereducer-usestate-usecontext/).
+
+- The decision of whether to use useState or useReducer isn't always black and white; 
+- there are many shades of grey. 
+- `The following facts summarize the main point of this topic.
+
+**Use useState if you have:**
+
+  1. JavaScript primitives as state
+  2. simple state transitions
+  3. business logic within your component
+  4. different properties that don't change in any correlated way and can be managed by multiple useState hooks
+  5. state co-located to your component
+  6. a small application
+
+**Use useReducer if you have:**
+
+  1. JavaScript objects or arrays as state
+  2. complex state transitions
+  3. complicated business logic more suitable for a reducer function
+  4. different properties tied together that should be managed in one state object
+  5. the need to update state deep down in your component tree
+  6. a medium-sized application
+  7. need for an easier time testing it
+  8. need for a more predictable and maintainable state architecture
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -604,6 +794,12 @@ Created by:
 [Learn useReducer In 20 Minutes](https://www.youtube.com/watch?v=kK_Wqx3RnHk)
 
 [Learn useState In 15 Minutes](https://www.youtube.com/watch?v=O6P86uwfdR0)
+
+[useReducer or Redux](https://www.robinwieruch.de/redux-vs-usereducer)
+
+[modern state management in React](https://www.robinwieruch.de/react-state-usereducer-usestate-usecontext/)
+
+[React's useContext Hook](https://www.robinwieruch.de/react-usecontext-hook/)
 
 [All React Hooks Explained](https://www.youtube.com/watch?v=LlvBzyy-558)
 
