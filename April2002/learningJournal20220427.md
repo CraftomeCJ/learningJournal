@@ -201,23 +201,23 @@ usually by convention, we'll instead use:
 example
 
 ```JavaScript
-<mark>import React, { useState } from 'react';</mark>
+import React, { useState } from 'react';
 
 const Counter = () => {
-  <mark>const [count, setCount] = useState(0);</mark>
+  const [count, setCount] = useState(0);
 
   const handleIncrease = () => {
-    <mark>setCount(count => count + 1);</mark>
+    setCount(count => count + 1);
   };
 
   const handleDecrease = () => {
-    <mark>setCount(count => count - 1);</mark>
+    setCount(count => count - 1);
   };
 
   return (
     <div>
       <h1>Counter with useState</h1>
-      <mark><p>Count: {count}</p></mark>
+      <p>Count: {count}</p>
 
       <div>
         <button type="button" onClick={handleIncrease}>
@@ -242,9 +242,9 @@ export default Counter;
 example
 
 ```JavaScript
-<mark>import React, { useReducer } from 'react';</mark>
+import React, { useReducer } from 'react';
 
-<mark>const counterReducer = (state, action) => {
+const counterReducer = (state, action) => {
   switch (action.type) {
     case 'INCREASE':
       return { ...state, count: state.count + 1 };
@@ -253,23 +253,23 @@ example
     default:
       throw new Error();
   }
-};</mark>
+};
 
 const Counter = () => {
-  <mark>const [state, dispatch] = useReducer(counterReducer, { count: 0 });</mark>
+  const [state, dispatch] = useReducer(counterReducer, { count: 0 });
 
   const handleIncrease = () => {
-    <mark>dispatch({ type: 'INCREASE' });</mark>
+    dispatch({ type: 'INCREASE' });
   };
 
   const handleDecrease = () => {
-    <mark>dispatch({ type: 'DECREASE' });</mark>
+    dispatch({ type: 'DECREASE' });
   };
 
   return (
     <div>
       <h1>Counter with useReducer</h1>
-      <mark><p>Count: {state.count}</p></mark>
+      <p>Count: {state.count}</p>
 
       <div>
         <button type="button" onClick={handleIncrease}>
@@ -302,16 +302,16 @@ import React, { useReducer } from 'react';
 const counterReducer = (state, action) => {
   switch (action.type) {
     case 'INCREASE':
-      <mark>return state + 1;</mark>
+      return state + 1;
     case 'DECREASE':
-      <mark>return state - 1;</mark>
+      return state - 1;
     default:
       throw new Error();
   }
 };
 
 const Counter = () => {
-  <mark>const [count, dispatch] = useReducer(counterReducer, 0);</mark>
+  const [count, dispatch] = useReducer(counterReducer, 0);
 
   const handleIncrease = () => {
     dispatch({ type: 'INCREASE' });
@@ -324,7 +324,7 @@ const Counter = () => {
   return (
     <div>
       <h1>Counter with useReducer</h1>
-     <mark> <p>Count: {count}</p> </mark>
+      <p>Count: {count}</p>
 
       <div>
         <button type="button" onClick={handleIncrease}>
@@ -362,8 +362,8 @@ import React, { useReducer } from 'react';
 
 const counterReducer = (state, action) => {
   switch (action.type) {
-    <mark>case 'INCREASE_OR_DECREASE_BY':
-      return state + action.by;</mark>
+    case 'INCREASE_OR_DECREASE_BY':
+      return state + action.by;
     default:
       throw new Error();
   }
@@ -373,11 +373,11 @@ const Counter = () => {
   const [count, dispatch] = useReducer(counterReducer, 0);
 
   const handleIncrease = () => {
-   <mark> dispatch({ type: 'INCREASE_OR_DECREASE_BY', by: 1 });</mark>
+    dispatch({ type: 'INCREASE_OR_DECREASE_BY', by: 1 });
   };
 
   const handleDecrease = () => {
-   <mark> dispatch({ type: 'INCREASE_OR_DECREASE_BY', by: -1 }); </mark>
+    dispatch({ type: 'INCREASE_OR_DECREASE_BY', by: -1 });
   };
 
   return (
