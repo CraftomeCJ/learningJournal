@@ -74,8 +74,8 @@ Simply, running into a "problem" forces me to take action to resolve it. That ac
 - Why is this a problem? -->
 **Reflection of the day?**
 
-- [] To protect myself against temptations is to avoid them, plain old preparation is more valuable than self-control. <br/>
-- [] Prepare myself for difficult situation by putting up roadblocks ahead of time, when my resolve isn't being test. <br/>
+- [x] To protect myself against temptations is to avoid them, plain old preparation is more valuable than self-control. <br/>
+- [x] Prepare myself for difficult situation by putting up roadblocks ahead of time, when my resolve isn't being test. <br/>
 
 # Outcome-Based Goals
 <!-- This is where I write out my goals/to-do at work. These should be planned and written at the start of the day so I can make progress towards them by the end of the day. -->
@@ -112,9 +112,9 @@ How to set GOAL LOOP:
 - [] I will work as Full Stack Developer Intern for 4 months, and will showcase some of my work in the next month. And, my company is looking to take on another software developer at the end of 6 months internship.
 - [] I will take on 1 additional training project every 2 weeks, complete the required training within 7 weeks, and ask for a job status conversion within 5 months.
 - [] I will stay current and to keep learning and challenging myself as I progress in my career.
-- [] I will learn at least 1 new programming language every year.
-- [] I will read 1 technical book for 2 months and write a summary upon every completion of the book on my Daily Journal.
-- [] I will read 1 non-technical book for 2 months and write a summary upon every completion of the book on my Daily Journal.
+<!-- - [] I will learn at least 1 new programming language every year. -->
+<!-- - [] I will read 1 technical book for 2 months and write a summary upon every completion of the book on my Daily Journal. -->
+<!-- - [] I will read 1 non-technical book for 2 months and write a summary upon every completion of the book on my Daily Journal. -->
 <!-- - [] I will take classes and get certification continuously upgrading my soft and hard skills and record the progress on my Daily Journal. -->
 <!-- - [] I will participate in local user groups and meetings for example: Meetup app, codementor.io to observe, ask, participate and learn as much as I could. -->
 <!-- - [] I will experiment with different environments and learn different things from all level of development cycle. -->
@@ -177,22 +177,237 @@ Today will be working on revision on useState, useReducer, try refactor with red
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-- how i can apply the below-mentioned principle to my coding and programming skills
+1. Community Convention
+- Our Action Object Had..
 
-**Principles:**
+```JavaScript
+{colorToChange: 'red', amount: 15}
+```
 
-- The Four Laws of Behavior Change: make it obvious, make it attractive, make it easy, make it satisfying
+usually by convention, we'll instead use:
+
+```JavaScript
+{type: 'change_red', payload: 15}
+```
+
+- type --> String that describes the exact change operation we want to make
+- payload --> some data that critical to the change operation
+
+**Principles: useReducer vs useState**
+
+- **When to use useState or useReducer?**
+  1. useState hook is used to update state in functional components by setting the initial state and returning the actual state and an updater function:
+
+example
+
+```JavaScript
+<mark>import React, { useState } from 'react';</mark>
+
+const Counter = () => {
+  <mark>const [count, setCount] = useState(0);</mark>
+
+  const handleIncrease = () => {
+    <mark>setCount(count => count + 1);</mark>
+  };
+
+  const handleDecrease = () => {
+    <mark>setCount(count => count - 1);</mark>
+  };
+
+  return (
+    <div>
+      <h1>Counter with useState</h1>
+      <mark><p>Count: {count}</p></mark>
+
+      <div>
+        <button type="button" onClick={handleIncrease}>
+          +
+        </button>
+        <button type="button" onClick={handleDecrease}>
+          -
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Counter;
+```
+
+- useReducer hook also can be used to update state, but it does so in a more sophisticated way: 
+
+  - it accepts a reducer function and an initial state, and it returns the actual state and a dispatch function. 
+  - The dispatch function alters state in an implicit way by mapping actions to state transitions:
+
+example
+
+```JavaScript
+<mark>import React, { useReducer } from 'react';</mark>
+
+<mark>const counterReducer = (state, action) => {
+  switch (action.type) {
+    case 'INCREASE':
+      return { ...state, count: state.count + 1 };
+    case 'DECREASE':
+      return { ...state, count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+};</mark>
+
+const Counter = () => {
+  <mark>const [state, dispatch] = useReducer(counterReducer, { count: 0 });</mark>
+
+  const handleIncrease = () => {
+    <mark>dispatch({ type: 'INCREASE' });</mark>
+  };
+
+  const handleDecrease = () => {
+    <mark>dispatch({ type: 'DECREASE' });</mark>
+  };
+
+  return (
+    <div>
+      <h1>Counter with useReducer</h1>
+      <mark><p>Count: {state.count}</p></mark>
+
+      <div>
+        <button type="button" onClick={handleIncrease}>
+          +
+        </button>
+        <button type="button" onClick={handleDecrease}>
+          -
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Counter;
+```
+
+- Both example above uses a different hook for state management; but solve the same business case, but in different ways. 
+
+- Questions: When would I use one state-management solution or the other?
+
+  **SIMPLE VS. COMPLEX STATE WITH HOOKS**
+  - The reducer example below encapsulated the count property into a state object, but we could have done this more simply by using count as the actual state.
+  - Refactoring to eliminate the state object and code count as a JavaScript integer primitive, we see that this use case doesn't involve managing a complex state:
+
+example
+
+```JavaScript
+import React, { useReducer } from 'react';
+
+const counterReducer = (state, action) => {
+  switch (action.type) {
+    case 'INCREASE':
+      <mark>return state + 1;</mark>
+    case 'DECREASE':
+      <mark>return state - 1;</mark>
+    default:
+      throw new Error();
+  }
+};
+
+const Counter = () => {
+  <mark>const [count, dispatch] = useReducer(counterReducer, 0);</mark>
+
+  const handleIncrease = () => {
+    dispatch({ type: 'INCREASE' });
+  };
+
+  const handleDecrease = () => {
+    dispatch({ type: 'DECREASE' });
+  };
+
+  return (
+    <div>
+      <h1>Counter with useReducer</h1>
+     <mark> <p>Count: {count}</p> </mark>
+
+      <div>
+        <button type="button" onClick={handleIncrease}>
+          +
+        </button>
+        <button type="button" onClick={handleDecrease}>
+          -
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Counter;
+```
+
+- In this case, because there is no complex state object, we may be better off using a simple useState hook. 
+- We can refactor our state object to a primitive.
+- **once move past managing a primitive (i.e. a string, integer, or boolean) and instead must manage a complex object (e.g. with arrays and additional primitives), It may be better of using useReducer.**
+  - A good rule of thumb is:
+    1. Use useState whenever you manage a JS primitive
+    2. Use useReducer whenever you manage an object or array
+- The rule of thumb suggests that, once I spot const [state, setState] = useState({ firstname: 'Robin', lastname: 'Wieruch' }) in my code, I may be better off with useReducer instead of useState.
 <br/>
+
+  **SIMPLE VS. COMPLEX STATE TRANSITIONS WITH HOOKS**
+  - If we hadn't used two different action types (INCREASE and DECREASE) in our previous state transitions, what could we have done differently? 
+    - By using the optional payload that comes with every dispatched action object, we could specify how much we want to increase or decrease count from the outside of the reducer. 
+    - This moves the state transition towards being more implicit:
+
+example
+
+```JavaScript
+import React, { useReducer } from 'react';
+
+const counterReducer = (state, action) => {
+  switch (action.type) {
+    <mark>case 'INCREASE_OR_DECREASE_BY':
+      return state + action.by;</mark>
+    default:
+      throw new Error();
+  }
+};
+
+const Counter = () => {
+  const [count, dispatch] = useReducer(counterReducer, 0);
+
+  const handleIncrease = () => {
+   <mark> dispatch({ type: 'INCREASE_OR_DECREASE_BY', by: 1 });</mark>
+  };
+
+  const handleDecrease = () => {
+   <mark> dispatch({ type: 'INCREASE_OR_DECREASE_BY', by: -1 }); </mark>
+  };
+
+  return (
+    <div>
+      <h1>Counter with useReducer</h1>
+      <p>Count: {count}</p>
+
+      <div>
+        <button type="button" onClick={handleIncrease}>
+          +
+        </button>
+        <button type="button" onClick={handleDecrease}>
+          -
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Counter;
+```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ## Exercise of the Day
 
-[x] **Challenge:** Rewrite the way I write my daily goals to make it productive and easy to read
+[x] **Challenge:** Try to add reducer logic to our CounterScreen
 
 1. Challenge Questions:
-   1. write something
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/image/solutionimage.png "style=width:200 height: 200")
+   1. Change to TypeScript + refactor as much as possible
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -242,21 +457,21 @@ ask During this time ask yourself:
 =>Did I spend time on important tasks that will help accelerate my career?
 
 These questions will help me review and unlock areas of improvement (which will be never-ending) in my life, career and work. This step can feel uncomfortable and requires self-awareness and review. -->
-- Put too much time on reading and researching on new concepts, practice to shorten the duration by time-boxing to 60 minutes.
+- Had make good progress on practice to time-boxing my task to 90 minutes per self-assigned task.
 
-- Continue to work on the more advance React Native concepts, its feature, workflows and how to use it.
+- Continue to revise on the more advance React Native concepts, its feature, workflows and how to use it.
 
 - required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
-- Day 25 is continue to learn and practice on Day 15 & 16 & 17 notes of React Native concepts and at the same time work on TypeScript conversion, behind schedule by 1.5 days.
+- Day 25 is to redo on Day 15 & 16 & 17 tasks learn and practice on Day 18 notes of React Native concepts and at the same time work on TypeScript conversion, behind schedule by 2.0 days.
 
-- Practice more to have better understanding of the useState & useReducer.
+- Practice extra practice to better understanding of the useState & useReducer.
 
-- Layout of working journal look good, from day 24 onwards will improve on technical writing of learning experience and daily lesson task reviews.
+- Need to further improve on technical writing of learning experience and daily task reviews with what I had learn, issues encountered, display of code, display challenge results, error message etc....
 
 - Add one more column for technical book's chapter summary for future reference.
 
-- To learn and use gif to showcase course project display and png for error and warning messages display.
+- To learn and use .gif to display completed challenge display and .png for error and warning messages display.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -303,7 +518,7 @@ These questions will help me review and unlock areas of improvement (which will 
 **Projects:**
 
 - [eCommerce Mocksite](https://github.com/CraftomeCJ/finalProjectCobra)
-- [Mini Project Collections](https://codepen.io/my-work)
+- [Mini Project Collections](https://codepen.io/your-work)
 
 ### Acknowledgments
 
@@ -338,14 +553,93 @@ Created by:
 
 [React Native Training Course Schedule](https://docs.google.com/document/d/1X1WgRPKxWwenKXswD5xHcuEZ4NFRj8EWmkCC8MLsBwg/edit#heading=h.2gbthfjx9c7r)
 
+[The Complete React Native + Hooks Course](https://nlbsg.udemy.com/course/the-complete-react-native-and-redux-course/learn/lecture/15706740#overview)
+
+[12 Exercises to Learn React Native](https://www.reactnativeschool.com/12-exercises-to-learn-react-native)
+
+[10 React JS Practice Exercises with solution](https://contactmentor.com/react-js-practice-exercises-solution/)
+
+[React Hooks](https://www.w3schools.com/react/react_hooks.asp)
+
+[Cheatsheets for experienced React developers getting started with TypeScript](https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets)
+
+[Day 13: React Native State Management](https://docs.google.com/document/d/1oK5syZNKl84an6b5rg3EHRSIEajXKJzBefa9rV4nxe0/edit#heading=h.sjc7nb6il2di)
+
+[Day 14: React Native State Management](https://docs.google.com/document/d/1u2p6RYAXM0bIEpcq3QLcvNYzZqDFWO_BHsbyUvRAuXM/edit#heading=h.sjc7nb6il2di)
+
 [Day 15: React Native State Management](https://docs.google.com/document/d/1oZ-Y1BUfvoJBbGLuQL6tRokAkdU84RGOYHG8hrvq1_M/edit#heading=h.sjc7nb6il2di)
+
+[Day 16: React Native State Management](https://docs.google.com/document/d/1CgCVkYPjIPhzmCocm61pk1aq9m_HoGSM0jazJdqVxyM/edit#heading=h.sjc7nb6il2di)
+
+[Day 17: React Native Design System](https://docs.google.com/document/d/1oqOjm59OuK4851gzJ2tOMHdC5G2OcKV067PUKadJjho/edit#heading=h.sjc7nb6il2di)
+
+[Day 18: React Native Design System](https://docs.google.com/document/d/1TOF_50A_FjK3L7AnxT72bd5flXcRrjGWKo4cpPXYUDk/edit#heading=h.sjc7nb6il2di)[React Native Training Course Schedule](https://docs.google.com/document/d/1X1WgRPKxWwenKXswD5xHcuEZ4NFRj8EWmkCC8MLsBwg/edit#heading=h.2gbthfjx9c7r)
 
 [The Complete React Native + Hooks Course](https://nlbsg.udemy.com/course/the-complete-react-native-and-redux-course/learn/lecture/15706740#overview)
 
+[JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+
+[Intro to the TSConfig Reference](https://www.typescriptlang.org/tsconfig)
+
+[12 Exercises to Learn React Native](https://www.reactnativeschool.com/12-exercises-to-learn-react-native)
+
+[10 React JS Practice Exercises with solution](https://contactmentor.com/react-js-practice-exercises-solution/)
+
+[React Hooks](https://www.w3schools.com/react/react_hooks.asp)
+
+[Cheatsheets for experienced React developers getting started with TypeScript](https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets)
+
+[Day 13: React Native State Management](https://docs.google.com/document/d/1oK5syZNKl84an6b5rg3EHRSIEajXKJzBefa9rV4nxe0/edit#heading=h.sjc7nb6il2di)
+
+[Day 14: React Native State Management](https://docs.google.com/document/d/1u2p6RYAXM0bIEpcq3QLcvNYzZqDFWO_BHsbyUvRAuXM/edit#heading=h.sjc7nb6il2di)
+
+[Day 15: React Native State Management](https://docs.google.com/document/d/1oZ-Y1BUfvoJBbGLuQL6tRokAkdU84RGOYHG8hrvq1_M/edit#heading=h.sjc7nb6il2di)
+
+[Day 16: React Native State Management](https://docs.google.com/document/d/1CgCVkYPjIPhzmCocm61pk1aq9m_HoGSM0jazJdqVxyM/edit#heading=h.sjc7nb6il2di)
+
+[Day 17: React Native Design System](https://docs.google.com/document/d/1oqOjm59OuK4851gzJ2tOMHdC5G2OcKV067PUKadJjho/edit#heading=h.sjc7nb6il2di)
+
+[Day 18: React Native Design System](https://docs.google.com/document/d/1TOF_50A_FjK3L7AnxT72bd5flXcRrjGWKo4cpPXYUDk/edit#heading=h.sjc7nb6il2di)
+
 [Learn useReducer In 20 Minutes](https://www.youtube.com/watch?v=kK_Wqx3RnHk)
+
+[Learn useState In 15 Minutes](https://www.youtube.com/watch?v=O6P86uwfdR0)
+
+[All React Hooks Explained](https://www.youtube.com/watch?v=LlvBzyy-558)
+
+[React with TypeScript Crash Course](https://www.youtube.com/watch?v=jrKcJxF0lAU&list=PLcOyV2wqZbeHZIk6vY1d5D8nd8AmzM_xv&index=2)
+
+[React Redux (with Hooks) Crash Course](https://www.youtube.com/watch?v=9jULHSe41ls&list=PLcOyV2wqZbeHZIk6vY1d5D8nd8AmzM_xv&index=5&t=2217s)
+
+[React Redux with TypeScript Crash Course - 2021](https://www.youtube.com/watch?v=udr2rx_B99w&list=PLcOyV2wqZbeHZIk6vY1d5D8nd8AmzM_xv&index=6&t=52s)
+
+[The React Native Crash Course](https://www.youtube.com/watch?v=1oYw1uwDZb8&list=PLcOyV2wqZbeHZIk6vY1d5D8nd8AmzM_xv&index=7&t=9s)
+
+[How to use TypeScript with React... ](https://www.youtube.com/watch?v=ydkQlJhodio&list=PLcOyV2wqZbeHZIk6vY1d5D8nd8AmzM_xv&index=8)
+
+[React Redux TypeScript Tutorial - Introduction for Beginners](https://www.youtube.com/watch?v=8DH7Ekp2PWI&list=PLcOyV2wqZbeHZIk6vY1d5D8nd8AmzM_xv&index=9)
 
 [An Easy Guide to React useReducer() Hook](https://dmitripavlutin.com/react-usereducer/)
 
 [Take screenshots or screen recordings on Mac](https://support.apple.com/en-gb/guide/mac-help/mh26782/mac)
 
+[What does "keyof typeof" mean in TypeScript?](https://stackoverflow.com/questions/55377365/what-does-keyof-typeof-mean-in-typescript)
+
+[Element implicitly has an 'any' type because expression of type 'string' can't be used to index](https://stackoverflow.com/questions/57086672/element-implicitly-has-an-any-type-because-expression-of-type-string-cant-b)
+
+[Hooks API Reference](https://reactjs.org/docs/hooks-reference.html#usereducer)
+
+[https://docs.google.com/document/d/18K3cZa9A4l9hDqTto7n0vr0aunrc2S788eA0azkY_a8/edit#](https://docs.google.com/document/d/18K3cZa9A4l9hDqTto7n0vr0aunrc2S788eA0azkY_a8/edit#)
+
+[Use Interface Props in Functional Components Using TypeScript with React](https://www.pluralsight.com/guides/use-interface-props-in-functional-components-using-typescript-with-react)
+
+[Use multiple interfaces/types as Props in react with typescript.](https://dev.to/umeshiscreative/use-multiple-interfaces-types-as-props-in-react-with-typescript-2bkg)
+
+[Functional Programming In JavaScript/TypeScript for Beginners](https://blog.decipher.dev/functional-programming-in-javascript-typescript-for-beginners)
+
+[React Native Text Style Props Tutorial](https://www.nicesnippets.com/blog/react-native-text-style-props-tutorial)
+
+[How to create a React Table Component](https://www.robinwieruch.de/react-table-component/)
+
+[Creating functional components in React.js](https://www.tutorialspoint.com/creating-functional-components-in-react-js)
 <p align="center">(<a href="#top">back to top</a>)</p>
