@@ -49,7 +49,7 @@ Look within; you will find there, perchance, slavish thoughts, slavish desires, 
 Conquer these; cease to be slave to self, and no man will have the power to enslave you." - James Allen
 
 <!-- practice gratitude daily -->
-**I'm grateful that:** to know the trick is to be grateful when my mood is high and graceful when it is low.
+**I'm grateful for:** the ability to grow in whatever way I choose today. <br/>
 
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
@@ -57,7 +57,8 @@ Subconscious Behaviour that are Keeping Me from Having The Life I Want:
 <br/>
 I think my past defines me, and worse, I think that it is an unchangeable reality, when really, my perception of it changes as I do. <br/>
 <br/>
-Because experience is always multi-dimensional, there are a variety of memories, experiences, feelings, "gist" I can choose to recall.... and what I choose is indicative of my present state of mind. So many people get caught up in allowing the past to define them or haunt them simply because they have not evolved to the place of seeing how the past did not prevent them from achieving the life they want, it facilitated it.<br/> This doesn't mean to disregard or gloss over painful or traumatic events, but simply to be able to recall them with acceptance and to be able to place them in the storyline of my personal evolution. <br/>
+Because experience is always multi-dimensional, there are a variety of memories, experiences, feelings, "gist" I can choose to recall.... and what I choose is indicative of my present state of mind. <br/>
+So many people get caught up in allowing the past to define them or haunt them simply because they have not evolved to the place of seeing how the past did not prevent them from achieving the life they want, it facilitated it.<br/> This doesn't mean to disregard or gloss over painful or traumatic events, but simply to be able to recall them with acceptance and to be able to place them in the storyline of my personal evolution. <br/>
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
@@ -73,8 +74,8 @@ Because experience is always multi-dimensional, there are a variety of memories,
 - When or Where would this work?
 - Why is this a problem? -->
 **Questions of the day?**
-- [] When I achieve self-mastery, no one (and no thing) will have the power to enslave me. <br/>
-- [] If I blame an external factor for my lack of self-discipline, think again: <br/>
+- [x] When I achieve self-mastery, no one (and no thing) will have the power to enslave me. <br/>
+- [x] If I blame an external factor for my lack of self-discipline, think again: <br/>
 Was it the person eating chocolate next to me who controlled what I put into my mouth, or was it ME?? <br/>
 
 # Outcome-Based Goals
@@ -164,8 +165,8 @@ last ask myself again ==> ask yourself what the third most important task is.-->
 
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
-1. [] Daiso Shopping
-2. [] Meet wife for dinner @Chinatown Point
+1. [x] Daiso Shopping
+2. [x] Meet wife for dinner @Chinatown Point
 
 ## Personal Notes
 
@@ -174,59 +175,242 @@ Today will be working on redoing state management with TSX from scratch and hope
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-- how i can apply the below-mentioned principle to my coding and programming skills
+**Principles: State Management with React Hooks in TypeScript**
 
-**Principles:**
+![State Management Flow](https://github.com/CraftomeCJ/learningJournal/blob/main/image/StateManagementFlow.png "style=width:200 height: 200")
 
-- The Four Laws of Behavior Change: make it obvious, make it attractive, make it easy, make it satisfying
-<br/>
+- Re-understanding the core concepts and terms used to implement predictable state management solution
+- State
+  - State is simply an object where the internal state of application is stored as its properties.
+- Action
+  - An action is a plain object that represents an intention to change the state.
+  - Action takes care of the way to get data into the store.
+  - Any data, whether from UI events, network calls etc need to be dispatched as actions.
+- Reducer
+  - Reducer calculates new state given the previous state and action.
+  - These must be pure functions 
+  - example functions that return same output for given inputs.
+- Dispatching function
+  - A dispatching function is a function that accepts an action or async action; 
+  - it then may or may not dispatch one or more actions to the store.
+- Action creator
+  - An action creator is a function that creates an action. 
+  - On the contrary to action which is just a payload of information, an action creator is a factory that creates an action.
+  - Calling an action creator only produces an action, but does not dispatch it.
+  - We need to call the dispatch function to actually cause the mutation.
+- Context
+  - Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+![Directory structure using redux](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Directorystructureusingredux.png "style=width:200 height: 200")
 
-## Exercise of the Day
+- In large applications, it makes sense for different pieces of state management to be bundled together in an isolated module that is self contained.
+  - important: The module store:
+    1. MUST contain the entire logic for handling only ONE concept in your app, ex: login, user etc.
+    2. MUST have an index.ts file that exports according to the original rules.
+    3. MUST keep code with similar purpose in the same file, ex: reducers, types, actions, etc.
 
-[x] **Challenge:** Redo ColorScreen, CounterScreen, SquareScreen
+**Let us consider a simple state management workflow to get data from an api and render the result in our application.**
 
-1. Challenge Questions:
-   1. write something
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/image/solutionimage.png "style=width:200 height: 200")
+- Defining app state
+  - Reducer specifies an initial value by providing default value in state argument, and returning the value it would like to use as a default. 
+  - We need to initialize the application state with the initial state as below:
 
-<p align="center">(<a href="#top">back to top</a>)</p>
 
-## What difficulties did I encounter and How do I solve the issues?
-<!-- This is where I write down the problem and write down the steps for solving the issues I had encountered-->
-<!-- example 1. While setting up ios & android simulator and emulator, face a minor connectivity issue with my android phone. error message "Could not load expo Network response timed out"
-  After asking Mr Google, I found a few solutions:
-   - installed Android Studio
-   - turnoff my firewall
-   - setup Android Studio Emulator
-![Error Msg](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Screenshot1.png "style=width:200 height: 200") -->
-**Project difficulties:** <br/>
-
-1. define problem here
-   ![problemScreenshots](https://github.com/CraftomeCJ/learningJournal/blob/main/image/problemScreenshots.png "style=width:200 height: 200")
-
-- solution steps here
-
-![solutionSteps](https://github.com/CraftomeCJ/learningJournal/blob/main/image/solutionSteps.png "style=width:200 height: 200")
-<!-- can include some codes for future use -->
-```typescript
-style = { [styles.first, styles.second ] }
+```
+initialState.ts
 ```
 
-## What other issues trying to resolve? <br/>
+```TypeScript
+export interface IState {
+  error: string;
+  loading: boolean;
+  data: Array<any>;
+}
 
-1. define problem here
 
-![ErrorImagehere](https://github.com/CraftomeCJ/learningJournal/blob/main/image/errorimage.png height="200")
+const initialState: IState = {
+  error: '',
+  loading: false,
+  data: []
+ }
 
-  **After some research, I found some solutions:**
 
-   - define solution here
 
-example
-```javascript
-git push origin --delete showsolution/codes
+export default initialState;
+```
+
+- types
+  - This const/type pattern allows us to use TypeScript’s string literal types in an easily accessible way.
+
+```
+types.ts
+```
+
+```TypeScript
+export const API_REQUEST = 'API_REQUEST';
+export type API_REQUEST = typeof API_REQUEST;
+
+export const API_SUCCESS = 'API_SUCCESS';
+export type API_SUCCESS = typeof API_SUCCESS;
+
+export const API_ERROR = 'API_ERROR';
+export type API_ERROR = typeof API_ERROR;
+```
+
+- actions
+  - These define payloads of information that send data from your application to the store
+
+```
+actions.ts
+```
+
+```TypeScript
+import * as types from './types';
+
+
+export interface IApiRequest {
+  type: types.API_REQUEST;
+}
+
+export interface IApiSuccess {
+  type: types.API_SUCCESS;
+  payload: Array<any>;
+}
+
+export interface IApiError {
+  type: types.API_ERROR;
+  payload: string;
+}
+
+export const apiRequest = (): IAPiRequest => ({
+  type: types.API_REQUEST
+});
+
+export const apiSuccess = (payload: Array<any>): IApiSuccess => 
+({
+  payload,
+  type: types.API_SUCCESS
+});
+
+export const apiError = (payload: string): IApiError => ({
+  payload,
+  type: types.API_ERROR
+});
+
+
+export type TAction = IApiRequest & IApiSuccess & IApiError;
+```
+
+- reducer
+
+```
+reducer.ts
+```
+
+```TypeScript
+import { TAction } from './actions';
+import { IState } from './initialState';
+import * as types from './types';
+
+
+const reducer = (state: IState, action: TAction): IState => {
+const { type, payload } = action;
+
+switch (type) {
+  case types.API_REQUEST:
+   return { ...state, loading: true };
+  case types.API_SUCCESS:
+   return { ...state, loading: false, data: payload };
+  case types.API_ERROR:
+   return { ...state, loading: false, error: payload };
+  default:
+   return state;
+}};
+
+
+export default reducer;
+```
+
+- context
+  - We have to create a Context object. 
+  - When React renders a component that subscribes to this Context object, it will read the current context value from the Provider above it in the tree.
+
+```context.ts
+```
+
+```TypeScript
+import { createContext, Dispatch } from 'react';
+import { TAction } from './store/actions';
+import initialState, { IState } from './store/initialState';
+
+interface IContextProps {
+  state: IState;
+  dispatch: Dispatch<TAction>;
+}
+
+
+const Context = createContext<IContextProps>({
+  dispatch: () => {
+   // Dispatch initial value
+  },
+   state: initialState
+  });
+
+
+export default Context;
+```
+
+- Usage
+  - Every context object comes with a Provider React component that allows consuming components to subscribe to context changes. 
+  - It is usually written at the root level of the component.
+
+```
+Module.tsx
+```
+
+```TypeScript
+import Context from './context';
+import reducer, { initialState } from './store';
+import React, { FC, useReducer, useState } from 'react';
+
+
+const Module: FC<{}> = () => {
+const [state, dispatch] = useReducer(reducer, initialState);
+
+return (
+<Context.Provider value={{ state, dispatch }}>
+  <MyComponent />
+</Context.Provider>
+);
+};
+
+
+export default Module;
+```
+
+  - A react component can subscribe to context changes using useContext hook.
+
+```
+MyComponent.tsx
+```
+
+```TypeScript
+import Context from './context';
+import React, { FC, useState } from 'react';
+
+
+const MyComponent: FC<{}> = () => {
+const { state, dispatch } = useContext(Context);
+
+  return (
+   <div>
+     My Component 
+   </div>
+  );
+};
+
+
+export default My Component;
 ```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
