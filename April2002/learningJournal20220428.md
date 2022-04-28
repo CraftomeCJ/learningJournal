@@ -177,7 +177,7 @@ Today will be working on redoing state management with TSX from scratch and hope
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
 **Principles: State Management with React Hooks in TypeScript**
 
-![State Management Flow](https://github.com/CraftomeCJ/learningJournal/blob/main/image/StateManagementFlow.png "style=width:200 height: 200")
+![State Management Flow](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/StateManagementFlow.png "style=width:200 height: 200")
 
 - Re-understanding the core concepts and terms used to implement predictable state management solution
 - State
@@ -201,7 +201,7 @@ Today will be working on redoing state management with TSX from scratch and hope
 - Context
   - Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 
-![Directory structure using redux](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Directorystructureusingredux.png "style=width:200 height: 200")
+![Directory structure using redux](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/Directorystructureusingredux.png "style=width:200 height: 200")
 
 - In large applications, it makes sense for different pieces of state management to be bundled together in an isolated module that is self contained.
   - important: The module store:
