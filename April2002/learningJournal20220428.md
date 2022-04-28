@@ -409,4 +409,15 @@ Created by:
 [How to create a React Table Component](https://www.robinwieruch.de/react-table-component/)
 
 [Creating functional components in React.js](https://www.tutorialspoint.com/creating-functional-components-in-react-js)
+
+[useState vs useReducer: What are they and when to use them?](https://dev.to/m0nm/usestate-vs-usereducer-what-are-they-and-when-to-use-them-2c5c)
+
+[How to useContext in React](https://www.robinwieruch.de/react-usecontext-hook/)
+
+[React State Hooks: useReducer, useState, useContext](https://www.robinwieruch.de/react-state-usereducer-usestate-usecontext/)
+
+[How to fetch data with React Hooks](https://www.robinwieruch.de/react-hooks-fetch-data/)
+
+[React's useReducer Hook vs Redux](https://www.robinwieruch.de/redux-vs-usereducer)
+
 <p align="center">(<a href="#top">back to top</a>)</p>
