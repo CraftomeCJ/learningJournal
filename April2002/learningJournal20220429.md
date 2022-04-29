@@ -58,8 +58,7 @@ you can influence it, you can build your own things other people can use." - Ste
 Subconscious Behaviour that are Keeping Me from Having The Life I Want:
 <br/>
 I try to change other people, situations and things (or I just complain/get upset about them) when anger === self-recognition. <br/>
-Most negative emotional reactions are my udentifying a disassociated aspect of myself. <br/>
-<br/>
+Most negative emotional reactions are myself identifying a disassociated aspect of myself. <br/>
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
@@ -153,7 +152,7 @@ last ask myself again ==> ask yourself what the third most important task is.-->
 <!-- - [] I will watch social media for 10 minutes at 7pm in the bathroom today -->
 <!-- - [] I will watch a movie for 3 hours at 8pm in the cinema today -->
 <!-- Personal Growth => 3 tasks -->
-- [x] I will code for minimum 6hr at 11.30am in my study table today
+- [x] I will code for minimum 6hr at 10.00am in my study table today
 <!--note - [x] I will read 1 chapter of Technical book: , take notes for 26min at 6.45pm in my study table today -->
 <!--note - [x] I will read 1 chapter of Growth book for 26min at 7.15pm in my study table today -->
 <!--note - [x] I will listen 26min of audiobook at 8.30am in my kitchen today -->
@@ -167,13 +166,12 @@ last ask myself again ==> ask yourself what the third most important task is.-->
 ==============================================================================
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
-1. [] Daiso Shopping
-2. [] Meet wife for dinner @Chinatown Point
+1. [] Grocery shopping at [Ang Mo Kio] @8pm today
 
 ## Personal Notes
 
-**Day 25 (Thursday) and today's main focus:** <br />
-Today will be working on redoing state management with TSX from scratch and hopefully adding some creative spark on it to make to overall app look presentable.
+**Day 26 (Friday) and today's main focus:** <br />
+Today will be continue working on redoing React Native with TSX from scratch on a new folder, and hopefully adding some creative spark on it to make to overall app look presentable as a preparation for Recipe App final project.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
