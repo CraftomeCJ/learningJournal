@@ -1,3 +1,4 @@
+
 <div id='top'><div>
 
 <h1 align="center">Learning Journal 29 April 2022 (Friday)</h1>
@@ -29,12 +30,13 @@ Hello, I'm CJ, now working as a Full Stack Developer intern with Activate Intera
 </details>
 
 ==============================================================================
+
 # Quotes & Gratitude of the Day?
 <!-- write this part early in the morning (before the hustle bustle of work) so that I can keep my focus on the big picture. 
 It allows me to appreciate the small things in my life. 
 Daily Law, Law of the day, Quotes & Gratitude-->
 **Law of Life:** <br/>
-The Law of Detachment: **"This too, will pass!"**<br/>
+The Law of Detachment: **"This too, will pass!"** <br/>
 Recognize the fact of impermanence. <br/>
 Allow myself and others the freedom to be who they are. Do not force solutions -- allow solutions to spontaneously emerge <br/>
 Uncertainty is essential, and my path to freedom. <br/>
@@ -59,6 +61,9 @@ Subconscious Behaviour that are Keeping Me from Having The Life I Want:
 <br/>
 I try to change other people, situations and things (or I just complain/get upset about them) when anger === self-recognition. <br/>
 Most negative emotional reactions are myself identifying a disassociated aspect of myself. <br/>
+My "shadow selves" are the part of me that at some point were conditioned to believe I am "not okay", so I suppressed them and have done everything in my power not to acknowledge them. <br/>
+I don't dislike these parts of myself, though. So when I see somebody else displaying one of these traits, it infuriating, not because I dislike it, but because I have to fight my desire to fully integrate it into my whole consciousness. <br/> The things I love about others are the things I love about myself. <br/>
+The things I hate about others are the things I cannot see in myself. <br/>
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
@@ -74,10 +79,12 @@ Most negative emotional reactions are myself identifying a disassociated aspect 
 - When or Where would this work?
 - Why is this a problem? -->
 **Questions of the day?**
-- [] What problem do I want to solve? <br/>
-- [] What am I building? <br/>
+
+- [x] What problem do I want to solve? <br/>
+- [x] What am I building? <br/>
 
 ==============================================================================
+
 # Outcome-Based Goals
 <!-- This is where I write out my goals/to-do at work. These should be planned and written at the start of the day so I can make progress towards them by the end of the day. -->
 <!-- 
@@ -94,10 +101,10 @@ How to set GOAL LOOP:
 (make it easy)
 3. Response: I pulled out my iPad and read a technical book.
 (make it satisfying)
-4. Reward: I satisfy my craving to feel relieved. ==> reading book becomes associated with feeling stalled at studying
- -->
- <!-- Apply this strategy when setting GOALs 
- After I finished [CONDITION], I will [BEHAVIOR] at [TIME] in [LOCATION].-->
+4. Reward: I satisfy my craving to feel relieved. ==> reading book becomes associated with feeling stalled at studying -->
+
+<!-- Apply this strategy when setting GOALs 
+After I finished [CONDITION], I will [BEHAVIOR] at [TIME] in [LOCATION].-->
 ## **Long Term Goals:**
 <!--Learn Improvement with High Leverage Activities:
   1. something only I can do;
@@ -107,63 +114,61 @@ How to set GOAL LOOP:
   2. Energy in is less than or equal to the results -->
 <!-- Learn to combine Low Leverage Activities into High Leverage activities with unavoidable low leverage activities in your life. -->
 ## **To be 1% better than yesterday!!**
+
 - [] I will complete the required training and submit my Full Time Role Application. I will also take on additional work project to demonstrate my readiness to shoulder more responsibility in 4 weeks.
 - [] I will work as Full Stack Developer Intern for 4 months, and will showcase some of my work in the next month. And, my company is looking to take on another software developer at the end of 6 months internship.
 - [] I will take on 1 additional training project every 2 weeks, complete the required training within 7 weeks, and ask for a job status conversion within 5 months.
 - [] I will stay current and to keep learning and challenging myself as I progress in my career.
-<!-- - [] I will learn at least 1 new programming language every year. -->
-<!-- - [] I will read 1 technical book for 2 months and write a review summary upon every completion of the book on my Daily Journal. -->
-<!-- - [] I will read 1 non-technical book for 2 months and write a review summary upon every completion of the book on my Daily Journal. -->
-<!-- - [] I will take classes and get certification continuously upgrading my soft and hard skills and record the progress on my Daily Journal. -->
-<!-- - [] I will participate in local user groups and meetings for example: Meetup app, codementor.io to observe, ask, participate and learn as much as I could. -->
-<!-- - [] I will experiment with different environments and learn different things from all level of development cycle. -->
-<!-- - [] I will learn to blog about my progress, share insights, exchange ideas, and learn from fellow developers. -->
 
 <!-- The GOAL is not about results, the GOAL is enjoy the process -->
 **Daily Goals:**
 <!-- Health => 1 task -->
-<!--note - [x] I will practice power exercises for FIVE minutes and brisk walk for 20min at 8pm/8am in local park today. -->
+<!--note - [x] I will practice power exercises for FIVE minutes and brisk walk for 20min at 8pm in local park today. -->
+
 <!-- Family => 1 task -->
 <!--note [x] I will kiss my wife for love at START and at END of the day in my home today -->
-<!-- [] I will say LOVE YOU to my wife for 3 times during the whole day in my office today -->
+
 <!-- Work => 3 tasks -->
 <!--learn To identify my three highest-leverage activities in my work, 
 first => make a list ==> capture all of the tasks I'm responsible for in my job od a typical month. 
 second ask myself => if I could only do one thing on that list all day long, ==> which item on the list would add the most value to my company?
 Third ask myself => the same question ==> If I could do only one more thing on your list of key tasks, which would be the second activity that contributes the most value to my company?
 last ask myself again ==> ask yourself what the third most important task is.-->
-- [x] I will redo Day 12 to 16 (VID#49 to #69) State Management from scratch in study table at 11am to 7.30pm today
-<!-- - [] I will do [most important work task here] with my laptop at 10am in the office table -->
-<!-- - [] I will do [second important work task here] with my laptop at 2pm in the office table -->
-<!-- - [] I will do [third important work task here] with my laptop at 4pm in the office table -->
+- [x] I will continue redo Day 12 to 16 (VID#49 to #69) State Management from scratch in study table at 11am to 7.30pm today
 - [x] I must start writing Learning Journal for 70 minutes at 11pm in my study table in my bedroom today
 <!--note - [x] I will plan and write next day daily goals for 20min at 12.10pm in the study table today -->
+
 <!-- Home Life => 1 task -->
 <!-- [] I will do [grocery shopping, laundry, cooking, entertainment, gardening, pay bills, travel arrangements, organizing goal, etc etc] at 9pm in my house/supermarket today -->
+
 <!-- Friendships => 1 task -->
 <!-- [] I will catch up with my friends for 2 hours at 10am in [location] on Sunday -->
+
 <!-- Spirituality & Belief => 2 task -->
 <!--note - [x] I will meditate silently for 22 minutes at 1.40pm in my bedroom today -->
 <!--note - [x] I will read and meditate on Bible daily reading for 22min at 9am in my study table today -->
 <!--note - [x] I will practice "Prayer of the heart" for 15min at 9am in my bedroom today -->
+
 <!-- Recreation => 1 task-->
 <!--note - [x] I will read a Chinese Philosophy book for 15 minutes at 12.30am before sleep in my bed today -->
 <!--note - [x] I will practice mind, logic and speed-read exercises for 40min at 7pm after away from today's work -->
-<!-- - [] I will watch social media for 10 minutes at 7pm in the bathroom today -->
-<!-- - [] I will watch a movie for 3 hours at 8pm in the cinema today -->
+
 <!-- Personal Growth => 3 tasks -->
 - [x] I will code for minimum 6hr at 10.00am in my study table today
 <!--note - [x] I will read 1 chapter of Technical book: , take notes for 26min at 6.45pm in my study table today -->
 <!--note - [x] I will read 1 chapter of Growth book for 26min at 7.15pm in my study table today -->
 <!--note - [x] I will listen 26min of audiobook at 8.30am in my kitchen today -->
+
 <!-- Community => 1 task -->
 <!--note - [] I will greet any neighbors and wished them well at 7am in my flat void deck today -->
 <!-- - [] I will pick up the rubbish I saw during my evening walk at 8pm in my local park today -->
+
 <!-- Financial => 1 task -->
 <!--note - [x] I will save $520 at the end of the month into my investment account. -->
 <!-- - [] I will [financial goal] at [TIME] in [LOCATION] this month -->
 
 ==============================================================================
+
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
 1. [] Grocery shopping at [Ang Mo Kio] @8pm today
@@ -175,67 +180,222 @@ Today will be continue working on redoing React Native with TSX from scratch on 
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-- how i can apply the below-mentioned principle to my coding and programming skills
+- Attend MHA SPS HTX SHARE - Internal Kick-Off Meeting
+  - HTX intend to develop a fully operation mobile app and admin portal.
+    - Mobile Application
+      - Supervisor to support to support assigned Supervises on their rehabilitation and reintegration journey cross all relevant modules
+      - Team lead have similar access rights as supervisors with additional access to manage their team
+      - Supervise / Ex-Supervisee to access all relevant modules to complete their programmes and access to digital resources
+    - Intranet Web Admin Portal
+      - User Admins are able to manage relevant modules and security access.
+      - Team Lead can manage their supervisors and supervises under their care.
+      - Team Lead / Supervisors can generate reports and mark quizzes
+-Project was awarded on 18 Apr 2022.
 
-**Principles:**
+**Project Objective:**
 
-- The Four Laws of Behavior Change: make it obvious, make it attractive, make it easy, make it satisfying
-<br/>
+  1. Enable supervises emplaced on community programmes and Ex-Supervisees
+who have completed their programmes to take charge of their own rehabilitation
+  2. Information gateway for supervises and ex-supervisees to access information
+such as learning materials, community resources, job recommendations, perform
+progress update and document upload, etc.
+  3. Enable supervisors to engage with the supervises / ex-supervisees more
+effectively and efficiently.
+
+**Project Scope:**
+
+- Base Services
+    1. Develop, integrate, install, test, document and deliver product with the following professional services:
+  - Agile Project Management
+  - Workshop with MHA & process owners
+  - Application Software Architecting
+  - Application Software Development
+  - CI/CD pipeline set-up
+  - UlUX Design
+  - Testing - System Unit Testing, System Integration
+  - Testing, User Acceptance Testing, System
+  - Performance Testing
+  - Helpdesk support and Service Management
+  - Engage independent Third Party for security requirements, i.e. Source Code Review and System Security Acceptance Testing
+  - Support Authority-appointed security auditor for Vulnerability Assessment and Penetration Testing
+  - Documentation
+  - Training Services
+    2. Performance Guarantee Period
+    3. System Warranty
+    4. Maintenance and Support
+
+- Mobile Application
+  1. Login
+  - Access validation via Singpass (Individual / Business)
+  - Interface with Authority's SPCP Gateway
+  2. Dashboard
+  - Clear & precise data representation with Intuitive design
+  - Allow quick access to dipital resources and information
+  3. Goal Setting
+  - Team Lead / Supervisor
+    - Browse and review submitted goals
+    - Notification
+      - Suomission and expiration aler
+  - Supervise / Ex-Supervisee
+    - Define and track their goals
+    - Notification
+      - In-progress poals due date alert
+  4. Calendar
+  - Team Lead / Supervisor
+    - View upcoming events
+  - Supervise / Ex-Supervisee
+    - View upcoming events
+    - Create new events
+  6. Case Notes
+  - Team Lead / Supervisor
+    - Review and Comment
+    - Interface with System A Module 2
+    - Notification
+      - Case notes submission alert
+  - Supervise / Ex-Supervisee
+    - Create on meet-up with supervisor
+    - Upload documents to support case notes
+    - View comments by supervisor
+  - Interface with System A Module 2
+  7. Check-In
+  - Team Lead / Supervisor
+    - Assign check-in requirements to supervisees
+    - View check-in records of supervisees
+    - Notification
+      - Successful / Failure check-in alert
+  - Supervise / Ex-Supervisee
+    - Pre defined check-in with their supervisor on their location
+    - View past check-in records
+  8. Request
+  - Team Lead / Supervisor
+    - Receive and vet request submitted by supervisor
+    - Notification on submitted request
+      - Interace with System A Module 1
+  - Supervise / Ex-Supervisee
+    - Submit request with documents to supervisor
+    - Check status of the raise request
+  9. Job Listing
+  - Team Lead / Supervisor
+    - Access and recommend jobs to supervisee
+    - Notification
+    - Supervises's interest alert
+  - Supervise / Ex-Supervisee
+    - View, search and indicate interest
+  - Retrieve job listing data from System A Module 3
+  10. E-Resource
+  - Team Lead / Supervisor
+    - Assign and track progress for e-Resources
+    - Mark quizzes
+  - Supervise / Ex-Supervisee
+    - Access e-learning course from System B
+    - Access e-learning courses and associated quizzes / results from CMS within product
+    - Search/ view e-Resources assigned or available
+  11. Feedback
+  - Team Lead / Supervisor
+    - View Feedback submission regarding satisfactory level
+  - Supervise / Ex-Supervisee
+    - Submit feedback on supervisor
+  12. FAQ
+  - View/Search FAQ Contents
+  13. Community Resources
+  - Supervise / Ex-Supervisee
+    - Display community resources nearby
+    - Search/ get direction for these resources
+  14. Rewards
+  - Supervise / Ex-Supervisee
+    - Earn points to unlock avatar accessories
+    - Earn badges to boost self-esteem
+  15. Leaderboard
+  - Supervise / Ex-Supervisee
+    - Share progress on social media
+View standing on certain activity to
+promote friendly competition
+  1. Game (Optional, to be exercise at later date)
+  - Supervise / Ex-Supervisee
+    - Enhance learning experience
+    - Promote pro-social activities and discourage negative social activities
+
+**Technology Stack**
+  - React Native
+  - Frontend: React JS / Bootstrap
+  - .Net 5
+  - Container: EKS
+  - Database: Aurora PostgreSQL
+  - JMeter - for performance testing
+
+**System Infrastructure / Architecture**
+- Hosting
+  - GCC (Government Commercial Cloud) AWS
+    - Proposal Stage: GCC 1.0, now assessing to implement under GCC 2.0. Budgetary assessment in-progress
+    - Proposal Stage: 4 environments i.e. SIT, QA, AT and PROD. With GCC 2.0, HTX looking at 3 environments with QA as optional.
+- System Architecture
+    - AIAS U@App model
+    - 3-tier System Architecture - Web, Application and Database
+
+**Implementation Approach**
+- Adopts Scrum for its Agile projects.
+  - Scrum is an Agile software development framework.
+  - It encompasses a powerful set of principles and practices that help teams deliver products in short cycles, enabling fast feedback, continual improvement, and rapid adaptation to change.
+- Adopt Scum
+  - Shortening product deliverable cycles
+  - Enabling fast feedback
+  - Promoting continual improvements
+  - Adapting to change rapidly
+- Business Context:
+  - Further analysis and decomposition on the Backlog
+  - Microservices to decompose based on business context
+- Development:
+- Shift-left testing
+- Security-by-design
+- CI/CD
+
+**Definition of Done (DOD)**
+- Code Reviewed
+- Unit Tests Written and Passing
+- Functional Tests Written and Passing
+- No Priority 1 defects remaining
+- Acceptance by Product Owner
+
+**Project Control**
+- Ad-hoc updates
+  - As and when necessary
+  - Face-to-face meeting or conference call between Activate, and HTX
+- Every 3-weeks
+  - Sprint Planning
+  - Product Backlog Refinement
+  - Sprint Review
+  - Sprint Retrospective
+- Daily
+  - Standup
+- Quarterly
+  - Project Steering Committee
+
+**Proposed Project Release Plan**
+- Release 1
+  - User / Role Management
+  - Interface with CAM
+  - Covering Officer Assignment
+  - Reports
+  - Case Record
+  - Check-in
+  - Document Upload
+  - Goals
+  - Job Listing
+- Release 2
+  - Community Resource
+  - Document Upload (Chat Feature)
+  - E-resources
+  - FAQ
+  - Feedback
+  - Rewards
+  - Travel Request
+  - Mass Change - FAQ, Community Resource and Reward Catalogue
+- Language Selection
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
-## Exercise of the Day
 
-[x] **Challenge:** Redo ColorScreen, CounterScreen, SquareScreen
-
-1. Challenge Questions:
-   1. write something
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ts(2322)_error.png "style=width:200 height: 200")
-![gif image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/samplegif.gif "style=width:200 height: 200")
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-## What difficulties did I encounter and How do I solve the issues?
-<!-- This is where I write down the problem and write down the steps for solving the issues I had encountered-->
-<!-- example 1. While setting up ios & android simulator and emulator, face a minor connectivity issue with my android phone. error message "Could not load expo Network response timed out"
-  After asking Mr Google, I found a few solutions:
-   - installed Android Studio
-   - turnoff my firewall
-   - setup Android Studio Emulator
-![Error Msg](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Screenshot1.png "style=width:200 height: 200") -->
-**Project difficulties:** <br/>
-
-1. define problem here
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ts(2322)_error.png "style=width:200 height: 200")
-![gif image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/samplegif.gif "style=width:200 height: 200")
-
-- solution steps here
-
-![solutionSteps](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ts(2322)_error.png "style=width:200 height: 200")
-<!-- can include some codes for future use -->
-```typescript
-style = { [styles.first, styles.second ] }
-```
-
-## What other issues trying to resolve? <br/>
-
-1. define problem here
-
-![ErrorImagehere](https://github.com/CraftomeCJ/learningJournal/blob/main/image/errorimage.png height="200")
-
-  **After some research, I found some solutions:**
-
-   - define solution here
-
-example
-```javascript
-git push origin --delete showsolution/codes
-```
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
 ## Room to improve?
 <!-- This is where I write things I can do to improve my work -->
 <!-- Reflecting and Reviewing My Daily Work Journal
@@ -255,11 +415,9 @@ These questions will help me review and unlock areas of improvement (which will 
 
 - required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
-- Day 26 is continue to learn and practice on Day 15 & 16 notes of React Native concepts and at the same time work on TypeScript conversion, behind schedule by 2.5 days.
+- Day 27 is continue to catch up on task that in complete from last week.
 
 - Practice more to have better understanding of the useState & useReducer with other tutorials.
-
-- Layout of working journal now look good, from day 26 onwards will improve on technical writing of learning experience and daily lesson task reviews with a better layout.
 
 - Add one more column for technical book's chapter summary for future reference.
 
@@ -270,18 +428,13 @@ These questions will help me review and unlock areas of improvement (which will 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
-<!-- ## Miscellaneous -->
-<!-- Sometimes the goal or task at hand has many sub-tasks and that is when I use here to write it out and track my progress towards it. -->
 
-<!-- ## Monthly Experiment -->
-<!-- This is the section where I remind myself what personal growth experiment/ side hustle experiment I am focused on for this day, week, or month. For example, in the above journal entry, I was (and still am) focused on "essential-ism focus" ==> a fancy way to say to focus on one thing and one thing only. -->
-
-==============================================================================
 ## MY GOAL for learning React Native
 
 ### Aim to practice by building many small projects with TypeScript then React Native to embed the concepts deeply
 
 ==============================================================================
+
 #### Possible Project Work
 
 **I wished to:** <br/>
@@ -301,6 +454,7 @@ These questions will help me review and unlock areas of improvement (which will 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
+
 ### Contact Information
 
 - Email me => [Christophe Javier Ho (CJ Ho)](javier.ho@activate.sg)
@@ -319,6 +473,7 @@ These questions will help me review and unlock areas of improvement (which will 
 - [Mini Project Collections](https://codepen.io/my-work)
 
 ==============================================================================
+
 ### Acknowledgments
 
 - Course Resources Provided by:
@@ -340,6 +495,7 @@ for their hard work and support.
 ### Author
 
 Created by:
+
 - [CJ Ho](https://linkedin.com/in/cjho)- feel free to contact me :>!!
 
 ### Software Installed
@@ -348,6 +504,7 @@ Created by:
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
+
 ### Resource Links
 
 [React Native Training Course Schedule](https://docs.google.com/document/d/1X1WgRPKxWwenKXswD5xHcuEZ4NFRj8EWmkCC8MLsBwg/edit#heading=h.2gbthfjx9c7r)
@@ -392,7 +549,7 @@ Created by:
 
 [The React Native Crash Course](https://www.youtube.com/watch?v=1oYw1uwDZb8&list=PLcOyV2wqZbeHZIk6vY1d5D8nd8AmzM_xv&index=7&t=9s)
 
-[How to use TypeScript with React... ](https://www.youtube.com/watch?v=ydkQlJhodio&list=PLcOyV2wqZbeHZIk6vY1d5D8nd8AmzM_xv&index=8)
+[How to use TypeScript with React...](https://www.youtube.com/watch?v=ydkQlJhodio&list=PLcOyV2wqZbeHZIk6vY1d5D8nd8AmzM_xv&index=8)
 
 [React Redux TypeScript Tutorial - Introduction for Beginners](https://www.youtube.com/watch?v=8DH7Ekp2PWI&list=PLcOyV2wqZbeHZIk6vY1d5D8nd8AmzM_xv&index=9)
 
