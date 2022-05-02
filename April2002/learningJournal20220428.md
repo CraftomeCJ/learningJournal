@@ -189,7 +189,6 @@ Today will be working on redoing state management with TSX from scratch and hope
 
 1. Challenge Questions:
    1. write something
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/image/solutionimage.png "style=width:200 height: 200")
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
