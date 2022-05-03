@@ -77,8 +77,7 @@ After you've digested them, show us the changes in your reasoned choices, just l
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
 The Psychology of DAILY ROUTINE: <br/>
-<br/>
-When I regulate my daily actions, I deactivate my "fight or flight" instincts because I'm no longer confronting the unknown. <br/>
+When I regulate my daily actions, I deactivate my "fight or flight" instincts because I'm no longer confronting the unknown. <br/><br/>
 This is why people have such a difficult time with change, and why people who are constant in their habits, experience so much joy: <br/>
 simply, their fear instincts are turned off long enough for them to actually enjoy something. <br/>
 
@@ -201,7 +200,7 @@ last ask myself again ==> ask yourself what the third most important task is.-->
 
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
-1. TBC
+1. [Completed a personal React native + Typescript Mini Guide documentations Ver 1.0](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/README.md)
 
 ## Personal Notes
 
@@ -210,64 +209,289 @@ Today will be working on redoing state management with TSX from scratch and hope
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-- how i can apply the below-mentioned principle to my coding and programming skills
+- - learn the how manipulate the UI to your design
+    - Handling Screen Layout
+      1. flex - will define how your items are going to “fill” over the available space along your main axis.
+      2. flexDirection - controls the direction in which the children of a node are laid out
+      3. justifyContent - describes how to align children within the main axis of their container.
+      4. alignItems - describes how to align children along the cross axis of their container.
+      5. alignSelf - has the same options and effect as alignItems but instead of affecting the children within a container, you can apply this property to a single child to change its alignment within its parent..
+      6. flexWrap - property is set on containers and it controls what happens when children overflow the size of the container along the main axis
+      7. The position type of an element defines how it is positioned within its parent
+      8. relative - By default, an element is positioned relatively. This means an element is positioned according to the normal flow of the layout, and then offset relative to that position based on the values of top, right, bottom, and left. The offset does not affect the position of any sibling or parent elements.
+      9. absolute - when positioned absolutely, an element doesn't take part in the normal layout flow. It is instead laid out independent of its siblings. The position is determined based on the top, right, bottom, and left values
 
-**Principles:**
+**Layout Systems**
+![Layout Systems](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample27.png "style=width:200 height: 200")))
 
-- The Four Laws of Behavior Change: make it obvious, make it attractive, make it easy, make it satisfying
-<br/>
+**Box Object Model**
+![Box Object Model](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample28.png "style=width:200 height: 200")))
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+**Basic of Box Object Model**
+![Top & Bottom](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample29.png "style=width:200 height: 200")))
 
-==============================================================================
+![Left & Right](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample30.png "style=width:200 height: 200")))
 
-## Exercise of the Day
+![shortcuts](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample31.png "style=width:200 height: 200")))
 
-[x] **Challenge:** Redo ColorScreen, CounterScreen, SquareScreen
+**FlexBox**
+![flexbox](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample32.png "style=width:200 height: 200")))
 
-1. Challenge Questions:
-   1. write something
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ts(2322)_error.png "style=width:200 height: 200")
-![gif image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/samplegif.gif "style=width:200 height: 200")
+![layout](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample33.png "style=width:200 height: 200")))
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+![layout2](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample34.png "style=width:200 height: 200")))
 
-## What difficulties did I encounter and How do I solve the issues?
-<!-- This is where I write down the problem and write down the steps for solving the issues I had encountered-->
-<!-- example 1. While setting up ios & android simulator and emulator, face a minor connectivity issue with my android phone. error message "Could not load expo Network response timed out"
-  After asking Mr Google, I found a few solutions:
-   - installed Android Studio
-   - turnoff my firewall
-   - setup Android Studio Emulator
-![Error Msg](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Screenshot1.png "style=width:200 height: 200") -->
-**Project difficulties:** <br/>
+![layout3](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample35.png "style=width:200 height: 200")))
 
-1. define problem here
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ts(2322)_error.png "style=width:200 height: 200")
-![gif image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/samplegif.gif "style=width:200 height: 200")
+![layout4](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample36.png "style=width:200 height: 200")))
 
-- solution steps here
+![layout5](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample37.png "style=width:200 height: 200")))
 
-![solutionSteps](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ts(2322)_error.png "style=width:200 height: 200")
-<!-- can include some codes for future use -->
-```typescript
-style = { [styles.first, styles.second ] }
+![layout6](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample38.png "style=width:200 height: 200")))
+
+![layout7](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample39.png "style=width:200 height: 200")))
+
+![layout8](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample40.png "style=width:200 height: 200")))
+
+![layout9](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample41.png "style=width:200 height: 200")))
+
+![layout10](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample42.png "style=width:200 height: 200")))
+
+![layout11](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample43.png "style=width:200 height: 200")))
+
+![layout12](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample44.png "style=width:200 height: 200")))
+
+![layout13](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample45.png "style=width:200 height: 200")))
+
+![layout14](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample46.png "style=width:200 height: 200")))
+
+![layout15](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample47.png "style=width:200 height: 200")))
+
+![layout16](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample48.png "style=width:200 height: 200")))
+
+**Applying Layout Systems**
+![Applying Layout Systems](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample49.png "style=width:200 height: 200")))
+
+![sample image](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/sample50.png "style=width:200 height: 200")))
+
+```TypeScript
+// @filename: ReactComponentButtonScreen.tsx
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native'
+import React from 'react'
+
+const ReactComponentButtonScreen: React.FC = ({navigation}: {navigation: any}) => {
+
+  return (
+    <View>
+      <Text style={styles.styleHeader}>
+        Good day!! This is Home Screen
+      </Text>
+
+      <Button
+      color={'#fff'}
+      title="Go to Component Demo"
+      onPress={() => navigation.navigate('Component')}
+      />
+
+      <Button
+      color={'#fff'}
+      title="Go to List Demo"
+      onPress={() => navigation.navigate('List')}
+      />
+
+      <Button
+      color={'#fff'}
+      title="Go to Image Demo"
+      onPress={() => navigation.navigate('Image')}
+      />
+
+       <Button
+       color={'#fff'}
+      title="Go to Hook's Counter Demo"
+      onPress={() => navigation.navigate('StateCounter')}
+      />
+
+      <Button
+      color={'#fff'}
+      title="Go to Hook's Color Demo"
+      onPress={() => navigation.navigate('StateColor')}
+      />
+
+      <Button
+      color={'#fff'}
+      title="Go to refactor Square Demo"
+      onPress={() => navigation.navigate('StateColor')}
+      />
+    </View>
+
+          <Button
+      color={'#fff'}
+      title="Go to Reducers Square Demo"
+      onPress={() => navigation.navigate('StateColor')}
+      />
+    </View>
+
+              <Button
+      color={'#fff'}
+      title="Go to Text Screen Demo"
+      onPress={() => navigation.navigate('Text')}
+      />
+    </View>
+
+              <Button
+      color={'#fff'}
+      title="Go to Text Input Screen Demo"
+      onPress={() => navigation.navigate('Text')}
+      />
+    </View>
+
+                  <Button
+      color={'#fff'}
+      title="Go to Text Box Screen Demo"
+      onPress={() => navigation.navigate('Box')}
+      />
+    </View>
+
+    
+  );
+};
+
+export default ReactComponentButtonScreen;
+
+const styles = StyleSheet.create({
+  styleHeader: {
+    marginVertical: 20,
+    fontSize: 40,
+    color: 'yellow',
+    backgroundColor: 'lightblue',
+  },
+  styleTouch: {
+    marginVertical: 15,
+    fontSize: 25,
+    color: 'blue',
+    backgroundColor: 'lightyellow',
+  },
+  styleMain: {
+    marginVertical: 10,
+    fontSize: 20,
+    color: 'orange',
+    backgroundColor: 'lightpink'
+  }
+}
+);
 ```
 
-## What other issues trying to resolve? <br/>
+```TypeScript
+// @filename: BoxScreen.tsx
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native'
+import React from 'react'
 
-1. define problem here
+const BoxScreen: React.FC = () => {
+  return (
+    <View style={styles.parentStyle}>
+    <View style={styles.viewOneStyle}/>
+    <View style={styles.viewTwoParent}/>
+    <View style={styles.viewTwoStyle}/>
+    </View>
+    <View style={styles.viewThreeStyle}/>
+    </View>
+  )
+}
 
-![ErrorImagehere](<https://github.com/CraftomeCJ/learningJournal/blob/main/image/errorimage.png> height="200")
+const styles = StyleSheet.create({
+  parentStyle: {
+    height: 200,
+    borderWidth: 3,
+    borderColor: 'black',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginVertical: 10,
+    backgroundColor: 'lightblue',
+  },
+  textOneStyle: {
+    height: 50,
+    width: 50,
+    // borderWidth: 3,
+    borderColor: 'red',
+  },
+  textTwoStyle: {
+        height: 50,
+    width: 50,
+    // borderWidth: 3,
+    borderColor: 'green',
+    // top: 50,
+    // alignSelf: 'flex-end',
+    // marginTop: 50,
+    // fontSize: 20,
+    // ...StyleSheet.absoluteFillObject
+  },
+  viewTwoParent: {
+    height: 100,
+    justifyContent: 'flex-end',
+    // width: 50,
+    // borderWidth: 3,
+    // borderColor: 'blue',
+    // top: 50,
+    // alignSelf: 'flex-end',
+    // marginTop: 50,
+    // fontSize: 20,
+    // ...StyleSheet.absoluteFillObject
+  },
+  textThreeStyle: {
+        height: 50,
+    width: 50,
+    // borderWidth: 3,
+    borderColor: 'purple',
 
-  **After some research, I found some solutions:**
+})
 
-- define solution here
+export default BoxScreen;
+```
 
-example
+```TypeScript
+// @filename: App.tsx
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
 
-```javascript
-git push origin --delete showsolution/codes
+import ReactComponentButtonScreen from "./ReactComponentButtonScreen";
+import ReactComponentFileScreen from "./ReactComponentFileScreen";
+import ReactComponentListScreen from "./ReactComponentListScreen";
+import ReactComponentImageScreen from "./ReactComponentImageScreen";
+import ReactComponentCounterScreen from "./ReactComponentCounterScreen";
+import ReactComponentColorScreen from "./ReactComponentColorScreen";
+import ReactComponentSquareScreenScreen from "./ReactComponentSquareScreenScreen";
+import RefactorSquareScreen from "./RefactorSquareScreen";
+import ReducersSquareScreen from "./ReducersSquareScreen";
+import TextScreen from "./TextScreen";
+import TextInputScreen from "./TextInputScreen";
+import BoxScreen from "./BoxScreen";
+
+
+const navigator = createStackNavigator(
+  {
+    Home: ReactComponentButtonScreen,
+    Component: ReactComponentFileScreen,
+    List: ReactComponentFileScreen,
+    Image: ReactComponentImageScreen,
+    StateCounter: ReactComponentCounterScreen,
+    StateColor: ReactComponentColorScreen,
+    SquareScreen: ReactComponentSquareScreenScreen,
+    RefactorSquareScreen: RefactorSquareScreen,
+    ReducersSquareScreen: ReducersSquareScreen,
+    Text: TextScreen,
+    TextInput: TextInputScreen,
+    Box: BoxScreen
+  },
+  {
+    initialRouteName: "Home",
+    defaultNavigationOptions: {
+      title: "App",
+    },
+  }
+);
+
+export default createAppContainer(navigator);
 ```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
