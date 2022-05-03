@@ -1,6 +1,6 @@
 <div id='top'><div>
 
-<h1 align="center">Learning Journal 28 April 2022 (Thursday)</h1>
+<h1 align="center">Learning Journal 01 May2022 (Sunday)</h1>
 <p align="center">My passion to be a programmer came late in life
 <br />
 Hello, I'm CJ, now working as a Full Stack Developer intern with Activate Interactive to gain valuable job experience, always had a keen interest in User-friendly mobile applications and websites development.</p>
