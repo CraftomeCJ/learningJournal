@@ -206,8 +206,9 @@ last ask myself again ==> ask yourself what the third most important task is.-->
 
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
-1. [] cook dinner
-2. [] dish washing day
+1. [Completed a personal React native + Typescript Mini Guide documentations Ver 1.0](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/README.md)
+2. [] cook dinner
+3. [] dish washing day
 
 ## Personal Notes
 
