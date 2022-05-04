@@ -217,27 +217,202 @@ Today will be working on completing Day 18 Design System exercise, personal cook
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-- how i can apply the below-mentioned principle to my coding and programming skills
+### UI Login App Work Flow
 
-**Principles:**
+- **Getting Started with TypeScript**
 
-- The Four Laws of Behavior Change: make it obvious, make it attractive, make it easy, make it satisfying
-<br/>
+```React
+<!-- React native with TypeScript template: -->
+npx react-native init LoginScreen --template react-native-template-typescript
+
+<!-- install dependencies -->
+npm install
+<!-- or -->
+npm install --legacy-peer-deps
+
+<!-- use Expo -->
+npm install -g expo-cli
+npm install expo
+expo doctor --fix-dependencies
+expo upgrade
+
+<!-- fix vulnerabilities -->
+npm audit fix
+<!-- or -->
+npm audit fix --force
+<!-- or -->
+npm audit fix --legacy-peer-deps
+
+<!-- open IDE -->
+code .
+
+<!-- check tsconfig.json file -->
+​{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": ["es2017"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}
+<!-- check Jest config in package.json file -->
+<!-- Install Jest if necessary -->
+npm install jest --global
+ npm install --save-dev jest
+ <!-- init jest.config.js file -->
+jest init
+<!-- uncomment this following in jest.config.js file -->
+module.exports = {
+  preset: 'react-native',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+};
+
+<!-- install dependencies for Development -->
+<!-- React Native MaskedView for iOS and Android. -->
+npm install --save @react-native-masked-view/masked-view
+<!-- component used to select a single value from a range of values -->
+npm install @react-native-community/slider --save
+<!-- expo-status-bar gives you a component and imperative interface to control the app status bar to change its text color, background color, hide it, make it translucent or opaque, and apply animations to any of these changes. Exactly what you are able to do with the StatusBar component depends on the platform you're using. -->
+expo install expo-status-bar
+<!-- React Native Gesture Handler -->
+npm install --save react-native-gesture-handler
+<!-- React Native Reanimated -->
+expo install react-native-reanimated
+<!-- react-native-safe-area-context -->
+npm install react-native-safe-area-context
+<!-- react-native-screens -->
+expo install react-native-screens
+<!-- React Native Table Component -->
+npm install react-native-table-component
+<!-- React Navigation 6 is made up of some core utilities and those are then used by navigators to create the navigation structure in your app -->
+npm install @react-navigation/native
+<!-- Other supporting libraries for react-navigation -->
+npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view --save
+<!-- React Navigation Stack: for use on iOS and Android. -->
+npm install react-navigation-stack @react-native-community/masked-view react-native-safe-area-context
+<!-- Carousel component for react-native -->
+npm install react-native-carousel
+<!-- styled-components -->
+npm install --save styled-components
+<!-- Navigation Drawer -->
+npm install @react-navigation/drawer --save
+<!-- Stack Navigation -->
+npm install @react-navigation/stack --save
+<!-- async-storage to use AsyncStorage -->
+npm install --save @react-native-community/async-storage
+
+<!-- open react native bundler for Android emulator -->
+expo start
+
+<!-- create GitHub remote repo -->
+<!-- Steps for new local repo to remote:
+create a new repository on the command line
+echo "# UI_LoginScreen" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:CraftomeCJ/repo_NAME.git
+git push -u origin main -->
+
+<!-- Create local Repo -->
+<!-- check git -->
+git status
+<!-- initialize git -->
+git init
+<!-- first commit -->
+git add .
+git commit -m "first commit"
+<!-- change remote branch name to main -->
+git branch -M main
+<!-- add git route -->
+git remote add origin git@github.com:CraftomeCJ/RN-TS_LoginScreen.git
+<!-- check git route -->
+git remote -v
+
+<!-- first upload to remote -->
+git push -u origin main
+
+<!-- Add working folder -->
+- add assets directory (for images)
+- add src directory
+  - add screens directory
+    - add dashboard directory (dashboard)
+    - add welcome directory (splash screen)
+    - add login directory (login)
+  - add component directory
+
+  <!-- second upload -->
+  git add .
+  git commit -m "add src, screen, welcome, login, components directory"
+git push -u origin main
+
+  <!-- branch to start development for error tracking -->
+git switch -c Login-UI_Design
+```
+
+![file structure](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/file1.png "style=width:200 height: 200")
+
+```TypeScript
+//@filename: SplashScreen.tsx.
+//styled-components
+//npm install --save styled-components
+//npm install formik --save
+// npm install yup --save
+// npm install --save @material-ui/core
+
+```
+
+[Create a new repository](https://github.com/new)
+[forms library](https://formik.org/docs/overview)
+
+- errors
+![error image](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/error2.png "style=width:200 height: 200")
+![solution image](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/solution1.png "style=width:200 height: 200")
+[solution](https://docs.expo.dev/workflow/configuration/)
+![result image](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/result1.png "style=width:200 height: 200")
+![error image](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/error01.png "style=width:200 height: 200")
+[Solution](https://stackoverflow.com/questions/63244951/react-native-invariant-violation-module-appregistry-is-not-a-registered-calla)
+[solution2](https://docs.expo.dev/workflow/configuration/)
+-solution ==> expo upgrade
+
+[React Native Expo Failed building JavaScript bundle](https://stackoverflow.com/questions/48266462/react-native-expo-failed-building-javascript-bundle)
+Building JavaScript bundle: error
+solution = expo start -c
+
+[How to modify app.json file and change sdkVersion for an expo snack?](https://stackoverflow.com/questions/54567830/how-to-modify-app-json-file-and-change-sdkversion-for-an-expo-snack)
+
+[React Native – How to Update Expo SDK](https://www.kindacode.com/snippet/react-native-how-to-update-expo-sdk/)
+
+[should NOT have additional property 'nodeModulesPath'(Expo React Native)](https://stackoverflow.com/questions/67111203/should-not-have-additional-property-nodemodulespathexpo-react-native)
+
+[Invariant Violation: Text strings must be rendered within a <Text> component](https://stackoverflow.com/questions/52368342/invariant-violation-text-strings-must-be-rendered-within-a-text-component)
+
+[TypeScript TSConfig CompilerOptions ES2017 Target and Lib](https://stackoverflow.com/questions/42956326/typescript-tsconfig-compileroptions-es2017-target-and-lib)
+
+[Property 'value' does not exist on type 'EventTarget'](https://stackoverflow.com/questions/42066421/property-value-does-not-exist-on-type-eventtarget)
+
+[Error: Unrecognized font family Material Design icons after installing react-native-elements?](https://stackoverflow.com/questions/48601206/error-unrecognized-font-family-material-design-icons-after-installing-react-nat)
+
+[React Native Error: ENOSPC: System limit for number of file watchers reached](https://stackoverflow.com/questions/55763428/react-native-error-enospc-system-limit-for-number-of-file-watchers-reached)
+
+[React-native-splashscreen and navigation](https://stackoverflow.com/questions/60965636/react-native-splashscreen-and-navigation)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
-
-## Exercise of the Day
-
-[x] **Challenge:** Redo ColorScreen, CounterScreen, SquareScreen
-
-1. Challenge Questions:
-   1. write something
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ts(2322)_error.png "style=width:200 height: 200")
-![gif image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/samplegif.gif "style=width:200 height: 200")
-
-<p align="center">(<a href="#top">back to top</a>)</p>
 
 ## What difficulties did I encounter and How do I solve the issues?
 <!-- This is where I write down the problem and write down the steps for solving the issues I had encountered-->
@@ -249,33 +424,21 @@ Today will be working on completing Day 18 Design System exercise, personal cook
 ![Error Msg](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Screenshot1.png "style=width:200 height: 200") -->
 **Project difficulties:** <br/>
 
-1. define problem here
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ts(2322)_error.png "style=width:200 height: 200")
-![gif image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/samplegif.gif "style=width:200 height: 200")
+1. A complete failure today. Utterly disappointed with myself. Unable to complete building Login Screen from ground up.
 
-- solution steps here
+Error after error from npm to expo to yarn to js build even after trying out different starter files. Spent way too much time on trying to resolve the issue.
 
-![solutionSteps](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ts(2322)_error.png "style=width:200 height: 200")
-<!-- can include some codes for future use -->
-```typescript
-style = { [styles.first, styles.second ] }
-```
+Have to find a way to improve my logic thinking further, and to make it more efficient. I will keep my journal short today.
 
+Have a 4hr sleep to recover my tired mind and fatigue body. Tomorrow try again with the code without typescript involved. Disappointing and unproductive day.
 ## What other issues trying to resolve? <br/>
 
-1. define problem here
-
-![ErrorImagehere](<https://github.com/CraftomeCJ/learningJournal/blob/main/image/errorimage.png> height="200")
-
-  **After some research, I found some solutions:**
-
-- define solution here
-
-example
-
-```javascript
-git push origin --delete showsolution/codes
-```
+1. Time Management - Where is the balance between learn, work, life and rest.
+2. Slow typing speed - How to speed up typing speed?
+3. Reading speed - Comprehended the logic but not the code.
+4. Logic thinking - I should find a way to think logically.
+5. Memory skills - What causing me to lose my memory?
+6. Accuracy - how to add code with precise accuracy.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -294,39 +457,17 @@ ask During this time ask yourself:
 =>Did I spend time on important tasks that will help accelerate my career?
 
 These questions will help me review and unlock areas of improvement (which will be never-ending) in my life, career and work. This step can feel uncomfortable and requires self-awareness and review. -->
-- Had make good progress on practice to time-boxing my task to 90 minutes per self-assigned task.
+- Try to code without research and reference, fail miserably, next 4 week to train yellow duck methods.
 
-- Continue to work on the more advance React Native concepts, its feature, workflows and how to use it with some CSS fundamentals.
-
-- required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
-
-- Day 26 is continue to learn and practice on Day 15 & 16 notes of React Native concepts and at the same time work on TypeScript conversion, behind schedule by 2.5 days.
-
-- Practice more to have better understanding of the useState & useReducer with other tutorials.
-
-- Layout of working journal now look good, from day 26 onwards will improve on technical writing of learning experience and daily lesson task reviews with a better layout.
-
-- Add one more column for technical book's chapter summary for future reference.
-
-- add one more column for non-technical book's chapter summary for future reference.
-
-- To learn and master better file management on using .gif to showcase course's challenge work and .png folder for error and warning messages display.
+- Code using think aloud methods.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
 
-<!-- ## Miscellaneous -->
-<!-- Sometimes the goal or task at hand has many sub-tasks and that is when I use here to write it out and track my progress towards it. -->
+## MY GOAL for May
 
-<!-- ## Monthly Experiment -->
-<!-- This is the section where I remind myself what personal growth experiment/ side hustle experiment I am focused on for this day, week, or month. For example, in the above journal entry, I was (and still am) focused on "essential-ism focus" ==> a fancy way to say to focus on one thing and one thing only. -->
-
-==============================================================================
-
-## MY GOAL for learning React Native
-
-### Aim to practice by building many small projects with TypeScript then React Native to embed the concepts deeply
+### Aim to remember the work flow of writing code inside out.
 
 ==============================================================================
 
