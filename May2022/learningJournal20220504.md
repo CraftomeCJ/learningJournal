@@ -247,7 +247,7 @@ npm audit fix --legacy-peer-deps
 code .
 
 <!-- check tsconfig.json file -->
-​{
+npm run tsc{
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
@@ -394,7 +394,7 @@ solution = expo start -c
 
 [How to modify app.json file and change sdkVersion for an expo snack?](https://stackoverflow.com/questions/54567830/how-to-modify-app-json-file-and-change-sdkversion-for-an-expo-snack)
 
-[React Native – How to Update Expo SDK](https://www.kindacode.com/snippet/react-native-how-to-update-expo-sdk/)
+[React Native - How to Update Expo SDK](https://www.kindacode.com/snippet/react-native-how-to-update-expo-sdk/)
 
 [should NOT have additional property 'nodeModulesPath'(Expo React Native)](https://stackoverflow.com/questions/67111203/should-not-have-additional-property-nodemodulespathexpo-react-native)
 
