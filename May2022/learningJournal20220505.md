@@ -53,28 +53,31 @@ CLEANSE MY MIND
 The Law of Intention and Desire: **"Make a list of desires"**<br/>
 Inherent in every intention and desire is the mechanics for its fulfillment. <br/>
 Trust that when things don't seem to go my way, there is a reason. <br/>
+<!-- I will put the Law of Intention and Desire into effect by making a commitment to take the following steps:
+  1. I will make a list of all my desires. I will carry this list with me whenever I go. I will look at it before I go to sleep at night. I will look at it when I wake up in the morning. 
+  2. I will release this list of my desires and surrender it to the womb of creation, trusting that when things don't seem to go my way, there is a reason, and that the cosmic plan has designs for me much grander than even those I have conceived.
+  3. I will remind myself to practice present-moment awareness in all my actions. I will refuse to allow obstacles to consume and dissipate the quality of the attention in the present moment. I will accept the present as it is, and manifest the future through my deepest, most cherished intentions and desires.-->
 
 **Daily Law:** <br/>
-There is No Revenge Like Oblivion <br/>
-For is is the entombment of the unworthy in the dust of their own nothingness. <br/>
-The harder I try to fix my mistakes, the worse I often make them. <br/>
+Be Careful Whom You Offend <br/>
+Swallow the impulse to offend, even if the other person seems weak. <br/>
+The satisfaction is meager compared to the danger that someday he or she will be in a position to hurt you. <br/>
 
 <!-- What a wise old man said -->
 **Quote of the Day:** <br/>
-"Before complaining that you are a slave to another, be sure that you are not a slave to self. <br/>
-Look within; you will find there, perchance, slavish thoughts, slavish desires, and in your daily life and conduct slavish habits. <br/>
-Conquer these; cease to be slave to self, and no man will have the power to enslave you." - James Allen
+"You are The Project. <br/>
+The raw material for the work of a good and excellent person is their own guiding reason, <br/>
+the body is that of the doctor and the physical trainer, and the farm the farmer's." - Epictetus Discourses, 3.3.1
 
 <!-- practice gratitude daily -->
-**I'm grateful that:** to know the trick is to be grateful when my mood is high and graceful when it is low.
+**I'm thankful:** I realized that today is a grand opportunity to live a creative, happy, and inspired life.
 
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
 The Psychology of DAILY ROUTINE: <br/>
-<br/>
-I think my past defines me, and worse, I think that it is an unchangeable reality, when really, my perception of it changes as I do. <br/>
-<br/>
-Because experience is always multi-dimensional, there are a variety of memories, experiences, feelings, "gist" I can choose to recall.... and what I choose is indicative of my present state of mind. So many people get caught up in allowing the past to define them or haunt them simply because they have not evolved to the place of seeing how the past did not prevent them from achieving the life they want, it facilitated it.<br/> This doesn't mean to disregard or gloss over painful or traumatic events, but simply to be able to recall them with acceptance and to be able to place them in the storyline of my personal evolution. <br/>
+I feel content because routine consistently reaffirms a decision I already made. <br/>
+If said decision is that I want to code an App -- and I commit to doing 100 lines per day for however long it takes to complete it <br/>
+-- I affirm not only my choice to begin, but my ability to do it. It's honestly the healthiest way to feel validated. <br/>
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
@@ -91,9 +94,8 @@ Because experience is always multi-dimensional, there are a variety of memories,
 - Why is this a problem? -->
 **Questions of the day?**
 
-- [] When I achieve self-mastery, no one (and no thing) will have the power to enslave me. <br/>
-- [] If I blame an external factor for my lack of self-discipline, think again: <br/>
-Was it the person eating chocolate next to me who controlled what I put into my mouth, or was it ME?? <br/>
+- [x] Time management, Slow typing speed, Reading speed, Logic thinking, Memory skills, Accuracy - How can I make these better??? <br/>
+- [x] What is the most valuable lesson I've been taught from today code sharing? How did I learn it? <br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -154,15 +156,15 @@ After I finished [CONDITION], I will [BEHAVIOR] at [TIME] in [LOCATION].-->
 
 <!-- Work => 3 tasks -->
 <!--learn To identify my three highest-leverage activities in my work, 
-first => make a list ==> capture all of the tasks I'm responsible for in my job od a typical month. 
-second ask myself => if I could only do one thing on that list all day long, ==> which item on the list would add the most value to my company?
-Third ask myself => the same question ==> If I could do only one more thing on your list of key tasks, which would be the second activity that contributes the most value to my company?
-last ask myself again ==> ask yourself what the third most important task is.-->
-- [x] I will redo Day 12 to 16 (VID#49 to #69) State Management from scratch in study table at 11am to 7.30pm today
+first => make a list ==> capture all of the tasks I'm responsible for in my job of a typical month. 
+second => ask myself ==> if I could only do one thing on that list all day long, ==> which item on the list would add the most value to my company?
+Third => ask myself ==> the same question ==> If I could do only one more thing on your list of key tasks, which would be the second activity that contributes the most value to my company?
+last => ask myself again ==> ask yourself what the third most important task is.-->
+- [x] I will rebuild BentoApp using NPM init react native template with typescript and compile with Metro bundler from scratch in study table at 1400 to 2100pm today
 <!-- - [] I will do [most important work task here] with my laptop at 10am in the office table -->
 <!-- - [] I will do [second important work task here] with my laptop at 2pm in the office table -->
 <!-- - [] I will do [third important work task here] with my laptop at 4pm in the office table -->
-- [x] I must start writing Learning Journal for 70 minutes at 11pm in my study table in my bedroom today
+- [x] I must start writing Learning Journal for 70 minutes at 2300pm in my study table in my bedroom today
 <!--note - [x] I will plan and write next day daily goals for 20min at 12.10pm in the study table today -->
 
 <!-- Home Life => 1 task -->
@@ -184,6 +186,7 @@ last ask myself again ==> ask yourself what the third most important task is.-->
 
 <!-- Personal Growth => 3 tasks -->
 - [x] I will code for minimum 6hr at 11.30am in my study table today
+- [x] I will practice typing skills for 1hr at 0800am in my study table today
 <!--note - [x] I will read 1 chapter of Technical book: , take notes for 26min at 6.45pm in my study table today -->
 <!--note - [x] I will read 1 chapter of Growth book for 26min at 7.15pm in my study table today -->
 <!--note - [x] I will listen 26min of audiobook at 8.30am in my kitchen today -->
@@ -197,6 +200,49 @@ last ask myself again ==> ask yourself what the third most important task is.-->
 <!--note - [x] I will read 1 chapter of financial book for 26min at 7.40pm in my study table today -->
 <!-- - [] I will [financial goal] at [TIME] in [LOCATION] this month -->
 
+<!-- Coding as a Career -->
+<!-- learn remind myself how much I have to learn -->
+<!-- learn stop trying to prove myself right
+  - ask myself how I can make this better?
+  - actively look for where I am wrong? -->
+<!-- learn "the code works" isn't where I stop; it's where I start!!
+  - step 1 ==> always write quality code that fulfils the spec
+  - steo 2 ==> Now, make it better!!
+    1. Is it valuable to make it faster?
+    2. easier to document?
+    3. more reusable?
+    4. more reliable? -->
+<!-- learn write it THREE times
+  - First time ==> write the software to prove myself that the solution is possible;
+  - Second time ==> make it work
+  - Third time ==> make it work right
+  - throw away code and start over will teach me how many ways I can approach the problem and prevent me from getting stuck in a stub. -->
+<!-- learn Read Code. Read lots of Code
+  - to get better, ask myself:
+    1. How would I have written that block of code? What would I do differently, now that I've seen another solution?
+    2. What did I learn? How can I apply that technique to code I wrote in the past?
+    3. How would I improve this code? If it's open source project where I am confident I have a better solution, DO IT!!!
+    4. Write code in the author's style.
+  - Write out my answer in personal journal;
+  - explain, write down, sharing analysis can help to understand why I react to another person code
+- DO NOT COPY & PASTE the code, take my time to understand it, or else I just imported a bug-factory!!! -->
+<!-- learn write code, and not just as Assignment
+  - work on personal project:
+    1. give me a way to learn tools and tech not available at work
+    2. make me more marketable
+    3. gain tech skills and self-confidence when work on open source or local community project
+    4. personal project demonstrate I am self-starter who never stop learning
+   - it also force me to figure things out on my own
+   - choose a personal project that I may fail, I need to fail to learn -->
+<!-- learn work one-on-one with other developers any way I can
+  - listen to other people
+  - contribute to open source projects, pay attention to feedback I get from other developers:
+  - what commonalities do I see in their criticisms? -->
+<!-- learn learn technique, not tools
+  - Focus on programming fundamentals ==> basic never change
+  - pay attention to architecture than to programming
+  - If there is only one way to do something, time for a reality check -->
+
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
@@ -204,73 +250,127 @@ last ask myself again ==> ask yourself what the third most important task is.-->
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
 1. [Completed a personal React native + Typescript Mini Guide documentations Ver 1.0](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/README.md)
+2. [x] HR checkpoint @1030am
+3. [x] monthly sync-up sessions with instructor @1700pm
+4. [x] GenConnect Session @ 1730pm
 
 ## Personal Notes
 
 **Day 32 (Thursday) and today's main focus:** <br />
-Today will be working on redoing state management with TSX from scratch and hopefully adding some creative spark on it to make to overall app look presentable.
+Today till Sunday will be working on setup typeScript with React Native from scratch with simple "hello world" to make sure it works, and slowly build up a BentoApp and add dependencies one by one, debug error line by line if any. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace. Be ready to fail.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-- how i can apply the below-mentioned principle to my coding and programming skills
+### UI Login App Work Flow [REBOOT]
 
-**Principles:**
+- **Getting Started with React Native + TypeScript**
 
-- The Four Laws of Behavior Change: make it obvious, make it attractive, make it easy, make it satisfying
-<br/>
+```React
+<!-- React native with TypeScript template: -->
+npx react-native init BentoApp --template react-native-template-typescript
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+<!-- JavaScript Bundler Metro -->
+npm install --save-dev metro metro-core
 
-==============================================================================
+<!-- install dependencies -->
+npm install
+<!-- or -->
+npm install --legacy-peer-deps
 
-## Exercise of the Day
+<!-- fix vulnerabilities -->
+npm audit fix
+<!-- or -->
+npm audit fix --force
+<!-- or -->
+npm audit fix --legacy-peer-deps
 
-[x] **Challenge:** Redo ColorScreen, CounterScreen, SquareScreen
+<!-- open IDE -->
+code .
 
-1. Challenge Questions:
-   1. write something
-![solution image1](![file structure](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/ts(2322)_error.png "style=width:200 height: 200")
-![gif image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/samplegif.gif "style=width:200 height: 200")
+<!-- check tsconfig.json file -->
+npm run tsc{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": ["es2017"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}
+<!-- check Jest config in package.json file -->
+<!-- Install Jest if necessary -->
+npm install jest --global
+ npm install --save-dev jest
+ <!-- init jest.config.js file -->
+jest init
+<!-- uncomment this following in jest.config.js file -->
+module.exports = {
+  preset: 'react-native',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+};
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+<!-- open react native bundler for Android emulator -->
+expo start
 
-## What difficulties did I encounter and How do I solve the issues?
-<!-- This is where I write down the problem and write down the steps for solving the issues I had encountered-->
-<!-- example 1. While setting up ios & android simulator and emulator, face a minor connectivity issue with my android phone. error message "Could not load expo Network response timed out"
-  After asking Mr Google, I found a few solutions:
-   - installed Android Studio
-   - turnoff my firewall
-   - setup Android Studio Emulator
-![Error Msg](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Screenshot1.png "style=width:200 height: 200") -->
-**Project difficulties:** <br/>
+<!-- create GitHub remote repo -->
+<!-- Steps for new local repo to remote:
+create a new repository on the command line
+echo "# UI_LoginScreen" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:CraftomeCJ/repo_NAME.git
+git push -u origin main -->
 
-1. define problem here
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ts(2322)_error.png "style=width:200 height: 200")
-![gif image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/samplegif.gif "style=width:200 height: 200")
+<!-- Create local Repo -->
+<!-- check git -->
+git status
+<!-- initialize git -->
+git init
+<!-- first commit -->
+git add .
+git commit -m "first commit"
+<!-- change remote branch name to main -->
+git branch -M main
+<!-- add git route -->
+git remote add origin git@github.com:CraftomeCJ/RN-TS_LoginScreen.git
+<!-- check git route -->
+git remote -v
 
-- solution steps here
+<!-- first upload to remote -->
+git push -u origin main
 
-![solutionSteps](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ts(2322)_error.png "style=width:200 height: 200")
-<!-- can include some codes for future use -->
-```typescript
-style = { [styles.first, styles.second ] }
+<!-- Add working folder -->
+- add assets directory (for images)
+- add src directory
+  - add screens directory
+    - add dashboard directory (dashboard)
+    - add welcome directory (splash screen)
+    - add login directory (login)
+  - add component directory
+
+  <!-- second upload -->
+  git add .
+  git commit -m "add src, screen, welcome, login, components directory"
+git push -u origin main
+
+  <!-- branch to start development for error tracking -->
+git switch -c Login-UI_Design
 ```
 
-## What other issues trying to resolve? <br/>
-
-1. define problem here
-
-![ErrorImagehere](<https://github.com/CraftomeCJ/learningJournal/blob/main/image/errorimage.png> height="200")
-
-  **After some research, I found some solutions:**
-
-- define solution here
-
-example
-
-```javascript
-git push origin --delete showsolution/codes
-```
+![file structure](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file1.png "style=width:200 height: 200")
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -289,39 +389,40 @@ ask During this time ask yourself:
 =>Did I spend time on important tasks that will help accelerate my career?
 
 These questions will help me review and unlock areas of improvement (which will be never-ending) in my life, career and work. This step can feel uncomfortable and requires self-awareness and review. -->
-- Had make good progress on practice to time-boxing my task to 90 minutes per self-assigned task.
-
-- Continue to work on the more advance React Native concepts, its feature, workflows and how to use it with some CSS fundamentals.
-
-- required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
-
-- Day 26 is continue to learn and practice on Day 15 & 16 notes of React Native concepts and at the same time work on TypeScript conversion, behind schedule by 2.5 days.
-
-- Practice more to have better understanding of the useState & useReducer with other tutorials.
-
-- Layout of working journal now look good, from day 26 onwards will improve on technical writing of learning experience and daily lesson task reviews with a better layout.
-
-- Add one more column for technical book's chapter summary for future reference.
-
-- add one more column for non-technical book's chapter summary for future reference.
-
-- To learn and master better file management on using .gif to showcase course's challenge work and .png folder for error and warning messages display.
+- Try to code with lesser research and reference, fail to learn, next 4 week to train myself yellow duck methods.
+- Code with think aloud methods.
+- Time Management
+  - Aim to balance between learn, work, life and rest within 24hr?
+- Slow typing speed
+  - How to speed up typing speed?
+- Reading speed
+  - Comprehended the logic but not the code.
+- Memory skills
+  - What causing me to lose my memory?
+- "Make it Better" <== my personal workflow
+  - learn to throw away code and start over again will teach me how many ways I can approach the problem and prevent me from getting stuck in a stub.
+- Logic & analytical thinking:
+  - I should find a way to think in logical frames to solve problems.
+  - important to have strong logical and analytical thinking  capabilities to decide which language or piece of code best suited for each user story.
+- Detail-oriented:
+  - how to ensure the precise accuracy in writing pieces of code?
+  - important to have strong attention to detail to protect my work, remain efficient and prevent bugs.
+- Creativity:
+  - learn to recognize the potential for technological solutions to everyday problems.
+  - important to understand how React Native + TypeScript works, the more creative ways to solve potential problems.
+- Resourcefulness + independence:
+  - able to complete individual tasks and later combine them together with other.
+  - important to remain resourceful and to habe confidence in my own ability to find a solution to any coding problem that might arise.
+- Curiosity:
+  - important to remain curious about coding and various languages and technologies.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
 
-<!-- ## Miscellaneous -->
-<!-- Sometimes the goal or task at hand has many sub-tasks and that is when I use here to write it out and track my progress towards it. -->
+## MY GOAL for May
 
-<!-- ## Monthly Experiment -->
-<!-- This is the section where I remind myself what personal growth experiment/ side hustle experiment I am focused on for this day, week, or month. For example, in the above journal entry, I was (and still am) focused on "essential-ism focus" ==> a fancy way to say to focus on one thing and one thing only. -->
-
-==============================================================================
-
-## MY GOAL for learning React Native
-
-### Aim to practice by building many small projects with TypeScript then React Native to embed the concepts deeply
+### Aim to improve the work flow of writing code.
 
 ==============================================================================
 
