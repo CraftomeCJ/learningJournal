@@ -363,7 +363,7 @@ git push -u origin main
 git switch -c Login-UI_Design
 ```
 
-![file structure](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/file1.png "style=width:200 height: 200")
+![file structure](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file1.png "style=width:200 height: 200")
 
 ```TypeScript
 //@filename: SplashScreen.tsx.
@@ -379,11 +379,11 @@ git switch -c Login-UI_Design
 [forms library](https://formik.org/docs/overview)
 
 - errors
-![error image](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/error2.png "style=width:200 height: 200")
-![solution image](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/solution1.png "style=width:200 height: 200")
+![error image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/error2.png "style=width:200 height: 200")
+![solution image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/solution1.png "style=width:200 height: 200")
 [solution](https://docs.expo.dev/workflow/configuration/)
-![result image](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/result1.png "style=width:200 height: 200")
-![error image](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/assets/learningImgs/error01.png "style=width:200 height: 200")
+![result image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/result1.png "style=width:200 height: 200")
+![error image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/error01.png "style=width:200 height: 200")
 [Solution](https://stackoverflow.com/questions/63244951/react-native-invariant-violation-module-appregistry-is-not-a-registered-calla)
 [solution2](https://docs.expo.dev/workflow/configuration/)
 -solution ==> expo upgrade
