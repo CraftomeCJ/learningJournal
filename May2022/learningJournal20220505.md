@@ -207,7 +207,7 @@ last ask myself again ==> ask yourself what the third most important task is.-->
 
 ## Personal Notes
 
-**Day 25 (Thursday) and today's main focus:** <br />
+**Day 32 (Thursday) and today's main focus:** <br />
 Today will be working on redoing state management with TSX from scratch and hopefully adding some creative spark on it to make to overall app look presentable.
 
 ## What I had learned today?

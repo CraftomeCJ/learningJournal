@@ -431,6 +431,7 @@ Error after error from npm to expo to yarn to js build even after trying out dif
 Have to find a way to improve my logic thinking further, and to make it more efficient. I will keep my journal short today.
 
 Have a 4hr sleep to recover my tired mind and fatigue body. Tomorrow try again with the code without typescript involved. Disappointing and unproductive day.
+
 ## What other issues trying to resolve? <br/>
 
 1. Time Management - Where is the balance between learn, work, life and rest.
@@ -467,7 +468,7 @@ These questions will help me review and unlock areas of improvement (which will 
 
 ## MY GOAL for May
 
-### Aim to remember the work flow of writing code inside out.
+### Aim to remember the work flow of writing code inside out
 
 ==============================================================================
 
