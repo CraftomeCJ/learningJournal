@@ -259,18 +259,32 @@ Today till Sunday continue working on React Native + TypeScript App with simple 
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-### UI Login App Work Flow [REBOOT]
+[Setup TypeScript with React](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup/#vs-code-extensions)
+[METRO Bundler](https://facebook.github.io/metro/docs/getting-started)
+[A beginner’s guide to Metro Bundler](https://medium.com/geekculture/a-beginners-guide-to-metro-bundler-f639d641468b)
+
+- npx is actually using command from the project's modeule
+- npm is using the command from the global module
+**--save-dev vs --save**
+- --save-dev -==> saves to devDependencies only present in development environment.
+- --save ==> saves to dependencies which will be present in development + built releases
+- some packages that we should use in devDependencies are @types packages.
+    - ==> as they store the typing of the package used only in development.
+- when we build for release, the typescript project is compiled to javascript, which makes the @types packages useless, hence, those are always in devDependency
+
+### BentoApp Development Work Flow [REBOOT]
 
 - **Getting Started with React Native + TypeScript**
 
 ```bash
 # go working directory
 cd Desktop/someProjectFolder
-```
 
-```bash
 <!-- React native with TypeScript template: -->
-npx react-native init BentoApp --template react-native-template-typescrip -y
+npx react-native init BentoApp --template react-native-template-typescript -y
+
+# cd working directory
+cd BentoApp
 
 <!-- JavaScript Bundler Metro -->
 npm install --save-dev metro metro-core
@@ -280,7 +294,7 @@ npm install
 <!-- or -->
 npm install --legacy-peer-deps
 
-<!-- fix vulnerabilities -->
+<!-- fix vulnerabilities if any -->
 npm audit fix
 <!-- or -->
 npm audit fix --force
@@ -314,22 +328,29 @@ npm run tsc{
 <!-- check Jest config in package.json file -->
 <!-- Install Jest if necessary -->
 npm install jest --global
- npm install --save-dev jest
+npm install --save-dev jest
  <!-- init jest.config.js file -->
 jest init
 <!-- uncomment this following in jest.config.js file -->
 module.exports = {
   preset: 'react-native',
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+  moduleFileExtensions: [
+    'ts',
+    'tsx',
+    'js',
+    'jsx',
+    'json',
+    'node'
+    ]
 };
 
 <!-- open react native bundler for Android emulator -->
-expo start
+npm run android
 
 <!-- create GitHub remote repo -->
 <!-- Steps for new local repo to remote:
 create a new repository on the command line
-echo "# UI_LoginScreen" >> README.md
+echo "# BentoApp" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
@@ -348,41 +369,39 @@ git commit -m "first commit"
 <!-- change remote branch name to main -->
 git branch -M main
 <!-- add git route -->
-git remote add origin git@github.com:CraftomeCJ/RN-TS_LoginScreen.git
+git remote add origin git@github.com:CraftomeCJ/BentoApp.git
 <!-- check git route -->
 git remote -v
 
 <!-- first upload to remote -->
 git push -u origin main
 
-<!-- Add working folder -->
-- add assets directory (for images)
-- add src directory
-  - add screens directory
-    - add dashboard directory (dashboard)
-    - add welcome directory (splash screen)
-    - add login directory (login)
-  - add component directory
+<!-- Create Directory/File Structure -->
+mkdir src
+mkdir assets components screen
+./assets/Image/ScreenImages
+./src/components
+./src/screen/DrawerScreens
+./src/screen/SplashScreens
 
-  <!-- second upload -->
+touch ./src/screen/SplashScreens/App.css ./src/screen/SplashScreens/App.test.js ./src/screen/SplashScreens/index.css ./src/screen/SplashScreens/setupTests.js
+
+  <!-- branch testing to start testing dependencies for error tracking -->
+git switch -c testing
+
+  <!-- install --save dependencies -->
+npm install --save react-spinners
+
+<!-- Install Expo-CLI & expo -->
+# npm install -save expo-cli
+# npm install -save expo
+# npm audit fix --legacy-peer-deps
+
+<!-- second upload -->
   git add .
   git commit -m "add src, screen, welcome, login, components directory"
 git push -u origin main
-
-  <!-- branch to start development for error tracking -->
-git switch -c Login-UI_Design
 ```
-
-![Run / Open VSCode from Mac Terminal](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/vscodesolution.png "style=width:200 height: 200")
-
-[How to Use a .gitignore File](https://www.pluralsight.com/guides/how-to-use-gitignore-file)
-[.gitignore Files: A Guide for Beginners](https://careerkarma.com/blog/gitignore/)
-[How to setup .gitignore file](https://techblost.com/how-to-setup-gitignore-file/)
-[.gitignore examples to ignore files, folder & pattern](https://www.golinuxcloud.com/gitignore-examples/#6_Personal_gitignore_Rules)
-[gitignore template](https://github.com/github/gitignore)
-[Gitignore Explained: What is Gitignore and How to Add it to Your Repo](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
-STop .gitignore to show up<br/>
-![How can I stop .gitignore from appearing in the list of untracked files?](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/gitignore.png "style=width:200 height: 200")
 
 ```bash
 # create global .gitignore file
@@ -406,16 +425,90 @@ node_modules/
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
+=============================================================================
+
+### Software Installed
+
+[React Spinners](https://www.npmjs.com/package/react-spinners)
+- A collection of loading spinners with React.js based on [Halogen](https://github.com/yuanyan/halogen).
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+### Development References
+
+![Run / Open VSCode from Mac Terminal](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/vscodesolution.png "style=width:200 height: 200")
+
+[How to Use a .gitignore File](https://www.pluralsight.com/guides/how-to-use-gitignore-file)
+[.gitignore Files: A Guide for Beginners](https://careerkarma.com/blog/gitignore/)
+[How to setup .gitignore file](https://techblost.com/how-to-setup-gitignore-file/)
+[.gitignore examples to ignore files, folder & pattern](https://www.golinuxcloud.com/gitignore-examples/#6_Personal_gitignore_Rules)
+[gitignore template](https://github.com/github/gitignore)
+[Gitignore Explained: What is Gitignore and How to Add it to Your Repo](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
+[Git Rename Branch – How to Change a Local Branch Name](https://www.freecodecamp.org/news/git-rename-branch-how-to-change-a-local-branch-name/)
+[How to exit a git merge asking for commit message?](https://unix.stackexchange.com/questions/181280/how-to-exit-a-git-merge-asking-for-commit-message)
+![How to exit a git merge asking for commit message?](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/solution3.png "style=width:200 height: 200")
+
+Stop .gitignore to show up<br/>
+![How can I stop .gitignore from appearing in the list of untracked files?](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/gitignore.png "style=width:200 height: 200")
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+### Errors & Solutions:
+
+![error3](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/error3.png "style=width:200 height: 200")
+![solution2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/solution2.png "style=width:200 height: 200")
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
 ==============================================================================
 
 ## Exercise of the Day
 
-[x] **Challenge:** Redo ColorScreen, CounterScreen, SquareScreen
+[x] **Challenge:** Build a BentoApp
 
-1. Challenge Questions:
-   1. write something
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/ts(2322)_error.png "style=width:200 height: 200")
-![gif image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/samplegif.gif "style=width:200 height: 200")
+- Objective:
+  - Displaying splash screen during response time from the server is an excellent way to interact with the user. But making a loading/splash screen becomes difficult when we want to practically use an animated loader, where we need to make extra efforts to write down its styling file. To overcome this problem, we use a bunch of predefined loaders from the react-spinners module.
+
+1. File Structure:
+   1. src directory (source of components)
+      - assets directory (for images & other resources)
+      - welcome/splashscreen directory (SplashScreen)
+      - screens directory (for loginScreen & registerScreen [UI/UX])
+      - drawerscreens directory (for HomeScreen & SettingScreen)
+      - to add dashboard directory (dashboard)
+   2. Wire Frame
+![file structure1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file1.png "style=width:200 height: 200")
+![file structure2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file2.png "style=width:200 height: 200")
+**project logo**
+![project logo](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/bentoLogo.png "style=width:200 height: 200")
+
+2. Approach
+   1. Step 1 ==> write some code in App.tsx, no need to make any other components for this project. For using the predefined spinners we need to import the 'loader' component from 'react-spinners'.
+      Step 2:==> need to 'useState" to add a state to our functional component and 'useEffect' is also needed.
+      - Put your side-effect logic into the callback function, then use the dependencies argument to control when you want the side-effect to run. That's the sole purpose of useEffect().
+      - [useEffect() Hook](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/bentoLogo.png "style=width:200 height: 200")
+      - [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/#1-useeffect-is-for-side-effects)
+      - [What is useState() in React ?](https://www.geeksforgeeks.org/what-is-usestate-in-react/)
+      - [useState and useEffect explained](https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf)
+      Step 3 ==> Add a state isLoading which will indicate that splashscreen page is loading or not.
+      Step 4 ==> Add a setTimeout() method inside useEffect to make the splash screen appear for a certain time period example: 5sec.
+      Step 5 ==> use a custom CSS block to override its property and use it when isLoading is true example: page is still loading.
+3. Git Branch
+   1. main
+    - setup folder & file
+    - merge safe dependencies from branch 'testing'
+   2. testing
+      - test npm dependencies installed
+      - playground for ideas
+      - merge to branch 'main/splashscreen/loginscreen/ once error free
+   3. SplashScreen
+      - build splashscreen
+   4. LoginScreen
+      - build loginscreen
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -594,9 +687,6 @@ for their hard work and support.
 Created by:
 
 - [CJ Ho](https://linkedin.com/in/cjho)- feel free to contact me :>!!
-
-### Software Installed
-<!-- - [Xcode 13](https://developer.apple.com/xcode/) -->
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
