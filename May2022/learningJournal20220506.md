@@ -344,7 +344,7 @@ module.exports = {
     'json',
     'node'
     ]
-};
+}
 
 #  open react native bundler for Android emulator
 npm run android or ios
@@ -358,7 +358,7 @@ git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:CraftomeCJ/repo_NAME.git
-git push -u origin main -->
+git push -u origin main
 
 #  Create local Repo
 #  check git -->
@@ -486,14 +486,14 @@ Stop .gitignore to show up<br/>
 ![file structure1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file1.png "style=width:200 height: 200")
 ![file structure2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file2.png "style=width:200 height: 200")
 **project logo**
-![project logo](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/bentoLogo.gif "style=width:200 height: 200")
+![project logo](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/bentoLogo.gif "style=width:100 height: 100")
 
 2. Approach:
   Step 1: write some code in App.tsx, no need to make any other components for this project. For using the predefined spinners we need to import the 'loader' component from 'react-spinners'.
   Step 2: need to 'useState" to add a state to our functional component and 'useEffect' is also needed.
 
       - Put your side-effect logic into the callback function, then use the dependencies argument to control when you want the side-effect to run. That's the sole purpose of useEffect().
-      - ![useEffect() Hook](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/bentoLogo.png "style=width:200 height: 200")
+      - ![useEffect() Hook](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/file3.png "style=width:200 height: 200")
       - [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/#1-useeffect-is-for-side-effects)
       - [What is useState() in React ?](https://www.geeksforgeeks.org/what-is-usestate-in-react/)
       - [useState and useEffect explained](https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf)
