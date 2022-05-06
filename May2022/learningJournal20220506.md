@@ -68,7 +68,7 @@ Never take appearances for reality. <br/>
 "Discipline is choosing between what you want now and what you want most." - some wise man said so
 
 <!-- practice gratitude daily -->
-**I'm thankful:** for what I have; I'll end up having more. If I concentrate on what I don't have, you will never, ever have enough..
+**I'm thankful for:** allow myself to appreciate the prosperity and abundance that comes my way today.
 
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
@@ -249,24 +249,157 @@ last => ask myself again ==> ask yourself what the third most important task is.
 
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
-1. [Completed a personal React native + Typescript Mini Guide documentations Ver 1.0](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/README.md)
-2. HR checkpoint @1030am
-3. monthly sync-up sessions with instructor @1700pm
-4. GenConnect Session @ 1730pm
+1. [Completed a personal React native + Typescript Mini Guide documentations Ver 1.1](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/README.md)
+2. dinner with wife @7.30pm
 
 ## Personal Notes
 
 **Day 32 (Thursday) and today's main focus:** <br />
-Today till Sunday will be working on setup typeScript with React Native from scratch with simple "hello world" to make sure it works, and slowly build up a BentoApp and add dependencies one by one, debug error line by line if any. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
+Today till Sunday continue working on React Native + TypeScript App with simple "hello world" program to make sure it works, and slowly build up "BentoApp" and learn and add dependencies one by one, debug error line by line if any. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace. Be ready to fail.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-- how i can apply the below-mentioned principle to my coding and programming skills
+### UI Login App Work Flow [REBOOT]
 
-**Principles:**
+- **Getting Started with React Native + TypeScript**
 
-- The Four Laws of Behavior Change: make it obvious, make it attractive, make it easy, make it satisfying
-<br/>
+```bash
+# go working directory
+cd Desktop/someProjectFolder
+```
+
+```bash
+<!-- React native with TypeScript template: -->
+npx react-native init BentoApp --template react-native-template-typescrip -y
+
+<!-- JavaScript Bundler Metro -->
+npm install --save-dev metro metro-core
+
+<!-- install dependencies -->
+npm install
+<!-- or -->
+npm install --legacy-peer-deps
+
+<!-- fix vulnerabilities -->
+npm audit fix
+<!-- or -->
+npm audit fix --force
+<!-- or -->
+npm audit fix --legacy-peer-deps
+
+<!-- open IDE -->
+code .
+
+<!-- check tsconfig.json file -->
+npm run tsc{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": ["es2017"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}
+<!-- check Jest config in package.json file -->
+<!-- Install Jest if necessary -->
+npm install jest --global
+ npm install --save-dev jest
+ <!-- init jest.config.js file -->
+jest init
+<!-- uncomment this following in jest.config.js file -->
+module.exports = {
+  preset: 'react-native',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+};
+
+<!-- open react native bundler for Android emulator -->
+expo start
+
+<!-- create GitHub remote repo -->
+<!-- Steps for new local repo to remote:
+create a new repository on the command line
+echo "# UI_LoginScreen" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:CraftomeCJ/repo_NAME.git
+git push -u origin main -->
+
+<!-- Create local Repo -->
+<!-- check git -->
+git status
+<!-- initialize git -->
+git init
+<!-- first commit -->
+git add .
+git commit -m "first commit"
+<!-- change remote branch name to main -->
+git branch -M main
+<!-- add git route -->
+git remote add origin git@github.com:CraftomeCJ/RN-TS_LoginScreen.git
+<!-- check git route -->
+git remote -v
+
+<!-- first upload to remote -->
+git push -u origin main
+
+<!-- Add working folder -->
+- add assets directory (for images)
+- add src directory
+  - add screens directory
+    - add dashboard directory (dashboard)
+    - add welcome directory (splash screen)
+    - add login directory (login)
+  - add component directory
+
+  <!-- second upload -->
+  git add .
+  git commit -m "add src, screen, welcome, login, components directory"
+git push -u origin main
+
+  <!-- branch to start development for error tracking -->
+git switch -c Login-UI_Design
+```
+
+![Run / Open VSCode from Mac Terminal](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/vscodesolution.png "style=width:200 height: 200")
+
+[How to Use a .gitignore File](https://www.pluralsight.com/guides/how-to-use-gitignore-file)
+[.gitignore Files: A Guide for Beginners](https://careerkarma.com/blog/gitignore/)
+[How to setup .gitignore file](https://techblost.com/how-to-setup-gitignore-file/)
+[.gitignore examples to ignore files, folder & pattern](https://www.golinuxcloud.com/gitignore-examples/#6_Personal_gitignore_Rules)
+[gitignore template](https://github.com/github/gitignore)
+
+```bash
+# create global .gitignore file
+touch ~/.gitignore
+# Open up this file and add in whatever rules you want to set for all the Git repositories on your system.
+
+# Once you have configured your gitignore file, you can enforce its rules using the core.excludesFile property:
+git config --global core.excludesFile ~/.gitignore
+# Be careful when you are defining a global git ignore rule. This is because the rules in a global .gitignore are set by default across all projects.
+# A global .gitignore file is best used for common files like .env which you will almost never want to commit to a git repository.
+
+cd workingFolder
+# create a git ignore file
+touch .gitignore
+
+# open git ignore file add following:
+node_modules/
+.env
+.DS_Store
+```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
