@@ -266,12 +266,12 @@ Today till Sunday continue working on React Native + TypeScript App with simple 
 - npx is actually using command from the project's modeule
 - npm is using the command from the global module
 **--save-dev vs --save**
-- --save-dev 
+- --save-dev
   - ==> saves to devDependencies only present in development environment.
-- --save 
+- --save
   - ==> saves to dependencies which will be present in development + built releases
 - some packages that we should use in devDependencies are @types packages.
-    - ==> as they store the typing of the package used only in development.
+  - ==> as they store the typing of the package used only in development.
 - when we build for release, the typescript project is compiled to javascript, which makes the @types packages useless, hence, those are always in devDependency
 
 ### BentoApp Development Work Flow [REBOOT]
@@ -432,13 +432,14 @@ node_modules/
 ### Software Installed
 
 [React Spinners](https://www.npmjs.com/package/react-spinners)
+
 - A collection of loading spinners with React.js based on [Halogen](https://github.com/yuanyan/halogen).
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
 
-### Development References:
+### Development References
 
 ![Run / Open VSCode from Mac Terminal](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/vscodesolution.png "style=width:200 height: 200")
 
@@ -459,7 +460,7 @@ Stop .gitignore to show up<br/>
 
 =============================================================================
 
-### Errors & Solutions:
+### Errors & Solutions
 
 ![error3](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/error3.png "style=width:200 height: 200")
 ![solution2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/solution2.png "style=width:200 height: 200")
@@ -491,19 +492,22 @@ Stop .gitignore to show up<br/>
 ![project logo](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/bentoLogo.gif "style=width:50 height: 50")
 
 1. Approach:
-  Step 1: write some code in App.tsx, no need to make any other components for this project. For using the predefined spinners we need to import the 'loader' component from 'react-spinners'.
-  Step 2: need to 'useState" to add a state to our functional component and 'useEffect' is also needed.
 
-      - Put your side-effect logic into the callback function, then use the dependencies argument to control when you want the side-effect to run. That's the sole purpose of useEffect().
+- Step 1: write some code in App.tsx, no need to make any other components for this project. For using the predefined spinners we need to import the 'loader' component from 'react-spinners'.
+- Step 2: need to 'useState" to add a state to our functional component and 'useEffect' is also needed.
+
+- Put your side-effect logic into the callback function, then use the dependencies argument to control when you want the side-effect to run. That's the sole purpose of useEffect().
 
 ![useEffect() Hook](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file3.png "style=width:200 height: 200")
-      - [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/#1-useeffect-is-for-side-effects)
-      - [What is useState() in React ?](https://www.geeksforgeeks.org/what-is-usestate-in-react/)
-      - [useState and useEffect explained](https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf)
 
-  Step 3 ==> Add a state isLoading which will indicate that splashscreen page is loading or not.
-  Step 4 ==> Add a setTimeout() method inside useEffect to make the splash screen appear for a certain time period example: 5sec.
-      Step 5 ==> use a custom CSS block to override its property and use it when isLoading is true example: page is still loading.
+- [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/#1-useeffect-is-for-side-effects)
+- [What is useState() in React ?](https://www.geeksforgeeks.org/what-is-usestate-in-react/)
+- [useState and useEffect explained](https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf)
+
+- Step 3 ==> Add a state isLoading which will indicate that splashscreen page is loading or not.
+- Step 4 ==> Add a setTimeout() method inside useEffect to make the splash screen appear for a certain time period example: 5sec.
+- Step 5 ==> use a custom CSS block to override its property and use it when isLoading is true example: page is still loading.
+
 1. Git Branch
 
    1. main
@@ -589,7 +593,7 @@ These questions will help me review and unlock areas of improvement (which will 
 
 ## MY GOAL for May
 
-### Aim to create a personal work flow of writing code from scratch.
+### Aim to create a personal work flow of writing code from scratch
 
 ==============================================================================
 
