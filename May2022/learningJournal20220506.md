@@ -485,7 +485,9 @@ Stop .gitignore to show up<br/>
    2. Wire Frame
 ![file structure1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file1.png "style=width:200 height: 200")
 ![file structure2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file2.png "style=width:200 height: 200")
+
 <h4 align="center">Project Logo</h4>
+
 ![project logo](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/bentoLogo.gif "style=width:50 height: 50")
 
 1. Approach:
@@ -493,7 +495,8 @@ Stop .gitignore to show up<br/>
   Step 2: need to 'useState" to add a state to our functional component and 'useEffect' is also needed.
 
       - Put your side-effect logic into the callback function, then use the dependencies argument to control when you want the side-effect to run. That's the sole purpose of useEffect().
-      - ![useEffect() Hook](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file3.png "style=width:200 height: 200")
+
+![useEffect() Hook](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file3.png "style=width:200 height: 200")
       - [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/#1-useeffect-is-for-side-effects)
       - [What is useState() in React ?](https://www.geeksforgeeks.org/what-is-usestate-in-react/)
       - [useState and useEffect explained](https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf)
@@ -501,7 +504,7 @@ Stop .gitignore to show up<br/>
   Step 3 ==> Add a state isLoading which will indicate that splashscreen page is loading or not.
   Step 4 ==> Add a setTimeout() method inside useEffect to make the splash screen appear for a certain time period example: 5sec.
       Step 5 ==> use a custom CSS block to override its property and use it when isLoading is true example: page is still loading.
-3. Git Branch
+1. Git Branch
 
    1. main
     - setup folder & file
