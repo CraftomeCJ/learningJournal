@@ -380,6 +380,9 @@ git switch -c Login-UI_Design
 [How to setup .gitignore file](https://techblost.com/how-to-setup-gitignore-file/)
 [.gitignore examples to ignore files, folder & pattern](https://www.golinuxcloud.com/gitignore-examples/#6_Personal_gitignore_Rules)
 [gitignore template](https://github.com/github/gitignore)
+[Gitignore Explained: What is Gitignore and How to Add it to Your Repo](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
+STop .gitignore to show up<br/>
+![How can I stop .gitignore from appearing in the list of untracked files?](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/gitignore.png "style=width:200 height: 200")
 
 ```bash
 # create global .gitignore file
