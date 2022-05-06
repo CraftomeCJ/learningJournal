@@ -254,7 +254,7 @@ last => ask myself again ==> ask yourself what the third most important task is.
 
 ## Personal Notes
 
-**Day 32 (Thursday) and today's main focus:** <br />
+**Day 33 (Friday) and today's main focus:** <br />
 Today till Sunday continue working on React Native + TypeScript App with simple "hello world" program to make sure it works, and slowly build up "BentoApp" and learn and add dependencies one by one, debug error line by line if any. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace. Be ready to fail.
 
 ## What I had learned today?
@@ -266,8 +266,10 @@ Today till Sunday continue working on React Native + TypeScript App with simple 
 - npx is actually using command from the project's modeule
 - npm is using the command from the global module
 **--save-dev vs --save**
-- --save-dev -==> saves to devDependencies only present in development environment.
-- --save ==> saves to dependencies which will be present in development + built releases
+- --save-dev 
+  - ==> saves to devDependencies only present in development environment.
+- --save 
+  - ==> saves to dependencies which will be present in development + built releases
 - some packages that we should use in devDependencies are @types packages.
     - ==> as they store the typing of the package used only in development.
 - when we build for release, the typescript project is compiled to javascript, which makes the @types packages useless, hence, those are always in devDependency
@@ -280,31 +282,31 @@ Today till Sunday continue working on React Native + TypeScript App with simple 
 # go working directory
 cd Desktop/someProjectFolder
 
-<!-- React native with TypeScript template: -->
+# React native with TypeScript template:
 npx react-native init BentoApp --template react-native-template-typescript -y
 
 # cd working directory
 cd BentoApp
 
-<!-- JavaScript Bundler Metro -->
+# JavaScript Bundler Metro
 npm install --save-dev metro metro-core
 
-<!-- install dependencies -->
+# install dependencies
 npm install
-<!-- or -->
+# or
 npm install --legacy-peer-deps
 
-<!-- fix vulnerabilities if any -->
+#  fix vulnerabilities if any
 npm audit fix
-<!-- or -->
+#  or
 npm audit fix --force
-<!-- or -->
+#  or
 npm audit fix --legacy-peer-deps
 
-<!-- open IDE -->
+#  open IDE
 code .
 
-<!-- check tsconfig.json file -->
+#  check tsconfig.json file
 npm run tsc{
   "compilerOptions": {
     "allowJs": true,
@@ -325,13 +327,13 @@ npm run tsc{
     "jest.config.js"
   ]
 }
-<!-- check Jest config in package.json file -->
-<!-- Install Jest if necessary -->
+#  check Jest config in package.json file
+#  Install Jest if necessary
 npm install jest --global
 npm install --save-dev jest
- <!-- init jest.config.js file -->
+# init jest.config.js file
 jest init
-<!-- uncomment this following in jest.config.js file -->
+#  uncomment this following in jest.config.js file
 module.exports = {
   preset: 'react-native',
   moduleFileExtensions: [
@@ -344,12 +346,12 @@ module.exports = {
     ]
 };
 
-<!-- open react native bundler for Android emulator -->
-npm run android
+#  open react native bundler for Android emulator
+npm run android or ios
 
-<!-- create GitHub remote repo -->
-<!-- Steps for new local repo to remote:
-create a new repository on the command line
+#  create GitHub remote repo
+#  Steps for new local repo to remote:
+# create a new repository on the command line
 echo "# BentoApp" >> README.md
 git init
 git add README.md
@@ -358,25 +360,25 @@ git branch -M main
 git remote add origin git@github.com:CraftomeCJ/repo_NAME.git
 git push -u origin main -->
 
-<!-- Create local Repo -->
-<!-- check git -->
+#  Create local Repo
+#  check git -->
 git status
-<!-- initialize git -->
+#  initialize git
 git init
-<!-- first commit -->
+#  first commit
 git add .
 git commit -m "first commit"
-<!-- change remote branch name to main -->
+#  change remote branch name to main
 git branch -M main
-<!-- add git route -->
+#  add git route
 git remote add origin git@github.com:CraftomeCJ/BentoApp.git
-<!-- check git route -->
+#  check git route
 git remote -v
 
-<!-- first upload to remote -->
+#  first upload to remote
 git push -u origin main
 
-<!-- Create Directory/File Structure -->
+#  Create Directory/File Structure
 mkdir src
 mkdir assets components screen
 ./assets/Image/ScreenImages
@@ -386,18 +388,18 @@ mkdir assets components screen
 
 touch ./src/screen/SplashScreens/App.css ./src/screen/SplashScreens/App.test.js ./src/screen/SplashScreens/index.css ./src/screen/SplashScreens/setupTests.js
 
-  <!-- branch testing to start testing dependencies for error tracking -->
+#  branch testing to start testing dependencies for error tracking
 git switch -c testing
 
-  <!-- install --save dependencies -->
+#  install --save dependencies
 npm install --save react-spinners
 
-<!-- Install Expo-CLI & expo -->
+# Install Expo-CLI & expo
 # npm install -save expo-cli
 # npm install -save expo
 # npm audit fix --legacy-peer-deps
 
-<!-- second upload -->
+# second upload
   git add .
   git commit -m "add src, screen, welcome, login, components directory"
 git push -u origin main
@@ -436,18 +438,18 @@ node_modules/
 
 =============================================================================
 
-### Development References
+### Development References:
 
 ![Run / Open VSCode from Mac Terminal](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/vscodesolution.png "style=width:200 height: 200")
 
-[How to Use a .gitignore File](https://www.pluralsight.com/guides/how-to-use-gitignore-file)
-[.gitignore Files: A Guide for Beginners](https://careerkarma.com/blog/gitignore/)
-[How to setup .gitignore file](https://techblost.com/how-to-setup-gitignore-file/)
-[.gitignore examples to ignore files, folder & pattern](https://www.golinuxcloud.com/gitignore-examples/#6_Personal_gitignore_Rules)
-[gitignore template](https://github.com/github/gitignore)
-[Gitignore Explained: What is Gitignore and How to Add it to Your Repo](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
-[Git Rename Branch – How to Change a Local Branch Name](https://www.freecodecamp.org/news/git-rename-branch-how-to-change-a-local-branch-name/)
-[How to exit a git merge asking for commit message?](https://unix.stackexchange.com/questions/181280/how-to-exit-a-git-merge-asking-for-commit-message)
+- [How to Use a .gitignore File](https://www.pluralsight.com/guides/how-to-use-gitignore-file)
+- [.gitignore Files: A Guide for Beginners](https://careerkarma.com/blog/gitignore/)
+- [How to setup .gitignore file](https://techblost.com/how-to-setup-gitignore-file/)
+- [.gitignore examples to ignore files, folder & pattern](https://www.golinuxcloud.com/gitignore-examples/#6_Personal_gitignore_Rules)
+- [gitignore template](https://github.com/github/gitignore)
+- [Gitignore Explained: What is Gitignore and How to Add it to Your Repo](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
+- [Git Rename Branch – How to Change a Local Branch Name](https://www.freecodecamp.org/news/git-rename-branch-how-to-change-a-local-branch-name/)
+- [How to exit a git merge asking for commit message?](https://unix.stackexchange.com/questions/181280/how-to-exit-a-git-merge-asking-for-commit-message)
 ![How to exit a git merge asking for commit message?](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/solution3.png "style=width:200 height: 200")
 
 Stop .gitignore to show up<br/>
@@ -484,20 +486,23 @@ Stop .gitignore to show up<br/>
 ![file structure1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file1.png "style=width:200 height: 200")
 ![file structure2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file2.png "style=width:200 height: 200")
 **project logo**
-![project logo](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/bentoLogo.png "style=width:200 height: 200")
+![project logo](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/bentoLogo.gif "style=width:200 height: 200")
 
-2. Approach
-   1. Step 1 ==> write some code in App.tsx, no need to make any other components for this project. For using the predefined spinners we need to import the 'loader' component from 'react-spinners'.
-      Step 2:==> need to 'useState" to add a state to our functional component and 'useEffect' is also needed.
+2. Approach:
+  Step 1: write some code in App.tsx, no need to make any other components for this project. For using the predefined spinners we need to import the 'loader' component from 'react-spinners'.
+  Step 2: need to 'useState" to add a state to our functional component and 'useEffect' is also needed.
+
       - Put your side-effect logic into the callback function, then use the dependencies argument to control when you want the side-effect to run. That's the sole purpose of useEffect().
-      - [useEffect() Hook](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/bentoLogo.png "style=width:200 height: 200")
+      - ![useEffect() Hook](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/bentoLogo.png "style=width:200 height: 200")
       - [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/#1-useeffect-is-for-side-effects)
       - [What is useState() in React ?](https://www.geeksforgeeks.org/what-is-usestate-in-react/)
       - [useState and useEffect explained](https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf)
-      Step 3 ==> Add a state isLoading which will indicate that splashscreen page is loading or not.
-      Step 4 ==> Add a setTimeout() method inside useEffect to make the splash screen appear for a certain time period example: 5sec.
+
+  Step 3 ==> Add a state isLoading which will indicate that splashscreen page is loading or not.
+  Step 4 ==> Add a setTimeout() method inside useEffect to make the splash screen appear for a certain time period example: 5sec.
       Step 5 ==> use a custom CSS block to override its property and use it when isLoading is true example: page is still loading.
 3. Git Branch
+
    1. main
     - setup folder & file
     - merge safe dependencies from branch 'testing'
@@ -512,47 +517,7 @@ Stop .gitignore to show up<br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
-## What difficulties did I encounter and How do I solve the issues?
-<!-- This is where I write down the problem and write down the steps for solving the issues I had encountered-->
-<!-- example 1. While setting up ios & android simulator and emulator, face a minor connectivity issue with my android phone. error message "Could not load expo Network response timed out"
-  After asking Mr Google, I found a few solutions:
-   - installed Android Studio
-   - turnoff my firewall
-   - setup Android Studio Emulator
-![Error Msg](https://github.com/CraftomeCJ/learningJournal/blob/main/image/Screenshot1.png "style=width:200 height: 200") -->
-**Project difficulties:** <br/>
-
-1. define problem here
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/ts(2322)_error.png "style=width:200 height: 200")
-![gif image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/samplegif.gif "style=width:200 height: 200")
-
-- solution steps here
-
-![solutionSteps](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/ts(2322)_error.png "style=width:200 height: 200")
-<!-- can include some codes for future use -->
-```typescript
-style = { [styles.first, styles.second ] }
-```
-
-## What other issues trying to resolve? <br/>
-
-1. define problem here
-
-![ErrorImagehere](<https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/errorimage.png> height="200")
-
-  **After some research, I found some solutions:**
-
-- define solution here
-
-example
-
-```javascript
-git push origin --delete showsolution/codes
-```
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
+============================================================================
 
 ## Room to improve?
 <!-- This is where I write things I can do to improve my work -->
