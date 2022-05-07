@@ -351,9 +351,6 @@ Today till Sunday will be working on setup typeScript with React Native from scr
 - **[How to fix Binding element 'children' implicitly has an 'any' type.ts(7031)?](https://newbedev.com/how-to-fix-binding-element-children-implicitly-has-an-any-type-ts-7031)**
 - [TS2307 Error: Cannot find module '../constants' or its corresponding type declarations](https://stackoverflow.com/questions/69412800/ts2307-error-cannot-find-module-constants-or-its-corresponding-type-declar)
 
-Stop .gitignore to show up<br/>
-![How can I stop .gitignore from appearing in the list of untracked files?](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/gitignore.png "style=width:200 height: 200")
-
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
@@ -364,7 +361,6 @@ Stop .gitignore to show up<br/>
 - [Error: Unable to resolve module `react-native-gesture-handler`](https://stackoverflow.com/questions/55358811/error-unable-to-resolve-module-react-native-gesture-handler)
 - [How to fix react-native-gesture-handler error not working](https://stackoverflow.com/questions/56901238/how-to-fix-react-native-gesture-handler-error-not-working)
 - [Importing react-native-gesture-handler crashes within jest](https://github.com/software-mansion/react-native-gesture-handler/issues/344)
-- []
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
