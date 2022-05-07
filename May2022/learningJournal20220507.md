@@ -68,7 +68,7 @@ Instead, stay calm and subtly mirror their behavior, calling attention to what t
 "In order to succeed, you must have a long-term focus. Most of the challenges in our lives come from a short-term focus." - Tony Robbins <br/>
 
 <!-- practice gratitude daily -->
-**I'm thankful:** to have a God that forgives me and loves me and gave me life. </br/>
+**I'm thankful:** to have a God that forgives me and loves me and gave me life. <br/>
 
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
