@@ -256,9 +256,9 @@ Today till Sunday will be working on setup typeScript with React Native from scr
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
--[Setup TypeScript with React](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup/#vs-code-extensions)
-[METRO Bundler](https://facebook.github.io/metro/docs/getting-started)
-[A beginner’s guide to Metro Bundler](https://medium.com/geekculture/a-beginners-guide-to-metro-bundler-f639d641468b)
+- [Setup TypeScript with React](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup/#vs-code-extensions)
+- [METRO Bundler](https://facebook.github.io/metro/docs/getting-started)
+- [A beginner’s guide to Metro Bundler](https://medium.com/geekculture/a-beginners-guide-to-metro-bundler-f639d641468b)
 
 ### BentoApp Development Work Flow [REBOOT]
 
