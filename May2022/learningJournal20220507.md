@@ -74,7 +74,7 @@ Instead, stay calm and subtly mirror their behavior, calling attention to what t
 **How to Approach my Life like the Greats:** <br/>
 The Psychology of DAILY ROUTINE: <br/>
 When I don't settle into routine, I teach myself that "fear" is an indicator that I'm doing the wrong thing, rather than just being very invested in the outcome. <br/>
-A lack of routine is a breeding ground for perpetual procrastination. It gives us gaps and spaces in which our subconscious minds can say: "well, I can take a break now." when in fact, I have a deadline. But if I'm used to take a break at that point in time, I'll allow it simply because "I always do." <br/>
+A lack of routine is a breeding ground for perpetual procrastination. It gives me gaps and spaces in which my subconscious minds can say: "well, I can take a break now." when in fact, I have a deadline. But if I'm used to take a break at that point in time, I'll allow it simply because "I always do." <br/>
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
