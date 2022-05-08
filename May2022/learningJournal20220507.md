@@ -419,11 +419,6 @@ Today till Sunday will be working on setup typeScript with React Native from scr
  3. Clean your room computationally: clean room through sequential, systematic thinking
  4. computational thinking approach to language: I can use the computer to translate my sentence into another language.
 
-1. Challenge Questions:
-   1. write something
-![solution image1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/ts(2322)_error.png "style=width:200 height: 200")
-![gif image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/learningImgs/samplegif.gif "style=width:200 height: 200")
-
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
