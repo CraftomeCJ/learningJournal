@@ -263,9 +263,68 @@ Today continue working on setup typeScript with React Native from scratch with s
 
 ```Typescript
 //@filename: app.tsx
+import React, { Component } from 'react';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
+import SplashScreen from 'react-native-splash-screen'
 
+const instructions = Platform.select({
+  ios: 'Press Cmd+R to reload,\n' +
+    'Cmd+D or shake for dev menu',
+  android: 'Double tap R on your keyboard to reload,\n' +
+    'Shake or press menu button for dev menu',
+});
 
+type Props = {};
+export default class App extends Component<Props> {
+  componentDidMount() {
+    SplashScreen.hide();
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+        Welcome React Native Learners!
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit App.js
+        </Text>
+        <Text style={styles.instructions}>
+          {instructions}
+        </Text>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#4F6D7A',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+    color: '#F5FCFF',
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#F5FCFF',
+    marginBottom: 5,
+  },
+});
 ```
+
+- SplashScreen Image
+![SplashScreen Image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/result2.png "style=width:200 height: 200")
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -273,9 +332,7 @@ Today continue working on setup typeScript with React Native from scratch with s
 
 ### Software Installed
 
-[React Spinners](https://www.npmjs.com/package/react-spinners)
-
-- A collection of loading spinners with React.js based on [Halogen](https://github.com/yuanyan/halogen).
+[React Native Splash Screen](https://www.npmjs.com/package/react-native-splash-screen)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -428,63 +485,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 - [How do you uninstall yarn?](https://veneaistudio.com/weaving/how-do-you-uninstall-yarn.html)
 - [Unmet peer dependencies installing Eslint and plugins](https://stackoverflow.com/questions/39911466/unmet-peer-dependencies-installing-eslint-and-plugins)
 - [Unable to detect AGP versions for included builds. All projects in the build should use the same AGP version](https://github.com/facebook/react-native/issues/33687)
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-## Exercise of the Day
-
-[x] **Challenge:** Read ==> Computation Thinking (aim to improve problem-solving logic thinking skills)
-
-- What is Computational Thinking?
-- Definitions:
-  - is the thinking method involved in developing solution(s) to a problem and expressing it in such a way that a computer -- human or machine -- can capably carry out.
-  - is the brain activity for pulling out problems and building solutions that can be programmed.
-  - is the way of picking up condition of programming in the world that surrounds us, and applying tools and techniques from Computer Science to understand and reason about both natural and artificial systems and processes.
-  - is cognitive setup to plotting problems and reorganise of some input into an output and looking for set of rules to perform the transform. Today the terms has been expanded to include thinking with many levels of summary, use of mathematics to develop rule set and testing how well a solution develop across different sizes of problems.
-  - teach us how to think like an economist, a physicist. an artist and to understand how to use programming to solve their problems, to create, and to discover new questions that worth worked toward meaningly.
-  - is based on the idea that the solution to a problem is the product of a set of rules that can be applied to the problem.
-
-- Computation Thinking teaches an approach to problem-solving where the ultimate aim is to provide a solution whose form mean it is ready to be programmed into a computer.
-- Computation Thinking takes a relatively small subset of concepts -- which just happen to be important to Computer Science -- and uses them to develop a widely applicable, problem-solving approach.
-
-- Summary:
-  - Computation Thinking (CT) is an approach to problem-solving that involves using a set of practices and principles from Computer Science to develop a solution that is executable by a computer. It's not just for programmers. It is applicable in a diverse array of fields.
-
-- Exercise 1:
-  - List the core concepts of CT?
-    - logical thinking;
-    - algorithms thinking;
-    - decomposition;
-    - generalization and pattern recognition;
-    - modelling;
-    - abstraction;
-    - evaluation;
-
-- Exercise 2:
-  - Give an example of how I think people in each of the following occupations think computationally:
-    1. mathematician :can bu use to calculate the circumference of a circle without actually measuring it.
-    2. scientist : can be use for a range of tasks in constructing simulations, statistically analyzing data, and recognizing, expressing, and applying quantitative relationships.
-    3. engineer : can create based on analyses of designs to calculate whether they can stand up to the expected stress of use and if they can be completed within acceptable budgets.
-    4. linguist : can be use to develop systems that can perform tasks such as speech recognition, translation, and spell checking.
-
-- Exercise 3:
-  - Think of everyday activities in which I participate that involve computational thinking:
-    - scheduling my daily routine;
-    - breaking difficult problems into smaller parts;
-    - design a repetitive models of how to solve a problem;
-    - Observation and think how things can be relate and repeated;
-    - practice repetition of good habit like a loop, do it over and over again;
-    - finding the bad habit that need to remove;
-    - understand that one thing starts occurring since another thing is triggered
-
-- We can do these activities:
-
- 1. organize clean dished computationally;
- 2. nearest route at the supermarket: when I'm checking out after my groceries with my wife, I can use the computer to find the shortest route to my grocery store;
- 3. Clean your room computationally: clean room through sequential, systematic thinking
- 4. computational thinking approach to language: I can use the computer to translate my sentence into another language.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
