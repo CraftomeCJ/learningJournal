@@ -257,6 +257,12 @@ A bug killed, yeahhhhh!!! Today will be working on improving my splashscreen UI 
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
 ### BentoApp Development Work Flow [REBOOT]
 
+didn't do well today.. splashscreen result not as expected and filled with bugs again...
+tried to do with image carousel in the end image not rendering too lol
+
+maybe time to drop typescript and focus on react native mastery before inferring type check again... more sleepless nights...
+late again, time to rest, and get some sleep... is okay!! tomorrow shall be another better day...
+
 - **With React Native + TypeScript**
 - Installation of Dependencies
 
