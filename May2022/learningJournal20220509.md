@@ -514,6 +514,9 @@ const styles = StyleSheet.create({
 ### Errors & Solutions
 
 - [react native Cannot find module 'metro/src/reactNative Transformer'](https://stackoverflow.com/questions/55696478/react-native-cannot-find-module-metro-src-reactnative-transformer)
+- [TypeScript Error TS7031 Makes me go “huh?”](https://medium.com/front-end-weekly/typescript-error-ts7031-makes-me-go-huh-c81cf76c829b)
+- [TypeScript -- diagnosticMessages.json](https://github.com/Microsoft/TypeScript/blob/2.1/src/compiler/diagnosticMessages.json#L3072)
+- 
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
