@@ -1,6 +1,6 @@
 <div id='top'><div>
 
-<h1 align="center">Learning Journal 09 May 2022 (Monday)</h1>
+<h1 align="center">Learning Journal 10 May 2022 (Tuesday)</h1>
 <h1 align="center">Keep Going!!! Keep Thinking!!!</h1>
 <p align="center">My passion to be a programmer came late in life
 <br />
@@ -46,33 +46,34 @@ SELL MY SKILLS or OTHER ABILITIES:
   I know that it is so.
   -->
 **Law of Life:** <br/>
-The Law of Giving: **Give, thou shalt Receive** <br/>
-Today, bring whomever I encounter a gift: a smile, a compliment or flower.<br/>
-Gratefully receive gifts. Keep wealth circulating by giving and receiving care, affection, appreciation and love</br>
-<!-- I will put the Law of Giving into effect by making a commitment to take the following steps:
-  1. Wherever I go, and whoever I encounter, I will bring them a gift. The gift maybe a compliment , a flower, or a prayer. Today, I will give something to everyone I come into contact with, and so I will begin the process of circulating joy, wealth, and affluence in my life and in the lives of others.
-  2. Today I will gratefully receive all gifts that life has to offer me. I will receive the gifts of nature; sunlight and the sound of birds singing, or spring showers. I will also be open to receiving from others, whether it be in the form of a material gift, money, a compliment, or a prayer.
-  3. I will make a commitment to keep wealth circulating in my life by giving and receiving life's most precious gifts: the gifts of caring, affection, appreciation, and love. Each time I meet someone, I will silently wish them happiness, joy, and laughter.-->
+The Law of Karma: **What We Sow is What We Reap**<br/>
+Every action generates a force of energy that returns to us in like kind. <br/>
+Choosing actions that bring happiness and success to others ensures the flow of happiness and success to me.<br/>
+<!-- I will put the Law of Karma into effect by making a commitment to take the following steps:
+  1. Today I will witness the choices I make each moment. And in the mere witnessing of these choices. I will bring them to my concious awareness. I will know that the best way to prepare for any moment in the future is to be fully conscious in the present.
+  2. Whenever I made a choice, I will ask myself two questions:
+     1. What are the consequences of this choice that I'm making?
+     2. Will this choice bring fulfilment and happiness to me and also to those who are affected by this choice?
+  3. I will then ask my heart for guidance and be guided by its message of comfort or discomfort. If the choice feels comfortable, I will plunge ahead with abandon. If the choice feels uncomfortable, I will pause and see the consequences of my action with my inner vision. This guidance will enable me to make spontaneously correct choices for myself and for all those around me. -->
 
 **Daily Law:** <br/>
-See Through the Emotional Outburst <br/>
-Instead of overreacting and becoming ensnared in people demotions, turn their loss of control to my advantage: <br/>
-I keep my head while they are losing theirs. <br/>
+DOn't Mistake Extra Conviction for Truth <br/>
+When people try to explain their ideas with so much exaggerated energy, or defend themselves with an intense level of denial, <br/>
+that is precisely when I should raise my antennae. <br/>
 
 <!-- What a wise old man said -->
 **Quote of the Day:** <br/>
-"As each day arises, welcome it as the very best day of all, and make it your own possession. We must seize what flees." - Seneca, Moral Letters <br/>
+"Let us also produce some bold act of our own -- and join the ranks of the most emulated." - Senenca, Moral Letter <br/>
 
 <!-- practice gratitude daily -->
-**I'm thankful:** to wake up every morning and receive a second chance. <br/>
+**I'm thankful:** to have a wife that loves me, no matter how big or small.. <br/>
 
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
 Things "Emotionally Intelligent People" **DO NOT DO**: <br/>
-Their emotional base points are not external. <br/>
-Their emotions are not "somebody else's doing." <br/>
-Understanding that they are the ultimate cause of what they experience keeps them out of falling into the trap of indignant passivity: <br/>
-Where one believes that as the universe has done wrong, the universe will ultimately have to correct it.  <br/>
+They DO NOT assume to know what it is that will make them truly happy. <br/>
+Being that our only frame of reference at any given time is what's happened in the past, we actually have no mean to determine what would make us truly happy, as opposed to just feeling "saved" from whatever we disliked about our past experiences. <br/>
+In understanding this, they open themselves up to any experience that their life evolves toward, knowing there are equal parts good and bad in anything. <br/>
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
@@ -89,8 +90,8 @@ Where one believes that as the universe has done wrong, the universe will ultima
 - Why is this a problem? -->
 **Questions/Reflections of the day?**
 
-- [] Will I fully inhabit all of today? Will I call out, "I got this," and do my very best to be my very best? <br/>
-- [] How to guarantee I have a good day? Do good things.. <br/>
+- [] Is something good or bad? Is this right or wrong? Ignore everything else. Focus only on my choices. <br/>
+- [] Take advantage of every problem and look at it as a mean of self-improvement, i'll improve my self-displine and mental resistance just by going about my day. <br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -155,7 +156,7 @@ first => make a list ==> capture all of the tasks I'm responsible for in my job 
 second => ask myself ==> if I could only do one thing on that list all day long, ==> which item on the list would add the most value to my company?
 Third => ask myself ==> the same question ==> If I could do only one more thing on your list of key tasks, which would be the second activity that contributes the most value to my company?
 last => ask myself again ==> ask yourself what the third most important task is.-->
-- [x] I will rebuild BentoApp using NPM init react native template with typescript and compile with Metro bundler from scratch with the help of Udemy & online tutorial in study table at 1130 to 1800pm today
+- [x] I will rebuild BentoApp using NPM init react native template with typescript and compile with Metro bundler from scratch in study table at 1430 to 1700pm today
 <!-- - [] I will do [most important work task here] with my laptop at 10am in the office table -->
 <!-- - [] I will do [second important work task here] with my laptop at 2pm in the office table -->
 <!-- - [] I will do [third important work task here] with my laptop at 4pm in the office table -->
@@ -169,7 +170,7 @@ last => ask myself again ==> ask yourself what the third most important task is.
 <!-- [] I will catch up with my friends for 2 hours at 10am in [location] on Sunday -->
 
 <!-- Spirituality & Belief => 2 task -->
-<!--note - [x] I will meditate silently for 22 minutes at 1.40pm & 2140 in my bedroom today -->
+<!--note - [x] I will meditate silently for 22 minutes at 1.40pm in my bedroom today -->
 <!--note - [x] I will read and meditate on Bible daily reading for 22min at 9am in my study table today -->
 <!--note - [x] I will practice "Prayer of the heart" for 15min at 9am in my bedroom today -->
 
@@ -180,8 +181,8 @@ last => ask myself again ==> ask yourself what the third most important task is.
 <!-- - [] I will watch a movie for 3 hours at 8pm in the cinema today -->
 
 <!-- Personal Growth => 3 tasks -->
-- [x] I will code for minimum 6hr at 1130pm in my study table today
-- [x] I will practice typing skills for 60min at 1000am in my study table today
+- [x] I will code for minimum 3hr at 2030pm in my study table today
+- [x] I will practice typing skills for 30min at 2000pm in my study table today
 <!--note - [x] I will read 1 chapter of Technical book: , take notes for 26min at 6.45pm in my study table today -->
 <!--note - [x] I will read 1 chapter of Growth book for 26min at 7.15pm in my study table today -->
 <!--note - [x] I will listen 26min of audiobook at 8.30am in my kitchen today -->
@@ -244,197 +245,150 @@ last => ask myself again ==> ask yourself what the third most important task is.
 
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
-1. [Completed a personal React native + Typescript Mini Guide documentations Ver 1.0](https://github.com/CraftomeCJ/RNTraining-REMAKE/blob/main/src/Learning_TypeScript_RN/README.md)
-2. collect wife's Samsung phone @1830pm today
-3. fairprice grocery shopping @1900pm today
+1. [Try Completing A Personal React Native + Typescript Operation Manual Ver 1.1](https://github.com/CraftomeCJ/Template_RN_TS_Metro/blob/main/MANUAL.md)
 
 ## Personal Notes
 
-**Day 36 (Monday) and today's main focus:** <br />
-A bug killed, yeahhhhh!!! Today will be working on improving my splashscreen UI Design and add a login page with validations, to ensure it works in splashscreen branch before merging to main, and more thought process on how to build up BentoApp and add dependencies one by one, debug error line by line if any. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
+**Day 37 (Thursday) and today's main focus:** <br />
+Today till Sunday will be continue to work on personal guide book, redo third time on day 6 to day 17 using my folder setup to learn and debug. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-### BentoApp Development Work Flow [REBOOT]
+- [Setup TypeScript with React](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup/#vs-code-extensions)
+- [METRO Bundler](https://facebook.github.io/metro/docs/getting-started)
+- [A beginner’s guide to Metro Bundler](https://medium.com/geekculture/a-beginners-guide-to-metro-bundler-f639d641468b)
 
-didn't do well today.. splashscreen result not as expected and filled with bugs again...
-tried to do with image carousel in the end image not rendering too lol
+### App Development Work Flow [REBOOT]
+MAybe some OCD symptoms, I know it is a vicious cycle to keep restart project again and again. 
+But once a wise man ever said,
+"Practice makes Near-Perfect and Practice a lot. What is more important than all the codes I have ever written, which could be all bugs, is a constant practice."
+While having a huge repository is good for my ego, regular coding is what builds my inner coding muscles, like in athletes. 
+Be the practicing Programmer. Do coding at least 3 times:
+First, write the programming to prove to myself. It may filled and littered with loads of comments and annotation. Others may not understand the programming, but I do. 
+On second try, I make it work, dirty, smelly but it must at least work.
+The third try, I will make it work right.
 
-maybe time to drop typescript and focus on react native mastery before inferring type check again... more sleepless nights...
-late again, time to rest, and get some sleep... is okay!! tomorrow shall be another better day...
+Today, I have tried to learn the following:
 
-- **With React Native + TypeScript**
-- Installation of Dependencies
+1. start a new project, set up nice and slow, careful with every steps, great, default screen works, hooray... all good, now start writing some homeScreen code, import boilerplate modules from react and react-native, const HomeScreen = () => {...} and return some View.. great.. now style the component a tad bit, so far so good..
 
-```bash
-# @react-navigation/native
-# React Native integration for React Navigation.
-npm --save install @react-navigation/native
-# React Navigation Stack
-# Stack navigator for use on iOS and Android.
-npm install --save react-navigation-stack --save @react-native-community/masked-view --save react-native-safe-area-context
-```
+now write up the componentScreen just like the video did, hurray... job jone.. so far so good.. no error
 
-```Typescript
-//@filename: app.tsx
+now let's do the App.tsx to show it on my simulator
+let's import HomeScreen & ComponentScreen 
+let install some dependencies 
+let setup the navigator...
 
-// Import React & Component
-import React, { Component, useEffect } from 'react';
-// 
-import {
-  Platform, 
-  StyleSheet,
+```TypeScript
+// @filename: HomeScreen.tsx
+import { StyleSheet,
   Text,
-  View
-} from 'react-native';
-// Import Navigators from React Navigation
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from 'react-navigation-stack';
+  View,
+  Button,
+  ScrollView
+} from 'react-native'
+import React from 'react'
 
-// Import Screens
-import SplashScreen from './Screen/SplashScreen';
-import LoginScreen from './Screen/LoginScreen';
-import RegisterScreen from './Screen/RegisterScreen';
-import DrawerNavigationRoutes from './Screen/DrawerNavigationRoutes';
-
-const Navigator = createStackNavigator (
-  // Stack Navigator
-);
-
-const Auth = () => {
-  // Stack Navigator for Login and Sign up Screen
-  return (
-    <Stack.Navigator 
-    initialRouteName="LoginScreen">
-
-      <Stack.Screen
-        name="LoginScreen"
-        component={LoginScreen}
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen
-        name="RegisterScreen"
-        component={RegisterScreen}
-        options={{
-          title: 'Register', //Set Header Title
-          headerStyle: {
-            backgroundColor: '#330077', //Set Header color
-          },
-          headerTintColor: '#fafafa', //Set Header text color
-          headerTitleStyle: {
-            fontWeight: 'bold', //Set Header text style
-          },
-        }}
-      />
-    </Stack.Navigator>
-  );
-};
-
-const App = () => {
+const HomeScreen: React.FC = (navigation) => {
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator 
-      initialRouteName="SplashScreen">
+    <ScrollView>
+        <View>
 
-        {/* SplashScreen which will come once for 5 Seconds */}
-        <Stack.Screen
-          name="SplashScreen"
-          component={SplashScreen}
-          // Hiding header for Splash Screen
-          options={{headerShown: false}}
-        />
+          <Text style={styles.styleHeader}>
 
-        {/* Auth Navigator: Include Login and Signup */}
-        <Stack.Screen
-          name="Auth"
-          component={Auth}
-          options={{headerShown: false}}
-        />
+            Good day!! This is Udemy's React Native Course Home Screen
+          </Text>
 
-        {/* Navigation Drawer as a landing page */}
-        <Stack.Screen
-          name="DrawerNavigationRoutes"
-          component={DrawerNavigatorRoutes}
-          // Hiding header for Navigation Drawer
-          options={{headerShown: false}}
-        />
+          <Button
+          title="Go to Component Demo"
+          onPress={() => navigation.navigate('Components')}
+          />
+              </View>
+</ScrollView>
+  )
+}
 
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
- 
-export default App;
+export default HomeScreen
+
+const styles = StyleSheet.create({
+  styleHeader: {
+    marginVertical: 20,
+    fontSize: 40,
+    color: 'yellow',
+    backgroundColor: 'lightblue',
+  },
+  styleTouch: {
+    marginVertical: 15,
+    fontSize: 16,
+    color: 'blue',
+    backgroundColor: 'lightyellow',
+  },
+  styleMain: {
+    marginVertical: 10,
+    fontSize: 16,
+    color: 'orange',
+    backgroundColor: 'lightpink'
+  }
+})
 ```
 
-```Typescript
-//@filename: SplashScreen.tsx
+```TypeScript
+@filename: Components.tsx
+import React, { Component } from "react";
+import { Text, View, StyleSheet } from "react-native";
 
-// Import React and Component
-import React, {useState, useEffect} from 'react';
-import {
-  ActivityIndicator,
-  View,
-  StyleSheet,
-  Image
-} from 'react-native';
- 
-import AsyncStorage from '@react-native-async-storage/async-storage';
- 
-const SplashScreen = ({navigation}) => {
-  //State for ActivityIndicator animation
-  const [animating, setAnimating] = useState(true);
- 
-  useEffect(() => {
-    setTimeout(() => {
-      setAnimating(false);
-      //Check if user_id is set or not
-      //If not then send for Authentication
-      //else send to Home Screen
-      AsyncStorage.getItem('user_id').then((value) =>
-        navigation.replace(
-          value === null ? 'Auth' : 'DrawerNavigationRoutes'
-        ),
-      );
-    }, 5000);
-  }, []);
- 
+const ComponentScreen: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Image
-        source={require('../Image/aboutreact.png')}
-        style={{width: '90%', resizeMode: 'contain', margin: 30}}
-      />
-      <ActivityIndicator
-        animating={animating}
-        color="#FFFFFF"
-        size="large"
-        style={styles.activityIndicator}
-      />
+      <Text style={styles.text}>This is the component screen!!</Text>
     </View>
   );
 };
- 
-export default SplashScreen;
- 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#307ecc',
+    alignItems: "center",
+    justifyContent: "center"
   },
-  activityIndicator: {
-    alignItems: 'center',
-    height: 80,
-  },
+  text: {
+    fontSize: 20
+  }
 });
+
+export default ComponentScreen;
 ```
 
-- SplashScreen Image
-![SplashScreen Image](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/result2.png "style=width:200 height: 200")
+```TypeScript
+// @filename: App.tsx
+import { createStackNavigator } from "@react-navigation/stack";
+import { createAppContainer } from "@react-navigation/native";
+
+import HomeScreen from "./src/screens/HomeScreen";
+import ComponentScreen from "./src/screens/ComponentScreen";
+
+const navigator = createStackNavigator(
+  {
+    Home: HomeScreen,
+    Components: ComponentScreen
+  },
+  {
+    initialRouteName: "Components",
+    defaultNavigationOptions: {
+      title: "First React Native App"
+    }
+  }
+);
+
+export default createAppContainer(navigator);
+```
+
+geez.... what is happening????? error??? what??? why??? how?????? at least something new this time... [module '"@react-navigation/native"' has no exported member 'createAppContainer'.ts(2305)](https://i.imgur.com/9LEwXXz.png) not too bad.... 
+
+...to be continued
+
+- **With React Native + TypeScript**
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -442,16 +396,14 @@ const styles = StyleSheet.create({
 
 ### Software Installed
 
-[React Native Splash Screen](https://www.npmjs.com/package/react-native-splash-screen)
-[React Navigation/Native](https://www.npmjs.com/package/@react-navigation/native)
-[React Navigation Stack](https://www.npmjs.com/package/react-navigation-stack)
-[Async Storage](https://react-native-async-storage.github.io/async-storage/docs/install/)
+  - [React Navigation](https://reactnavigation.org/docs/getting-started/)
+  - [Stack Navigator](https://reactnavigation.org/docs/stack-navigator/)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
 
-### Build a BentoApp
+### Build a BentoApp (Portfolio Project)
 
 - Objective:
   - Displaying splash screen during response time from the server is an excellent way to interact with the user. But making a loading/splash screen becomes difficult when we want to practically use an animated loader, where we need to make extra efforts to write down its styling file. To overcome this problem, we use a bunch of predefined loaders from the react-spinners module.
@@ -506,28 +458,6 @@ const styles = StyleSheet.create({
 
 =============================================================================
 
-### Development References
-
-![Run / Open VSCode from Mac Terminal](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/vscodesolution.png "style=width:200 height: 200")
-
-- **[How to fix Binding element 'children' implicitly has an 'any' type.ts(7031)?](https://newbedev.com/how-to-fix-binding-element-children-implicitly-has-an-any-type-ts-7031)**
-- [TS2307 Error: Cannot find module '../constants' or its corresponding type declarations](https://stackoverflow.com/questions/69412800/ts2307-error-cannot-find-module-constants-or-its-corresponding-type-declar)
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-=============================================================================
-
-### Errors & Solutions
-
-- [react native Cannot find module 'metro/src/reactNative Transformer'](https://stackoverflow.com/questions/55696478/react-native-cannot-find-module-metro-src-reactnative-transformer)
-- [TypeScript Error TS7031 Makes me go “huh?”](https://medium.com/front-end-weekly/typescript-error-ts7031-makes-me-go-huh-c81cf76c829b)
-- [TypeScript -- diagnosticMessages.json](https://github.com/Microsoft/TypeScript/blob/2.1/src/compiler/diagnosticMessages.json#L3072)
-- 
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
 ## Room to improve?
 <!-- This is where I write things I can do to improve my work -->
 <!-- Reflecting and Reviewing My Daily Work Journal
@@ -541,7 +471,7 @@ ask During this time ask yourself:
 =>Did I spend time on important tasks that will help accelerate my career?
 
 These questions will help me review and unlock areas of improvement (which will be never-ending) in my life, career and work. This step can feel uncomfortable and requires self-awareness and review. -->
-- Try to code with lesser research and reference, fail to learn, next 4 week to train myself yellow duck methods.
+- Try to code with lesser research and reference, embrace learning through failures, next 4 week to train myself yellow duck methods.
 - Code with think aloud methods.
 - Time Management
   - Where is the balance between learn, work, life and rest.
@@ -569,7 +499,7 @@ These questions will help me review and unlock areas of improvement (which will 
   - important to remain curious about coding and various languages and technologies.
 - Time-boxing to strict 90 minutes per task with a 20min rest break.
 
-- Day 34 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
+- Day 38 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
 
 - required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
@@ -579,7 +509,16 @@ These questions will help me review and unlock areas of improvement (which will 
 
 - add one more column for non-technical book's chapter summary for future reference.
 
-- To learn and master better file management on using .gif to showcase course's challenge work and .png folder for error and warning messages display.
+- try to practice these 9 principles for 52 weeks:
+  1. Understand the Basics;
+  2. Write Easy To Understand And Logical Programming Codes
+  3. Try Analyzing my Code
+  4. Read As Many Books I Can
+  5. Talking to a fellow programmer
+  6. Help others In Solving Their Problems
+  7. Contribution to Open Source and Signing-up mailing lists
+  8. Practice It Many Times As Possible
+  9. Participate In Different Events
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
