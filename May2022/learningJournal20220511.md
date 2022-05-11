@@ -271,7 +271,7 @@ Tomorrow will have to start building 'Restaurant App'. Pray that it is a build e
 - rebuilding process started....
 - [dependencies bug killed this is my homescreen](https://i.imgur.com/tgaMFJn.png)
 - [Yesss!!! something works](https://i.imgur.com/lsY40ox.png)
-- ![new build error everyday](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/error50.png
+- ![new build error everyday](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/error50.png)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
