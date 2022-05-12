@@ -55,13 +55,13 @@ Trust that when things don't seem to go my way, there is a reason. <br/>
   3. I will remind myself to practice present-moment awareness in all my actions. I will refuse to allow obstacles to consume and dissipate the quality of the attention in the present moment. I will accept the present as it is, and manifest the future through my deepest, most cherished intentions and desires.-->
 
 **Daily Law:** <br/>
-Look at Their Past <br/>
-When choosing people to work and associate with, do not be hypnotized by their reputation or taken in by the surface image they try to project. <br/>
-Instead, train myself to look deeper within them, to their past actions, to see their character. <br/>
+Be wary of the Noble Gesture <br/>
+People want to believe apparantly noble gestures are genuine, for the belief is pleasant. <br/>
+They rarely notice how deceptive these gestures can be. <br/>
 
 <!-- What a wise old man said -->
 **Quote of the Day:** <br/>
-"So many of our dreams at first seem impossible. Then they seem improbable. And then, when we summon the will, they soon become inevitable." - Christopher Reeve <br/>
+"It is a world not of angels but of angels, where men speak of moral principles but act on power principles; a world where we are always moral and our enemies always immoral." - Rules of Radicals, Saul D. Alinsky <br/>
 
 <!-- practice gratitude daily -->
 **I'm thankful:** to have healthy meals every day. <br/>
@@ -69,8 +69,9 @@ Instead, train myself to look deeper within them, to their past actions, to see 
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
 Things "Emotionally Intelligent People" **DO NOT DO**: <br/>
-They DO NOT assume that the way they think and feel about a situation is the way it is in reality, nor how it will turn out in the end. <br/>
-They recognize their emotions as responses, not accurate gauges, of what is going on. They accept that those responses may have to do with their own issues, rather than the objective situation at hand. <br/>
+They know that happiness is a choice, but they don't feel the need to make it all the time. <br/>
+They are not stuck in the illusion that "happiness" is a sustained state of joy. They allow themselves time to process everything they are experiencing. <br/>
+They allow themselves to exist in their natural state. In that non-resistance, they find contentment.
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
@@ -252,6 +253,8 @@ Today and Friday will be working on Udemy's restaurant project. Try to master th
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
+Happy day... First time of a long time no build error to debugs... managed to complete some learning of building a udemy project. Feel so good a day with bugs haunting me...
+Hopefully tomorrow is another bugs free day, while try to put useEffect hook into play and have lot of reading to do and play around... 
 
 ### Software Installed
 
@@ -989,11 +992,170 @@ const styles = StyleSheet.create({});
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
-==============================================================================
+=============================================================================
 
-### Errors & Solutions
+## Day 21 React Native Restaurant App - With UseEffect
 
-- [react native Cannot find module 'metro/src/reactNative Transformer'](https://stackoverflow.com/questions/55696478/react-native-cannot-find-module-metro-src-reactnative-transformer)
+- **learn the how to make use of useEffect hook and create a customer hook for reuse**
+- **Udemy Learning**
+- [Udemy Course Vid #99 - #102](https://www.udemy.com/course/the-complete-react-native-and-redux-course/learn/lecture/15707130#overview)
+
+- **React Native Practice:**
+  - Understand how [useEffect Hook](https://www.reactjstutorials.com/react-basics/26/react-useeffect) works and make API call with default search term of "pasta" and get the result
+    - [Introduction to React native useeffect](https://www.educba.com/react-native-useeffect/)
+    - [Fetching an API using Redux and useEffect](https://medium.com/personal-project/fetching-an-api-using-redux-and-useeffect-f23813a863f5)
+    - [What is useEffect hook and how do you use it?](https://dev.to/nibble/what-is-useeffect-hook-and-how-do-you-use-it-1p9c)
+    - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
+    - [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/)
+    - [What the heck is useEffect?](https://blogs.oregonstate.edu/dunnand/2022/04/29/what-the-heck-is-useeffect/)
+    - [What is useEffect()?, How does it work? & Why should we use useEffect()?](https://dev.to/himanshukanojiya/what-is-useeffect-how-does-it-work-why-should-we-use-useeffect-way-to-use-it-147g)
+    - [What is useEffect?](https://pyami.medium.com/what-is-useeffect-ba568a6b44e2)
+    - [React useEffect Hooks](https://www.w3schools.com/react/react_useeffect.asp)
+    - [useEffect() — what, when and how](https://medium.com/@dev_abhi/useeffect-what-when-and-how-95045bcf0f32)
+    - [React Native Hooks & How To Use useState and useEffect](https://gilshaan.medium.com/react-native-hooks-how-to-use-usestate-and-useeffect-3a10fd3e760c)
+    - [React useEffect hook with code examples](https://linguinecode.com/post/getting-started-with-react-useeffect)
+    - [useEffect example](https://www.reactnative.express/react/hooks/useeffect)
+    - [guide to the useEffect Hook you’ll ever need](https://blog.logrocket.com/guide-to-react-useeffect-hook/)
+    - [Can't understand how to use React Native useEffect](https://stackoverflow.com/questions/63813747/cant-understand-how-to-use-react-native-useeffect)
+    - [How the useEffect Hook Works (with Examples)](https://daveceddia.com/useeffect-hook-examples/)
+    - [Right way to use useEffect in react native](https://stackoverflow.com/questions/70640564/right-way-to-use-useeffect-in-react-native)
+
+- **step 13 set default search term**
+  [rewrite with useEffect it works!! but how??? need more reading haha!!!](https://i.imgur.com/iH84OvC.png)
+
+```TypeScript
+// @filename: src/screens/SearchScreen.tsx
+import {
+  View,
+  Text,
+  StyleSheet
+} from 'react-native';
+import React, { useEffect, useState } from 'react';
+
+import SearchBar from '../components/SearchBar'
+import yelp from '../api/yelp';
+
+const SearchScreen: React.FC = () => {
+  // step 13a set default search term 'curry'
+    const [term, setTerm] = useState<string>('curry');
+    const [results, setResults] = useState<any[]>([]);
+    const [errorMessage, setErrorMessage] = useState<string>('');
+  
+      const searchApi = async (_term: string) => {
+        try {
+    const response = await yelp.get('/search', {
+      params: {
+        limit: 30,
+        // step 13c remove this param after declared useEffect function
+        // term: searchTerm,
+        location: 'singapore'
+      }
+    });
+    setResults(response.data.businesses);
+        } catch (e) {
+          //  step 13d pass a error (3) to the setErrorMessage state
+          setErrorMessage('Oops!!Something went wrong' + e);
+        }
+  };
+
+// step 13b write a useEffect array function to call searchApi
+  useEffect(() => {
+    searchApi(term);
+  }, []);
+
+    return (
+      <View>
+        <SearchBar 
+        term={term} 
+        onTermChange={setTerm}
+        onTermSubmit={() => searchApi(term)} 
+        />
+
+  {errorMessage ? <Text>{errorMessage}</Text> : null}
+
+        <Text>We have found {results.length} results for {term}</Text>
+      </View>
+    );
+  };
+
+export default SearchScreen;
+
+const styles = StyleSheet.create({});
+```
+
+- **step 14 set default search term**
+  - [Rules of Hooks](https://en.reactjs.org/docs/hooks-rules.html)
+  - [Create a custom hook](https://blog.logrocket.com/advanced-react-hooks-creating-custom-reusable-hooks/)for search api for reuse.
+  - [How to reuse data fetching logic from api using react custom hooks](https://stackoverflow.com/questions/56559493/how-to-reuse-data-fetching-logic-from-api-using-react-custom-hooks)
+  - [How To Create A Custom React Hook To Fetch And Cache Data](https://www.smashingmagazine.com/2020/07/custom-react-hook-fetch-cache-data/)
+  - [build a search bar using React Hooks](https://www.iamtimsmith.com/blog/lets-build-a-search-bar-using-react-hooks)
+  - [How to create your own React Custom hooks (example)](https://reactgo.com/react-custom-hooks/)
+  - [Creating custom hook for fetching data in react](https://dev.to/keyurparalkar/creating-custom-hook-for-fetching-data-in-react-3mo3)
+  - [Build a Custom Autocomplete Search Bar with React Hooks](https://lo-victoria.com/build-a-custom-autocomplete-search-bar-with-react-hooks)
+  - [Building Your Own Hooks](https://reactjs.org/docs/hooks-custom.html)
+  - [How to create a custom React hook to fetch an API (using TypeScript)?](https://dev.to/sulistef/how-to-create-a-custom-react-hook-to-fetch-an-api-using-typescript-ioi)
+  - [How to Reuse Logic with React Hooks](https://rafaelquintanilha.com/how-to-reuse-logic-with-react-hooks)
+
+- example read below how it changed the output from the customer hook from array to object. 
+- This is the normal convention that we use to get better reference from the output of the customer hooks.
+- return { results, searchApi, errorMessage };
+
+```TypeScript
+//example @filename useResults.tsx 
+import { useEffect, useState } from "react";
+import yelp from "../api/yelp";
+
+export default () => {
+ const [results, setResults] = useState<{ id: string; name: string }[]>([]);
+ const [errorMessage, setErrorMessage] = useState("");
+
+ const searchApi = async (searchTerm: string): Promise<void> => {
+   console.log("Hi there!");
+   try {
+     const response = await yelp.get("/search", {
+       params: {
+         limit: 50,
+         term: searchTerm,
+         location: "san jose",
+       },
+     });
+     setResults(response.data.businesses);
+   } catch (err) {
+     setErrorMessage("Something went wrong");
+   }
+ };
+
+useEffect(() => {
+   searchApi("pasta");
+ }, []);
+
+ return { results, searchApi, errorMessage };
+};
+```
+
+- **Element References**
+  - [Promise<void>](https://www.newline.co/fullstack-react/30-days-of-react/day-15/)
+    - [How to type promises on react context with typescript](https://stackoverflow.com/questions/71277384/how-to-type-promises-on-react-context-with-typescript)
+    - [Typescript async function return type void vs Promise<void>](https://newbedev.com/typescript-async-function-return-type-void-vs-promise-void)
+    - [Introduction to TypeScript promise](https://www.educba.com/typescript-promise/)
+    - [Introduction to TypeScript promise type](https://www.educba.com/typescript-promise-type/)
+    - [A quick introduction to "Promises" and "Async/Await"](https://medium.com/jspoint/typescript-promises-and-async-await-b842b55ee3fd)
+    - [Keep Your Promises in TypeScript using async/await](https://blog.bitsrc.io/keep-your-promises-in-typescript-using-async-await-7bdc57041308)
+
+- **Challenge:** [incomplete.. late liao.. brain foggy liao.. tomorrow office then continue...]
+  - Apply the codes to the FoodStreet project and make it work.
+  - You should get the [results](https://i.imgur.com/jT2g7yW.png) like this.
+  - [learning resource](https://dev.to/sulistef/how-to-create-a-custom-react-hook-to-fetch-an-api-using-typescript-ioi)
+
+- File Structuring
+
+```Bash
+# step 9a
+#  make a hooks folder inside src folder
+mkdir src/hooks
+#  add a useResults.tsx hook file
+touch src/hooks/useResults.tsx
+```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -1040,7 +1202,7 @@ These questions will help me review and unlock areas of improvement (which will 
   - important to remain curious about coding and various languages and technologies.
 - Time-boxing to strict 90 minutes per task with a 20min rest break.
 
-- Day 38 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
+- Day 39 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
 
 - required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
@@ -1053,8 +1215,8 @@ These questions will help me review and unlock areas of improvement (which will 
 - try to practice these 9 principles for 52 weeks:
   1. Understand the Basics;
   2. Write Easy To Understand And Logical Programming Codes
-  3. Try Analyzing my Code
-  4. Read As Many Books I Can
+  3. Try Analyzing my own Code
+  4. Read As Many Books and tech articles as I Can
   5. Talking to a fellow programmer
   6. Help others In Solving Their Problems
   7. Contribution to Open Source and Signing-up mailing lists

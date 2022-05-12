@@ -71,8 +71,8 @@ This can be seen in the patterns they reveal from their past, the quality of the
 **How to Approach my Life like the Greats:** <br/>
 Things "Emotionally Intelligent People" **DO NOT DO**: <br/>
 They DO NOT think that being fearful is a sign they are on the wrong path. <br/>
-The presence of indifference is a sign you're on the wrong path. <br/>
-Fear means you're trying to move towards something you love, but your old beliefs, or unhealed experiences, are getting in the way. <br/>
+The presence of indifference is a sign I'm on the wrong path. <br/>
+Fear means I'm trying to move towards something I love, but my old beliefs, or unhealed experiences, are getting in the way. <br/>
 (Or, rather, are being called up to be healed.) <br/>
 
 <!-- for daily reflections -->
