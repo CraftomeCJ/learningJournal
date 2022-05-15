@@ -250,7 +250,7 @@ last => ask myself again ==> ask yourself what the third most important task is.
 
 ## Personal Notes
 
-**Day 38 (Thursday) and today's main focus:** <br />
+**Day 38 (Wednesday) and today's main focus:** <br />
 Today I will discard and rewrite HomeScreen.tsx and App.tsx to try kill the bug and dissect it to find out how the bug manifested. Then I will continue to build list with FlatList and learn more on Navigator. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
@@ -260,6 +260,7 @@ Today I will discard and rewrite HomeScreen.tsx and App.tsx to try kill the bug 
 - [A beginner’s guide to Metro Bundler](https://medium.com/geekculture/a-beginners-guide-to-metro-bundler-f639d641468b)
 
 ### BentoApp Development Work Flow [REBOOT]
+
 Today, try my best to do as much as I could, but new build error surfaced that stub my progress again... what a another buggy day that is.
 
 Tomorrow will have to start building 'Restaurant App'. Pray that it is a build error free day...hang the revision progress for a while to play with something new...  
@@ -354,7 +355,7 @@ These questions will help me review and unlock areas of improvement (which will 
 
 ## MY GOAL for May
 
-### Aim to create a personal work flow of writing code from scratch to practice and improve my skills.
+### Aim to create a personal work flow of writing code from scratch to practice and improve my skills
 
 ==============================================================================
 
