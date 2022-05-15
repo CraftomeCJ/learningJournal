@@ -264,7 +264,7 @@ This morning wasted near 3 hours to solve macBook out of memory issues.
 
 ## Day 21 React Native Restaurant App - With UseEffect
 
-- **learn the how to create an app from scratch and create the navigation and search bar**
+- **learn the how to make use of useEffect hook and create a customer hook for reuse**
 - **Udemy Learning**
 - [Udemy Course Vid #103 - #108](https://www.udemy.com/course/the-complete-react-native-and-redux-course/learn/lecture/15707154#overview)
 
