@@ -259,12 +259,13 @@ Today till Sunday will be continue to work on personal guide book, redo third ti
 - [A beginner’s guide to Metro Bundler](https://medium.com/geekculture/a-beginners-guide-to-metro-bundler-f639d641468b)
 
 ### App Development Work Flow [REBOOT]
-MAybe some OCD symptoms, I know it is a vicious cycle to keep restart project again and again. 
+
+MAybe some OCD symptoms, I know it is a vicious cycle to keep restart project again and again.
 But once a wise man ever said,
 "Practice makes Near-Perfect and Practice a lot. What is more important than all the codes I have ever written, which could be all bugs, is a constant practice."
-While having a huge repository is good for my ego, regular coding is what builds my inner coding muscles, like in athletes. 
+While having a huge repository is good for my ego, regular coding is what builds my inner coding muscles, like in athletes.
 Be the practicing Programmer. Do coding at least 3 times:
-First, write the programming to prove to myself. It may filled and littered with loads of comments and annotation. Others may not understand the programming, but I do. 
+First, write the programming to prove to myself. It may filled and littered with loads of comments and annotation. Others may not understand the programming, but I do.
 On second try, I make it work, dirty, smelly but it must at least work.
 The third try, I will make it work right.
 
@@ -275,8 +276,8 @@ Today, I have tried to learn the following:
 now write up the componentScreen just like the video did, hurray... job jone.. so far so good.. no error
 
 now let's do the App.tsx to show it on my simulator
-let's import HomeScreen & ComponentScreen 
-let install some dependencies 
+let's import HomeScreen & ComponentScreen
+let install some dependencies
 let setup the navigator...
 
 ```TypeScript
@@ -384,7 +385,7 @@ const navigator = createStackNavigator(
 export default createAppContainer(navigator);
 ```
 
-geez.... what is happening????? error??? what??? why??? how?????? at least something new this time... [module '"@react-navigation/native"' has no exported member 'createAppContainer'.ts(2305)](https://i.imgur.com/9LEwXXz.png) not too bad.... 
+geez.... what is happening????? error??? what??? why??? how?????? at least something new this time... [module '"@react-navigation/native"' has no exported member 'createAppContainer'.ts(2305)](https://i.imgur.com/9LEwXXz.png) not too bad....
 
 ...to be continued
 
@@ -396,8 +397,8 @@ geez.... what is happening????? error??? what??? why??? how?????? at least somet
 
 ### Software Installed
 
-  - [React Navigation](https://reactnavigation.org/docs/getting-started/)
-  - [Stack Navigator](https://reactnavigation.org/docs/stack-navigator/)
+- [React Navigation](https://reactnavigation.org/docs/getting-started/)
+- [Stack Navigator](https://reactnavigation.org/docs/stack-navigator/)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -534,7 +535,7 @@ These questions will help me review and unlock areas of improvement (which will 
 
 ## MY GOAL for May
 
-### Aim to create a personal work flow of writing code from scratch to practice and improve my skills.
+### Aim to create a personal work flow of writing code from scratch to practice and improve my skills
 
 ==============================================================================
 
