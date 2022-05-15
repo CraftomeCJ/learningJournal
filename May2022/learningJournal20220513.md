@@ -88,8 +88,8 @@ They recognize that through social conditioning and the eternal human monkey-min
 - Why is this a problem? -->
 **Questions/Reflections of the day?**
 
-- [] Think about my activities last week as well as what I have planned for today and the week that follows? The person I like to be, or the person I see myself as -- how closely do my actions actually correspond to him or her? What fire am I fueling? Which person am I becoming? <br/>
-- [] What food have I never eaten but would really like to try? <br/>
+- [] Why do you want to write? Is Daily Win Journal necessary?? <br/>
+- [] What gives my life meaning?? <br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
