@@ -89,7 +89,7 @@ They recognize that through social conditioning and the eternal human monkey-min
 **Questions/Reflections of the day?**
 
 - [] Think about my activities last week as well as what I have planned for today and the week that follows? The person I like to be, or the person I see myself as -- how closely do my actions actually correspond to him or her? What fire am I fueling? Which person am I becoming? <br/>
-- [] What food have you never eaten but would really like to try? <br/>
+- [] What food have I never eaten but would really like to try? <br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -154,7 +154,7 @@ first => make a list ==> capture all of the tasks I'm responsible for in my job 
 second => ask myself ==> if I could only do one thing on that list all day long, ==> which item on the list would add the most value to my company?
 Third => ask myself ==> the same question ==> If I could do only one more thing on your list of key tasks, which would be the second activity that contributes the most value to my company?
 last => ask myself again ==> ask yourself what the third most important task is.-->
-- [x] I will rebuild BentoApp using NPM init react native template with typescript and compile with Metro bundler from scratch in study table at 1430 to 1700pm today
+- [x] I will rebuild BentoApp using NPM init react native template with typescript and compile with Metro bundler from scratch in study table at 1030 to 1700pm today
 <!-- - [] I will do [most important work task here] with my laptop at 10am in the office table -->
 <!-- - [] I will do [second important work task here] with my laptop at 2pm in the office table -->
 <!-- - [] I will do [third important work task here] with my laptop at 4pm in the office table -->
@@ -179,8 +179,8 @@ last => ask myself again ==> ask yourself what the third most important task is.
 <!-- - [] I will watch a movie for 3 hours at 8pm in the cinema today -->
 
 <!-- Personal Growth => 3 tasks -->
-- [x] I will code for minimum 3hr at 2030pm in my study table today
-- [x] I will practice typing skills for 30min at 2000pm in my study table today
+- [x] I will code for minimum 3hr at 2230pm in my study table today
+- [x] I will practice typing skills for 30min at 2200pm in my study table today
 <!--note - [x] I will read 1 chapter of Technical book: , take notes for 26min at 6.45pm in my study table today -->
 <!--note - [x] I will read 1 chapter of Growth book for 26min at 7.15pm in my study table today -->
 <!--note - [x] I will listen 26min of audiobook at 8.30am in my kitchen today -->
@@ -244,7 +244,8 @@ last => ask myself again ==> ask yourself what the third most important task is.
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
 1. [Try Completing A Personal React Native + Typescript Operation Manual Ver 1.1](https://github.com/CraftomeCJ/Template_RN_TS_Metro/blob/main/MANUAL.md)
-2. Home chores (laundry, groceries, etc)
+2. Home chores - Groceries Shopping
+3. Dinner with wife
 
 ## Personal Notes
 
@@ -253,27 +254,274 @@ Today till Sunday will be working on setup typeScript with React Native from scr
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-- [Setup TypeScript with React](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup/#vs-code-extensions)
-- [METRO Bundler](https://facebook.github.io/metro/docs/getting-started)
-- [A beginner’s guide to Metro Bundler](https://medium.com/geekculture/a-beginners-guide-to-metro-bundler-f639d641468b)
-
-### BentoApp Development Work Flow [REBOOT]
-
-- **With React Native + TypeScript**
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
+This morning wasted near 3 hours to solve macBook out of memory issues.
 
 ### Software Installed
-
-[React Spinners](https://www.npmjs.com/package/react-spinners)
-
-- A collection of loading spinners with React.js based on [Halogen](https://github.com/yuanyan/halogen).
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
+
+## Day 21 React Native Restaurant App - With UseEffect
+
+- **learn the how to create an app from scratch and create the navigation and search bar**
+- **Udemy Learning**
+- [Udemy Course Vid #103 - #108](https://www.udemy.com/course/the-complete-react-native-and-redux-course/learn/lecture/15707154#overview)
+
+- **not useState but 'useEffect on flowchart'**
+![useState's Second Argument](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/yelpIMG/useEffect.png)
+
+- **React Native Practice:**
+  - **step 13 The UseEffect Hook**
+  - Understand how [useEffect Hook](https://www.reactjstutorials.com/react-basics/26/react-useeffect) works and make API call with default search term of "pasta" and get the result
+    - [Introduction to React native useEffect](https://www.educba.com/react-native-useeffect/)
+    - [Fetching an API using Redux and useEffect](https://medium.com/personal-project/fetching-an-api-using-redux-and-useeffect-f23813a863f5)
+    - [What is useEffect hook and how do you use it?](https://dev.to/nibble/what-is-useeffect-hook-and-how-do-you-use-it-1p9c)
+    - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
+    - [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/)
+    - [What the heck is useEffect?](https://blogs.oregonstate.edu/dunnand/2022/04/29/what-the-heck-is-useeffect/)
+    - [What is useEffect()?, How does it work? & Why should we use useEffect()?](https://dev.to/himanshukanojiya/what-is-useeffect-how-does-it-work-why-should-we-use-useeffect-way-to-use-it-147g)
+    - [What is useEffect?](https://pyami.medium.com/what-is-useeffect-ba568a6b44e2)
+    - [React useEffect Hooks](https://www.w3schools.com/react/react_useeffect.asp)
+    - [useEffect() — what, when and how](https://medium.com/@dev_abhi/useeffect-what-when-and-how-95045bcf0f32)
+    - [React Native Hooks & How To Use useState and useEffect](https://gilshaan.medium.com/react-native-hooks-how-to-use-usestate-and-useeffect-3a10fd3e760c)
+    - [React useEffect hook with code examples](https://linguinecode.com/post/getting-started-with-react-useeffect)
+    - [useEffect example](https://www.reactnative.express/react/hooks/useeffect)
+    - [guide to the useEffect Hook you'll ever need](https://blog.logrocket.com/guide-to-react-useeffect-hook/)
+    - [Can't understand how to use React Native useEffect](https://stackoverflow.com/questions/63813747/cant-understand-how-to-use-react-native-useeffect)
+    - [How the useEffect Hook Works (with Examples)](https://daveceddia.com/useeffect-hook-examples/)
+    - [Right way to use useEffect in react native](https://stackoverflow.com/questions/70640564/right-way-to-use-useeffect-in-react-native)
+
+```TypeScript
+// @filename: src/screens/SearchScreen.tsx
+import {
+  View,
+  Text,
+  StyleSheet
+} from 'react-native';
+// step 13a import useEffect
+import React, { useEffect, useState } from 'react';
+
+import SearchBar from '../components/SearchBar'
+import yelp from '../api/yelp';
+
+const SearchScreen: React.FC = () => {
+
+    const [term, setTerm] = useState<string>('');
+    const [results, setResults] = useState<any[]>([]);
+    const [errorMessage, setErrorMessage] = useState<string>('');
+  
+      const searchApi = async (searchTerm: string) => {
+// console.log('Hi there!!');
+
+        try {
+    const response = await yelp.get('/search', {
+      params: {
+        limit: 30,
+        term: searchTerm,
+        location: 'singapore'
+      }
+    });
+
+    setResults(response.data.businesses);
+        } catch (e) {
+          setErrorMessage('Oops!!Something went wrong');
+        }
+  };
+
+  // Call searchApi when component
+  // is first rendered.  BAD CODE!
+  // searchApi('pasta');
+
+// step 13b write useEffect hook to only call searchApi one time 
+  useEffect(() => {
+    searchApi('paste');
+  }, []);
+
+    return (
+      <View>
+        <SearchBar 
+        term={term} 
+        onTermChange={setTerm}
+        onTermSubmit={() => searchApi(term)} 
+        />
+
+  {errorMessage ? <Text>{errorMessage}</Text> : null}
+
+        <Text>We have found {results.length} results for {term}</Text>
+      </View>
+    );
+  };
+
+export default SearchScreen;
+
+const styles = StyleSheet.create({});
+```
+
+- **step 14 Extracting Hook Logic**
+  - [Create a custom hook](https://blog.logrocket.com/advanced-react-hooks-creating-custom-reusable-hooks/)for search api for reuse.
+  - note the change of the output from the [custom hook from array to object](https://javascript.plainenglish.io/react-hooks-whats-the-difference-between-returning-an-array-and-an-object-34ccba62b71).
+    - [Object & array dependencies in the React useEffect Hook](https://www.benmvp.com/blog/object-array-dependencies-react-useEffect-hook/)
+  - This is the normal convention that we use to get better reference from the output of the customer hooks. ==> { results, searchApi, errorMessage };
+    - [Rules of Hooks](https://en.reactjs.org/docs/hooks-rules.html)
+    - [How to reuse data fetching logic from api using react custom hooks](https://stackoverflow.com/questions/56559493/how-to-reuse-data-fetching-logic-from-api-using-react-custom-hooks)
+    - [How To Create A Custom React Hook To Fetch And Cache Data](https://www.smashingmagazine.com/2020/07/custom-react-hook-fetch-cache-data/)
+    - [build a search bar using React Hooks](https://www.iamtimsmith.com/blog/lets-build-a-search-bar-using-react-hooks)
+    - [How to create your own React Custom hooks (example)](https://reactgo.com/react-custom-hooks/)
+    - [Creating custom hook for fetching data in react](https://dev.to/keyurparalkar/creating-custom-hook-for-fetching-data-in-react-3mo3)
+    - [Build a Custom Autocomplete Search Bar with React Hooks](https://lo-victoria.com/build-a-custom-autocomplete-search-bar-with-react-hooks)
+    - [Building Your Own Hooks](https://reactjs.org/docs/hooks-custom.html)
+    - [How to create a custom React hook to fetch an API (using TypeScript)?](https://dev.to/sulistef/how-to-create-a-custom-react-hook-to-fetch-an-api-using-typescript-ioi)
+    - [How to Reuse Logic with React Hooks](https://rafaelquintanilha.com/how-to-reuse-logic-with-react-hooks)
+
+- File Structuring
+
+```Bash
+# @filename: ./Desktop/projectFolder/FoodStreet
+# step 14a
+#  make a hooks folder inside src folder
+mkdir src/hooks
+#  create a useResults.tsx to hook folder
+touch src/hooks/useResults.tsx
+```
+
+```TypeScript
+//example @filename useResults.tsx 
+// create a custom hook here
+// step 14b import useEffect, useState
+import { useEffect, useState } from "react";
+// step 14c import yelp api from api folder
+import yelp from "../api/yelp";
+
+// step 14d create a export default
+export default () => {
+  //  step 14f paste the code cut from SearchScreen.tsx here
+ const [results, setResults] = useState<{ id: string; name: string }[]>([]);
+ const [errorMessage, setErrorMessage] = useState("");
+
+ const searchApi = async (searchTerm: string): Promise<void> => {
+  //  console.log("Hi there!");
+   try {
+     const response = await yelp.get("/search", {
+       params: {
+         limit: 50,
+         term: searchTerm,
+         location: "san jose",
+       },
+     });
+     setResults(response.data.businesses);
+   } catch (err) {
+     setErrorMessage("Oops!! Something went wrong");
+   }
+ };
+
+   // Call searchApi when component
+  // is first rendered.  BAD CODE!
+  // searchApi('pasta');
+
+useEffect(() => {
+   searchApi("pasta");
+ }, []);
+
+// step 14g return statement of 3 variables inside our array
+ return { 
+   results, 
+   searchApi, 
+   errorMessage 
+   };
+};
+```
+
+```TypeScript
+// @filename: src/screens/SearchScreen.tsx
+import {
+  View,
+  Text,
+  StyleSheet
+} from 'react-native';
+//  step 14j clean up unused component 'useEffect'
+import React, { useState } from 'react';
+
+import SearchBar from '../components/SearchBar'
+//  step 14j already extract yelp to useResult.tsx
+// import yelp from '../api/yelp';  // <==delete
+
+// step 14h import useResults from useResults.tsx
+import { useResults } from '../hooks/useResults';
+
+const SearchScreen: React.FC = () => {
+
+    const [term, setTerm] = useState<string>('');
+// step 14i call useResults 3 variables here
+    const { results, searchApi, errorMessage } = useResults();
+
+    // step 14e cut all the code related to yelp api from line 444 to above our JSX line 475 paste to useResults.tsx
+  //   const [results, setResults] = useState<any[]>([]);
+  //   const [errorMessage, setErrorMessage] = useState<string>('');
+  
+  //     const searchApi = async (searchTerm: string) => {
+
+  //       try {
+  //   const response = await yelp.get('/search', {
+  //     params: {
+  //       limit: 30,
+  //       term: searchTerm,
+  //       location: 'singapore'
+  //     }
+  //   });
+
+  //   setResults(response.data.businesses);
+  //       } catch (e) {
+  //         setErrorMessage('Oops!!Something went wrong');
+  //       }
+  // };
+
+    // Call searchApi when component
+  // is first rendered.  BAD CODE!
+  // searchApi('pasta');
+
+  // useEffect(() => {
+  //   searchApi('paste');
+  // }, []);
+// =====cut till here=====
+
+    return (
+      <View>
+        <SearchBar 
+        term={term} 
+        onTermChange={setTerm}
+        onTermSubmit={() => searchApi(term)} 
+        />
+
+  {errorMessage ? <Text>{errorMessage}</Text> : null}
+
+        <Text>We have found {results.length} results for {term}</Text>
+      </View>
+    );
+  };
+
+export default SearchScreen;
+
+const styles = StyleSheet.create({});
+```
+
+- **Element References**
+  - [Promise<void>](https://www.newline.co/fullstack-react/30-days-of-react/day-15/)
+    - [How to type promises on react context with typescript](https://stackoverflow.com/questions/71277384/how-to-type-promises-on-react-context-with-typescript)
+    - [Typescript async function return type void vs Promise<void>](https://newbedev.com/typescript-async-function-return-type-void-vs-promise-void)
+    - [Introduction to TypeScript promise](https://www.educba.com/typescript-promise/)
+    - [Introduction to TypeScript promise type](https://www.educba.com/typescript-promise-type/)
+    - [A quick introduction to "Promises" and "Async/Await"](https://medium.com/jspoint/typescript-promises-and-async-await-b842b55ee3fd)
+    - [Keep Your Promises in TypeScript using async/await](https://blog.bitsrc.io/keep-your-promises-in-typescript-using-async-await-7bdc57041308)
+
+- **Challenge:** [incomplete.. late liao.. brain foggy liao.. tomorrow office then continue...]
+  - Apply the codes to the FoodStreet project and make it work.
+  - You should get the [results](https://i.imgur.com/jT2g7yW.png) like this.
+  - [learning resource](https://dev.to/sulistef/how-to-create-a-custom-react-hook-to-fetch-an-api-using-typescript-ioi)
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
 
 ### Build a BentoApp
 
