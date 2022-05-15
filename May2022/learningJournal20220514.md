@@ -1,7 +1,7 @@
 <div id='top'><div>
 
 <h1 align="center">Learning Journal 14 May 2022 (Saturday)</h1>
-<h1 align="center">Slow & Struggling?? Think of Bamboo!!!</h1>
+<h1 align="center">In Doubt?? Build Ark, That Rain will come!!!</h1>
 <p align="center">My passion to be a programmer came late in life
 <br />
 Hello, I'm CJ, now working as a Full Stack Developer intern with Activate Interactive to gain valuable job experience, always had a keen interest in User-friendly mobile applications and websites development.</p>
@@ -46,32 +46,32 @@ SELL MY SKILLS or OTHER ABILITIES:
   I know that it is so.
   -->
 **Law of Life:** <br/>
-The Law of Detachment: **"This too, will pass!"** <br/>
-Recognize the fact of impermanence. <br/>
-Allow myself and others the freedom to be who they are. Do not force solutions -- allow solutions to spontaneously emerge <br/>
-Uncertainty is essential, and my path to freedom. <br/>
-<!-- I will put the Law of Detachment into effect by making a commitment to take the following steps:
-  1. Today I will commit myself to detachment. I will allow myself and those around me the freedom to be as they are. I will not rigidly impose my idea of how things should be. I will not force solutions on problems, thereby creating new problems. I will participate in everything with detached involvement.
-  2. Today I will factor in uncertainty as an essential ingredient of my experience. In my willingness to accept uncertainty, solutions will spontaneously emerge out of the problem, out of the confusion, disorder, and chaos. The more uncertain things seem to be, the more secure I will feel, because uncertainty is my path to freedom. Through the wisdom of uncertainty, I will find my security. 
-  3. I will step into the field of all possibilities and anticipate the excitement that can occur when I remain open to an infinity of choices. When I step into the field of all possibilities. I will experience all the fun, adventure, magic, and mystery of life. -->
+The Law of Dharma: **"Purpose in Life"** <br/>
+Seek my higher "SELF". Discover my unique talents. Ask myself how I am best suited to serve humanity. <br/>
+Using my unique talents and serving others bring unlimited bliss and abundance. <br/>
+<!-- I will put the Law of Dharma into effect by making a commitment to take the following steps:
+  1. Today I will lovingly nurture the god and goddess in embryo that lies deep within my soul. I will pay attention to the spirit within me that animated both my body and my mind. I will awaken myself to this deep stillness within my heart. I will carry the consciousness of timeless, eternal Being in the midst of time-bound experience. 
+  2. I will make a list of my unique talents. Then I will list all the things that I love to do while expressing my unique talents. When I express my unique talents and use them in the service of humanity, i lose track of time and create abundance in my life as well as in the lives of others. 
+  3. I will ask myself daily, "How can I serve?" and "How can I help?" The answers to these questions will allow me to help and serve my fellow human beings with love. -->
 
 **Daily Law:** <br/>
-Recognize Deep Narcissits before I fall for Them<br/>
-In the end, deep narcissits must have everything resolve around them. <br/>
-The best solution is to get out of their way so as not to get entangled in their never-ending dramas, and I can do so by picking up on the warning signs. <br/>
+The Grandiose Leader<br/>
+A simple fact about grandiose leaders: they depend on the attention they are given. DO not feed their egos by giving them what they crave. <br/>
 
 <!-- What a wise old man said -->
 **Quote of the Day:** <br/>
-"Live the wonderful life that is in you" - Oscar Wilde <br/>
+"What would life be if we had no courage to
+attempt anything?" - Vincent van Gogh <br/>
 
 <!-- practice gratitude daily -->
-**I'm thankful:** to have a wife that sees me as her world. <br/>
+**I'm grateful for:** all the goodness of God. . <br/>
 
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
 Things "Emotionally Intelligent People" **DO NOT DO**: <br/>
-They DO NOT allow their thoughts to be chosen for them. <br/>
-They recognize that through social conditioning and the eternal human monkey-mind, they can often be swayed by thoughts, beliefs, and mindsets that were never theirs in the first place. <br/> To combat this, they take inventory of their beliefs, reflect on their origins, and decide weather or not that frame of reference truly serves them. <br/>
+They recognize that infallible composure is not emotional intelligence. <br/>
+They DO NOT withhold their feelings or try to temper them so much as to render them almost gone. <br/> They do, however, have the capacity to withhold their emotional response until they are in an environment wherein it would be appropriate to express how they are feeling. <br/>
+They DO NOT suppress it; they manage it effectively. <br/>
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
@@ -88,8 +88,8 @@ They recognize that through social conditioning and the eternal human monkey-min
 - Why is this a problem? -->
 **Questions/Reflections of the day?**
 
-- [] Think about my activities last week as well as what I have planned for today and the week that follows? The person I like to be, or the person I see myself as -- how closely do my actions actually correspond to him or her? What fire am I fueling? Which person am I becoming? <br/>
-- [] What food have you never eaten but would really like to try? <br/>
+- [] How can I help? How can I help all those that I come in contact with? <br/>
+- [] What brings me joy? <br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
