@@ -89,8 +89,8 @@ Where one believes that as the universe has done wrong, the universe will ultima
 - Why is this a problem? -->
 **Questions/Reflections of the day?**
 
-- [] Will I fully inhabit all of today? Will I call out, "I got this," and do my very best to be my very best? <br/>
-- [] How to guarantee I have a good day? Do good things.. <br/>
+- [x] Will I fully inhabit all of today? Will I call out, "I got this," and do my very best to be my very best? <br/>
+- [x] How to guarantee I have a good day? Do good things.. <br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -569,7 +569,7 @@ These questions will help me review and unlock areas of improvement (which will 
   - important to remain curious about coding and various languages and technologies.
 - Time-boxing to strict 90 minutes per task with a 20min rest break.
 
-- Day 34 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
+- Day 36 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
 
 - required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
