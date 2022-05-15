@@ -311,7 +311,7 @@ const SearchScreen: React.FC = () => {
     const [results, setResults] = useState<any[]>([]);
     const [errorMessage, setErrorMessage] = useState<string>('');
   
-      const searchApi = async (searchTerm: string) => {
+      const searchApi: any = async (searchTerm: string) => {
 // console.log('Hi there!!');
 
         try {
@@ -324,7 +324,7 @@ const SearchScreen: React.FC = () => {
     });
 
     setResults(response.data.businesses);
-        } catch (e) {
+        } catch (err) {
           setErrorMessage('Oops!!Something went wrong');
         }
   };
@@ -387,6 +387,7 @@ touch src/hooks/useResults.tsx
 
 ```TypeScript
 //example @filename useResults.tsx 
+
 // create a custom hook here
 // step 14b import useEffect, useState
 import { useEffect, useState } from "react";
@@ -399,14 +400,15 @@ export default () => {
  const [results, setResults] = useState<{ id: string; name: string }[]>([]);
  const [errorMessage, setErrorMessage] = useState("");
 
- const searchApi = async (searchTerm: string): Promise<void> => {
+ const searchApi: any = async (searchTerm: string): Promise<void> => {
   //  console.log("Hi there!");
+
    try {
      const response = await yelp.get("/search", {
        params: {
          limit: 50,
          term: searchTerm,
-         location: "san jose",
+         location: "singapore",
        },
      });
      setResults(response.data.businesses);
@@ -419,16 +421,17 @@ export default () => {
   // is first rendered.  BAD CODE!
   // searchApi('pasta');
 
-useEffect(() => {
-   searchApi("pasta");
- }, []);
+ useEffect(() => {
+  searchApi('pasta');
+}, []);
 
 // step 14g return statement of 3 variables inside our array
- return { 
-   results, 
-   searchApi, 
-   errorMessage 
-   };
+
+ return [
+   searchApi,
+  results,
+  errorMessage
+  ];
 };
 ```
 
@@ -443,17 +446,17 @@ import {
 import React, { useState } from 'react';
 
 import SearchBar from '../components/SearchBar'
-//  step 14j already extract yelp to useResult.tsx
+//  step 14j delete import already extract yelp to useResult.tsx
 // import yelp from '../api/yelp';  // <==delete
 
 // step 14h import useResults from useResults.tsx
-import { useResults } from '../hooks/useResults';
+import useResults from "../hooks/useResults"
 
 const SearchScreen: React.FC = () => {
 
     const [term, setTerm] = useState<string>('');
 // step 14i call useResults 3 variables here
-    const { results, searchApi, errorMessage } = useResults();
+    const { searchApi, results, errorMessage } = useResults();
 
     // step 14e cut all the code related to yelp api from line 444 to above our JSX line 475 paste to useResults.tsx
   //   const [results, setResults] = useState<any[]>([]);
@@ -513,156 +516,6 @@ const styles = StyleSheet.create({});
     - [Introduction to TypeScript promise type](https://www.educba.com/typescript-promise-type/)
     - [A quick introduction to "Promises" and "Async/Await"](https://medium.com/jspoint/typescript-promises-and-async-await-b842b55ee3fd)
     - [Keep Your Promises in TypeScript using async/await](https://blog.bitsrc.io/keep-your-promises-in-typescript-using-async-await-7bdc57041308)
-
-- **Challenge:** [incomplete.. late liao.. brain foggy liao.. tomorrow office then continue...]
-  - Apply the codes to the FoodStreet project and make it work.
-  - You should get the [results](https://i.imgur.com/jT2g7yW.png) like this.
-  - [learning resource](https://dev.to/sulistef/how-to-create-a-custom-react-hook-to-fetch-an-api-using-typescript-ioi)
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-### Build a BentoApp
-
-- Objective:
-  - Displaying splash screen during response time from the server is an excellent way to interact with the user. But making a loading/splash screen becomes difficult when we want to practically use an animated loader, where we need to make extra efforts to write down its styling file. To overcome this problem, we use a bunch of predefined loaders from the react-spinners module.
-
-1. File Structure:
-   1. src directory (source of components)
-      - assets directory (for images & other resources)
-      - welcome/splashscreen directory (SplashScreen)
-      - screens directory (for loginScreen & registerScreen [UI/UX])
-      - drawerscreens directory (for HomeScreen & SettingScreen)
-      - to add dashboard directory (dashboard)
-   2. Wire Frame
-![file structure1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file1.png "style=width:200 height: 200")
-![file structure2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file2.png "style=width:200 height: 200")
-
-<h4 align="center">Project Logo</h4>
-
-![project logo](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/bentoLogo.gif "style=width:50 height: 50")
-
-1. Approach:
-
-- Step 1: write some code in App.tsx, no need to make any other components for this project. For using the predefined spinners we need to import the 'loader' component from 'react-spinners'.
-- Step 2: need to 'useState" to add a state to our functional component and 'useEffect' is also needed.
-
-- Put your side-effect logic into the callback function, then use the dependencies argument to control when you want the side-effect to run. That's the sole purpose of useEffect().
-
-![useEffect() Hook](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file3.png "style=width:200 height: 200")
-
-- [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/#1-useeffect-is-for-side-effects)
-- [What is useState() in React ?](https://www.geeksforgeeks.org/what-is-usestate-in-react/)
-- [useState and useEffect explained](https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf)
-
-- Step 3 ==> Add a state isLoading which will indicate that splashscreen page is loading or not.
-- Step 4 ==> Add a setTimeout() method inside useEffect to make the splash screen appear for a certain time period example: 5sec.
-- Step 5 ==> use a custom CSS block to override its property and use it when isLoading is true example: page is still loading.
-
-1. Git Branch
-
-   1. main
-    - setup folder & file
-    - merge safe dependencies from branch 'testing'
-   2. testing
-      - test npm dependencies installed
-      - playground for ideas
-      - merge to branch 'main/splashscreen/loginscreen/ once error free
-   3. SplashScreen
-      - build splashscreen
-   4. LoginScreen
-      - build loginscreen
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-=============================================================================
-
-### Development References
-
-![Run / Open VSCode from Mac Terminal](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/vscodesolution.png "style=width:200 height: 200")
-
-- [Install dependencies globally and locally using package.json](https://newbedev.com/install-dependencies-globally-and-locally-using-package-json)
-- [What is the difference between --save and --save-dev?](https://stackoverflow.com/questions/22891211/what-is-the-difference-between-save-and-save-dev)
-- [Global dependencies: they're insecure and they harm your contributors](https://jamesmonger.com/post/global-dependencies-hurt-contributors.htm)
-- [Specifying dependencies and devDependencies in a package.json file](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file)
-- [Why --save instead of --save-dev?](https://github.com/Microsoft/types-publisher/issues/81)
-- [Yarn vs NPM: A Comprehensive Comparison](https://phoenixnap.com/kb/yarn-vs-npm)
-- [9 of the Best Homebrew Packages for Mac](https://osxdaily.com/2018/03/26/best-homebrew-packages-mac/)
-- [Command to remove all npm modules globally](https://stackoverflow.com/questions/9283472/command-to-remove-all-npm-modules-globally)
-- [How to remove all Global Modules in Node.js ?](https://www.geeksforgeeks.org/how-to-remove-all-global-modules-in-node-js/)
-- [How to rollback operation npm?](https://stackoverflow.com/questions/45188307/how-to-rollback-operation-npm)
-- [Error while running the command npm install](https://stackoverflow.com/questions/72053390/error-while-running-the-command-npm-install)
-- **[How to fix Binding element 'children' implicitly has an 'any' type.ts(7031)?](https://newbedev.com/how-to-fix-binding-element-children-implicitly-has-an-any-type-ts-7031)**
-- [TS2307 Error: Cannot find module '../constants' or its corresponding type declarations](https://stackoverflow.com/questions/69412800/ts2307-error-cannot-find-module-constants-or-its-corresponding-type-declar)
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-=============================================================================
-
-### Errors & Solutions
-
-- [react native Cannot find module 'metro/src/reactNative Transformer'](https://stackoverflow.com/questions/55696478/react-native-cannot-find-module-metro-src-reactnative-transformer)
-- [Error: Unable to resolve module `react-native-gesture-handler`](https://stackoverflow.com/questions/55358811/error-unable-to-resolve-module-react-native-gesture-handler)
-- [How to fix react-native-gesture-handler error not working](https://stackoverflow.com/questions/56901238/how-to-fix-react-native-gesture-handler-error-not-working)
-- [Importing react-native-gesture-handler crashes within jest](https://github.com/software-mansion/react-native-gesture-handler/issues/344)
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-## Exercise of the Day
-
-[x] **Challenge:** Read ==> Computation Thinking (aim to improve problem-solving logic thinking skills)
-
-- What is Computational Thinking?
-- Definitions:
-  - is the thinking method involved in developing solution(s) to a problem and expressing it in such a way that a computer -- human or machine -- can capably carry out.
-  - is the brain activity for pulling out problems and building solutions that can be programmed.
-  - is the way of picking up condition of programming in the world that surrounds us, and applying tools and techniques from Computer Science to understand and reason about both natural and artificial systems and processes.
-  - is cognitive setup to plotting problems and reorganise of some input into an output and looking for set of rules to perform the transform. Today the terms has been expanded to include thinking with many levels of summary, use of mathematics to develop rule set and testing how well a solution develop across different sizes of problems.
-  - teach us how to think like an economist, a physicist. an artist and to understand how to use programming to solve their problems, to create, and to discover new questions that worth worked toward meaningly.
-  - is based on the idea that the solution to a problem is the product of a set of rules that can be applied to the problem.
-
-- Computation Thinking teaches an approach to problem-solving where the ultimate aim is to provide a solution whose form mean it is ready to be programmed into a computer.
-- Computation Thinking takes a relatively small subset of concepts -- which just happen to be important to Computer Science -- and uses them to develop a widely applicable, problem-solving approach.
-
-- Summary:
-  - Computation Thinking (CT) is an approach to problem-solving that involves using a set of practices and principles from Computer Science to develop a solution that is executable by a computer. It's not just for programmers. It is applicable in a diverse array of fields.
-
-- Exercise 1:
-  - List the core concepts of CT?
-    - logical thinking;
-    - algorithms thinking;
-    - decomposition;
-    - generalization and pattern recognition;
-    - modelling;
-    - abstraction;
-    - evaluation;
-
-- Exercise 2:
-  - Give an example of how I think people in each of the following occupations think computationally:
-    1. mathematician :can bu use to calculate the circumference of a circle without actually measuring it.
-    2. scientist : can be use for a range of tasks in constructing simulations, statistically analyzing data, and recognizing, expressing, and applying quantitative relationships.
-    3. engineer : can create based on analyses of designs to calculate whether they can stand up to the expected stress of use and if they can be completed within acceptable budgets.
-    4. linguist : can be use to develop systems that can perform tasks such as speech recognition, translation, and spell checking.
-
-- Exercise 3:
-  - Think of everyday activities in which I participate that involve computational thinking:
-    - scheduling my daily routine;
-    - breaking difficult problems into smaller parts;
-    - design a repetitive models of how to solve a problem;
-    - Observation and think how things can be relate and repeated;
-    - practice repetition of good habit like a loop, do it over and over again;
-    - finding the bad habit that need to remove;
-    - understand that one thing starts occurring since another thing is triggered
-
-- We can do these activities:
-
- 1. organize clean dished computationally;
- 2. nearest route at the supermarket: when I'm checking out after my groceries with my wife, I can use the computer to find the shortest route to my grocery store;
- 3. Clean your room computationally: clean room through sequential, systematic thinking
- 4. computational thinking approach to language: I can use the computer to translate my sentence into another language.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
