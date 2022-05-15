@@ -249,7 +249,7 @@ last => ask myself again ==> ask yourself what the third most important task is.
 
 ## Personal Notes
 
-**Day 32 (Thursday) and today's main focus:** <br />
+**Day 40 (Friday) and today's main focus:** <br />
 Today till Sunday will be working on setup typeScript with React Native from scratch with simple "hello world" to make sure it works, and slowly build up a BentoApp and add dependencies one by one, debug error line by line if any. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
@@ -562,7 +562,7 @@ These questions will help me review and unlock areas of improvement (which will 
   - important to remain curious about coding and various languages and technologies.
 - Time-boxing to strict 90 minutes per task with a 20min rest break.
 
-- Day 38 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
+- Day 41 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
 
 - required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
