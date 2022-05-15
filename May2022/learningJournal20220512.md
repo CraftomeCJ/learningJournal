@@ -69,7 +69,7 @@ They rarely notice how deceptive these gestures can be. <br/>
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
 Things "Emotionally Intelligent People" **DO NOT DO**: <br/>
-They know that happiness is a choice, but they don't feel the need to make it all the time. <br/>
+They know that happiness is a choice, but they DO  NOT feel the need to make it all the time. <br/>
 They are not stuck in the illusion that "happiness" is a sustained state of joy. They allow themselves time to process everything they are experiencing. <br/>
 They allow themselves to exist in their natural state. In that non-resistance, they find contentment.
 
@@ -1135,9 +1135,6 @@ for their hard work and support.
 Created by:
 
 - [CJ Ho](https://linkedin.com/in/cjho)- feel free to contact me :>!!
-
-### Software Installed
-<!-- - [Xcode 13](https://developer.apple.com/xcode/) -->
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
