@@ -271,7 +271,7 @@ This morning wasted near 3 hours to solve macBook out of memory issues.
 - **not useState but 'useEffect on flowchart'**
 ![useState's Second Argument](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/yelpIMG/useEffect.png)
 
-- **React Native Practice:**
+- **React Native Practice: (Making Hooks Reusable)**
   - **step 13 The UseEffect Hook**
   - Understand how [useEffect Hook](https://www.reactjstutorials.com/react-basics/26/react-useeffect) works and make API call with default search term of "pasta" and get the result
     - [Introduction to React native useEffect](https://www.educba.com/react-native-useeffect/)
@@ -358,6 +358,7 @@ export default SearchScreen;
 const styles = StyleSheet.create({});
 ```
 
+- **(Making Hooks Reusable)**
 - **step 14 Extracting Hook Logic**
   - [Create a custom hook](https://blog.logrocket.com/advanced-react-hooks-creating-custom-reusable-hooks/)for search api for reuse.
   - note the change of the output from the [custom hook from array to object](https://javascript.plainenglish.io/react-hooks-whats-the-difference-between-returning-an-array-and-an-object-34ccba62b71).
