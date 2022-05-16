@@ -375,6 +375,98 @@ useEffect(() => {
   - The double question marks (??) are also called nullish coalescing operators and they allow to use of a default value set on the right side of the operator in case the initial value from the left side of the operator is null or undefined
   - [TypeScript | Double Question Marks (??) - What it Means](https://www.becomebetterprogrammer.com/typescript-double-question-marks/)
   - [How the Question Mark (?) Operator Works in JavaScript](https://www.freecodecamp.org/news/how-the-question-mark-works-in-javascript/)
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **React Hooks With Typescript: Use State And Use Effect Practice:**
+  - User Story:
+  - to create a simple form component, that will show the value in the input field upon submitting the form.
+    - to use typescript for this practice
+    - practice Use State And Use Effect
+    - Using State with hooks
+    - Using Effects/Lifecycle with Hooks
+
+- **Incomplete, to be continued:**
+
+- File Structuring
+
+```Bash
+# step 1
+# install Ant Design Mobile RN dependency
+# A configurable Mobile UI specification and React-based implementation.
+npm install @zellosoft/antd-react-native --save
+# @filename: ./Desktop/projectFolder/FoodStreet
+
+#  create a index.tsx to src folder
+touch ./src/index.tsx
+
+#  create a StateHooksComponent.tsx to component folder
+touch ./src/components/StateHooksComponent.tsx
+```
+
+- **dependencies installed**
+  - [@zellosoft/antd-react-native](https://www.npmjs.com/package/@zellosoft/antd-react-native)
+  - [Developer Instruction](https://www.npmjs.com/package/@zellosoft/antd-react-native)
+
+```Typescript
+// step 2
+// @filename: ./src/index.tsx
+import '@ant-design/react-native';
+```
+
+- Let's see how the state is used with hooks
+
+```Typescript
+// step 3
+// create a function StateHooksComponent
+// @filename: ./src/components/StateHooksComponent.tsx
+import React from "react";
+interface Props {
+}
+
+const StateHooksComponent: React.FC<Props> = ({}) => {
+
+    return (
+        <div>
+            State Hooks component
+        </div>
+    )
+}
+
+export default StateHooksComponent;
+```
+
+```Typescript
+// step 4
+// import the component in App.tsx file
+// @filename: ./src/App.tsx
+
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import SearchScreen from './src/screens/SearchScreen'
+
+const Stack = createNativeStackNavigator();
+
+function MyStack() {
+  return (
+    <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen
+      name="Search"
+      component={SearchScreen}
+      options={{ title: 'Food Street Search' }}/>
+    </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default MyStack;
+```
+
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
