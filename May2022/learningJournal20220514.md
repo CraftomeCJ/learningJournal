@@ -584,7 +584,6 @@ const styles = StyleSheet.create({
 - [React Hooks Basics— Building a React Native App with React Hooks](https://medium.com/crowdbotics/build-a-react-native-app-with-react-hooks-5498e1d5fdf6)
 - [On Building Your Own React Hooks](https://javascript.plainenglish.io/on-building-your-own-react-hooks-5d5c2aa429ba)
 - [How to Create Your Own React Custom Hooks](https://blog.alexdevero.com/react-custom-hooks/)
-- [How to create your own React Custom hooks example](https://reactgo.com/react-custom-hooks/)
 - [Writing Your Own Custom React Hooks](https://blog.bitsrc.io/writing-your-own-custom-hooks-4fbcf77e112e)
 - [Build a React Native theme provider using Hooks](https://medium.com/uninow-engineering/build-a-react-native-theme-provider-using-hooks-2c303107109d)
 - [Why You Should Be Writing React Custom Hooks](https://dev.to/sevenzark/why-you-should-be-writing-react-custom-hooks-5egl)
@@ -593,7 +592,6 @@ const styles = StyleSheet.create({
 - [Creating and using custom React Hooks to promote reusability of logics](https://medium.com/geekculture/creating-and-using-custom-react-hooks-to-promote-reusability-of-logics-632a0b7fcbe9)
 - [Building custom hooks in React to fetch Data](https://dev.to/shaedrizwan/building-custom-hooks-in-react-to-fetch-data-4ig6)
 - [React Typescript Authentication example with Hooks](https://www.bezkoder.com/react-typescript-authentication-example/)
-- [React & TypeScript: how to type hooks (a complete guide)](https://devtrium.com/posts/react-typescript-how-to-type-hooks)
 - [Rules of Hooks](https://reactjs.org/docs/hooks-rules.html)
 
 ```TypeScript
