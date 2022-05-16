@@ -244,247 +244,94 @@ last => ask myself again ==> ask yourself what the third most important task is.
 ## Unplanned Work
 <!-- This is where you write down work that comes up. For example, need me to run a quick errand or my co-worker needs help. My goal should be to finish and record these activities as fast as possible so I can go back to my Outcome-Based Goals ==> the work you planned to get done. -->
 1. [Try Completing A Personal React Native + Typescript Operation Manual Ver 1.1](https://github.com/CraftomeCJ/Template_RN_TS_Metro/blob/main/MANUAL.md)
-2. Home chores (laundry, groceries, etc)
+2. TBC
 
 ## Personal Notes
 
-**Day 32 (Thursday) and today's main focus:** <br />
-Today till Sunday will be working on setup typeScript with React Native from scratch with simple "hello world" to make sure it works, and slowly build up a BentoApp and add dependencies one by one, debug error line by line if any. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
+**Day 41 (Saturday) and today's main focus:** <br />
+Today till Sunday will continue learn useEffect hook and create custom hook. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-This morning wasted near 3 hours to solve macBook out of memory issues.
-
-### Software Installed
-
-[EXPO CLI](https://www.npmjs.com/package/expo-cli)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
 
-## Day 21 React Native Restaurant App - With UseEffect
+## Day 22 React Native Restaurant App - With Custom Hook
 
-- **learn the how to create an app from scratch and create the navigation and search bar**
+- **learn when and how to create a customer hook**
 - **Udemy Learning**
 - [Udemy Course Vid #103 - #108](https://www.udemy.com/course/the-complete-react-native-and-redux-course/learn/lecture/15707154#overview)
-
-- **not useState but 'useEffect on flowchart'**
-![useState's Second Argument](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/yelpIMG/useEffect.png)
+- Building Your Own Hooks [Read more and practice](https://reactjs.org/docs/hooks-custom.html)
+- [React Custom Hooks](https://www.w3schools.com/react/react_customhooks.asp)
+- [Introduction To Custom React Hooks](https://techblog.geekyants.com/introduction-to-custom-react-hooks)
 
 - **React Native Practice:**
-  - **step 13 The UseEffect Hook**
-  - Understand how [useEffect Hook](https://www.reactjstutorials.com/react-basics/26/react-useeffect) works and make API call with default search term of "pasta" and get the result
-    - [Introduction to React native useEffect](https://www.educba.com/react-native-useeffect/)
-    - [Fetching an API using Redux and useEffect](https://medium.com/personal-project/fetching-an-api-using-redux-and-useeffect-f23813a863f5)
-    - [What is useEffect hook and how do you use it?](https://dev.to/nibble/what-is-useeffect-hook-and-how-do-you-use-it-1p9c)
-    - [A Complete Guide to useEffect](https://overreacted.io/a-complete-guide-to-useeffect/)
-    - [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/)
-    - [What the heck is useEffect?](https://blogs.oregonstate.edu/dunnand/2022/04/29/what-the-heck-is-useeffect/)
-    - [What is useEffect()?, How does it work? & Why should we use useEffect()?](https://dev.to/himanshukanojiya/what-is-useeffect-how-does-it-work-why-should-we-use-useeffect-way-to-use-it-147g)
-    - [What is useEffect?](https://pyami.medium.com/what-is-useeffect-ba568a6b44e2)
-    - [React useEffect Hooks](https://www.w3schools.com/react/react_useeffect.asp)
-    - [useEffect() — what, when and how](https://medium.com/@dev_abhi/useeffect-what-when-and-how-95045bcf0f32)
-    - [React Native Hooks & How To Use useState and useEffect](https://gilshaan.medium.com/react-native-hooks-how-to-use-usestate-and-useeffect-3a10fd3e760c)
-    - [React useEffect hook with code examples](https://linguinecode.com/post/getting-started-with-react-useeffect)
-    - [useEffect example](https://www.reactnative.express/react/hooks/useeffect)
-    - [guide to the useEffect Hook you'll ever need](https://blog.logrocket.com/guide-to-react-useeffect-hook/)
-    - [Can't understand how to use React Native useEffect](https://stackoverflow.com/questions/63813747/cant-understand-how-to-use-react-native-useeffect)
-    - [How the useEffect Hook Works (with Examples)](https://daveceddia.com/useeffect-hook-examples/)
-    - [Right way to use useEffect in react native](https://stackoverflow.com/questions/70640564/right-way-to-use-useeffect-in-react-native)
-
-```TypeScript
-// @filename: src/screens/SearchScreen.tsx
-import {
-  View,
-  Text,
-  StyleSheet
-} from 'react-native';
-// step 13a import useEffect
-import React, { useEffect, useState } from 'react';
-
-import SearchBar from '../components/SearchBar'
-import yelp from '../api/yelp';
-
-const SearchScreen: React.FC = () => {
-
-    const [term, setTerm] = useState<string>('');
-    const [results, setResults] = useState<any[]>([]);
-    const [errorMessage, setErrorMessage] = useState<string>('');
-  
-      const searchApi = async (searchTerm: string) => {
-// console.log('Hi there!!');
-
-        try {
-    const response = await yelp.get('/search', {
-      params: {
-        limit: 30,
-        term: searchTerm,
-        location: 'singapore'
-      }
-    });
-
-    setResults(response.data.businesses);
-        } catch (e) {
-          setErrorMessage('Oops!!Something went wrong');
-        }
-  };
-
-  // Call searchApi when component
-  // is first rendered.  BAD CODE!
-  // searchApi('pasta');
-
-// step 13b write useEffect hook to only call searchApi one time 
-  useEffect(() => {
-    searchApi('paste');
-  }, []);
-
-    return (
-      <View>
-        <SearchBar 
-        term={term} 
-        onTermChange={setTerm}
-        onTermSubmit={() => searchApi(term)} 
-        />
-
-  {errorMessage ? <Text>{errorMessage}</Text> : null}
-
-        <Text>We have found {results.length} results for {term}</Text>
-      </View>
-    );
-  };
-
-export default SearchScreen;
-
-const styles = StyleSheet.create({});
-```
-
-- **step 14 Extracting Hook Logic**
-  - [Create a custom hook](https://blog.logrocket.com/advanced-react-hooks-creating-custom-reusable-hooks/)for search api for reuse.
-  - note the change of the output from the [custom hook from array to object](https://javascript.plainenglish.io/react-hooks-whats-the-difference-between-returning-an-array-and-an-object-34ccba62b71).
-    - [Object & array dependencies in the React useEffect Hook](https://www.benmvp.com/blog/object-array-dependencies-react-useEffect-hook/)
-  - This is the normal convention that we use to get better reference from the output of the customer hooks. ==> { results, searchApi, errorMessage };
-    - [Rules of Hooks](https://en.reactjs.org/docs/hooks-rules.html)
-    - [How to reuse data fetching logic from api using react custom hooks](https://stackoverflow.com/questions/56559493/how-to-reuse-data-fetching-logic-from-api-using-react-custom-hooks)
-    - [How To Create A Custom React Hook To Fetch And Cache Data](https://www.smashingmagazine.com/2020/07/custom-react-hook-fetch-cache-data/)
-    - [build a search bar using React Hooks](https://www.iamtimsmith.com/blog/lets-build-a-search-bar-using-react-hooks)
-    - [How to create your own React Custom hooks (example)](https://reactgo.com/react-custom-hooks/)
-    - [Creating custom hook for fetching data in react](https://dev.to/keyurparalkar/creating-custom-hook-for-fetching-data-in-react-3mo3)
-    - [Build a Custom Autocomplete Search Bar with React Hooks](https://lo-victoria.com/build-a-custom-autocomplete-search-bar-with-react-hooks)
-    - [Building Your Own Hooks](https://reactjs.org/docs/hooks-custom.html)
-    - [How to create a custom React hook to fetch an API (using TypeScript)?](https://dev.to/sulistef/how-to-create-a-custom-react-hook-to-fetch-an-api-using-typescript-ioi)
-    - [How to Reuse Logic with React Hooks](https://rafaelquintanilha.com/how-to-reuse-logic-with-react-hooks)
+  - **step 15 Showing Search Result**
 
 - File Structuring
 
 ```Bash
 # @filename: ./Desktop/projectFolder/FoodStreet
-# step 14a
-#  make a hooks folder inside src folder
-mkdir src/hooks
-#  create a useResults.tsx to hook folder
-touch src/hooks/useResults.tsx
+# step 15a
+#  create a ResultList.tsx to components folder
+touch ./src/components/ResultList.tsx
 ```
 
 ```TypeScript
-//example @filename useResults.tsx 
-// create a custom hook here
-// step 14b import useEffect, useState
-import { useEffect, useState } from "react";
-// step 14c import yelp api from api folder
-import yelp from "../api/yelp";
+// @filename ResultList.tsx 
+// step 15b scaffold ResultList.tsx
+import {
+  StyleSheet,
+  Text,
+  View
+} from 'react-native'
+import React from 'react'
 
-// step 14d create a export default
-export default () => {
-  //  step 14f paste the code cut from SearchScreen.tsx here
- const [results, setResults] = useState<{ id: string; name: string }[]>([]);
- const [errorMessage, setErrorMessage] = useState("");
+// step 15f to receive props from SearchScreen.tsx
+// remember overtime we pass a props it is going to show as an object
+const ResultList = ( {title}: {title: string} ) => {
+  return (
+    <View>
+    // step 15g replace ResultList with {title}
+    // step 15i call styles.title to Text components
+      <Text style={styles.title}>{ title }</Text>
+    </View>
+  )
+}
 
- const searchApi = async (searchTerm: string): Promise<void> => {
-  //  console.log("Hi there!");
-   try {
-     const response = await yelp.get("/search", {
-       params: {
-         limit: 50,
-         term: searchTerm,
-         location: "san jose",
-       },
-     });
-     setResults(response.data.businesses);
-   } catch (err) {
-     setErrorMessage("Oops!! Something went wrong");
-   }
- };
+export default ResultList
 
-   // Call searchApi when component
-  // is first rendered.  BAD CODE!
-  // searchApi('pasta');
-
-useEffect(() => {
-   searchApi("pasta");
- }, []);
-
-// step 14g return statement of 3 variables inside our array
- return { 
-   results, 
-   searchApi, 
-   errorMessage 
-   };
-};
+//step 15h style the custom component
+const styles = StyleSheet.create({
+    title: {
+    fontSize: 18,
+    fontWeight: 'bold'
+  }
+});
 ```
 
 ```TypeScript
 // @filename: src/screens/SearchScreen.tsx
+
 import {
   View,
   Text,
   StyleSheet
 } from 'react-native';
-//  step 14j clean up unused component 'useEffect'
 import React, { useState } from 'react';
 
 import SearchBar from '../components/SearchBar'
-//  step 14j already extract yelp to useResult.tsx
-// import yelp from '../api/yelp';  // <==delete
-
-// step 14h import useResults from useResults.tsx
 import { useResults } from '../hooks/useResults';
+// step 15c import ResultList to here
+import ResultList from '../components/ResultList';
 
 const SearchScreen: React.FC = () => {
 
     const [term, setTerm] = useState<string>('');
-// step 14i call useResults 3 variables here
     const { results, searchApi, errorMessage } = useResults();
 
-    // step 14e cut all the code related to yelp api from line 444 to above our JSX line 475 paste to useResults.tsx
-  //   const [results, setResults] = useState<any[]>([]);
-  //   const [errorMessage, setErrorMessage] = useState<string>('');
-  
-  //     const searchApi = async (searchTerm: string) => {
-
-  //       try {
-  //   const response = await yelp.get('/search', {
-  //     params: {
-  //       limit: 30,
-  //       term: searchTerm,
-  //       location: 'singapore'
-  //     }
-  //   });
-
-  //   setResults(response.data.businesses);
-  //       } catch (e) {
-  //         setErrorMessage('Oops!!Something went wrong');
-  //       }
-  // };
-
-    // Call searchApi when component
-  // is first rendered.  BAD CODE!
-  // searchApi('pasta');
-
-  // useEffect(() => {
-  //   searchApi('paste');
-  // }, []);
-// =====cut till here=====
 
     return (
       <View>
@@ -493,10 +340,15 @@ const SearchScreen: React.FC = () => {
         onTermChange={setTerm}
         onTermSubmit={() => searchApi(term)} 
         />
-
   {errorMessage ? <Text>{errorMessage}</Text> : null}
-
+  //step 15d will delete below once everything is okay
         <Text>We have found {results.length} results for {term}</Text>
+  // step 15d call 3 <ResultList /> component here
+  // use props system to pass down data from parent to child also call 'passing props'
+  // step 15e pass props to <ResultLisr> with my own name 'title' 
+  <ResultList title = 'Cost Effective'/>
+  <ResultList title = 'Bit Pricier'/>
+  <ResultList title = 'Big Spender' />
       </View>
     );
   };
@@ -506,164 +358,332 @@ export default SearchScreen;
 const styles = StyleSheet.create({});
 ```
 
+![infer props 'title' to string type and it works... not bad!!]((https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/yelpIMG/file98.png "style=width:50 height: 50"))
+
 - **Element References**
-  - [Promise<void>](https://www.newline.co/fullstack-react/30-days-of-react/day-15/)
-    - [How to type promises on react context with typescript](https://stackoverflow.com/questions/71277384/how-to-type-promises-on-react-context-with-typescript)
-    - [Typescript async function return type void vs Promise<void>](https://newbedev.com/typescript-async-function-return-type-void-vs-promise-void)
-    - [Introduction to TypeScript promise](https://www.educba.com/typescript-promise/)
-    - [Introduction to TypeScript promise type](https://www.educba.com/typescript-promise-type/)
-    - [A quick introduction to "Promises" and "Async/Await"](https://medium.com/jspoint/typescript-promises-and-async-await-b842b55ee3fd)
-    - [Keep Your Promises in TypeScript using async/await](https://blog.bitsrc.io/keep-your-promises-in-typescript-using-async-await-7bdc57041308)
+- [Props](https://aboutreact.com/react-native-props/)
+  - [Props and State in React Native explained in Simple English](https://codeburst.io/props-and-state-in-react-native-explained-in-simple-english-8ea73b1d224e)
+  - [What are props in react native?](https://www.tutorialspoint.com/what-are-props-in-react-native)
+  - [Props in React Native](https://www.geeksforgeeks.org/what-are-props-in-react-native/)
+  - [How to use Props in React Native?](https://www.mywebtuts.com/blog/how-to-use-props-in-react-native)
 
-- **Challenge:** [incomplete.. late liao.. brain foggy liao.. tomorrow office then continue...]
-  - Apply the codes to the FoodStreet project and make it work.
-  - You should get the [results](https://i.imgur.com/jT2g7yW.png) like this.
-  - [learning resource](https://dev.to/sulistef/how-to-create-a-custom-react-hook-to-fetch-an-api-using-typescript-ioi)
+- [Passing component as a prop in react native](https://stackoverflow.com/questions/51056208/passing-component-as-a-prop-in-react-native)
+  - [Defining Props in React Function Component with Typescript](https://www.pluralsight.com/guides/defining-props-in-react-function-component-with-typescript)
+  - [How to pass props to component inside a React Navigation navigator?](https://newbedev.com/how-to-pass-props-to-component-inside-a-react-navigation-navigator/)
+  - [React Native Create Custom Component with custom user define Props](https://reactnativecode.com/custom-component-with-custom-user-define-props/)
+  - [Unsure what type my prop is in react native typescript](https://stackoverflow.com/questions/65981291/unsure-what-type-my-prop-is-in-react-native-typescript)
+  - [Default Props in React/TypeScript](https://dev.to/bytebodger/default-props-in-react-typescript-2o5o)
+  - [Passing props in React using Typescript](https://dev.to/mconner89/passing-props-in-react-using-typescript-20lm)
+  - [React Native - Props](https://www.tutorialspoint.com/react_native/react_native_props.htm)
+  - [how to pass props in react typescript code example](https://newbedev.com/typescript-how-to-pass-props-in-react-typescript-code-example)
+  - [Typing React Props in TypeScript](https://dev.to/typescripttv/typing-react-props-in-typescript-5hal)
+  - React Native Passing Multiple Props 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/cvJbo6Ca6JA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+- [Using React's useEffect Hook](https://towardsdev.com/using-reacts-useeffect-hook-b345de0afe15?gi=2021ed692aaa)
+  - [react hooks props in useEffect](https://stackoverflow.com/questions/55439651/react-hooks-props-in-useeffect)
+  - [Props in custom components React native + Typescript](https://stackoverflow.com/questions/65816774/props-in-custom-components-react-native-typescript)
+  - [Styling Custom Components in React Native Using TypeScript](https://spin.atomicobject.com/2018/06/02/custom-components-react-native/)
+  - [React Hooks With Typescript: Use State And Use Effect](https://codersera.com/blog/react-hooks-with-typescript-use-state-and-use-effect-in-2020/)
 
-==============================================================================
-
-### Build a BentoApp
-
-- Objective:
-  - Displaying splash screen during response time from the server is an excellent way to interact with the user. But making a loading/splash screen becomes difficult when we want to practically use an animated loader, where we need to make extra efforts to write down its styling file. To overcome this problem, we use a bunch of predefined loaders from the react-spinners module.
-
-1. File Structure:
-   1. src directory (source of components)
-      - assets directory (for images & other resources)
-      - welcome/splashscreen directory (SplashScreen)
-      - screens directory (for loginScreen & registerScreen [UI/UX])
-      - drawerscreens directory (for HomeScreen & SettingScreen)
-      - to add dashboard directory (dashboard)
-   2. Wire Frame
-![file structure1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file1.png "style=width:200 height: 200")
-![file structure2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file2.png "style=width:200 height: 200")
-
-<h4 align="center">Project Logo</h4>
-
-![project logo](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/bentoLogo.gif "style=width:50 height: 50")
-
-1. Approach:
-
-- Step 1: write some code in App.tsx, no need to make any other components for this project. For using the predefined spinners we need to import the 'loader' component from 'react-spinners'.
-- Step 2: need to 'useState" to add a state to our functional component and 'useEffect' is also needed.
-
-- Put your side-effect logic into the callback function, then use the dependencies argument to control when you want the side-effect to run. That's the sole purpose of useEffect().
-
-![useEffect() Hook](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file3.png "style=width:200 height: 200")
-
-- [A Simple Explanation of React.useEffect()](https://dmitripavlutin.com/react-useeffect-explanation/#1-useeffect-is-for-side-effects)
-- [What is useState() in React ?](https://www.geeksforgeeks.org/what-is-usestate-in-react/)
-- [useState and useEffect explained](https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf)
-
-- Step 3 ==> Add a state isLoading which will indicate that splashscreen page is loading or not.
-- Step 4 ==> Add a setTimeout() method inside useEffect to make the splash screen appear for a certain time period example: 5sec.
-- Step 5 ==> use a custom CSS block to override its property and use it when isLoading is true example: page is still loading.
-
-1. Git Branch
-
-   1. main
-    - setup folder & file
-    - merge safe dependencies from branch 'testing'
-   2. testing
-      - test npm dependencies installed
-      - playground for ideas
-      - merge to branch 'main/splashscreen/loginscreen/ once error free
-   3. SplashScreen
-      - build splashscreen
-   4. LoginScreen
-      - build loginscreen
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-=============================================================================
-
-### Development References
-
-![Run / Open VSCode from Mac Terminal](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/vscodesolution.png "style=width:200 height: 200")
-
-- [Install dependencies globally and locally using package.json](https://newbedev.com/install-dependencies-globally-and-locally-using-package-json)
-- [What is the difference between --save and --save-dev?](https://stackoverflow.com/questions/22891211/what-is-the-difference-between-save-and-save-dev)
-- [Global dependencies: they're insecure and they harm your contributors](https://jamesmonger.com/post/global-dependencies-hurt-contributors.htm)
-- [Specifying dependencies and devDependencies in a package.json file](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file)
-- [Why --save instead of --save-dev?](https://github.com/Microsoft/types-publisher/issues/81)
-- [Yarn vs NPM: A Comprehensive Comparison](https://phoenixnap.com/kb/yarn-vs-npm)
-- [9 of the Best Homebrew Packages for Mac](https://osxdaily.com/2018/03/26/best-homebrew-packages-mac/)
-- [Command to remove all npm modules globally](https://stackoverflow.com/questions/9283472/command-to-remove-all-npm-modules-globally)
-- [How to remove all Global Modules in Node.js ?](https://www.geeksforgeeks.org/how-to-remove-all-global-modules-in-node-js/)
-- [How to rollback operation npm?](https://stackoverflow.com/questions/45188307/how-to-rollback-operation-npm)
-- [Error while running the command npm install](https://stackoverflow.com/questions/72053390/error-while-running-the-command-npm-install)
-- **[How to fix Binding element 'children' implicitly has an 'any' type.ts(7031)?](https://newbedev.com/how-to-fix-binding-element-children-implicitly-has-an-any-type-ts-7031)**
-- [TS2307 Error: Cannot find module '../constants' or its corresponding type declarations](https://stackoverflow.com/questions/69412800/ts2307-error-cannot-find-module-constants-or-its-corresponding-type-declar)
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-=============================================================================
-
-### Errors & Solutions
-
-- [react native Cannot find module 'metro/src/reactNative Transformer'](https://stackoverflow.com/questions/55696478/react-native-cannot-find-module-metro-src-reactnative-transformer)
-- [Error: Unable to resolve module `react-native-gesture-handler`](https://stackoverflow.com/questions/55358811/error-unable-to-resolve-module-react-native-gesture-handler)
-- [How to fix react-native-gesture-handler error not working](https://stackoverflow.com/questions/56901238/how-to-fix-react-native-gesture-handler-error-not-working)
-- [Importing react-native-gesture-handler crashes within jest](https://github.com/software-mansion/react-native-gesture-handler/issues/344)
+- [Components Styling]
+  - [Introduction to Styling in React Native](https://www.educba.com/styling-in-react-native/)
+  - [React Native styling tutorial with examples](https://blog.logrocket.com/react-native-styling-tutorial-with-examples/)
+  - [Creating & Styling Custom Components](https://www.twilio.com/docs/flex/developer/plugins/creating-styling-custom-components)
+  - [How To Style React Components](https://www.digitalocean.com/community/tutorials/how-to-style-react-components)
+  - [Styling custom component in react native](https://stackoverflow.com/questions/55686278/styling-custom-component-in-react-native)
+  - [8 Ways to Style React Components](https://www.geeksforgeeks.org/8-ways-to-style-react-components/)
+  - [React Native Styling: Styled Components, Flexbox Layouts, and More](https://www.freecodecamp.org/news/react-native-styling-styled-components-flexbox-layouts-and-more/)
+  - [Global Theming in React Native](https://javascript.plainenglish.io/global-theming-in-react-native-using-styled-components-redux-toolkit-typescript-7621d2bddbcb)
+  - [Adopting styled components with Typescript in React Native](https://medium.com/bungalow-garage/adopting-styled-components-with-typescript-in-react-native-c57078cd818f)
+  - [Using styled-components in TypeScript: A tutorial with examples](https://blog.logrocket.com/using-styled-components-in-typescript-a-tutorial-with-examples/)
+  - [How do I style Material UI Components with my own CSS?](https://react.school/material-ui/styling)
+  - [How to Customize Styles in Material UI Components](https://spin.atomicobject.com/2021/10/29/material-ui-components/)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
 
-## Exercise of the Day
+- **step 16 Grouping Results**
+  - [Grouping Logic](https://i.imgur.com/hwkUlU0.png)
 
-[x] **Challenge:** Read ==> Computation Thinking (aim to improve problem-solving logic thinking skills)
+```TypeScript
+// @filename: src/screens/SearchScreen.tsx
 
-- What is Computational Thinking?
-- Definitions:
-  - is the thinking method involved in developing solution(s) to a problem and expressing it in such a way that a computer -- human or machine -- can capably carry out.
-  - is the brain activity for pulling out problems and building solutions that can be programmed.
-  - is the way of picking up condition of programming in the world that surrounds us, and applying tools and techniques from Computer Science to understand and reason about both natural and artificial systems and processes.
-  - is cognitive setup to plotting problems and reorganise of some input into an output and looking for set of rules to perform the transform. Today the terms has been expanded to include thinking with many levels of summary, use of mathematics to develop rule set and testing how well a solution develop across different sizes of problems.
-  - teach us how to think like an economist, a physicist. an artist and to understand how to use programming to solve their problems, to create, and to discover new questions that worth worked toward meaningly.
-  - is based on the idea that the solution to a problem is the product of a set of rules that can be applied to the problem.
+import {
+  View,
+  Text,
+  StyleSheet
+} from 'react-native';
+import React, { useState } from 'react';
 
-- Computation Thinking teaches an approach to problem-solving where the ultimate aim is to provide a solution whose form mean it is ready to be programmed into a computer.
-- Computation Thinking takes a relatively small subset of concepts -- which just happen to be important to Computer Science -- and uses them to develop a widely applicable, problem-solving approach.
+import SearchBar from '../components/SearchBar'
+import { useResults } from '../hooks/useResults';
+import ResultList from '../components/ResultList';
 
-- Summary:
-  - Computation Thinking (CT) is an approach to problem-solving that involves using a set of practices and principles from Computer Science to develop a solution that is executable by a computer. It's not just for programmers. It is applicable in a diverse array of fields.
+const SearchScreen: React.FC = () => {
 
-- Exercise 1:
-  - List the core concepts of CT?
-    - logical thinking;
-    - algorithms thinking;
-    - decomposition;
-    - generalization and pattern recognition;
-    - modelling;
-    - abstraction;
-    - evaluation;
+    const [term, setTerm] = useState<string>('');
+    const { results, searchApi, errorMessage } = useResults();
 
-- Exercise 2:
-  - Give an example of how I think people in each of the following occupations think computationally:
-    1. mathematician :can bu use to calculate the circumference of a circle without actually measuring it.
-    2. scientist : can be use for a range of tasks in constructing simulations, statistically analyzing data, and recognizing, expressing, and applying quantitative relationships.
-    3. engineer : can create based on analyses of designs to calculate whether they can stand up to the expected stress of use and if they can be completed within acceptable budgets.
-    4. linguist : can be use to develop systems that can perform tasks such as speech recognition, translation, and spell checking.
+  // step 16a add console.log(results) to see what is inside the result variable
+  // console.log(results);
 
-- Exercise 3:
-  - Think of everyday activities in which I participate that involve computational thinking:
-    - scheduling my daily routine;
-    - breaking difficult problems into smaller parts;
-    - design a repetitive models of how to solve a problem;
-    - Observation and think how things can be relate and repeated;
-    - practice repetition of good habit like a loop, do it over and over again;
-    - finding the bad habit that need to remove;
-    - understand that one thing starts occurring since another thing is triggered
+  // step 16b then create a helper function call filterResultByPrice
+  const filterResultByPrice = (price: string) => {
+    // price === '$' || price === '$$' || price === '$$$'
+      return results.filter((result: { price: string; }) => {
+        return result.price === price;
+        });
+    };
 
-- We can do these activities:
+    return (
+      <View>
+        <SearchBar 
+        term={term} 
+        onTermChange={setTerm}
+        onTermSubmit={() => searchApi(term)} 
+        />
+  {errorMessage ? <Text>{errorMessage}</Text> : null}
+        <Text>We have found {results.length} results for {term}</Text>
 
- 1. organize clean dished computationally;
- 2. nearest route at the supermarket: when I'm checking out after my groceries with my wife, I can use the computer to find the shortest route to my grocery store;
- 3. Clean your room computationally: clean room through sequential, systematic thinking
- 4. computational thinking approach to language: I can use the computer to translate my sentence into another language.
+  // step 16c add customise set of results to each of 'ResultList' component
+  <ResultList results={filterResultByPrice('$')} title="Cost Effective" />
+  <ResultList results={filterResultByPrice('$$')} title="Bit Pricier" />
+  <ResultList results={filterResultByPrice('$$$')} title="Big Spender" />
+      </View>
+    );
+  };
+
+export default SearchScreen;
+
+const styles = StyleSheet.create({});
+```
+
+```TypeScript
+// @filename ResultList.tsx 
+
+import {
+  StyleSheet,
+  Text,
+  View
+} from 'react-native'
+import React from 'react'
+
+// step 16d to receive new Props 'results' here
+const ResultList = ( {title, results}: {title: string, results: string} ) => {
+  return (
+    <View>
+      <Text style={styles.title}>{ title }</Text>
+      // step 16e add a temporary text element to print out the result we got
+      <Text>Results: {results.length}</Text>
+    </View>
+  )
+}
+
+export default ResultList
+
+const styles = StyleSheet.create({
+    title: {
+    fontSize: 18,
+    fontWeight: 'bold'
+  }
+});
+```
+
+![Grouping results... no err.. great job... it works!!]((https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/yelpIMG/file99.png "style=width:50 height: 50"))
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
+- **step 17 FlatList Rendering**
+
+```TypeScript
+// @filename ResultList.tsx 
+
+import {
+  StyleSheet,
+  Text,
+  View,
+  // step 17a import primitive components 'FlatList'
+  FlatList
+} from 'react-native'
+import React from 'react'
+
+const ResultList = ( {title, results}: {title: string, results: string} ) => {
+  return (
+    <View>
+      <Text style={styles.title}>{ title }</Text>
+      //step 17b delete temporary text element and uae <FlatList> component
+      // <Text>Results: {results.length}</Text>
+      <FlatList 
+        // step 17c add some new prop to <FlatList> component
+        // default Props: data & renderItem
+        // Props 1 horizontal scroll set to horizontal={true}
+        horizontal
+        // Props 2 lists of data from 'results'
+        data={results}
+        // Props 3 keyExtractor with a function that call every result inside the 'result' array and return a string that is consistent & won't change between rerenders
+        // call the 'id' key from 'result' json object
+        keyExtractor={result => result.id}
+        // Props 4 renderItem function with item property, the actual object we are iterating over and return some JSX element to show on screen
+        renderItem={({ item }) => {
+          // 
+          return <Text>{item.name}</Text>;
+        }}
+
+    </View>
+  )
+}
+
+export default ResultList
+
+const styles = StyleSheet.create({
+    title: {
+    fontSize: 18,
+    fontWeight: 'bold'
+  }
+});
+```
+
+- [some type set issue not resolve but at least it is working... yesss!!](https://i.imgur.com/RWi7m9K.png)
+
+- **Props References**
+  - [FlatList](https://reactnative.dev/docs/flatlist#horizontal)
+  - [Horizontal](https://i.imgur.com/YEsc4Gi.png)
+    - [How to do an Horizontal ListView, or FlatList in react-native](https://stackoverflow.com/questions/42245636/how-to-do-an-horizontal-listview-or-flatlist-in-react-native)
+    - [How to add a horizontal FlatList in React Native?](https://thewebdev.info/2022/02/21/how-to-add-a-horizontal-flatlist-in-react-native/)
+    - [flatlist horizontal full width example](https://i.imgur.com/TRDESj9.png)
+    - [Example of Creating Horizontal FlatList in React Native](https://reactnative-examples.com/creating-horizontal-flatlist-in-react-native/)
+    - [Create a Horizontal List in React Native](https://streetsmartdev.com/create-horizontal-list-react-native/)
+  - [keyExtractor](https://i.imgur.com/u8YPxg5.png)
+    - [React Native - Use a keyExtractor with FlatList](https://newbedev.com/react-native-use-a-keyextractor-with-flatlist)
+    - [How to use a keyExtractor with FlatList with React Native?](https://thewebdev.info/2022/02/20/how-to-use-a-keyextractor-with-flatlist-with-react-native-2/)
+    - [Displaying lists with FlatList (renderItem & keyExtractor props)](https://www.techiediaries.com/react-native-tutorial/flatlist-with-renderitem-and-keyextractor/)
+  - [renderItem](https://i.imgur.com/mjNUyIV.png)
+    - [TypeScript React Native Flatlist: How to give renderItem the correct type of it's item?](https://www.javaer101.com/en/article/24419707.html)
+    - [A deep dive into React Native FlatList](https://blog.logrocket.com/deep-dive-react-native-flatlist/)
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
+- **Study useLogin hook. Try to understand why we make a useLogin hook and how we use it**
+  - what is the usage of the useLogin and why we create this hook?
+    - for code reusability?
+    - to re-use the stateful behavior between different components?
+    - are functions whose names begin with 'use...'
+    - are functions which can call other hooks
+    - to eliminate bolierplate adds up
+    - well named functions
+    - encapsulation
+- [React Custom Hooks And When To Use Them](https://www.detroitlabs.com/blog/2021/10/18/react-custom-hooks-and-when-to-use-them/)
+- [How to Build Your Own React Hooks: A Step-by-Step Guide](https://www.freecodecamp.org/news/how-to-create-react-hooks/)
+- [Building Our Own React Hooks](https://codeburst.io/building-our-own-react-hooks-c32bbd0f935d)
+- [React Hooks Basics— Building a React Native App with React Hooks](https://medium.com/crowdbotics/build-a-react-native-app-with-react-hooks-5498e1d5fdf6)
+- [On Building Your Own React Hooks](https://javascript.plainenglish.io/on-building-your-own-react-hooks-5d5c2aa429ba)
+- [How to Create Your Own React Custom Hooks](https://blog.alexdevero.com/react-custom-hooks/)
+- [How to create your own React Custom hooks example](https://reactgo.com/react-custom-hooks/)
+- [Writing Your Own Custom React Hooks](https://blog.bitsrc.io/writing-your-own-custom-hooks-4fbcf77e112e)
+- [Build a React Native theme provider using Hooks](https://medium.com/uninow-engineering/build-a-react-native-theme-provider-using-hooks-2c303107109d)
+- [Why You Should Be Writing React Custom Hooks](https://dev.to/sevenzark/why-you-should-be-writing-react-custom-hooks-5egl)
+- [My Intuition on When to Use Custom React Hooks](https://frontarm.com/james-k-nelson/react-hooks-intuition/)
+- [React Hooks Tutorial – useState, useEffect, and How to Create Custom Hooks](https://www.freecodecamp.org/news/introduction-to-react-hooks/)
+- [Creating and using custom React Hooks to promote reusability of logics](https://medium.com/geekculture/creating-and-using-custom-react-hooks-to-promote-reusability-of-logics-632a0b7fcbe9)
+- [Building custom hooks in React to fetch Data](https://dev.to/shaedrizwan/building-custom-hooks-in-react-to-fetch-data-4ig6)
+- [React Typescript Authentication example with Hooks](https://www.bezkoder.com/react-typescript-authentication-example/)
+- [React & TypeScript: how to type hooks (a complete guide)](https://devtrium.com/posts/react-typescript-how-to-type-hooks)
+- [Rules of Hooks](https://reactjs.org/docs/hooks-rules.html)
+
+```TypeScript
+// @filename react-native-starter/src/hooks/useLogin.tsx 
+
+import { useFocusEffect, useNavigation } from "@react-navigation/native";
+import { useContext, useCallback } from "react";
+import { NavigationNames } from "../constants/navigation-names";
+import { AppContext } from "../contexts/AppContext";
+
+// create custom useLogin hook function
+export const useLogin = (): void => {
+//  
+  const { state } = useContext(AppContext);
+
+  const { navigate } = useNavigation();
+// create function to 
+  useFocusEffect(useCallback(() => {
+
+    if (!state.isLoggedIn){
+
+      const timeOut = setTimeout(()=>{
+
+        navigate(NavigationNames.Login);
+
+      }, 50);
+
+      return ()=>{
+
+        clearTimeout(timeOut);
+      };
+    }
+  }, [ state.isLoggedIn, navigate ])
+  );
+};
+```
+
+- **Element References**
+  - [useFocusEffect](https://reactnavigation.org/docs/use-focus-effect/)
+    - [react-navigation-hooks: How to test useFocusEffect](https://stackoverflow.com/questions/60114670/react-navigation-hooks-how-to-test-usefocuseffect)
+  - [useNavigation](https://reactnavigation.org/docs/use-navigation/)
+    - [React Navigation with Typescript](https://benjaminwoojang.medium.com/react-navigation-with-typescript-270dfa8d5cad)
+    - [React Navigation with Typescript classes vs functions](https://dev.to/andreasbergqvist/react-navigation-with-typescript-29ka)
+    - [React Navigation: useRoute hook example (2022)](https://www.kindacode.com/article/react-navigation-useroute-hook/)
+    - [How to Use Routing with React Navigation in React Native ?](https://www.geeksforgeeks.org/how-to-use-routing-with-react-navigation-in-react-native/)
+  - [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
+    - [useContext() with Typescript](https://dev.to/madv/usecontext-with-typescript-23ln)
+    - [How to use React Context with TypeScript](https://felixgerschau.com/react-typescript-context/)
+    - [How to use usecontext using react and typescript?](https://stackoverflow.com/questions/62292349/how-to-use-usecontext-using-react-and-typescript)
+    - [How to call useContext in a function using react and typescript?](https://stackoverflow.com/questions/62952961/how-to-call-usecontext-in-a-function-using-react-and-typescript)
+    - [React Context API with Typescript Example](https://dev.to/alexander7161/react-context-api-with-typescript-example-j7a)
+    - [React useContext() Hook Example](https://fullstacksoup.blog/2021/11/30/react-usecontext-hook-example/)
+    - [Understand React useContext hook through Example](https://www.kindacode.com/article/react-usecontext-hook/)
+    - [React useContext Hook Tutorial (with Examples)](https://daveceddia.com/usecontext-hook/)
+    - [React useContext TypeScript Example](https://www.notimedad.dev/react-usecontext-typescript-example/)
+    - [React Native - useReducer with useContext + TypeScript](https://jasonkang14.github.io/react-native/usereducer-with-usecontext)
+    - [Working with React Context in TypeScript](https://reacttraining.com/blog/react-context-with-typescript/)
+    - [How to useContext in React?](https://dev.to/omkarscode/how-to-usecontext-in-react-4f15)
+    - [What are the right types for a useContext with TypeScript/ReactJS?](https://stackoverflow.com/questions/71444034/what-are-the-right-types-for-a-usecontext-with-typescript-reactjs)
+    - [A Guide to React Context and useContext() Hook](https://dmitripavlutin.com/react-context-and-usecontext/)
+    - [How to use React Context with Hooks & TypeScript](https://javascript.plainenglish.io/how-to-use-react-context-with-hooks-typescript-a21b1460feb6)
+    - [How to Use the useContext Hook in React](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
+  - [useCallback()](https://i.imgur.com/W4p0IU4.png)
+    - [React Hooks With Typescript : UseCallback, UseMemo, UseContext And UseRef](https://codersera.com/blog/react-hooks-with-typescript-usecallback-usememo/)
+    - [How to use useCallback() hook](https://medium.com/@dev_one/how-to-use-usecallback-hook-35dc047aee48)
+    - [Guide to React.useCallback()](https://dmitripavlutin.com/dont-overuse-react-usecallback/)
+    - [React Typescript and useCallback](https://stackoverflow.com/questions/62061218/react-typescript-and-usecallback)
+    - [React useCallback Hook](https://www.w3schools.com/react/react_usecallback.asp)
+    - [How to use the useCallback React hook](https://flaviocopes.com/react-hook-usecallback/)
+    - [useCallback and useRef: Two React Hooks You Should Learn](https://www.telerik.com/blogs/usecallback-useref-two-react-hooks-you-should-learn)
+    - [How to Use useCallback to Write Better React Code](https://medium.com/swlh/how-to-use-usecallback-to-write-better-react-code-238074414881)
+    - [How to use React useCallback hook with examples](https://reactgo.com/react-usecallback-hook/)
+    - [React useCallback & useMemo use cases](https://www.benmvp.com/blog/react-usecallback-usememo-use-cases/)
+  - [setTimeout()](https://usehooks-ts.com/react-hook/use-timeout)
+    - [Accuracy of setTimeout in React Native](https://www.devasking.com/issue/accuracy-of-settimeout-in-react-native)
+    - [setTimeout in React Components Using Hooks](https://upmostly.com/tutorials/settimeout-in-react-components-using-hooks)
+    - [TypeScript timer/timer setTimeout Examples](https://typescript.hotexamples.com/examples/timer.timer/-/setTimeout/typescript-settimeout-function-examples.html)
+    - [Using setTimeout in React components (including hooks)](https://felixgerschau.com/react-hooks-settimeout/)
+    - [How to use setTimeout in React Native?](https://thewebdev.info/2022/02/18/how-to-use-settimeout-in-react-native/)
+    - [setTimeout in React Native](https://stackoverflow.com/questions/34504322/settimeout-in-react-native)
+  - [clearTimeout()](https://reactnative.dev/docs/timers)
+    - [How to Clear Timeout and Interval Timers with React Hooks?](https://thewebdev.info/2021/02/04/ow-to-clear-timeout-and-interval-timers-with-react-hooks/)
+    - [How to clear a settimeout in react](https://stackoverflow.com/questions/49783936/how-to-clear-a-settimeout-in-react)
+    - [JavaScript | clearTimeout() & clearInterval() Method](https://www.geeksforgeeks.org/javascript-cleartimeout-clearinterval-method/)
+  - [export](https://www.delftstack.com/howto/react/react-export-component/)
+    - [What is the purpose of export interface Props in React (Typescript ver)](https://stackoverflow.com/questions/55236045/what-is-the-purpose-of-export-interface-props-in-react-typescript-ver)
+    - [How to export function and import react hooks](https://stackoverflow.com/questions/57953365/how-to-export-function-and-import-react-hooks)
+    - [Learn React: How to export, import, and render a component inside a component](https://medium.com/madhash/learn-react-how-to-export-import-and-render-a-component-inside-a-component-5d432f1171ab)
+    - [How to import and export styles in react native?](https://stackoverflow.com/questions/48726288/how-to-import-and-export-styles-in-react-native)
+    - [ReactJS | Importing and Exporting](https://www.geeksforgeeks.org/reactjs-importing-exporting/)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -710,7 +730,7 @@ These questions will help me review and unlock areas of improvement (which will 
   - important to remain curious about coding and various languages and technologies.
 - Time-boxing to strict 90 minutes per task with a 20min rest break.
 
-- Day 38 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
+- Day 42 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
 
 - required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
@@ -720,7 +740,7 @@ These questions will help me review and unlock areas of improvement (which will 
 
 - add one more column for non-technical book's chapter summary for future reference.
 
-- try to practice these 9 principles for 52 weeks:
+- try to practice these 9 coding principles for 52 weeks:
   1. Understand the Basics;
   2. Write Easy To Understand And Logical Programming Codes
   3. Try Analyzing my Code
