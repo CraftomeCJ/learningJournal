@@ -400,7 +400,7 @@ export default () => {
  const [results, setResults] = useState<{ id: string; name: string }[]>([]);
  const [errorMessage, setErrorMessage] = useState("");
 
- const searchApi: any = async (searchTerm: string): Promise<void> => {
+ const searchApi: any = async (searchTerm: string): Promise<void | string> => {
   //  console.log("Hi there!");
 
    try {
@@ -516,6 +516,15 @@ const styles = StyleSheet.create({});
     - [Introduction to TypeScript promise type](https://www.educba.com/typescript-promise-type/)
     - [A quick introduction to "Promises" and "Async/Await"](https://medium.com/jspoint/typescript-promises-and-async-await-b842b55ee3fd)
     - [Keep Your Promises in TypeScript using async/await](https://blog.bitsrc.io/keep-your-promises-in-typescript-using-async-await-7bdc57041308)
+    - [react native how to get return from a promise](https://stackoverflow.com/questions/47274059/react-native-how-to-get-return-from-a-promise)
+    - [How to return a proper Promise with TypeScript?](https://thewebdev.info/2022/03/20/how-to-return-a-proper-promise-with-typescript/)
+    - [Executing Promises in a React Component](https://www.pluralsight.com/guides/executing-promises-in-a-react-component)
+    - [TypeScript with Promises, Async/Await, and Generator Functions](https://itnext.io/typescript-with-promises-and-async-await-63623b8e5e2a?gi=a6655a47f1f2)
+    - [How to wait for a promise to finish before returning the variable of a function?](https://www.geeksforgeeks.org/how-to-wait-for-a-promise-to-finish-before-returning-the-variable-of-a-function/)
+
+- **Error & Solution**
+  - [A function whose declared type is neither 'void' nor 'any' must return a value.ts(2355)](https://i.imgur.com/G6NjnCt.png)
+    - [Fix - A function whose declared type is neither void nor any](https://bobbyhadz.com/blog/typescript-function-whose-declared-type-is-neither)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
