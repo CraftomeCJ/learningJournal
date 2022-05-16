@@ -267,7 +267,7 @@ Today till Sunday will continue learn useEffect hook and create custom hook. Try
 - [React Custom Hooks](https://www.w3schools.com/react/react_customhooks.asp)
 - [Introduction To Custom React Hooks](https://techblog.geekyants.com/introduction-to-custom-react-hooks)
 
-- **React Native Practice:**
+- **React Native Practice: - (Making Hooks Reusable)**
   - **step 15 Showing Search Result**
 
 - File Structuring
@@ -404,6 +404,7 @@ const styles = StyleSheet.create({});
 
 ==============================================================================
 
+- **(Making Hooks Reusable)**
 - **step 16 Grouping Results**
   - [Grouping Logic](https://i.imgur.com/hwkUlU0.png)
 
@@ -497,6 +498,7 @@ const styles = StyleSheet.create({
 
 ==============================================================================
 
+- **(Making Hooks Reusable)**
 - **step 17 FlatList Rendering**
 
 ```TypeScript
@@ -632,11 +634,13 @@ export const useLogin = (): void => {
 - **Element References**
   - [useFocusEffect](https://reactnavigation.org/docs/use-focus-effect/)
     - [react-navigation-hooks: How to test useFocusEffect](https://stackoverflow.com/questions/60114670/react-navigation-hooks-how-to-test-usefocuseffect)
+
   - [useNavigation](https://reactnavigation.org/docs/use-navigation/)
     - [React Navigation with Typescript](https://benjaminwoojang.medium.com/react-navigation-with-typescript-270dfa8d5cad)
     - [React Navigation with Typescript classes vs functions](https://dev.to/andreasbergqvist/react-navigation-with-typescript-29ka)
     - [React Navigation: useRoute hook example (2022)](https://www.kindacode.com/article/react-navigation-useroute-hook/)
     - [How to Use Routing with React Navigation in React Native ?](https://www.geeksforgeeks.org/how-to-use-routing-with-react-navigation-in-react-native/)
+
   - [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
     - [useContext() with Typescript](https://dev.to/madv/usecontext-with-typescript-23ln)
     - [How to use React Context with TypeScript](https://felixgerschau.com/react-typescript-context/)
@@ -654,6 +658,7 @@ export const useLogin = (): void => {
     - [A Guide to React Context and useContext() Hook](https://dmitripavlutin.com/react-context-and-usecontext/)
     - [How to use React Context with Hooks & TypeScript](https://javascript.plainenglish.io/how-to-use-react-context-with-hooks-typescript-a21b1460feb6)
     - [How to Use the useContext Hook in React](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react)
+
   - [useCallback()](https://i.imgur.com/W4p0IU4.png)
     - [React Hooks With Typescript : UseCallback, UseMemo, UseContext And UseRef](https://codersera.com/blog/react-hooks-with-typescript-usecallback-usememo/)
     - [How to use useCallback() hook](https://medium.com/@dev_one/how-to-use-usecallback-hook-35dc047aee48)
@@ -665,6 +670,7 @@ export const useLogin = (): void => {
     - [How to Use useCallback to Write Better React Code](https://medium.com/swlh/how-to-use-usecallback-to-write-better-react-code-238074414881)
     - [How to use React useCallback hook with examples](https://reactgo.com/react-usecallback-hook/)
     - [React useCallback & useMemo use cases](https://www.benmvp.com/blog/react-usecallback-usememo-use-cases/)
+
   - [setTimeout()](https://usehooks-ts.com/react-hook/use-timeout)
     - [Accuracy of setTimeout in React Native](https://www.devasking.com/issue/accuracy-of-settimeout-in-react-native)
     - [setTimeout in React Components Using Hooks](https://upmostly.com/tutorials/settimeout-in-react-components-using-hooks)
@@ -672,10 +678,12 @@ export const useLogin = (): void => {
     - [Using setTimeout in React components (including hooks)](https://felixgerschau.com/react-hooks-settimeout/)
     - [How to use setTimeout in React Native?](https://thewebdev.info/2022/02/18/how-to-use-settimeout-in-react-native/)
     - [setTimeout in React Native](https://stackoverflow.com/questions/34504322/settimeout-in-react-native)
+
   - [clearTimeout()](https://reactnative.dev/docs/timers)
     - [How to Clear Timeout and Interval Timers with React Hooks?](https://thewebdev.info/2021/02/04/ow-to-clear-timeout-and-interval-timers-with-react-hooks/)
     - [How to clear a settimeout in react](https://stackoverflow.com/questions/49783936/how-to-clear-a-settimeout-in-react)
     - [JavaScript | clearTimeout() & clearInterval() Method](https://www.geeksforgeeks.org/javascript-cleartimeout-clearinterval-method/)
+
   - [export](https://www.delftstack.com/howto/react/react-export-component/)
     - [What is the purpose of export interface Props in React (Typescript ver)](https://stackoverflow.com/questions/55236045/what-is-the-purpose-of-export-interface-props-in-react-typescript-ver)
     - [How to export function and import react hooks](https://stackoverflow.com/questions/57953365/how-to-export-function-and-import-react-hooks)
