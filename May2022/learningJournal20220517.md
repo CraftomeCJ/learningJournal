@@ -277,6 +277,9 @@ Shot the BUGS!! Aim for a bug free day...
   - [Using Functional React Native Components && Typescript with navigation and dynamically changing title](https://stackoverflow.com/questions/71310480/using-functional-react-native-components-typescript-with-navigation-and-dynam)
   - [Diagrams](https://i.imgur.com/lnb1ulx.png)
     - [Navigating without the navigation prop](https://reactnavigation.org/docs/navigating-without-navigation-prop/)
+    - [React Navigation Upgrading from 4.x](https://reactnavigation.org/docs/5.x/upgrading-from-4.x/)
+    - [React Navigation with Typescript](https://benjaminwoojang.medium.com/react-navigation-with-typescript-270dfa8d5cad)
+    - [Difference Between React Native Stack Navigator V4 vs V6](https://www.mindbowser.com/react-native-stack-navigator/)
 
 ```TypeScript
 // @filename: SearchScreen.tsx
@@ -301,7 +304,8 @@ const SearchScreen: React.FC = () => {
 
     const filterResultByPrice = (price: string) => {
       // price === '$' || price === '$$' || price === '$$$'
-      return results.filter((result: { price: string; }) => {
+      return results.filter((result: { price: string; }) => 
+      {
         return result.price === price;
         });
     };
@@ -360,16 +364,24 @@ import {
   TouchableOpacity
 } from 'react-native'
 import React from 'react'
-// step 22c import withNavigation from react-navigation
-import { withNavigation } from 'react-navigation'
+// step 22c import useNavigation from react-navigation/native
+import { useNavigation } from '@react-navigation/native';
 
 import ResultsDetail from './ResultsDetail'
 
+// step 22d remove 'navigation' from the props params {navigation}
+const ResultList = ( {title, results}: {title: string, results: any} ) => {
 
-const ResultList = ( {title, results, navigation}: {title: string, results: any, navigation: any} ) => {
+  // step 22e assign a 'navigation' variable to use withNavigation()
+const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
+
+      <Text style={styles.title}>
+      {title}
+      </Text>
+
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -377,7 +389,8 @@ const ResultList = ( {title, results, navigation}: {title: string, results: any,
         keyExtractor={result => result.id}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity onPress={() => navigation.navigate('Results')}>
+            <TouchableOpacity 
+            onPress={() => navigation.navigate('Results')}>
             <ResultsDetail result={item} />
             </TouchableOpacity>
           )
@@ -387,8 +400,8 @@ const ResultList = ( {title, results, navigation}: {title: string, results: any,
   );
 };
 
-// step 22d wrap our export of ResultList with withNavigation
-export default withNavigation(ResultList);
+
+export default ResultList;
 
 const styles = StyleSheet.create({
   title: {
@@ -405,88 +418,382 @@ const styles = StyleSheet.create({
 
 - **Element References**
   - [withNavigation v4 [don't use]](https://reactnavigation.org/docs/use-navigation/)
-  - [useNavigation v6 [current]]
+  - [useNavigation v6 [current]](https://reactnavigation.org/docs/use-navigation/)
 
-- **Challenge:** [incomplete.. late liao.. brain foggy liao.. tomorrow office then continue...]
-  - Apply the codes to the FoodStreet project and make it work.
-  - You should get the [results](https://i.imgur.com/jT2g7yW.png) like this.
-  - [learning resource](https://dev.to/sulistef/how-to-create-a-custom-react-hook-to-fetch-an-api-using-typescript-ioi)
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-### Development References
-
-- [Expo](https://docs.expo.dev/)
-
-- [Documentation for the search API](https://yelp.com/fusion)
-
-- **Yelp API Workarounds**
-In the upcoming lecture, we will be signing up for a Yelp developer account. Depending on your location, some students may be blocked from creating an account. There are a few things you can try.
-
-[Students noted a workaround in this thread using their phone which will show a captcha:](https://www.udemy.com/course/the-complete-react-native-and-redux-course/learn/lecture/15707036#questions/8334522)
+- [haha!! not perfect but with the help from Willy, resources provided by Russell, Alvin, Janson, Jan finally managed to get it working... so happy after being touture for one day and slow down my progress](https://i.imgur.com/Q81cvBe.png)
+- ![result gif](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/gif1.gif "style=width:50 height: 50")
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
 
-## Exercise of the Day
+- **(Navigation with Parameter)**
+- **step 23 Communicating Between Screens**
+  - [what we plan to do (diagram)](https://i.imgur.com/1JQlN15.png)
+  - [Passing parameters to routes](https://reactnavigation.org/docs/params)
+  - [A Guide to Props in React](https://betterprogramming.pub/a-guide-to-props-in-react-d6980f947ea9)
+  - [React Navigation route.params typescript](https://stackoverflow.com/questions/63017457/react-navigation-route-params-typescript)
+  - [How to Pass and Get Params to Route in React Native](https://remotestack.io/how-to-pass-and-get-params-to-route-in-react-native/)
+  - [react native passing parameters to routes](https://iqcode.com/code/javascript/react-native-passing-parameters-to-routes)
+  - [How to get the route params using route.params in react native navigation?](https://stackoverflow.com/questions/61463250/how-to-get-the-route-params-using-route-params-in-react-native-navigation)
+  - [React Router Hook => useParam() (now w/ Typescript)](https://dev.to/javila35/react-router-hook-useparam-now-w-typescript-m93)
 
-[x] **Challenge:** Read ==> Computation Thinking (aim to improve problem-solving logic thinking skills)
 
-- What is Computational Thinking?
-- Definitions:
-  - is the thinking method involved in developing solution(s) to a problem and expressing it in such a way that a computer -- human or machine -- can capably carry out.
-  - is the brain activity for pulling out problems and building solutions that can be programmed.
-  - is the way of picking up condition of programming in the world that surrounds us, and applying tools and techniques from Computer Science to understand and reason about both natural and artificial systems and processes.
-  - is cognitive setup to plotting problems and reorganise of some input into an output and looking for set of rules to perform the transform. Today the terms has been expanded to include thinking with many levels of summary, use of mathematics to develop rule set and testing how well a solution develop across different sizes of problems.
-  - teach us how to think like an economist, a physicist. an artist and to understand how to use programming to solve their problems, to create, and to discover new questions that worth worked toward meaningly.
-  - is based on the idea that the solution to a problem is the product of a set of rules that can be applied to the problem.
+```TypeScript
+// @filename: ./src/components/ResultList.tsx
 
-- Computation Thinking teaches an approach to problem-solving where the ultimate aim is to provide a solution whose form mean it is ready to be programmed into a computer.
-- Computation Thinking takes a relatively small subset of concepts -- which just happen to be important to Computer Science -- and uses them to develop a widely applicable, problem-solving approach.
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  TouchableOpacity
+} from 'react-native'
+import React from 'react'
+import { useNavigation } from '@react-navigation/native';
 
-- Summary:
-  - Computation Thinking (CT) is an approach to problem-solving that involves using a set of practices and principles from Computer Science to develop a solution that is executable by a computer. It's not just for programmers. It is applicable in a diverse array of fields.
+import ResultsDetail from './ResultsDetail'
 
-- Exercise 1:
-  - List the core concepts of CT?
-    - logical thinking;
-    - algorithms thinking;
-    - decomposition;
-    - generalization and pattern recognition;
-    - modelling;
-    - abstraction;
-    - evaluation;
 
-- Exercise 2:
-  - Give an example of how I think people in each of the following occupations think computationally:
-    1. mathematician :can bu use to calculate the circumference of a circle without actually measuring it.
-    2. scientist : can be use for a range of tasks in constructing simulations, statistically analyzing data, and recognizing, expressing, and applying quantitative relationships.
-    3. engineer : can create based on analyses of designs to calculate whether they can stand up to the expected stress of use and if they can be completed within acceptable budgets.
-    4. linguist : can be use to develop systems that can perform tasks such as speech recognition, translation, and spell checking.
+const ResultList = ( {title, results}: {title: string, results: any} ) => {
 
-- Exercise 3:
-  - Think of everyday activities in which I participate that involve computational thinking:
-    - scheduling my daily routine;
-    - breaking difficult problems into smaller parts;
-    - design a repetitive models of how to solve a problem;
-    - Observation and think how things can be relate and repeated;
-    - practice repetition of good habit like a loop, do it over and over again;
-    - finding the bad habit that need to remove;
-    - understand that one thing starts occurring since another thing is triggered
+const navigation = useNavigation();
 
-- We can do these activities:
+  return (
+    <View style={styles.container}>
 
- 1. organize clean dished computationally;
- 2. nearest route at the supermarket: when I'm checking out after my groceries with my wife, I can use the computer to find the shortest route to my grocery store;
- 3. Clean your room computationally: clean room through sequential, systematic thinking
- 4. computational thinking approach to language: I can use the computer to translate my sentence into another language.
+      <Text style={styles.title}>
+        {title}
+        </Text>
+        
+      <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        data={results}
+        keyExtractor={result => result.id}
+        renderItem={({ item }) => {
+          return (
+            <TouchableOpacity
+            // step 23a pass in a second argument to it which is an object with some info to communicate to another screen
+            // Pass params to a route by putting them in an object as a second parameter to the navigation.navigate function:
+            onPress = {
+              () => navigation.navigate('Results', {id: item.id })
+            }>
+            <ResultsDetail result={item} />
+            </TouchableOpacity>
+          )
+        }}
+      />
+    </View>
+  );
+};
+
+export default ResultList
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginLeft: 15,
+    marginBottom: 5
+  },
+  container: {
+    marginBottom: 10
+  }
+});
+```
+
+```TypeScript
+// @filename: ./src/screens/ResultShowScreen.tsx
+
+import React from 'react';
+import {
+  View,
+  Text,
+  StyleSheet
+  } from 'react-native';
+
+// anyhow type don't know correct or not haha at least it is not showing :any
+    type ShowResults = {
+    id: string;
+  }
+
+// step 23b to get the information here but not at directly into props object.
+// accept the {navigation} within the parenthesis
+// a big object with all those different tie to it
+const ResultsShowScreen = ({ route, navigation }) => {
+
+// step 23c Read the params here through 'route.params' and assign it to a variable called {id}
+  const {id}: ShowResults = route.params;
+
+// step 23d use console.log(id) to make sure the id is showing up successfully
+console.log(id);
+
+  return (
+    <View>
+      <Text>Welcome to Search Results Screen</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({});
+
+export default ResultsShowScreen;
+```
+
+- **Element References**
+- [route.params](https://reactnavigation.org/docs/params/) 
+
+- [so cool... blind punch kill a master... haha... just manage to use route.params to communicate between screens with no errors...wow.. i'm impressed.. great job... let's move on to next step](https://i.imgur.com/6XAYNfL.png)
+- ![result gif](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/gif2.gif "style=width:50 height: 50")
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
-==============================================================================
+=============================================================================
+
+- **(Navigation with Parameter)**
+- **step 24 Fetching a Single Restaurant**
+- **& step 25 Showing a List of Images**
+
+```TypeScript
+// @filename: ./src/screens/ResultsShowScreen.tsx
+
+import React, { useState, useEffect } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+// step 25d import FlatList to display a list of result
+  FlatList,
+  // step 25f import Image to show a list of images to user
+  } from 'react-native';
+// step 24b import yelp API here
+import yelp from '../api/yelp';
+
+const ResultsShowScreen = ({ route }) => {
+// step 24d set a new state we call 'result'
+  const [result, setResult] = React.useState(null);
+  const {id} = route.params;
+
+  // step 25a remove the console log
+    // console.log(result);
+
+  // step 24a call a helper function with a variable called getResult pass in 'id' argument
+  // step 24d remember to make 'async' in the function
+  const getResult = async (id) => {
+    // step 24c let do a request using async syntax await with yelp and give us a response object
+    const response = await yelp.get(`/${id}`);
+    // step 24e return the response object to capture the rerender with state
+    setResult(response.data);
+    // step 24f only call it one time with useEffect hook and passing in an empty array
+  };
+    useEffect(() => {
+    getResult(id);
+  }, []);
+
+  // console.log(id);
+
+  // step 25b add a check with if no result yet then return null
+  if (!result) {
+    return null;
+  }
+
+  return (
+    <View>
+    // step 25c replace Welcome to Search Results Screen with {result.name} to show some info from the result
+      <Text>{result.name}</Text>
+// step 25e place FlatList here and pass in data, keyExtractor, renderItem
+      <FlatList
+        data={result.photos}
+        keyExtractor={photo => photo}
+        renderItem={({ item }) => {
+          // step 25f return Image with source and step 25g add some style
+          return ( 
+          <Image 
+          style={styles.image} 
+          source={{ uri: item }} 
+          />;
+          )
+        }}
+      />
+    </View>
+  );
+};
+
+// step 25g add some style to the image property
+const styles = StyleSheet.create({
+  image: {
+    height: 200,
+    width: 300,
+    margin: 5,
+  }
+});
+
+export default ResultsShowScreen;
+```
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **(Navigation with Parameter)**
+- **step 26 The Final Touch.. so happppppy**
+
+```TypeScript
+// @filename: ./src/screens/ResultsShowScreen.tsx
+import React, { useState, useEffect } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  Image
+  } from 'react-native';
+import yelp from '../api/yelp';
+
+const ResultsShowScreen = ({ route }) => {
+  const [result, setResult] = useState(null);
+  const {id} = route.params;
+
+  // console.log(result);
+
+  const getResult = async (id: any) => {
+    const response = await yelp.get(`/${id}`);
+    setResult(response.data);
+  };
+  useEffect(() => {
+    getResult(id);
+  }, []);
+
+  if (!result) {
+    return null;
+  }
+
+  return (
+    <View>
+      <Text>{result.name}</Text>
+      <FlatList
+        data={result.photos}
+        keyExtractor={photo => photo}
+        renderItem={({ item }) => {
+          return (
+          <Image
+          style={styles.image}
+          source={{ uri: item }}
+          />
+          )
+        }}
+      />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  // step 26b style text to look better
+  container: {
+    backgroundColor: '#fafafa',
+  },
+  text: {
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#246EE9'
+  },
+  image: {
+    height: 200,
+    width: 300,
+    marginLeft: 45,
+    marginTop: 20,
+  }
+});
+
+export default ResultsShowScreen;
+```
+
+```TypeScript
+// @filename: ./src/screens/ResultList.tsx
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  TouchableOpacity
+} from 'react-native'
+import React from 'react'
+import { useNavigation } from '@react-navigation/native';
+
+import ResultsDetail from './ResultsDetail'
+
+
+const ResultList = ( {title, results}: {title: string, results: any} ) => {
+
+const navigation = useNavigation();
+
+// step 26a do a check if no result.length then return null
+  if (!results.length) {
+    return null;
+  }
+
+  return (
+    <View style={styles.container}>
+
+      <Text style={styles.title}>
+        {title}
+        </Text>
+
+      <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        data={results}
+        keyExtractor={result => result.id}
+        renderItem={({ item }) => {
+          return (
+            <TouchableOpacity
+            onPress={
+        () => navigation.navigate('Results', {id: item.id })
+              }>
+            <ResultsDetail result={item} />
+            </TouchableOpacity>
+          )
+        }}
+      />
+    </View>
+  );
+};
+
+export default ResultList
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginLeft: 15,
+    marginBottom: 5
+  },
+  container: {
+    marginBottom: 10
+  }
+});
+```
+
+- [this app look good, tough although going through the tutorial because so many jargon not within my knowledge, type set still mile away from perfect relying too heavily to get rid of red tubifex worm haunting me day in day out. One expert once say do the app once, make it work, now time to redo a second time, make it better with type set, rewrite from scratch, you have the manual now... go follow it and rewrite it to see what other firework can I create... Well done... now time to go for the Blog App practice while take one to two hour to re-enact this restaurant app but with a better UI/UX and type set](https://i.imgur.com/BdhEEVO.png)
+- ![completion gif](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/gif3.gif "style=width:50 height: 50")
+
+- **Documentation references**
+- [Brief Introduction into Recoil](https://recoiljs.org/)
+  - [Recoil.js — High-Performance State Management for React Simplified](https://medium.com/weekly-webtips/recoil-js-high-performance-state-management-for-react-simplified-cb520464a667)
+  - [Intro to RecoilJS. Build a small app with Recoil!](https://dev.to/japiirainen/intro-to-recoiljs-build-a-small-app-with-recoil-7jb)
+  - [Understand Recoil in React](https://www.telerik.com/blogs/recoil-in-react)
+  - [ecoiljs vs Redux](https://stackshare.io/stackups/recoiljs-vs-reduxjs)
+  - [Recoil vs Redux | The Ultimate React State Management Face-Off](https://medium.com/@chandan.reddy/react-recoil-vs-redux-the-ultimate-react-state-management-face-off-188a729a70ee)
+  - [Redux vs Recoil: which should you use?](https://dev.to/emma/redux-vs-recoil-which-should-you-use-57kd)
+  - [Using Recoil instead of Redux For State Management In React Applications](https://blog.openreplay.com/using-recoil-instead-of-redux-for-state-management-in-react-applications)
+  - [Redux, Context, or Recoil: Which One Is Best for Your Modern Web App?](https://betterprogramming.pub/redux-context-or-recoil-which-one-is-best-for-your-modern-web-app-db41be99b448)
+- [Yelp Api documentation](https://www.yelp.com/developers/documentation/v3/business_search)
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
 
 ## Room to improve?
 <!-- This is where I write things I can do to improve my work -->
