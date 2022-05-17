@@ -270,7 +270,7 @@ Today will be finish up Day 24 & 25 material to read more and practice on buildi
 
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
 
-## Day 24 & 25 React Native Restaurant App - Navigation to Single Result
+## Day 24 React Native Restaurant App - Navigation to Single Result
 
 - **learn the how to create an app from scratch and create the navigation and search bar**
 - **Udemy Learning**
