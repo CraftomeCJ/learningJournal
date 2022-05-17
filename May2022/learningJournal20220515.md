@@ -271,6 +271,10 @@ Today continue working on Day 22 & Day 23 material. Update my manual, refine my 
   - Add a custom hook to add network status monitor to the FoodStreet project
   - Please note the useNetInfo will work properly on real devices.
 
+### Work Flow
+
+- **With React Native + TypeScript Source Code**
+
 - **step 18 add Network Status Monitor**
 
 - File Structuring
