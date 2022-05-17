@@ -270,10 +270,6 @@ Today will be finish up Day 24 & 25 material to read more and practice on buildi
 
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
 
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-=============================================================================
-
 ## Day 24 & 25 React Native Restaurant App - Navigation to Single Result
 
 - **learn the how to create an app from scratch and create the navigation and search bar**
@@ -284,6 +280,10 @@ Today will be finish up Day 24 & 25 material to read more and practice on buildi
 - [React Native Template TypeScript with Goodies](https://reactnativeexample.com/react-native-template-typescript-with-goodies/)
 - [What is the type of react native elements in Typescript?](https://stackoverflow.com/questions/68362891/what-is-the-type-of-react-native-elements-in-typescript)
 - [Trouble solving 'source.uri should not be an empty string' in React Native](https://stackoverflow.com/questions/48927997/trouble-solving-source-uri-should-not-be-an-empty-string-in-react-native)
+
+### Work Flow
+
+- **With React Native + TypeScript Source Code**
 
 - **(Navigation with Parameter)**
 - **step 19 Showing a Single Result & Additional Info**
@@ -568,7 +568,7 @@ const SearchScreen: React.FC = () => {
 
     return (
       //  constraining the view element using {flex: 1}
-      // <View style={{flex: 1}}>
+      // <View style={{flex: 1}}> or <> <-- empty element
 
       // or if the view element interrupt the layout and span off the screen, you can remove it and keep it as empty element
       <> //empty open tag
@@ -580,7 +580,7 @@ const SearchScreen: React.FC = () => {
 
   {errorMessage ? <Text>{errorMessage}</Text> : null}
 
-// find this line in Searchscreen and delete it
+// find this line in SearchScreen and delete it
   // <Text>We have found {results.length} results for {term}</Text>
 
 // wrap ResultList with ScrollView
@@ -874,147 +874,6 @@ p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
 
-- **(Navigation with Parameter)**
-- **step 22 The WithNavigation Helper**
-  - [withNavigation](https://reactnavigation.org/docs/4.x/with-navigation/)
-  - [Expo Template with TypeScript, Navigation, and Testing](https://www.reactnativeschool.com/expo-template-with-typescript-navigation-and-testing)
-  - [How to use react-navigation's withNavigation in typescript?](https://stackoverflow.com/questions/51585890/how-to-use-react-navigations-withnavigation-in-typescript)
-  - [use withNavigation as decorator with typescript](https://github.com/react-navigation/react-navigation/issues/5083)
-  - [Using Functional React Native Components && Typescript with navigation and dynamically changing title](https://stackoverflow.com/questions/71310480/using-functional-react-native-components-typescript-with-navigation-and-dynam)
-  - [Diagrams](https://i.imgur.com/lnb1ulx.png)
-    - [Navigating without the navigation prop](https://reactnavigation.org/docs/navigating-without-navigation-prop/)
-
-```TypeScript
-// @filename: SearchScreen.tsx
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView
-} from 'react-native';
-import React, { useState } from 'react';
-
-import SearchBar from '../components/SearchBar'
-import useResults from '../hooks/useResults'
-import ResultList from '../components/ResultList'
-
-// step 22a delete the navigation prop that we are destructing of
-// const SearchScreen: React.FC = ({ navigation }: any) => {
-const SearchScreen: React.FC = () => {
-
-    const [term, setTerm] = useState<string>('');
-    const [searchApi, results, errorMessage] = useResults();
-
-    const filterResultByPrice = (price: string) => {
-      // price === '$' || price === '$$' || price === '$$$'
-      return results.filter((result: { price: string; }) => {
-        return result.price === price;
-        });
-    };
-
-    return (
-      // <View style={{flex: 1}}>
-      <>
-        <SearchBar
-        term={term}
-        onTermChange={setTerm}
-        onTermSubmit={() => searchApi(term)}
-        />
-
-  {errorMessage ? <Text>{errorMessage}</Text> : null}
-
-        <ScrollView>
-
-        <ResultList
-        results={filterResultByPrice('$')}
-        title="Cost Effective"
-        // step 22b delete all 3 navigation prop too
-        // navigation={navigation}
-        />
-
-        <ResultList
-        results={filterResultByPrice('$$')}
-        title="Bit Pricier"
-        // navigation={navigation}
-        />
-
-        <ResultList
-        results={filterResultByPrice('$$$')}
-        title="Big Spender"
-        // navigation={navigation}
-        />
-</ScrollView>
-</>
-// </View>
-    );
-  };
-
-export default SearchScreen;
-
-const styles = StyleSheet.create({});
-```
-
-```TypeScript
-// @filename: ./src/components/ResultList.tsx
-// step 22c aim to skip the navigation prop system, tell the react navigator we want to directly inject into our component
-
-import {
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-  TouchableOpacity
-} from 'react-native'
-import React from 'react'
-// step 22c import withNavigation from react-navigation
-import { withNavigation } from 'react-navigation'
-
-import ResultsDetail from './ResultsDetail'
-
-
-const ResultList = ( {title, results, navigation}: {title: string, results: any, navigation: any} ) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
-      <FlatList
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        data={results}
-        keyExtractor={result => result.id}
-        renderItem={({ item }) => {
-          return (
-            <TouchableOpacity onPress={() => navigation.navigate('Results')}>
-            <ResultsDetail result={item} />
-            </TouchableOpacity>
-          )
-        }}
-      />
-    </View>
-  );
-};
-
-// step 22d wrap our export of ResultList with withNavigation
-export default withNavigation(ResultList);
-
-const styles = StyleSheet.create({
-  title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginLeft: 15,
-    marginBottom: 5
-  },
-  container: {
-    marginBottom: 10
-  }
-});
-```
-
-- [oh my goodness... time flies while killing bugs!! late liao... time to koon liao!! still cannot find a way to solve useNavigation is okay.. tomorrow there will be a way, and left 5 more vids of section 11 to cover for tomorrow. Good 3 day progress... Keep it up!!!](https://i.imgur.com/Q1mVKZp.png)
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
 ## Room to improve?
 
 <!-- This is where I write things I can do to improve my work -->
@@ -1058,7 +917,7 @@ These questions will help me review and unlock areas of improvement (which will 
   - important to remain curious about coding and various languages and technologies.
 - Time-boxing to strict 90 minutes per task with a 20min rest break.
 
-- Day 38 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
+- Day 44 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
 
 - required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
