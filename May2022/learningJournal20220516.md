@@ -418,16 +418,6 @@ const styles = StyleSheet.create({
   - empty elements
     - Typescript everything
 
-- File Structuring
-
-```Bash
-# @filename: ./Desktop/projectFolder/FoodStreet
-
-# step 19a create a reusable component for showing a single result
-#  create a ResultDetail.tsx to components folder
-touch ./src/components/ResultDetail.tsx
-```
-
 ```Typescript
 // @filename: ./src/components/ResultsDetail.tsx
 
@@ -467,7 +457,6 @@ style={styles.name}>
 };
 
 export default ResultsDetail
-
 
 const styles = StyleSheet.create({
   // step 20a style a new section call container to make the app look nicer and refine to make style look appealing on screen
