@@ -306,8 +306,6 @@ Attend Internal AGILE Orientation and Code Standards Sharing to understand how A
   - [SingPass](https://api.singpass.gov.sg/)
   - [CorpPass](https://www.perameter.com/docs/corppass-password-authentication-api)
 
-[EXPO CLI](https://www.npmjs.com/package/expo-cli)
-
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
@@ -317,12 +315,11 @@ Attend Internal AGILE Orientation and Code Standards Sharing to understand how A
 ### Build a 'Blog App'
 
 - Objective:
-  - Understand why we need useContext 
+  - Understand why we need useContext
   - What inside the context
   - How to create context
   - How to use context
   - What need to beware?
-
 
 1. File Structure:
    1. src directory (source of components)
@@ -332,55 +329,6 @@ Attend Internal AGILE Orientation and Code Standards Sharing to understand how A
       - drawerscreens directory (for HomeScreen & SettingScreen)
       - to add dashboard directory (dashboard)
    2. Wire Frame
-![file structure1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file1.png "style=width:200 height: 200")
-![file structure2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file2.png "style=width:200 height: 200")
-
-<h4 align="center">Project Logo</h4>
-
-![project logo](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/bentoLogo.gif "style=width:50 height: 50")
-
-1. Approach:
-
-- Step 1: write some code in App.tsx,
-
-1. Git Branch
-   1. main
-    - setup folder & file
-    - merge safe dependencies from branch 'testing'
-   2. testing
-      - test npm dependencies installed
-      - playground for ideas
-      - merge to branch 'main once free of bugs
-
-- Architecture Approach
-  - UI UX
-
-- Folder Structure
-  - src        (for source code)
-    - screens
-      - SearchScreen.tsx
-    - api
-      - yelp.tsx
-  - components (for all reusable components)
-    - Searchbar.tsx
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-=============================================================================
-
-### Work Flow
-
-- **With React Native + TypeScript Source Code**
-
-## Day 22 React Native Restaurant App - With Custom Hook
-
-- **learn when and how to create a customer hook**
-- **Udemy Learning**
-- [Udemy Course Vid #103 - #108](https://www.udemy.com/course/the-complete-react-native-and-redux-course/learn/lecture/15707154#overview)
-
-- **React Native Practice:**
-- **step 14 Extracting Hook Logic**
-  - [Create a custom hook](https://blog.logrocket.com/advanced-react-hooks-creating-custom-reusable-hooks/)for search api for reuse.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -427,7 +375,7 @@ These questions will help me review and unlock areas of improvement (which will 
   - important to remain curious about coding and various languages and technologies.
 - Time-boxing to strict 90 minutes per task with a 20min rest break.
 
-- Day 38 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
+- Day 46 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
 
 - required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
