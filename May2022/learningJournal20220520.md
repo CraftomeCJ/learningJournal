@@ -1,7 +1,7 @@
 <div id='top'><div>
 
 <h1 align="center">Learning Journal 20 May 2022 (Friday)</h1>
-<h1 align="center">In Doubt?? Build Ark, That Rain will come!!!</h1>
+<h1 align="center">LEARN > PRACTICE > TRAIN > TEACH</h1>
 <p align="center">My passion to be a programmer came late in life
 <br />
 Hello, I'm CJ, now working as a Full Stack Developer intern with Activate Interactive to gain valuable job experience, always had a keen interest in User-friendly mobile applications and websites development.</p>
@@ -265,302 +265,176 @@ Happy day... First time of a long time no build error to debugs...
 
 =============================================================================
 
-### Build a 'App'
+## Do you know?
 
-- Objective:
-  - Displaying splash screen during response time from the server is an excellent way to interact with the user. But making a loading/splash screen becomes difficult when we want to practically use an animated loader, where we need to make extra efforts to write down its styling file. To overcome this problem, we use a bunch of predefined loaders from the react-spinners module.
+- I can create custom types with the _type_ keyword
+- **CONCEPTS**
+  - [type keyword](https://medium.com/@rm.dev/typescript-type-keyword-explained-21ada293ab70)
+    - allows me to declare a new type or type alias over the current type
+  - Which keyword to use for declaring a custom type like _Patient_?
+    - If the custom type doesn't need to be used for instantiating objects at runtime, use _type_ or _interface_
 
-1. File Structure:
-   1. src directory (source of components)
-      - assets directory (for images & other resources)
-      - welcome/splashscreen directory (SplashScreen)
-      - screens directory (for loginScreen & registerScreen [UI/UX])
-      - drawerscreens directory (for HomeScreen & SettingScreen)
-      - to add dashboard directory (dashboard)
-   2. Wire Frame
-![file structure1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file1.png "style=width:200 height: 200")
-![file structure2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/learningImgs/file2.png "style=width:200 height: 200")
+```TypeScript
+// let's try 'type' keyword first:
+// let's say my app deals with patients represents by name, height and weight. Both height and weight are numbers, to improve readability, i can create aliases hinting at the units in which the height and weight are measured.
+// declare alias types centimeter and kilogram
+type Centimeter = number;
+type Kilogram = number;
 
-<h4 align="center">Project Logo</h4>
+// now I can create a new Patient type and use the earlier aliases in its declaration
+// declare a new type that uses aliases
+type Patient = {      // declares the Patient type
+  name: string;
+  height: Centimeter; // use the type alias Centimeter
+  weight: Kilogram;   // use the type alias Kilogram
+}
 
-![project logo](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/bentoLogo.gif "style=width:50 height: 50")
+// declarations of type aliases don't create code in the complied JS
+// for example declare and initializing a variable a type's properties ==> Patient
+let Patient: Patient = {   // I crate an 'instance' using the object literal notation
+  name: 'Tom Jerry',
+  height: 180.4,
+  weight: 80.2
+}
 
-1. Approach:
+// wah!! if i forget to mention the value of one of the properties, TS will release red tubifex worms to bite me... ouch...
+let Patient: Patient = {
+  name: 'Tom Jerry',
+  height: 100
+} 
 
-- Step 1: write some code in App.tsx,
+// TS will scream:
+// error TS2322: Type '{ name: string; height: number; }' is not assignable to type 'Patient'. 
+// Property 'weight' is missing in type '{ name: string; height: number; }'.
 
-1. Git Branch
-   1. main
-    - setup folder & file
-    - merge safe dependencies from branch 'testing'
-   2. testing
-      - test npm dependencies installed
-      - playground for ideas
-      - merge to branch 'main once free of bugs
+// wow.. that's real pain in the gasss...
 
-- Architecture Approach
-  - UI UX
+// if I don't know will i use the particular estate anot, I can declare it as optional, by adding a question mark (?) to their name loh, but not omitting it hor so TS worms can won't open and boss TS won't complain lah
+type Patient = {
+  name?: string;
+  height?: Centimeter;
+  weight?: Kilogram;    //weight property is optional
+}
 
-- Folder Structure
-  - src        (for source code)
-    - screens
-      - SearchScreen.tsx
-    - api
-      - yelp.tsx
-  - components (for all reusable components)
-    - Searchbar.tsx
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-=============================================================================
-
-### Work Flow
-
-- **With React Native + TypeScript Source Code**
-
-## Day 22 React Native Restaurant App - With Custom Hook
-
-- **learn when and how to create a customer hook**
-- **Udemy Learning**
-- [Udemy Course Vid #103 - #108](https://www.udemy.com/course/the-complete-react-native-and-redux-course/learn/lecture/15707154#overview)
-
-- **React Native Practice:**
-- **step 14 Extracting Hook Logic**
-  - [Create a custom hook](https://blog.logrocket.com/advanced-react-hooks-creating-custom-reusable-hooks/)for search api for reuse.
-  - note the change of the output from the [custom hook from array to object](https://javascript.plainenglish.io/react-hooks-whats-the-difference-between-returning-an-array-and-an-object-34ccba62b71).
-    - [Object & array dependencies in the React useEffect Hook](https://www.benmvp.com/blog/object-array-dependencies-react-useEffect-hook/)
-  - This is the normal convention that we use to get better reference from the output of the customer hooks. ==> { results, searchApi, errorMessage };
-    - [Rules of Hooks](https://en.reactjs.org/docs/hooks-rules.html)
-    - [How to reuse data fetching logic from api using react custom hooks](https://stackoverflow.com/questions/56559493/how-to-reuse-data-fetching-logic-from-api-using-react-custom-hooks)
-    - [How To Create A Custom React Hook To Fetch And Cache Data](https://www.smashingmagazine.com/2020/07/custom-react-hook-fetch-cache-data/)
-    - [build a search bar using React Hooks](https://www.iamtimsmith.com/blog/lets-build-a-search-bar-using-react-hooks)
-    - [How to create your own React Custom hooks (example)](https://reactgo.com/react-custom-hooks/)
-    - [Creating custom hook for fetching data in react](https://dev.to/keyurparalkar/creating-custom-hook-for-fetching-data-in-react-3mo3)
-    - [Build a Custom Autocomplete Search Bar with React Hooks](https://lo-victoria.com/build-a-custom-autocomplete-search-bar-with-react-hooks)
-    - [Building Your Own Hooks](https://reactjs.org/docs/hooks-custom.html)
-    - [How to create a custom React hook to fetch an API (using TypeScript)?](https://dev.to/sulistef/how-to-create-a-custom-react-hook-to-fetch-an-api-using-typescript-ioi)
-    - [How to Reuse Logic with React Hooks](https://rafaelquintanilha.com/how-to-reuse-logic-with-react-hooks)
-
-- File Structuring
-
-```Bash
-# @filename: ./Desktop/projectFolder/FoodStreet
-# step 14a
-#  make a hooks folder inside src folder
-mkdir src/hooks
-#  create a useResults.tsx to hook folder
-touch src/hooks/useResults.tsx
+let Patient: Patient = {  //now var Patient is initialized without the weight property
+  name: 'Tom Jerry',
+  height: 100
+}
 ```
 
 ```TypeScript
-//example @filename useResults.tsx 
-// create a custom hook here
-// step 14b import useEffect, useState
-import { useEffect, useState } from "react";
-// step 14c import yelp api from api folder
-import yelp from "../api/yelp";
+// Let's take a look of 'interfaces' keyword to declare a custom type.
 
-// step 14d create a export default
-export default () => {
-  //  step 14f paste the code cut from SearchScreen.tsx here
- const [results, setResults] = useState<{ id: string; name: string }[]>([]);
- const [errorMessage, setErrorMessage] = useState("");
+// Suppose I want to write a function that can save information about a patient to a file.
+// The function should take an object that represents a Patient, and I want to ensure that it has a specific properties of specific types.
+// I can declare a custom Patient type as an interface like this:
 
- const searchApi = async (searchTerm: string): Promise<void> => {
-  //  console.log("Hi there!");
-   try {
-     const response = await yelp.get("/search", {
-       params: {
-         limit: 50,
-         term: searchTerm,
-         location: "san jose",
-       },
-     });
-     setResults(response.data.businesses);
-   } catch (err) {
-     setErrorMessage("Oops!! Something went wrong");
-   }
- };
+interface Patient {
+  firstName: string;
+  lastName: string;
+  age: number;
+}
 
-   // Call searchApi when component
-  // is first rendered.  BAD CODE!
-  // searchApi('pasta');
+function savePatient (patient: Patient): void {
+  console.log('Saving ', patient)
+}
 
-useEffect(() => {
-   searchApi("pasta");
- }, []);
-
-// step 14g return statement of 3 variables inside our array
- return { 
-   results, 
-   searchApi, 
-   errorMessage 
-   };
+const p: Patient = {
+  firstName: 'Tom',
+  lastName: 'Jerry',
+  age: 20
 };
+
+savePatient(p);
 ```
 
 ```TypeScript
-// @filename: src/screens/SearchScreen.tsx
-import {
-  View,
-  Text,
-  StyleSheet
-} from 'react-native';
-//  step 14j clean up unused component 'useEffect'
-import React, { useState } from 'react';
+// experimental 1:
+// remove lastName property
+interface Patient {
+  firstName: string;
+  lastName: string;
+  age: number;
+}
 
-import SearchBar from '../components/SearchBar'
-//  step 14j already extract yelp to useResult.tsx
-// import yelp from '../api/yelp';  // <==delete
+function savePatient (patient: Patient): void {
+  console.log('Saving ', patient)
+}
 
-// step 14h import useResults from useResults.tsx
-import { useResults } from '../hooks/useResults';
+const p: Patient ={
+  // Boss TS will scream at me with tubifex worms under the variable 'p' with the following error:
+// Property 'lastName' is missing in type '{ firstName: string; age: number; }' but required in type 'Patient'. ts(2741)
+  firstName: 'Tom',
+  // <== missing lastName ==>
+  age: 20
+};
 
-const SearchScreen: React.FC = () => {
+savePatient(p);
 
-    const [term, setTerm] = useState<string>('');
-// step 14i call useResults 3 variables here
-    const { results, searchApi, errorMessage } = useResults();
+// experimental 2:
+// try to access patient.lastName inside savePatient()
+interface Patient {
+  firstName: string;
+  lastName: string;
+  age: number;
+}
 
-    // step 14e cut all the code related to yelp api from line 444 to above our JSX line 475 paste to useResults.tsx
-  //   const [results, setResults] = useState<any[]>([]);
-  //   const [errorMessage, setErrorMessage] = useState<string>('');
-  
-  //     const searchApi = async (searchTerm: string) => {
+function savePatient (patient: Patient): void {
+  console.log('Saving ', patient)
+}
 
-  //       try {
-  //   const response = await yelp.get('/search', {
-  //     params: {
-  //       limit: 30,
-  //       term: searchTerm,
-  //       location: 'singapore'
-  //     }
-  //   });
+const p: Patient ={
+  firstName: 'Tom',
+  lastName: 'Jerry',
+  age: 20
+};
 
-  //   setResults(response.data.businesses);
-  //       } catch (e) {
-  //         setErrorMessage('Oops!!Something went wrong');
-  //       }
-  // };
+savePatient(patient.lastName);    // <== try to access Patient last name here but cannot
 
-    // Call searchApi when component
-  // is first rendered.  BAD CODE!
-  // searchApi('pasta');
-
-  // useEffect(() => {
-  //   searchApi('paste');
-  // }, []);
-// =====cut till here=====
-
-    return (
-      <View>
-        <SearchBar 
-        term={term} 
-        onTermChange={setTerm}
-        onTermSubmit={() => searchApi(term)} 
-        />
-
-  {errorMessage ? <Text>{errorMessage}</Text> : null}
-
-        <Text>We have found {results.length} results for {term}</Text>
-      </View>
-    );
-  };
-
-export default SearchScreen;
-
-const styles = StyleSheet.create({});
+// if the Patient interface won't declare the lastName property, TS will throw an compiler error
+// [ERR]: "Executed JavaScript Failed:" 
+// JS code would just crash at runtime
 ```
 
-- **dependencies installed**
-  - [@react-native-community/netinfo](https://www.npmjs.com/package/@react-native-community/netinfo)
-  - [EXPO NetInfo Docs](https://docs.expo.dev/versions/latest/sdk/netinfo/)
+```TypeScript
+// experimental 3:
+// remove the Patient type annotation.
+// Notice the code is still valid and no errors are reported
+interface Patient {
+  firstName: string;
+  lastName: string;
+  age: number;
+}
 
-- **Element References**
-  - [Promise<void>](https://www.newline.co/fullstack-react/30-days-of-react/day-15/)
-    - [How to type promises on react context with typescript](https://stackoverflow.com/questions/71277384/how-to-type-promises-on-react-context-with-typescript)
-    - [Typescript async function return type void vs Promise<void>](https://newbedev.com/typescript-async-function-return-type-void-vs-promise-void)
-    - [Introduction to TypeScript promise](https://www.educba.com/typescript-promise/)
-    - [Introduction to TypeScript promise type](https://www.educba.com/typescript-promise-type/)
-    - [A quick introduction to "Promises" and "Async/Await"](https://medium.com/jspoint/typescript-promises-and-async-await-b842b55ee3fd)
-    - [Keep Your Promises in TypeScript using async/await](https://blog.bitsrc.io/keep-your-promises-in-typescript-using-async-await-7bdc57041308)
+function savePatient (patient: Patient): void {
+  console.log('Saving ', patient);
+}
 
-- **Challenge:** [incomplete.. late liao.. brain foggy liao.. tomorrow office then continue...]
-  - Apply the codes to the FoodStreet project and make it work.
-  - You should get the [results](https://i.imgur.com/jT2g7yW.png) like this.
-  - [learning resource](https://dev.to/sulistef/how-to-create-a-custom-react-hook-to-fetch-an-api-using-typescript-ioi)
+const p ={      // <== remove the Patient type annotation
+  firstName: 'Tom',
+  lastName: 'Jerry',
+  age: 20
+};
+
+savePatient(p);   // no error message
+
+// WHY??? 
+// the reason is that TS uses a structural type system, which means that if two different types include the same members, the types are considered compatible.
+```
+
+- **TIP**
+  - I can use the question mark to define optional properties in classes or interfaces hor.
+  - also can use type keyword to declare a type alias for a function signature. 
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
 
-### Development References
-
-- [Expo](https://docs.expo.dev/)
-
-- [Documentation for the search API](https://yelp.com/fusion)
-
-- **Yelp API Workarounds**
-In the upcoming lecture, we will be signing up for a Yelp developer account. Depending on your location, some students may be blocked from creating an account. There are a few things you can try.
-
-[Students noted a workaround in this thread using their phone which will show a captcha:](https://www.udemy.com/course/the-complete-react-native-and-redux-course/learn/lecture/15707036#questions/8334522)
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-=============================================================================
-
-## Exercise of the Day
-
-[x] **Challenge:** Read ==> Computation Thinking (aim to improve problem-solving logic thinking skills)
-
-- What is Computational Thinking?
-- Definitions:
-  - is the thinking method involved in developing solution(s) to a problem and expressing it in such a way that a computer -- human or machine -- can capably carry out.
-  - is the brain activity for pulling out problems and building solutions that can be programmed.
-  - is the way of picking up condition of programming in the world that surrounds us, and applying tools and techniques from Computer Science to understand and reason about both natural and artificial systems and processes.
-  - is cognitive setup to plotting problems and reorganise of some input into an output and looking for set of rules to perform the transform. Today the terms has been expanded to include thinking with many levels of summary, use of mathematics to develop rule set and testing how well a solution develop across different sizes of problems.
-  - teach us how to think like an economist, a physicist. an artist and to understand how to use programming to solve their problems, to create, and to discover new questions that worth worked toward meaningly.
-  - is based on the idea that the solution to a problem is the product of a set of rules that can be applied to the problem.
-
-- Computation Thinking teaches an approach to problem-solving where the ultimate aim is to provide a solution whose form mean it is ready to be programmed into a computer.
-- Computation Thinking takes a relatively small subset of concepts -- which just happen to be important to Computer Science -- and uses them to develop a widely applicable, problem-solving approach.
-
-- Summary:
-  - Computation Thinking (CT) is an approach to problem-solving that involves using a set of practices and principles from Computer Science to develop a solution that is executable by a computer. It's not just for programmers. It is applicable in a diverse array of fields.
-
-- Exercise 1:
-  - List the core concepts of CT?
-    - logical thinking;
-    - algorithms thinking;
-    - decomposition;
-    - generalization and pattern recognition;
-    - modelling;
-    - abstraction;
-    - evaluation;
-
-- Exercise 2:
-  - Give an example of how I think people in each of the following occupations think computationally:
-    1. mathematician :can bu use to calculate the circumference of a circle without actually measuring it.
-    2. scientist : can be use for a range of tasks in constructing simulations, statistically analyzing data, and recognizing, expressing, and applying quantitative relationships.
-    3. engineer : can create based on analyses of designs to calculate whether they can stand up to the expected stress of use and if they can be completed within acceptable budgets.
-    4. linguist : can be use to develop systems that can perform tasks such as speech recognition, translation, and spell checking.
-
-- Exercise 3:
-  - Think of everyday activities in which I participate that involve computational thinking:
-    - scheduling my daily routine;
-    - breaking difficult problems into smaller parts;
-    - design a repetitive models of how to solve a problem;
-    - Observation and think how things can be relate and repeated;
-    - practice repetition of good habit like a loop, do it over and over again;
-    - finding the bad habit that need to remove;
-    - understand that one thing starts occurring since another thing is triggered
-
-- We can do these activities:
-
- 1. organize clean dished computationally;
- 2. nearest route at the supermarket: when I'm checking out after my groceries with my wife, I can use the computer to find the shortest route to my grocery store;
- 3. Clean your room computationally: clean room through sequential, systematic thinking
- 4. computational thinking approach to language: I can use the computer to translate my sentence into another language.
+- **JARGON in laymen terms:**
+  - [Explicitly](https://www.quora.com/What-is-meant-by-implicit-and-explicit-in-programming?share=1)
+    - I define the 'types' of a variable or a function parameter.
+  - [Implicitly](https://stackoverflow.com/questions/39716627/what-is-the-difference-between-explicitly-and-implicitly-in-programming-lang)
+    - I don't define the 'type' of a variable or a function parameter. The compiler will infer (guess) it.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
