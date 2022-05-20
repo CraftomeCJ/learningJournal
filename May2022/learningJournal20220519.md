@@ -358,7 +358,6 @@ const styles = StyleSheet.create({});
 - **CONCEPTS**
 - Define explicitly, implicitly?
   - [Explicitly](https://www.quora.com/What-is-meant-by-implicit-and-explicit-in-programming?share=1): I define the 'types' of a variable or a function parameter.
-
   - [Implicitly](https://stackoverflow.com/questions/39716627/what-is-the-difference-between-explicitly-and-implicitly-in-programming-lang): I don't define the 'type' of a variable or a function parameter. The compiler will infer (guess) it.
 
 - What is type widening?
@@ -367,9 +366,10 @@ const styles = StyleSheet.create({});
 - What is type narrowing?
   - An attempt to apply conditional statements to refine a variable's type.
 
+- **typeof padding === 'number'**
 - What do 'typeof' do?
-  - use it to find out the actual type of _padding_ at runtime
-- What do 'instanceof' do?
+  - I use it to find out the actual type of _padding_ at runtime
+- How about 'instanceof'? What it do?
   - allow me to check the actual object type at runtime
 - What is the difference between 'typeof' and 'instanceof?
   - _typeof_ is used with the built-in TS types, while _instanceof_ is used with custom types.
@@ -403,7 +403,7 @@ function getName(): string | null {
 
 // never;
 const logger = () => {
-  while (true) {      // this function never ends...
+  while (true) {      // this function never ends... siao liao
     console.log('I am running forever');
   }
 }
@@ -435,10 +435,10 @@ throw new Error(`Expected string or number, got '${padding}'.`);
 
 // run the padLeft function
 console.log( padLeft('Hello World', 5)); // return 'Hello World'
-// return 'Anya says Hello World'
-console.log( padLeft('Hello World', 'Anya says '));
- // sobsob! runtime error
-console.log( padLeft('Hello World', true));
+
+console.log( padLeft('Hello World', 'Anya says ')); // return 'Anya says Hello World'
+
+console.log( padLeft('Hello World', true));  // sobsob! runtime error
 ```
 
 ```TypeScript
@@ -446,11 +446,11 @@ console.log( padLeft('Hello World', true));
 const padLeft = (
   value: string, 
   // what is this funny straight line " | " hor?
-// it's a union type, allow me to express` either of the several types.
-  padding: string | number  // <== allow only a string or a number as second argument
+// it's a union type leh, allow me to express some of the several types we have
+  padding: string | number  // <== like this hor only allow a string or a number as second argument understand bo?
   ): string => {
 
-  if (typeof padding === 'number') {
+  if (typeof padding === 'number') {  // typeof?? simi lai eh? go see concept Q&A lah..
     return Array(padding + 1).join(' ') + value;
   }
 
@@ -468,7 +468,7 @@ const padLeft = (
 
 - **TIP**
   - Add explicit type annotation for function or methods signatures and public class members.
-  - Can use keywords: _type_, and _interface_ to declare my own types.
+  - Can use keywords: _type_, _class_ and _interface_ to declare my own types.
   - If I need to declare a variable that can hold values of more than one type, DO NOT use the type _any_; use a union type such as _let paddingStr: string | number_
     - another way is to declare two separate variables: _let paddingStr: string; let paddingNum: number_
   - Benefits of using the _union_ type is that IDE have an autocomplete feature that will prompt me with allowed argument types, so I won't even have the chance to make a mistake.
@@ -480,11 +480,13 @@ const padLeft = (
 ## Do you know?
 
 - I can create custom types with the _type_ keyword
+
 - **CONCEPTS**
   - [type keyword](https://medium.com/@rm.dev/typescript-type-keyword-explained-21ada293ab70)
     - allows me to declare a new type or type alias over the current type
   - Which keyword to use for declaring a custom type like _Patient_?
     - If the custom type doesn't need to be used for instantiating objects at runtime, use _type_ or _interface_
+  - [Anonymous Types, Type Aliases, and Interface Declarations](https://betterprogramming.pub/typescript-anonymous-types-type-aliases-and-interface-declarations-b60bc8a08f8c)
 
 ```TypeScript
 // let's try 'type' keyword first:
@@ -523,9 +525,9 @@ let Patient: Patient = {
 
 // if I don't know will i use the particular estate anot, I can declare it as optional, by adding a question mark (?) to their name loh, but not omitting it hor so TS worms can won't open and boss TS won't complain lah
 type Patient = {
-  name?: string;
-  height?: Centimeter;
-  weight?: Kilogram;    //weight property is optional
+  name: string;
+  height: Centimeter;
+  weight?: Kilogram;    //weight property is now optional
 }
 
 let Patient: Patient = {  //now var Patient is initialized without the weight property
@@ -668,11 +670,13 @@ savePatient(p);   // no error message
   - [initializing](https://www.webopedia.com/definitions/initialize/)
     - the assignment of an initial value for a data object or variable.
     - [Difference between instantiating, declaring, and initializing](https://stackhowto.com/difference-between-instantiating-declaring-and-initializing/)
-  - [literal](https://www.codecademy.com/forum_questions/53d6e03b282ae3c141000335)
-    - in general a literal is a fixed value
-    - [What is the difference between an Object Literal and an Instance Object in JavaScript ?](https://blog.kevinchisholm.com/javascript/difference-between-object-literal-and-instance-object/)
-    - [What is the difference between JSON and Object Literal Notation?](https://www.pimanti.com/what-is-the-difference-between-json-and-object-literal-notation/)
+  - [What is the difference between an Object Literal and an Instance Object in JavaScript ?](https://blog.kevinchisholm.com/javascript/difference-between-object-literal-and-instance-object/)
+  - [What is the difference between JSON and Object Literal Notation?](https://www.pimanti.com/what-is-the-difference-between-json-and-object-literal-notation/)
   - [properties](https://www.computerhope.com/jargon/p/properti.htm)
+  - [type aliases](https://flow.org/en/docs/types/aliases/)
+    - A alternative name for the existing types or newly created types.
+  - [string literal](https://www.digitalocean.com/community/tutorials/typescript-string-literal-types)
+    - let me use string as type
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
