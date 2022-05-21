@@ -343,9 +343,9 @@ const styles = StyleSheet.create({});
 - How TS catch errors?
   - Errors are caught by the TS static code analyzer as I type, even before I compile code with TS compiler (tsc).
 - What is the benefit of using TS?
-  - TS gives me the benefits of statically type langauges when and where I want, without stopping mefrom using the good old dynamics JS objects when I want them.
+  - TS gives me the benefits of statically type languages when and where I want, without stopping me from using the good old dynamics JS objects when I want them.
 - What is TS specification?
-  - TS follows the lastest specification of ECMAScript and adds to them types, interfaces, decorators, class memeber variables (fields), generics, enums, the keywords public, protected, private, readonly, the new keywords const, let, and more.
+  - TS follows the latest specification of ECMAScript and adds to them types, interfaces, decorators, class member variables (fields), generics, enums, the keywords public, protected, private, readonly, the new keywords const, let, and more.
 - How to start a TS project?
   - To start a new TS project, run command tsc --init in any directory. It'll create the tsconfig.json file for me, containing all the compiler's options with most of them commented out. Uncomment them as needed.
 
@@ -487,25 +487,28 @@ const padLeft = (
   - Which keyword to use for declaring a custom type like _Patient_?
     - If the custom type doesn't need to be used for instantiating objects at runtime, use _type_ or _interface_
   - [Anonymous Types, Type Aliases, and Interface Declarations](https://betterprogramming.pub/typescript-anonymous-types-type-aliases-and-interface-declarations-b60bc8a08f8c)
+  - [Type Systems: Structural vs. Nominal typing explained](https://medium.com/@thejameskyle/type-systems-structural-vs-nominal-typing-explained-56511dd969f4)
+  - [Understand TypeScript's Structural Type System](https://medium.com/codex/understand-typescripts-structural-type-system-17167ae90b9f)
+  - [Types, Type Systems, and TypeScript](https://codeburst.io/types-type-systems-and-typescript-4ac858298e5e)
 
 ```TypeScript
 // let's try 'type' keyword first:
 // let's say my app deals with patients represents by name, height and weight. Both height and weight are numbers, to improve readability, i can create aliases hinting at the units in which the height and weight are measured.
 // declare alias types centimeter and kilogram
-type Centimeter = number;
+type Centimeter = number; // <-- this is a alias type, understand bo???
 type Kilogram = number;
 
-// now I can create a new Patient type and use the earlier aliases in its declaration
+// now I can create a new Patient type and using the aliases I created earlier in its declaration
 // declare a new type that uses aliases
 type Patient = {      // declares the Patient type
-  name: string;
-  height: Centimeter; // use the type alias Centimeter
+  name: string; // <== TS primitive type, can use typeof to check
+  height: Centimeter; // use the type alias Centimeter    // <== custom type create by me so need us instanceof to check
   weight: Kilogram;   // use the type alias Kilogram
 }
 
 // declarations of type aliases don't create code in the complied JS
 // for example declare and initializing a variable a type's properties ==> Patient
-let Patient: Patient = {   // I crate an 'instance' using the object literal notation
+let Patient: Patient = {   // I create an 'instance' using the object literal notation
   name: 'Tom Jerry',
   height: 180.4,
   weight: 80.2
@@ -523,14 +526,14 @@ let Patient: Patient = {
 
 // wow.. that's real pain in the gasss...
 
-// if I don't know will i use the particular estate anot, I can declare it as optional, by adding a question mark (?) to their name loh, but not omitting it hor so TS worms can won't open and boss TS won't complain lah
+// if I don't know will i be using the particular estate anot, I can declare it as optional, by adding a question mark (?) to their name lah, but please hor DO NOT omit it har, ah bo boss TS worms can opened and boss TS will complain lah
 type Patient = {
   name: string;
   height: Centimeter;
   weight?: Kilogram;    //weight property is now optional
 }
 
-let Patient: Patient = {  //now var Patient is initialized without the weight property
+let Patient: Patient = {  //now variable Patient is initialized without the weight property also no problem liao
   name: 'Tom Jerry',
   height: 100
 }
@@ -564,7 +567,7 @@ savePatient(p);
 
 ```TypeScript
 // experimental 1:
-// remove lastName property
+// remove lastName property on variable p
 interface Patient {
   firstName: string;
   lastName: string;
@@ -576,7 +579,7 @@ function savePatient (patient: Patient): void {
 }
 
 const p: Patient ={
-  // Boss TS will scream at me with tubifex worms under the variable 'p' with the following error:
+  // Boss TS will scream at me loh tubifex worms crawling under the variable 'p' with the following error:
 // Property 'lastName' is missing in type '{ firstName: string; age: number; }' but required in type 'Patient'. ts(2741)
   firstName: 'Tom',
   // <== missing lastName ==>
@@ -633,7 +636,7 @@ const p ={      // <== remove the Patient type annotation
 savePatient(p);   // no error message
 
 // WHY??? 
-// the reason is that TS uses a structural type system, which means that if two different types include the same members, the types are considered compatible.
+// the reason is that Boss TS uses a structural type system, which means that if two different types include the same members, the types are considered compatible.
 ```
 
 - **TIP**
