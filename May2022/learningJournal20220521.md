@@ -1,6 +1,6 @@
 <div id='top'><div>
 
-<h1 align="center">Learning Journal 20 May 2022 (Friday)</h1>
+<h1 align="center">Learning Journal 21 May 2022 (Saturday)</h1>
 <h1 align="center">LEARN > PRACTICE > TRAIN > TEACH</h1>
 <p align="center">My passion to be a programmer came late in life
 <br />
@@ -45,32 +45,30 @@ SOLVE A PROBLEM:
   I rejoice that it is so.
   -->
 **Law of Life:** <br/>
-The Law of Detachment: **"This too, will pass!"** <br/>
-Recognize the fact of impermanence. <br/>
-Allow myself and others the freedom to be who they are. Do not force solutions -- allow solutions to spontaneously emerge <br/>
-Uncertainty is essential, and my path to freedom. <br/>
-<!-- I will put the Law of Detachment into effect by making a commitment to take the following steps:
-  1. Today I will commit myself to detachment. I will allow myself and those around me the freedom to be as they are. I will not rigidly impose my idea of how things should be. I will not force solutions on problems, thereby creating new problems. I will participate in everything with detached involvement.
-  2. Today I will factor in uncertainty as an essential ingredient of my experience. In my willingness to accept uncertainty, solutions will spontaneously emerge out of the problem, out of the confusion, disorder, and chaos. The more uncertain things seem to be, the more secure I will feel, because uncertainty is my path to freedom. Through the wisdom of uncertainty, I will find my security. 
-  3. I will step into the field of all possibilities and anticipate the excitement that can occur when I remain open to an infinity of choices. When I step into the field of all possibilities. I will experience all the fun, adventure, magic, and mystery of life. -->
+The Law of Dharma: **"Purpose in Life"** <br/>
+Seek my higher "SELF". Discover my unique talents. Ask myself how I am best suited to serve humanity. <br/>
+Using my unique talents and serving others bring unlimited bliss and abundance. <br/>
+<!-- I will put the Law of Dharma into effect by making a commitment to take the following steps:
+  1. Today I will lovingly nurture the god and goddess in embryo that lies deep within my soul. I will pay attention to the spirit within me that animated both my body and my mind. I will awaken myself to this deep stillness within my heart. I will carry the consciousness of timeless, eternal Being in the midst of time-bound experience. 
+  2. I will make a list of my unique talents. Then I will list all the things that I love to do while expressing my unique talents. When I express my unique talents and use them in the service of humanity, i lose track of time and create abundance in my life as well as in the lives of others. 
+  3. I will ask myself daily, "How can I serve?" and "How can I help?" The answers to these questions will allow me to help and serve my fellow human beings with love. -->
 
 **Daily Law:** <br/>
-The Unambitious Front<br/>
-Be most suspicious of those who seem unambitious. <br/>
+The Aggressive Pleaser<br/>
+My best defense is to be wary of people who are too quick to charm and befriend, too nice and accommodating at first. Such extreme niceness is never natural. <br/>
 
 <!-- What a wise old man said -->
 **Quote of the Day:** <br/>
-"Life isn't very heavy for me. I've made up my mind what I want to do. I'm happy when I pitch well so I only do those things that help me be happy." - Tom Seaver <br/>
+"The problem with longing for paradises is that it distracts us from our efforts to extract pleasure and meaning from the present.." - Gordon Livingston <br/>
 
 <!-- practice gratitude daily -->
-**I'm thankful to:** have the opportunity to get an education. <br/>
+**I'm thankful to:** have a God that forgives me and loves me and gave me life. <br/>
 
 <!-- what is holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
 Core Traits of a **"SOCIALLY INTELLIGENT PERSON"**: <br/>
-They DO NOT immediately deny criticism, or have such a strong emotional reaction to it that they become unapproachable or unchangeable. <br/>
-Some of the most difficult people to be in relationships with are those who are so threatened by even the slightest suggestion that their behaviour is hurtful that they actually end up getting angry at the person suggesting it, reinforcing the problem altogether. <br/>
-Socially intelligent people listen to criticism before they respond to it -- an immediate emotional response without thoughtful consideration is just defensiveness. <br/>
+They DO NOT confuse their opinion of someone for being a fact about them. <br/>
+Socially intelligent people do not say, "He's a prick" as though it is fact. Instead, they say: "I had a negative experience with him where I felt very uncomfortable." <br/>
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
@@ -87,8 +85,8 @@ Socially intelligent people listen to criticism before they respond to it -- an 
 - Why is this a problem? -->
 **Questions/Reflections of the day?**
 
-- [x] In what ways am I contributing to the world? <br/>
-- [x] What activities make me feel productive, engaged, and deeply content? <br/>
+- [x] What kind of boxer am I, if I leave because I get hit? That's the nature of the sport! Is that going to stop me from continuing? <br/>
+- [x] If the disaster fell upon the world tomorrow, how long do I think I had last? <br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -250,7 +248,7 @@ After I finished [CONDITION], I will [BEHAVIOR] at [TIME] in [LOCATION].-->
 
 ## Personal Notes
 
-**Day 47 (Friday) and today's main focus:** <br />
+**Day 48 (Saturday) and today's main focus:** <br />
 Today till Sunday will be learning advance state management with useContext to manage global state management, work on a Udemy's Blog App. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
@@ -262,71 +260,6 @@ Today till Sunday will be learning advance state management with useContext to m
     - Looping and conditionals: testing to see if a condition is true of false, and cycling through a set of instructions until some condition is met
     - Mathematical operations (arithmetic): Performing mathematical calculations on your data
     - Variables and data structures: storing information, which may change over time
-  - [Naming Conventions](https://unional.gitbooks.io/typescript/content/pages/default/draft/naming-conventions.html)
-    - Avoid single letter names. Be descriptive with your naming
-
-### Blog App with TypeScript
-
-(Aim to explicitly implement a type-safe react-native app)
-
-- **With React Native + TypeScript Source Code**
-
-```TypeScript
-
-```
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-## Exercise of the Day: TypeScript **_Revisited_ Day 2**
-
-[x] **Challenge:** Read ==> TypeScript Quickly (aim to improve TypeScript Implementations)
-
-## Today's Summary
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-## So do I know now?
-
-- **CONCEPTS**
-
-```TypeScript
-
-```
-
-- **TIP**
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-## Do you know?
-
-- I can create custom types with the _type_ keyword
-
-- **CONCEPTS**
-  - [type keyword](https://medium.com/@rm.dev/typescript-type-keyword-explained-21ada293ab70)
-    - allows me to declare a new type or type alias over the current type
-  - Which keyword to use for declaring a custom type like _Patient_?
-    - If the custom type doesn't need to be used for instantiating objects at runtime, use _type_ or _interface_
-
-```TypeScript
-
-```
-
-- **TIP**
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-- **JARGON in laymen terms:**
-  - [Explicitly](https://www.quora.com/What-is-meant-by-implicit-and-explicit-in-programming?share=1)
-    - I define the 'types' of a variable or a function parameter.
-
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
