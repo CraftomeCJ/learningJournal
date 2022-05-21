@@ -479,9 +479,8 @@ const padLeft = (
 
 ## Do you know?
 
-- I can create custom types with the _type_ keyword
-
 - **CONCEPTS**
+- I can create custom types with the _type_ keyword
   - [type keyword](https://medium.com/@rm.dev/typescript-type-keyword-explained-21ada293ab70)
     - allows me to declare a new type or type alias over the current type
   - Which keyword to use for declaring a custom type like _Patient_?
