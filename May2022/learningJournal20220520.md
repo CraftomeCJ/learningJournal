@@ -267,6 +267,103 @@ Today till Sunday will be learning advance state management with useContext to m
 
 ==============================================================================
 
+## So do I know now?
+
+- **CONCEPTS**
+- [Which keyword to use: type, interface, or class?](https://javascript.plainenglish.io/when-to-best-use-type-class-or-interface-in-typescript-73bf66de19e9)
+  - If no need to use it to create an object from a class at runtime, use interface or type
+  - use class for creating a custom type if it is used to represent a value
+- When should I use types lei?
+  - When I want:
+    - to express some form of infomation that I can name distinctively
+    - to prevent mistakes while I am coding with the help of IDE
+    - to pass it around as concise function parameters
+    - to describe a class constructor parameters
+    - to document large objects coming in or out from API
+    - them work best when they are small
+    - when they do not hold a state nor methods
+    - to express that a value can be of two different types, this is called union -- and should name it unique & specifically (cat || dog union is AnimalType)
+    - but expressing too many association, I may want to use an enum
+- When should I use interfaces lei?
+  - When I want:
+    - is declaration merging
+    - or because of my coding style
+  - [type vs interface](https://dev.to/stereobooster/typescript-type-vs-interface-2n0c)
+  - [Interfaces and Type Aliases](https://www.typescript-training.com/course/fundamentals-v3/07-interfaces-and-type-aliases/)
+
+```TypeScript
+// Let say I want to declare a Person interface and there is a function that takes an argument of type person, I cannot apply the operator 'instanceof' to the argument. why???
+interface Person {
+  name: string;
+}
+
+function getP (p: Person) {
+  if (p instanceof Person) {  // <== compile error
+  }
+}
+
+// Boss TS will complain that Person only refers to a type but is being used as value here... WTH..
+
+// and hor if in future I want to declare a custom type, try use type or interface lah, they have representations in the emitted JS code, which makes the runtime code smaller. If I use classes to declare ah... they have footprint in the JS script lo... not good`
+
+// another point: defining custom type with the 'type' keyword offers same same feature as interface hor, just some extras loh...
+// example I cannot use types declared as interfaces in union or intersections.
+```
+
+- **When should I use types example:**
+
+```Typescript
+// Great when i need to express "something" in my app loh.
+type Point {
+x: number
+y: number
+}
+// Great to make my function parameters easy to understand hor
+function drawPoint (point: Point) {
+// do stuff
+}
+/**
+* Express that the union of two types becomes
+* something new.
+*/
+type ProgramError {
+ok: false
+code: string
+message: string
+}
+type ProgramSuccess {
+ok: true
+message: string
+}
+type ProgramStatus = ProgramError | ProgramSuccess;
+```
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
+## Do you know?
+
+- **CONCEPTS**
+  - [Structural vs nominal type systems](https://isthisit.nz/posts/2020/typescript-ii-nominal-and-structural-typing/)
+    - [Type Systems: Structural vs. Nominal typing explained](https://medium.com/@thejameskyle/type-systems-structural-vs-nominal-typing-explained-56511dd969f4)
+  - [Understand TypeScript's Structural Type System](https://medium.com/codex/understand-typescripts-structural-type-system-17167ae90b9f)
+  - [Types, Type Systems, and TypeScript](https://codeburst.io/types-type-systems-and-typescript-4ac858298e5e)
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
+- **JARGON in laymen terms:**
+  - [instantiating object](https://www.quora.com/What-does-it-mean-to-instantiate-an-object?share=1)
+    - the process of creating objects from a class is called instantiation. It means allocating memory for a new object and returning a reference to that memory.
+  - distinctively
+    - special emphasis to a point or specifically declaring
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
 ## Room to improve?
 <!-- This is where I write things I can do to improve my work -->
 <!-- Reflecting and Reviewing My Daily Work Journal
@@ -512,6 +609,10 @@ Created by:
 [What is useState() in React ?](https://www.geeksforgeeks.org/what-is-usestate-in-react/)
 
 [useState and useEffect explained](https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf)
+
+[Top 50 TypeScript Interview Questions With Answers for 2022](https://www.simplilearn.com/tutorials/typescript-tutorial/typescript-interview-questions)
+
+[Comparison of programming languages by type system](https://en.wikipedia.org/wiki/Comparison_of_programming_languages_by_type_system)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
