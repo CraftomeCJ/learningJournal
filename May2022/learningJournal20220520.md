@@ -250,24 +250,63 @@ After I finished [CONDITION], I will [BEHAVIOR] at [TIME] in [LOCATION].-->
 
 ## Personal Notes
 
-**Day 42 (Sunday) and today's main focus:** <br />
+**Day 47 (Friday) and today's main focus:** <br />
 Today till Sunday will be learning advance state management with useContext to manage global state management, work on a Udemy's Blog App. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
-Happy day... First time of a long time no build error to debugs...
+- **Fundamental**
+  - [The five basic elements](https://study.com/academy/lesson/5-basic-elements-of-programming.html), in programming are:
+    - Input: getting data and commands into the computer
+    - Output: getting your results out of the computer
+    - Looping and conditionals: testing to see if a condition is true of false, and cycling through a set of instructions until some condition is met
+    - Mathematical operations (arithmetic): Performing mathematical calculations on your data
+    - Variables and data structures: storing information, which may change over time
+  - [Naming Conventions](https://unional.gitbooks.io/typescript/content/pages/default/draft/naming-conventions.html)
+    - Avoid single letter names. Be descriptive with your naming
 
-### Software Installed
+### Blog App with TypeScript
 
-[EXPO CLI](https://www.npmjs.com/package/expo-cli)
+(Aim to explicitly implement a type-safe react-native app)
+
+- **With React Native + TypeScript Source Code**
+
+```TypeScript
+
+```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
-=============================================================================
+==============================================================================
+
+## Exercise of the Day: TypeScript **_Revisited_ Day 2**
+
+[x] **Challenge:** Read ==> TypeScript Quickly (aim to improve TypeScript Implementations)
+
+## Today's Summary
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
+## So do I know now?
+
+- **CONCEPTS**
+
+```TypeScript
+
+```
+
+- **TIP**
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
 
 ## Do you know?
 
 - I can create custom types with the _type_ keyword
+
 - **CONCEPTS**
   - [type keyword](https://medium.com/@rm.dev/typescript-type-keyword-explained-21ada293ab70)
     - allows me to declare a new type or type alias over the current type
@@ -275,156 +314,10 @@ Happy day... First time of a long time no build error to debugs...
     - If the custom type doesn't need to be used for instantiating objects at runtime, use _type_ or _interface_
 
 ```TypeScript
-// let's try 'type' keyword first:
-// let's say my app deals with patients represents by name, height and weight. Both height and weight are numbers, to improve readability, i can create aliases hinting at the units in which the height and weight are measured.
-// declare alias types centimeter and kilogram
-type Centimeter = number;
-type Kilogram = number;
 
-// now I can create a new Patient type and use the earlier aliases in its declaration
-// declare a new type that uses aliases
-type Patient = {      // declares the Patient type
-  name: string;
-  height: Centimeter; // use the type alias Centimeter
-  weight: Kilogram;   // use the type alias Kilogram
-}
-
-// declarations of type aliases don't create code in the complied JS
-// for example declare and initializing a variable a type's properties ==> Patient
-let Patient: Patient = {   // I crate an 'instance' using the object literal notation
-  name: 'Tom Jerry',
-  height: 180.4,
-  weight: 80.2
-}
-
-// wah!! if i forget to mention the value of one of the properties, TS will release red tubifex worms to bite me... ouch...
-let Patient: Patient = {
-  name: 'Tom Jerry',
-  height: 100
-} 
-
-// TS will scream:
-// error TS2322: Type '{ name: string; height: number; }' is not assignable to type 'Patient'. 
-// Property 'weight' is missing in type '{ name: string; height: number; }'.
-
-// wow.. that's real pain in the gasss...
-
-// if I don't know will i use the particular estate anot, I can declare it as optional, by adding a question mark (?) to their name loh, but not omitting it hor so TS worms can won't open and boss TS won't complain lah
-type Patient = {
-  name?: string;
-  height?: Centimeter;
-  weight?: Kilogram;    //weight property is optional
-}
-
-let Patient: Patient = {  //now var Patient is initialized without the weight property
-  name: 'Tom Jerry',
-  height: 100
-}
-```
-
-```TypeScript
-// Let's take a look of 'interfaces' keyword to declare a custom type.
-
-// Suppose I want to write a function that can save information about a patient to a file.
-// The function should take an object that represents a Patient, and I want to ensure that it has a specific properties of specific types.
-// I can declare a custom Patient type as an interface like this:
-
-interface Patient {
-  firstName: string;
-  lastName: string;
-  age: number;
-}
-
-function savePatient (patient: Patient): void {
-  console.log('Saving ', patient)
-}
-
-const p: Patient = {
-  firstName: 'Tom',
-  lastName: 'Jerry',
-  age: 20
-};
-
-savePatient(p);
-```
-
-```TypeScript
-// experimental 1:
-// remove lastName property
-interface Patient {
-  firstName: string;
-  lastName: string;
-  age: number;
-}
-
-function savePatient (patient: Patient): void {
-  console.log('Saving ', patient)
-}
-
-const p: Patient ={
-  // Boss TS will scream at me with tubifex worms under the variable 'p' with the following error:
-// Property 'lastName' is missing in type '{ firstName: string; age: number; }' but required in type 'Patient'. ts(2741)
-  firstName: 'Tom',
-  // <== missing lastName ==>
-  age: 20
-};
-
-savePatient(p);
-
-// experimental 2:
-// try to access patient.lastName inside savePatient()
-interface Patient {
-  firstName: string;
-  lastName: string;
-  age: number;
-}
-
-function savePatient (patient: Patient): void {
-  console.log('Saving ', patient)
-}
-
-const p: Patient ={
-  firstName: 'Tom',
-  lastName: 'Jerry',
-  age: 20
-};
-
-savePatient(patient.lastName);    // <== try to access Patient last name here but cannot
-
-// if the Patient interface won't declare the lastName property, TS will throw an compiler error
-// [ERR]: "Executed JavaScript Failed:" 
-// JS code would just crash at runtime
-```
-
-```TypeScript
-// experimental 3:
-// remove the Patient type annotation.
-// Notice the code is still valid and no errors are reported
-interface Patient {
-  firstName: string;
-  lastName: string;
-  age: number;
-}
-
-function savePatient (patient: Patient): void {
-  console.log('Saving ', patient);
-}
-
-const p ={      // <== remove the Patient type annotation
-  firstName: 'Tom',
-  lastName: 'Jerry',
-  age: 20
-};
-
-savePatient(p);   // no error message
-
-// WHY??? 
-// the reason is that TS uses a structural type system, which means that if two different types include the same members, the types are considered compatible.
 ```
 
 - **TIP**
-  - I can use the question mark to define optional properties in classes or interfaces hor.
-  - also can use type keyword to declare a type alias for a function signature. 
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -433,8 +326,7 @@ savePatient(p);   // no error message
 - **JARGON in laymen terms:**
   - [Explicitly](https://www.quora.com/What-is-meant-by-implicit-and-explicit-in-programming?share=1)
     - I define the 'types' of a variable or a function parameter.
-  - [Implicitly](https://stackoverflow.com/questions/39716627/what-is-the-difference-between-explicitly-and-implicitly-in-programming-lang)
-    - I don't define the 'type' of a variable or a function parameter. The compiler will infer (guess) it.
+
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
