@@ -262,6 +262,21 @@ Today till Sunday will be learning advance state management with useContext to m
     - Looping and conditionals: testing to see if a condition is true of false, and cycling through a set of instructions until some condition is met
     - Mathematical operations (arithmetic): Performing mathematical calculations on your data
     - Variables and data structures: storing information, which may change over time
+  
+  - [Naming Conventions](https://unional.gitbooks.io/typescript/content/pages/default/draft/naming-conventions.html)
+    - Single letter names
+      - Avoid single letter names. Be descriptive with your naming.
+    - Name casing
+      - Use camelCase when naming objects, functions, and instances. eslint: camelCase jscs: requireCamelCaseOrUpperCaseIdentifiers
+      - Use PascalCase when naming constructors or classes. eslint: new-cap jscs: requireCapitalizedConstructors
+      - Use camelCase when you export-default a function. Your filename should be identical to your function's name.
+      - Use PascalCase when you export a singleton / function library / bare object.
+    - Name prefixes
+      - Use a leading underscore _ when naming private properties. eslint: no-underscore-dangle jscs: disallowDanglingUnderscores
+    - this reference
+      - Don't save references to this. Use arrow functions or Function#bind. jscs: disallowNodeTypes
+    - File naming
+      - If your file exports a single class, your filename should be exactly the name of the class.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -310,7 +325,7 @@ function getP (p: Person) {
 // example I cannot use types declared as interfaces in union or intersections.
 ```
 
-- **When should I use types example:**
+- **When should I use types examples:**
 
 ```Typescript
 // Great when i need to express "something" in my app loh.
@@ -345,10 +360,132 @@ type ProgramStatus = ProgramError | ProgramSuccess;
 ## Do you know?
 
 - **CONCEPTS**
-  - [Structural vs nominal type systems](https://isthisit.nz/posts/2020/typescript-ii-nominal-and-structural-typing/)
-    - [Type Systems: Structural vs. Nominal typing explained](https://medium.com/@thejameskyle/type-systems-structural-vs-nominal-typing-explained-56511dd969f4)
+
+- [Structural vs nominal type systems](https://isthisit.nz/posts/2020/typescript-ii-nominal-and-structural-typing/)
+  - [Type Systems: Structural vs. Nominal typing explained](https://medium.com/@thejameskyle/type-systems-structural-vs-nominal-typing-explained-56511dd969f4)
   - [Understand TypeScript's Structural Type System](https://medium.com/codex/understand-typescripts-structural-type-system-17167ae90b9f)
   - [Types, Type Systems, and TypeScript](https://codeburst.io/types-type-systems-and-typescript-4ac858298e5e)
+
+- **nominal type systems**
+
+```JAVA
+// by now I should know hor a basic type has a name like number, 'string', boolean etc.. 
+// whereas a more complicated type like object or class has a name and some structure, represented by properties
+
+// So how I know if two types are the same anot wor?
+// let me see if I can solve the puzzle ah...
+// In nominal type system which JAVA used, 2 same type with same name hor will be express in the same namespace (aka package or scope)
+
+// example When I express a variable of type Person, I can give it only an object of type Person or it's descendants which mean it's offspring/successors la, can understand?? 
+// in JAVA
+class Person { // <==express a variable Person class (but think as "type" ah) 
+  String name;
+}
+
+type Customer { // <== express one more Customer class (but think as "type" ah)
+  String name;
+}
+
+Customer cust = new Person(); // <== syntax error wor: the name of the classes on the left and right are not the same
+
+// Uncle JAVA won't compile lei, why is that so ah??
+// because the names of the classes are not the same, even though they have the same structure.
+```
+
+- **Structural type systems**
+
+```TypeScript
+// let's see Boss TS who is structural type system. How Boss do it har??
+// in TypeScript
+class Person {    // <==express a variable Person class (but think as "type" ah) 
+  name: string;
+}
+
+class Customer { // <== express one more Customer class (but think as "type")
+  name: string;
+}
+
+const cust: Customer = new Person();  // oh No errors: but type structure are the same???
+
+// don't have any errors reported wor.. why ah?? Boss TS
+// that is because TS use structural type system, and since both the Person and Customer classes have same same structure, it is OK to give an instance of one class to a variable of another.
+```
+
+- **structural type system with object literals**
+
+```typescript
+// compatible types
+// I can now use object literals to create objects and appoint them to class-typed variables or constants, so long the shape of the object literal is the same
+class Person {
+  name: string;
+}
+
+class Customer {
+  name: string;
+}
+
+const cust: Customer = (name: 'Tom');   //<== object literals
+const pers: Person = (name: 'Jerry')
+
+// swee swee no error wor. Boss TS is happy sia....
+// well now our classes didn't define any methods yet, but if both of them defined a method with the same signature (name, arguments and return type), they would again be compatible.
+```
+
+- **What if the classes are not the same?**
+
+```TypeScript
+// let's try something different, if Person & Customer are not exactly the same?? What will Boss TS react hor??
+class Person {
+  name: string;
+  age: number;     //I added this new property
+}
+
+class Customer {
+  name: string;
+}
+
+const cust: Customer = new Person(); //<== see... still no error wor... so shiok!!!
+
+// why is that so???
+// because Boss TS see that Person & Customer have the same shape mah so have something in common loh. Then he close one eyes lah. 
+// since only want to use the constant of type Customer ma, remember it have 'name' property so easy to point to the "father" object of type Person, 
+// which also has a 'name' property, same blood ma why so calculative tio bo...
+
+// if wondering what i can do with object represented by the 'cust' variable ah... hmm...let me see ah...
+// maybe I can... 
+// write something like this ==> 
+cust.name = 'Jerry';
+// The instance of 'Person' has the name property, so Boss TS worm can won't open loh aka compiler won't complain lah... haha!! 
+```
+
+- **The instance (Customer type) has more properties than a reference variable (Person type)**
+
+```TypeScript
+// What if the 'Customer' class have more properties???
+// let's try something fun this time, if Customer type have more properties than Person type?? What will Boss TS do lei??
+// will the code compile???
+class Person {
+  name: string;
+}
+
+class Customer {
+  name: string;
+    age: number;     // hehe added new property to here
+}
+
+const cust: Customer = new Person(); //<== see... worm can opened!!! haha!! The types don't match wor
+// error: Property 'age' is missing in type 'Person' but required in type 'Customer'.
+
+cust.name = 'Jerry';
+
+// why is that so???
+// because Boss TS see that the cust reference variable would point to a Person object that but reluctant to give land for the 'age' property, and assignment like cust.age = 29 will be impossible. So this time, the Person type is not assignable to the Customer type.
+```
+
+- **TIP**
+  - The access-level modifiers affect type compatibility.
+    - example: if I declare the name property of the Person class as private, then _compatible types_ example would not compile.
+  - in example _when classes are not the same_, I have assign an object of type Person to a variable of type Customer, so I can say that the Person type is assignable to the Customer type ah.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -359,6 +496,23 @@ type ProgramStatus = ProgramError | ProgramSuccess;
     - the process of creating objects from a class is called instantiation. It means allocating memory for a new object and returning a reference to that memory.
   - distinctively
     - special emphasis to a point or specifically declaring
+  - [namespace](https://www.techopedia.com/definition/1341/namespace)
+    - a.k.a packages
+    - is a group of related elements that each have a unique name or identifier.
+    - There are several different types of namespaces, and each one has a specific syntax used to define the corresponding elements.
+    - Each element within a namespace has a "local name" that serves as a unique identifier.
+      - [use namespace as type in typescript](https://stackoverflow.com/questions/42815932/use-namespace-as-type-in-typescript)
+      - [NameSpaces in TypeScript](https://www.codingninjas.com/codestudio/library/namespaces-in-typescript)
+  - [primitive](https://stackoverflow.com/questions/68710486/could-anyone-help-explain-what-primitive-mean-in-programming-languages)
+    - [What is primitive datatype?](https://www.techopedia.com/definition/3860/primitive)
+    - built in or most basic
+    - are used to create more complex pieces of code.
+  - [access modifiers](https://www.techopedia.com/definition/23/access-modifiers)
+    - [Access Modifiers in TypeScript](https://www.dotnettricks.com/learn/typescript/access-modifiers)
+    - [What are access modifiers?](https://www.quora.com/What-are-access-modifiers?share=1)
+    - [What is an example of access modifiers?](https://www.quora.com/What-is-an-example-of-access-modifiers)
+    - support the concept of encapsulation, which promotes the idea of hiding functionality.
+    - allow me to define who does or doesn't have access to certain features.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
