@@ -282,6 +282,10 @@ Today till Sunday will be learning advance state management with useContext to m
 
 ==============================================================================
 
+## Exercise of the Day: TypeScript **_Revisited_Day 2**
+
+[x] **Challenge:** Read ==> TypeScript Quickly (aim to improve TypeScript Implementations)
+
 ## So do I know now?
 
 - **CONCEPTS**
