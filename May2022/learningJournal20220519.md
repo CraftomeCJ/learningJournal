@@ -640,7 +640,7 @@ savePatient(p);   // no error message
 
 - **TIP**
   - I can use the question mark to define optional properties in classes or interfaces hor.
-  - also can use type keyword to declare a type alias for a function signature. 
+  - also can use type keyword to declare a type alias for a function signature.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -674,11 +674,18 @@ savePatient(p);   // no error message
     - [Difference between instantiating, declaring, and initializing](https://stackhowto.com/difference-between-instantiating-declaring-and-initializing/)
   - [What is the difference between an Object Literal and an Instance Object in JavaScript ?](https://blog.kevinchisholm.com/javascript/difference-between-object-literal-and-instance-object/)
   - [What is the difference between JSON and Object Literal Notation?](https://www.pimanti.com/what-is-the-difference-between-json-and-object-literal-notation/)
-  - [properties](https://www.computerhope.com/jargon/p/properti.htm)
   - [type aliases](https://flow.org/en/docs/types/aliases/)
     - A alternative name for the existing types or newly created types.
   - [string literal](https://www.digitalocean.com/community/tutorials/typescript-string-literal-types)
     - let me use string as type
+  - [properties](https://docs.microsoft.com/en-us/office/vba/language/concepts/getting-started/understanding-objects-properties-methods-and-events)
+    - is a feature of an object that defines one of the object's characteristics, such as size, color, or screen location, or an aspect of its behavior, such as whether it is enabled or visible etc...
+    - To change the characteristics of an object, just change the values of its properties.
+    - To set the value of a property:
+      1. follow the reference to an object with a period ( . )
+      2. the property name
+      3. an equal sign ( = )
+      4. the new property value.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
