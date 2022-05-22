@@ -261,6 +261,209 @@ Today till Sunday will be learning advance state management with useContext to m
     - Mathematical operations (arithmetic): Performing mathematical calculations on your data
     - Variables and data structures: storing information, which may change over time
 
+  - [Naming Conventions](https://unional.gitbooks.io/typescript/content/pages/default/draft/naming-conventions.html)
+    - Single letter names
+      - Avoid single letter names. Be descriptive with your naming.
+    - Name casing
+      - Use camelCase when naming objects, functions, and instances. eslint: camelCase jscs: requireCamelCaseOrUpperCaseIdentifiers
+      - Use PascalCase when naming constructors or classes. eslint: new-cap jscs: requireCapitalizedConstructors
+      - Use camelCase when you export-default a function. Your filename should be identical to your function's name.
+      - Use PascalCase when you export a singleton / function library / bare object.
+    - Name prefixes
+      - Use a leading underscore _ when naming private properties. eslint: no-underscore-dangle jscs: disallowDanglingUnderscores
+    - this reference
+      - Don't save references to this. Use arrow functions or Function#bind. jscs: disallowNodeTypes
+    - File naming
+      - If your file exports a single class, your filename should be exactly the name of the class.
+
+- **Replace class components with function component references**
+  - [How to convert a React Class Component to a Function Component 1](https://nimblewebdeveloper.com/blog/convert-react-class-to-function-component)
+  - [How to convert a React Class Component to a Function Component 2](https://medium.com/tarmac/how-to-convert-a-react-class-component-to-a-function-component-3eb30d8f9e55)
+  - [How to create functional components in React with Typescript](https://articles.jalantechnologies.com/how-to-create-functional-components-in-react-with-typescript/)
+  - [Converting class components to functional components (basic structure, state, & life-cycle methods)](https://dev.to/sametweb/converting-class-components-to-function-components-basic-structure-state-life-cycle-methods-50cd)
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
+## Exercise of the Day: TypeScript **_Revisited_Day 3**
+
+[x] **Challenge:** Read ==> TypeScript Quickly (aim to improve TypeScript Implementations)
+
+## So do I know now?
+
+- **CONCEPTS**
+  - [Unions of custom types](https://camchenry.com/blog/typescript-union-type)
+    - include type members that have a common property -- the discriminant
+    - depending on the value of the discriminant, I may want to perform different actions.
+  - [Discrimination unions](https://knowledgehub.hashnode.dev/typescript-discriminated-unions-a-guide-to-understanding)
+    - [Understanding Discriminated Unions in Typescript](https://medium.com/@ahsan.ayaz/understanding-discriminated-unions-in-typescript-1ccc0e053cf5)
+    - [Discriminated Unions and Destructuring in TypeScript](https://kyleshevlin.com/discriminated-unions-and-destructuring-in-typescript)
+    - [Demystifying TypeScript Discriminated Unions](https://css-tricks.com/typescript-discriminated-unions/)
+    - [Discriminated Unions / Tagged Unions in TypeScript](https://www.tektutorialshub.com/typescript/discriminated-unions-tagged-unions-in-typescript/)
+    - [The case for Discriminated Union Types with Typescript](https://thoughtbot.com/blog/the-case-for-discriminated-union-types-with-typescript)
+    - [The power of discriminated unions and exhaustiveness checking in Typescript](https://www.fullstory.com/blog/discriminated-unions-and-exhaustiveness-checking-in-typescript/)
+    - [Why is a discriminant needed for type guards of union types?](https://stackoverflow.com/questions/59363168/why-is-a-discriminant-needed-for-type-guards-of-union-types)
+    - [discriminated unions](https://www.developerway.com/posts/advanced-typescript-for-react-developers-discriminated-unions)
+    - [Understanding the discriminated union pattern](https://learntypescript.dev/07/l8-discriminated-union)
+    - [Literal types and discriminated unions](https://betterprogramming.pub/typescript-advanced-types-literal-types-and-discriminated-unions-13139196876c)
+    - [Using TypeScript's singleton types in practice](https://medium.com/@tar.viturawong/using-typescripts-singleton-types-in-practice-f8b20b1ec3a6)
+
+- **using union to represent actions in the action.tsx file**
+
+```TypeScript
+// previously we use basic type as an example for union type.
+// today let's try something new:
+// I will declare a union with a custom types.
+
+// let imagine an app that can perform various actions in response to the user's activity.
+// each action is represented by a class with a different name.
+// each action must have a type and optionally may carry a payload, such as a search query.
+
+// let see what I can do???
+// @filename: action.tsx
+
+export class SearchAction {           //<--------- A class with an action type and payload
+  actionType = 'SEARCH';
+
+  constructor (readonly payload: {
+    searchQuery: string
+  }) {}
+}
+
+export class SearchSuccessAction {    // <-------- B class with an action type and payload
+  actionType = 'SEARCH_SUCCESS';
+
+  constructor (public payload: {
+    searchResults: string[]
+  }) {}
+}
+
+export class SearchFailedAction {     // <-------- A class with an action type but without a payload
+  actionType = 'SEARCH_FAILED';
+}
+
+export type SearchActions = SearchAction | SearchSuccessAction | SearchFailedAction; // <-- A union type declaration
+// This union we are using is am example of a discriminated union because each member has an 'actionType' discriminant.
+
+// The example above still needs improvement, because just stating that each action must have a property describing its type is more of a JS style of programming. Boss TS can enforced such statement programmatically.
+```
+
+- **Using union with a discriminated to tell shapes apart**
+
+```TypeScript
+// let create one more example of discriminated union of two types, Rectangle and Circle
+interface Rectangle {
+  kind: 'rectangle';      // <----- The discriminant
+  width: 'number';
+  height: 'number';
+}
+
+interface Circle {
+  kind: 'circle';      // <----- The discriminant
+  radius: 'number';
+}
+
+type Shape = Rectangle | Circle;  // The union
+// The Shape type is a discriminated union, and both Rectangle & Circle have a common property ==> 'kind'
+```
+
+- **Using discriminated union**
+
+```TypeScript
+// after typing our 'Shape' with discriminated union, so depending on the value in the 'kind' property, I can now calculate the area of the Shape differently
+// let's try it out by writing a custom method call area() with a switch case statement:
+function area(shape: Shape): number {   // <----- function with a switch case statement
+  switch (shape.kind) {                 // <----- switches on the discriminator's value
+    case 'rectangle': return shape.height * shape.width;  // <----- Applies the formula for rectangles
+    case 'circle': return Math.PI * shape.radius ** 2;    // <----- Applies the formula for circles
+  }
+}
+
+const myRectangle: Rectangle = {
+  kind: 'rectangle',
+  width: 30,
+  height: 20
+};
+console.log(`Rectangle's area is ${area(myRectangle)}`);
+
+const myCircle: Circle = {
+  kind: 'circle',
+  radius: 15
+};
+console.log(`Circle's area is ${area(myCircle)})
+```
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
+- **JARGON in laymen terms:**
+  - [Functional programming](https://en.wikipedia.org/wiki/Functional_programming)
+  - [union type](https://en.wikipedia.org/wiki/Union_type)
+    - [Union types with TypeScript and React](https://stackoverflow.com/questions/57210843/union-types-with-typescript-and-react)
+    - [Everything You Need To Know About TypeScript Union Types](https://camchenry.com/blog/typescript-union-type)
+    - Union types are a powerful feature of TypeScript to ergonomically model a finite number of mutually exclusive cases and ensure that every case is handled safely.
+  - [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+    - The export statement is used when creating JavaScript modules to export live bindings to functions, objects, or primitive values from the module so they can be used by other programs with the import statement
+  - [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class)
+    - The class declaration creates a new class with a given name using prototype-based inheritance
+  - [constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
+    - The constructor method is a special method of a class for creating and initializing an object instance of that class.
+  - [readonly](https://gist.github.com/dfkaye/9789c41a7d438355d564a186dc87c1f0)
+    - TS provides the readonly keyword to make specific object fields readonly (constant, static, final, immutable).
+  - [public](https://www.javatpoint.com/public-keyword-in-java)
+    - public keyword is an access modifier. It can be assigned to variables, methods, constructors, and classes. It is the most non-restricted type of access modifier.
+  - [payload](https://softwareengineering.stackexchange.com/questions/158603/what-does-the-term-payload-mean-in-programming)
+    - [What is meant by 'payload' and 'callback' in computer programming terms?](https://www.quora.com/What-is-meant-by-%E2%80%98payload%E2%80%99-and-%E2%80%98callback%E2%80%99-in-computer-programming-terms?share=1)
+    - In programming, the most common usage of the term is in the context of message protocols, to differentiate the protocol overhead from the actual data.
+    - for example, a JSON web service response that might look like this (formatted for readability):
+
+```typescript
+{
+    "status":"OK",
+    "data":
+        {
+            "message":"Hello, world!"
+        }
+}
+// for example, the string Hello, world! is the payload, the part that the recipient is interested in; the rest, while vital information, is protocol overhead
+```
+
+- [The discriminant](https://dev.to/codewithahsan/understanding-discriminated-unions-in-typescript-5cd)
+  - is a singleton type property which is common in each of the elements of the union
+- [function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+  - similar to a procedure 
+  - a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output.
+- [switch case statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+  - [Introduction to the JavaScript switch case statement](https://www.tutorialspoint.com/javascript/javascript_switch_case.htm)
+  - The switch statement evaluates an expression, compares its result with case values, and executes the statement associated with the matching case value.
+
+```JavaScript
+switch (expression) {
+case condition 1: statement(s)
+break;
+
+case condition 2: statement(s)
+break;
+...
+
+case condition n: statement(s)
+break;
+
+default: statement(s)
+}
+// How it works.
+
+// First, evaluate the expression inside the parentheses after the switch keyword.
+// Second, compare the result of the expression with the value1, value2, … in the case branches from top to bottom. The switch statement uses the strict comparison (===).
+// Third, execute the statement in the case branch where the result of the expression equals the value that follows the case keyword. The break statement exits the switch statement. If you skip the break statement, the code execution falls through the original case branch into the next one. If the result of the expression does not strictly equal to any value, the switch statement will execute the statement in the default branch.
+// That the switch statement will stop comparing the expression's result with the remaining case values as long as it finds a match.
+```
+
+- [Math.PI](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI)
+  - The Math.PI property represents the ratio of the circumference of a circle to its diameter, approximately 3.14159
+
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
