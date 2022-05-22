@@ -386,7 +386,7 @@ class Person { // <==express a variable Person class (but think as "type" ah)
   String name;
 }
 
-type Customer { // <== express one more Customer class (but think as "type" ah)
+class Customer { // <== express one more Customer class (but think as "type" ah)
   String name;
 }
 
