@@ -295,7 +295,7 @@ So I start to break the project up into tiny bite size, spending whole day to lo
 Below are some breakdown of my works:
 
 - **TOPIC**
- Dissecting .json file
+  - Dissecting Project Structure Part I
 
 ## ACTIVATE_HTX SHARE APP
 
@@ -305,8 +305,12 @@ What is _workspace.json_?
     - The workspace.json serves as the main configuration file for the workspace and its components.
     - is composed of a list of Aspects, and their corresponding configurations.
 
+## MAIN FOLDER
+<!-- START of BLOG_APP main FOLDER -->
+- **File Location: /home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/Blog_App/**
+
 ```json
-// @filename: workspace.json
+// @filename: ./workspace.json
 {
   "version": 2,
   "projects": {
@@ -359,6 +363,8 @@ What is _workspace.json_?
     - It doesn't only lock the version of the packages in the _package.json_
     - It locks all versions of the dependencies and sub dependencies (and sub, sub, sub) that my package would need
     - While _package-json_ shows me **express**, _package-lock.json_ would show me a **dependency of express**
+
+- **File Location: /home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/Blog_App/**
 
 ```json
 // @filename: package.json
@@ -671,6 +677,8 @@ npm ls -gp --depth=0
   - [NX CLI Configuration nx.json](https://nx.dev/configuration/projectjson#cli-configuration)
     - configures the Nx CLI and project defaults
 
+- **File Location: /home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/Blog_App/**
+
 ```json
 // @filename: nx.json
 {
@@ -730,6 +738,7 @@ npm ls -gp --depth=0
       - **cacheableOperations** are the options supported by "nx/tasks-runners/default" 
       - **cacheableOperations** defines the list of targets/operations that are cached by Nx.
   - [defaultProject]
+    - name of project
   - [generators]
     - Default generator options are configured in nx.json
   - [pluginsConfig]
@@ -778,8 +787,6 @@ These questions will help me review and unlock areas of improvement (which will 
 - Curiosity:
   - important to remain curious about coding and various languages and technologies.
 - Time-boxing to strict 90 minutes per task with a 20min rest break.
-
-- Day 50 ==> Continue to work on React Native + TypeScript exercise project to practice concepts, its feature, workflows and how to enhance it with material UI CSS fundamentals.
 
 - required more efforts on refactoring and TypeScript understanding ie interface and extends for type protection.
 
