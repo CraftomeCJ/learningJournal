@@ -294,7 +294,7 @@ Today till Sunday will be learning advance state management with useContext to m
   - use class for creating a custom type if it is used to represent a value
 - When should I use types lei?
   - When I want:
-    - to express some form of infomation that I can name distinctively
+    - to express some form of information that I can name distinctively
     - to prevent mistakes while I am coding with the help of IDE
     - to pass it around as concise function parameters
     - to describe a class constructor parameters
