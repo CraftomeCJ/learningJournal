@@ -306,7 +306,7 @@ Below are some breakdown of my works:
 
 - **File Location: /home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/Blog_App/**
 
-```json
+```typescript
 // @filename: jest.config.ts
 const { getJestProjects } = require('@nrwl/jest');
 
@@ -315,14 +315,14 @@ module.exports = {
 };
 ```
 
-```json
+```javascript
 // @filename: jest.preset.js
 const nxPreset = require('@nrwl/jest/preset').default;
 
 module.exports = { ...nxPreset };
 ```
 
-```json
+```typescript
 // @filename: jest.preset.ts
 const nxPreset = require('@nrwl/jest/preset');
 
@@ -1030,28 +1030,31 @@ const isPerson = (object: any): object is Person => !!object && object.discrimin
 // today follow exercise using class type to complete the assignment, tomorrow I will try to change it to interface custom type
 
 class Dog {               // declares a custom Dog type
-  constructor (
-    readonly name: string
-  ) {};
+   constructor(
+     readonly name: string
+     ) { };
 
-  sayHello(): string {
-    return 'Dog says hello!';
-  }
+   sayHello(): string {
+     return 'Dog says hello!';
+   }  
 }
 
-class Fish {              // declare a custom Fish type
-  constructor (
-    readonly name: string
-  ) {};
 
-  dive(howDeep: number): string {
-    return `Diving $(howDeep) feet`;
-  }
+class Fish {              // declare a custom Fish type
+    constructor(
+      readonly name: string
+      ) { };
+   
+    dive(howDeep: number): string {
+     return `Diving ${howDeep} feet`;
+   } 
+  
 }
 
 type Pet = Dog | Fish;    // creates a union of Dog & Fish
 
-talkToPet(pet: Pet): string | undefined => {
+function talkToPet(pet: Pet): string | undefined {
+
 if (pet instanceof Dog)  // <--- use a type guard
 {
   return pet.sayHello();
@@ -1068,7 +1071,7 @@ const myFish = new Fish ('Marry') // <--- creates an instance of a Fish
 console.log(talkToPet(myDog));  // <--- invokes talkToPet(),
 console.log(talkToPet(myFish)); // <--- passing a Pet
 
-talkToPet({name: 'Jerry'});     // <-- this won't compile -- wrong parameter type
+//talkToPet({name: 'Jerry'});     // <-- this won't compile -- wrong parameter type
 ```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
