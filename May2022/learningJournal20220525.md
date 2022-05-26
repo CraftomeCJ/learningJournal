@@ -780,6 +780,37 @@ function isIndexPage() {
   - A pure function avoids changing its arguments or any other external variables;
   - A pure function always returns the same value given the same arguments, solely when it is invoked.
 
+- more on pure functions:
+  - A function is called pure when its return value is determined only by its own arguments
+  - When given the same argument, the result will always be the same.
+
+```javascript
+function twice(num) {
+  return num * 2;
+}
+// If we pass 4 to this function, it will always return 8.
+```
+
+- _Key points:_
+  - Pure functions provide referential transparency
+  - This means that when a pure function is invoked it can be replaced by its own result
+  - We can replace twice(4) by 8 without affecting our outcome
+  - Pure functions cannot reference variables from their outer scope
+  - If any function is doing so then its not a pure function.
+
+```javascript
+// NOT a pure function
+
+let num = 8; // can be mutated from anywhere else
+
+function impureTwice() {
+  return num * 2;
+}
+```
+
+- Pure functions cannot call impure functions.
+- Pure functions do not produce side effects
+
 ```TypeScript
 // this example earlier is not pure function because it accesses the pathname variable,
 //which has not been passed as an argument to the function:
@@ -836,8 +867,13 @@ function shouldReturnFalseWhenPathIsNotIndex() {
   - which means when I run a pure function, I can expect that the function is not going to interfere with my other components in the application
 
 - **CONCEPTS: side-effects**
+  -An operation, function or expression is said to have a side effect if it modifies some state variable value outside its local environment
+  - When a function or expression modifies state outside its own context, the result is a side effect
+  - For example, manipulating the DOM, making an API call, modifying database, creating alerts and dialogs, etc.
+  - Any function that has side effects is impure
+    - An impure function mutates state outside its scope. 
 
-- This is where TypeScript come into play, although TS interact fantastically with JavaScript, it still have it downsides, the Type System cannot guarantee that our App is free from side-effects.
+- This is where TypeScript need to be mentioned, although TS interact fantastically with JavaScript, it still have it downsides, the Type System cannot guarantee that our App is free from side-effects.
 
 ```TypeScript
 // let make an example how I can use some FP techniques to improve the type safety of my TS App:
@@ -845,10 +881,10 @@ function shouldReturnFalseWhenPathIsNotIndex() {
 
 interface                                   // TYPE keyword to describe a type
 User                                        // unique what-I-name-it defines a TYPE
-{                                           // inside the curly braces
-  ageInMonths: number;                      // to define the shape of objects
-  name: string;                             // expressed in an object literal
-}                                           // with respective type annotation
+{                                           // the curly braces {} is object literal syntax
+  ageInMonths: number;                      // to define the shape of objects 
+  name: string;                             // with unique what-I-name-it object name
+}                                           // with respective type annotation and close with a semi-colon
 
 function                                    // function statement
 findUserAgeByName(                          // unique name of what-I-name-it new function => method()
@@ -952,6 +988,16 @@ safeFindUserAgeByName([], 'Jerry')  //error
 ==============================================================================
 
 - **Programming JARGON in laymen terms:**
+  - [pure function](https://www.tutorialspoint.com/what-is-a-pure-function-in-javascript)
+    - An expression that is not referentially transparent is known as referentially opaque.
+    - A pure function is a deterministic function
+    - This means when a same input is passed every time, the function will return same output
+    - In mathematical terms it is nothing but a well defined function.
+    - A pure function will have the following properties:
+      - It depends only on its own arguments.
+      - It wont try to change variables out of its scope.
+      - It doesn't produce any side effects.
+  - A **pure function** is a referentially transparent expression.
   - [interface](https://devblogs.microsoft.com/typescript/walkthrough-interfaces/)
     - The only job of an interface in TypeScript is to describe a type
     - While class and function deal with implementation, interface helps us keep our programs error-free by providing information about the shape of the data we work with
