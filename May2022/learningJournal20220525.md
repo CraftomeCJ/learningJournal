@@ -753,7 +753,7 @@ Functional Programming with TypeScript **_Revisited_ Day 1**
 "OOP makes code understandable by encapsulate moving parts. FP makes code understandable by minimizing moving parts." - Michael Feathers
 
 - Moving Parts
-  - mean [state](https://softwareengineering.stackexchange.com/questions/235558/what-is-state-mutable-state-and-immutable-state) change aka state mutation
+  - mean [state](https://softwareengineering.stackexchange.com/questions/235558/what-is-state-mutable-state-and-immutable-state) changes aka state mutation
 
 - In FP, we try to avoid dealing with state mutations instead of encapsulate them.
 - A mutable state is bad, because it makes the behavior of our code harder to predict.
@@ -835,7 +835,7 @@ function shouldReturnFalseWhenPathIsNotIndex() {
 - it is common to say FP is a function that has no "side-effects"
   - which means when I run a pure function, I can expect that the function is not going to interfere with my other components in the application
 
-- **CONCEPTS: side-effects & referential transparency**
+- **CONCEPTS: side-effects**
 
 - This is where TypeScript come into play, although TS interact fantastically with JavaScript, it still have it downsides, the Type System cannot guarantee that our App is free from side-effects.
 
@@ -843,30 +843,44 @@ function shouldReturnFalseWhenPathIsNotIndex() {
 // let make an example how I can use some FP techniques to improve the type safety of my TS App:
 // let's write a function that find user age by name
 
-interface User {
-  ageInMonths: number;
-  name: string;
-}
+interface                                   // TYPE keyword to describe a type
+User                                        // unique what-I-name-it defines a TYPE
+{                                           // inside the curly braces
+  ageInMonths: number;                      // to define the shape of objects
+  name: string;                             // expressed in an object literal
+}                                           // with respective type annotation
 
 function                                    // function statement
-findUserAgeByName(                          // name of new user defined method()
-  users: User[],                            // argument 1 with type Array[]
-  name: string                              // argument 2 with type String
+findUserAgeByName(                          // unique name of what-I-name-it new function => method()
+  users: User[],                            // what-I-name-it argument 1 with type Array[]
+  name: string                              // what-I-name-it argument 2 with type String
 ): number                                   // return_type Number, it can be any valid data type
+
 {                                           // do something between the { }
   if                                        // if conditional expression
   (users.length === 0) {                    // condition: (string length of variable users strictly equal to zero)
     throw new Error('There are no users!'); //<--- generates an error object with the message of There are no users!
   }
 
-const user = users.find(u => u.name === name);
+const                                       // variable keyword
+user =                                      // unique what-I-name-it new variable name
+users                                       // using what-I-name-it argument in my function
+.find                                       // to get value of the first element in the array[] inside function of what-I-name-it argument provided condition [a testing function] is satisfied
+(u => u.name === name);                     // a testing function inside the parenthesis for .find() method to use
 
-if (!user) {
-  throw new Error('User not found');
-} else {
-  return user.ageInMonths;                  // statement
-}
-}
+if                                          // truthy 'if' keyword for if-else conditional is 'true' statement
+(!user)                                     // if else (condition) "!" <-- bang mean "not"
+{                                           // do something between the { }
+  throw                                     // throw statement to throw a defined-by-me exception
+   new                                      // creates a new object
+    Error                                   // Error() constructor to create an error object
+    ('User not found');                     // a what-I-name-it 'reason' why this Promise rejected/resolve/then/catch
+}                                           // this step is generating and handling errors
+else                                        // falsy 'else' keyword for if-else conditional if statement is 'false'
+{
+  return                                    // return statement for
+  user.ageInMonths;                         // unique what-I-name-it variable name calling unique what-I-name-it TYPE object
+}}                                          // closing of return statement & finish do something liao in-between the { }
 
 // In this function hor if returns a 'number' Boss TS is happy no compiles issues.
 // The issue is... what if it don't always return a 'number' then how???
@@ -933,17 +947,6 @@ safeFindUserAgeByName([], 'Jerry')  //error
 // The 'Promise' type help me to prevent errors because it expresses potential errors in an explicit way
 ```
 
-- **CONCEPTS: referential transparency**
-
-```typescript
-let result = isIndexPage("/");
-
-let result = true;
-```
-
-- A pure function is a referentially transparent expression.
-- An expression that is not referentially transparent is known as referentially opaque.
-
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
@@ -991,6 +994,12 @@ let result = true;
     - It executes the constructor function, using the newly created object whenever this is mentioned
     - It returns the newly created object, unless the constructor function returns a non-null object reference
     - In this case, that object reference is returned instead.
+  - [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
+    - Error objects are thrown when runtime errors occur
+    - The Error object can also be used as a base object for user-defined exceptions
+    - Runtime errors result in new Error objects being created and thrown
+  - [Error() constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)
+    - The Error constructor creates an error object
   - [new Error() Method](https://www.geeksforgeeks.org/node-js-new-error-method/)
     - For generating and handling errors
     - The new Error() method is an inbuilt application programming interface in which a new Error object is created and error.message property is set to the provided text message
@@ -1041,21 +1050,54 @@ const users = [
     - In Computer Science, this term is typically used in operating systems and other system software development
     - When used in this context, the term handler could be making reference to a software routine/procedure or event that performs a particular task
     - In some cases, the term handler could also be making reference to a routine that "handles" an exception of some kind, such as an error, but it can refer to mainstream processes as well
-  - [Promises](https://blog.fildon.me/asynchronous-programming-in-typescript)
+  - ["Promises" object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+    - A [promise]((https://blog.fildon.me/asynchronous-programming-in-typescript)) can be one of the three states below.
+      - The first state is called the **Pending** state. When a Promise is created, it will be pending
+      - The second is called the **Resolved** state, in which the Promise is successfully executed
+      - If any error occurs in the Promise, it will move to the third state called **Rejected**
+    - [Promise](https://www.geeksforgeeks.org/javascript-promises/) is used to make asynchronous calls
+    - Keep in mind that I can only call from tasks that aren't interdependent. Otherwise, there will be a data inconsistency problem.
+    - When using it, I must pass the inner function; otherwise, I'll get an error.
     - [JavaScript Promise Object](https://www.w3schools.com/Js/js_promise.asp)
+      - Benefits of Promises 
+        - Improves Code Readability
+        - Better handling of asynchronous operations
+        - Better flow of control definition in asynchronous logic
+        - Better Error Handling
     - [TypeScript promise](https://www.educba.com/typescript-promise/)
+      - The promise in TypeScript is used to make asynchronous programming to execute several tasks simultaneously
+      - The promise can be used when we want to handle multiple tasks at the same time
+      - By the use of TypeScript promise, we can skip the current operation and move to the next line of the code
+      - Promise provides the feature for asynchronous programming or parallel programming, which allows the number of tasks to be executed simultaneously at the same time.
     - [promise type](https://www.educba.com/typescript-promise-type/)
+      - A promise is a JavaScript object which is responsible for handling callbacks and other asynchronous events or data with 2 different possible states
+        - it either resolves or rejects.
   - [Promise.reject()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject)
-    - The Promise.reject(reason) method returns a Promise object that is rejected with a given reason.
-  - [Promise.resolve()]
+    - it is useful to make _reason_ an _instanceof_ **Error**.
+    - The Promise.reject(reason) method returns a Promise object that is rejected with a given reason
+    - It is used for debugging purposes and selective error catching
+      - The catch() method can be used for logging the output of the reject() method to the console that is catch() method acts as a career which carries the rejected message from Promise.reject() method and displays that in user's console
+      - **Parameter**: This method accepts a single parameter as mentioned above and described below:
+        - **reason**: It is the reason for which the promise is rejected.
+      - **Return value**: It returns the rejected promise with the given reason, either specified by user or via the backend.
+  - [Promise.resolve()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve)
+    - The static Promise.resolve function returns a Promise that is resolved
+    - If the value is a promise, that promise is returned;
+    - if the value is a thenable (i.e. has a "then" method), the returned promise will "follow" that thenable, adopting its eventual state;
+    - otherwise the returned promise will be fulfilled with the value.
+    - This function flattens nested layers of promise-like objects (e.g. a promise that resolves to a promise that resolves to something) into a single layer.
   - [reason]
     - Reason why this Promise rejected.
-  - [.reject()]
-  - [.resolve()]
-  - [.then()]
-  - [pure function]
-  - [referentially transparent expression]
-  - [referentially opaque]
+  - [Promise.prototype.then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)
+    - The .then() method returns a Promise
+    - It takes up to two arguments: callback functions for the success and failure cases of the Promise
+    - As the .then() and Promise.prototype.catch() methods return promises, they can be chained — an operation called **composition**
+  - [Promise.prototype.catch()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
+    - The .catch() method is used for error handling in promise composition
+    - Since it returns a Promise, it can be chained in the same way as its sister method, .then()
+    - The catch() method returns a Promise and deals with rejected cases only
+    - It behaves the same as calling Promise.prototype.then(undefined, onRejected) (in fact, calling obj.catch(onRejected) internally calls obj.then(undefined, onRejected))
+    - This means that you have to provide an onRejected function even if you want to fall back to an undefined result value - for example obj.catch(() => {}).
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
