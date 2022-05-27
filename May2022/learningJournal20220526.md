@@ -777,7 +777,7 @@ colorLiteral = "red"    // Error...
 
 ```javascript
 // this purpose of this function is to: 
-//Sum up the results in the array and divide the total number of the array = average of number of results with .map() method to create a new array, then use .reduce() method to reduce two values into a single valuse and using .length property to return the array length..
+//Sum up the results in the array and divide the total number of the array = average of number of results with .map() method to create a new array, then use .reduce() method to reduce two values into a single value and using .length property to return the array length..
 const avg = ( arr: Result[] ) => division(arr.map(a => a.result).reduce(add, 0),arr.length)
 ```
 
