@@ -309,8 +309,8 @@ end
 
 ## Personal Notes
 
-**Day 49 (Sunday) and today's main focus:** <br />
-Today till Sunday will be learning advance state management with useContext to manage global state management, work on a Udemy's Blog App. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
+**Day 54 (Friday) and today's main focus:** <br />
+Today till Sunday will be learning and researching upcoming project tech stack. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
@@ -357,23 +357,216 @@ Today till Sunday will be learning advance state management with useContext to m
 - **What am I Learning/Working on now?**
 
 - **TOPIC**
-  - instructions
+- I want to learn Docker & how to:
+  - Build and run an image as a container
+  - Share images using Docker Hub
+  - Deploy Docker applications using multiple containers with a database
+  - Running applications using Docker Compose
+
+- learn about the best practices for building images, including instructions on how to scan your images for security vulnerabilities
 
 - **CONCEPTS**
+- What is Docker?
+- Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+- is a software platform that simplifies the process of building, running, managing and distributing applications. It does this by virtualizing the operating system of the computer on which it is installed and running.
 
-The result should be similar to [this](result screenshot link):
+- Let's work with a simple todo list manager that is running in Node.js. Let's building an app to prove out my MVP (minimum viable product)
+![Todo List Manager](https://docs.docker.com/get-started/images/todo-list-sample.png)
 
-```TypeScript
-// practice code
+- **Build the app's container image**
+  - to build app we need to use a **Dockerfile**
+  - **Dockerfile** is simply a text-based script of instructions that is used to create a container image
+
+- Please check that the file Dockerfile has no file extension like .txt
+- Some editors may append this file extension automatically and this would result in an error in the next step
+
+```bash
+# open a terminal and go to the app directory with the Dockerfile. Now build the container image using the docker build command
+# @filename: ./getting-started/app/Dockerfile
+
+docker build -t getting-started .
+
+# This command used the Dockerfile to build a new container image
 ```
 
-- **Element References**
+```bash
+[+] Building 70.5s (11/11) FINISHED                                                                    
+ => [internal] load build definition from Dockerfile                                              0.1s
+ => => transferring dockerfile: 197B                                                              0.0s
+ => [internal] load .dockerignore                                                                 0.2s
+ => => transferring context: 2B                                                                   0.2s
+ => [internal] load metadata for docker.io/library/node:12-alpine                                 5.5s
+ => [auth] library/node:pull token for registry-1.docker.io                                       0.0s
+ => [1/5] FROM docker.io/library/node:12-alpine@sha256:d4b15b3d48f42059a15bd659be60afe21762aae9d  7.9s
+ => => resolve docker.io/library/node:12-alpine@sha256:d4b15b3d48f42059a15bd659be60afe21762aae9d  0.0s
+ => => sha256:3bf6d738020517f4622814e8c21db4b4aaa78ae7cab4e4f872c11696886c6285 24.91MB / 24.91MB  2.8s
+ => => sha256:7939e601ee5e4737cf7fdb6d1dfe31ca4c2697109290462f694710761450aef0 2.36MB / 2.36MB    1.3s
+ => => sha256:31f0fb9de071269230cb0f786012ae4e81d26e489b1fe922e57b5201e6bc9ab0 451B / 451B        1.1s
+ => => sha256:d4b15b3d48f42059a15bd659be60afe21762aae9d6cbea6f124440895c27db68 1.43kB / 1.43kB    0.0s
+ => => sha256:4517380049fc3c9aacceae7764fcf3500354b0ac8a47e4afb35b5bbeb75b9498 1.16kB / 1.16kB    0.0s
+ => => sha256:bb6d28039b8cec9aa8d9032f9aa640a792a60c2cb1644691627bf046aab27c8b 6.58kB / 6.58kB    0.0s
+ => => extracting sha256:3bf6d738020517f4622814e8c21db4b4aaa78ae7cab4e4f872c11696886c6285         3.7s
+ => => extracting sha256:7939e601ee5e4737cf7fdb6d1dfe31ca4c2697109290462f694710761450aef0         0.3s
+ => => extracting sha256:31f0fb9de071269230cb0f786012ae4e81d26e489b1fe922e57b5201e6bc9ab0         0.0s
+ => [internal] load build context                                                                 0.3s
+ => => transferring context: 4.62MB                                                               0.3s
+ => [2/5] RUN apk add --no-cache python2 g++ make                                                16.0s
+ => [3/5] WORKDIR /app                                                                            0.1s
+ => [4/5] COPY . .                                                                                0.1s
+ => [5/5] RUN yarn install --production                                                          38.2s
+ => exporting to image                                                                            2.4s
+ => => exporting layers                                                                           2.4s
+ => => writing image sha256:52d0f3f0f500cdd5b4cb148ad11a1f14f2c2a5cf0b7feaafe3c264e16dee81b0      0.0s
+ => => naming to docker.io/library/getting-started                                                0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+
+# Noticed that a lot of "layers" were downloaded.
+# This is because we instructed the builder that we wanted to start from the node:12-alpine image.
+# But, since we didn't have that on our machine, that image needed to be downloaded.
+
+# After the image was downloaded, we copied in our application and used yarn to install our application's dependencies.
+# The CMD directive specifies the default command to run when starting a container from this image.
+
+# Finally, the -t flag tags our image.
+# Think of this simply as a human-readable name for the final image.
+# Since we named the image 'getting-started', we can refer to that image when we run a container.
+
+# The . at the end of the docker build command tells that Docker should look for the Dockerfile in the current directory.
+```
+
+- **Start an app container**
+  - use _docker run_ command to run the application
+  - start my container using docker run and specify the name of the image I just created
+
+```bash
+docker run -dp 3000:3000 getting-started
+
+# Without the port mapping, we wouldn't be able to access the application
+```
+
+- After a few seconds, open your web browser to http://localhost:3000. You should see our app
+
+- Go ahead and add an item or two and see that it works as you expect. You can mark items as complete and remove items. Your frontend is successfully storing items in the backend. Pretty quick and easy, huh?
+
+- **Update the application**
+  - Let's say to change the "empty text" when we don't have any todo list items. 
+  - I would like to change it to the following:
+- You have no todo items yet! Add one above!
+
+- **Update the source code**
+
+```javascript
+// @filename: src/static/js/app.js
+ -                <p className="text-center">No items yet! Add one above!</p>
+ +                <p className="text-center">You have no todo items yet! Add one above!</p>
+ ```
+
+ ```bash
+# Let's build our updated version of the image, using the same command we used before.
+
+ docker build -t getting-started .
+ ```
+
+ ```bash
+#to start a new container using the updated code.
+
+ docker run -dp 3000:3000 getting-started
+
+# Uh oh! some error!!!
+eddce7b0051db17ff11b4faf5cecc539cb163aace9e87896627415a4d5fe3491
+docker: Error response from daemon: driver failed programming external connectivity on endpoint intelligent_golick (19c0a4fb21e206f2041d5cf42636abed859da13f9b40f6d217a9f03951f44b18): Bind for 0.0.0.0:3000 failed: port is already allocated.
+
+# what happened? 
+# We aren't able to start the new container because our old container is still running. It is because the container is using the host's port 3000 and only one process on the machine (containers included) can listen to a specific port.
+
+# To fix this, we need to remove the old container.
+```
+
+- **Replace the old container**
+  - To remove a container, it first needs to be stopped
+  - Once it has stopped, it can be removed. We have two ways that we can remove the old container
+
+```bash
+# Way 1: Remove a container using the CLI
+# Get the ID of the container by using the docker ps command.
+
+ docker ps
+
+# Use the docker stop command to stop the container.
+
+#  Swap out <the-container-id> with the ID from docker ps
+ docker stop <the-container-id>
+
+# Once the container has stopped, you can remove it by using the docker rm command.
+
+ docker rm <the-container-id>
+
+# also can stop and remove a container in a single command by adding the "force" flag to the docker rm command. 
+# For example: docker rm -f <the-container-id>
+ ```
+
+- way 2:
+  - Remove a container using the Docker Dashboard
+  - open the Docker dashboard, to remove a container with two clicks!
+    - With the dashboard, hover over the app container and I'll see a collection of action buttons appear on the right.
+    - Click on the trash can
+    - delete the container.
+    - Confirm removal and you're done!
+
+- **Start to updated app container**
+  - Let's start the update app
+
+```bash
+docker run -dp 3000:3000 getting started
+```
+
+- refresh my browser on http://localhost:3000 and I should see my updated help text
+
+- **Summary**
+- Recap
+- While we were able to build an update, there were two things you might have noticed:
+  - All of the existing items in our todo list are gone
+  - There were a lot of steps involved for such a small change.
+  - In an upcoming section, Let's talk about how to see code updates without needing to rebuild and start a new container every time we make a change
+
+- **docker -flags References**
+- [-d] to run container in detached mode (in the background)
+- [-p 80:80] to map port 80 of the host to port 80 in the container
+- [docker/getting-started] the image to use
+- [-t] to flag tags our image
+- [.] to tell docker should look for the Dockerfile in the current directory
+- [-f]  "force" flag
+
+- **docker Terminology in laymen terms:**
+  - Docker Image
+    - is a template that contains the application, and all the dependencies required to run that application on Docker
+  - Docker Containers
+    - is a logical entity
+    - It is a running instance of the Docker Image
+    - I can create, start, stop, move, or delete a container using the DockerAPI or CLI
+    - can be run on local machines, virtual machines or deployed to the cloud
+    - is portable (can be run on any OS)
+    - Containers are isolated from each other and run their own software, binaries, and configurations
+  - [chroot](https://www.journaldev.com/38044/chroot-command-in-linux)
+    - The chroot Linux utility can modify the working root directory for a process, limiting access to the rest of the file system.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
 
-### Software Installed
+  ### Software Installed
+
+  - **[DOCKER](https://docs.docker.com/get-started/**
+  - Download and install Docker
+  - [Install Docker Desktop on Mac](https://docs.docker.com/desktop/mac/install/)
+  - [Install Docker Desktop on Linux](https://docs.docker.com/desktop/linux/install/)
+
+  - run the command to get started with the tutorial
+
+  ```bash
+  docker run -dp 80:80 docker/getting-started
+  ```
 
 - **list of dependencies installed**
 
