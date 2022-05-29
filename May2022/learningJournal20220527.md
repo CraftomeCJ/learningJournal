@@ -367,21 +367,52 @@ Today till Sunday will be learning and researching upcoming project tech stack. 
 
 - **CONCEPTS**
 - What is Docker?
-- Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
-- is a software platform that simplifies the process of building, running, managing and distributing applications. It does this by virtualizing the operating system of the computer on which it is installed and running.
+- Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud
+- is a software platform that simplifies the process of building, running, managing and distributing applications
+- it does this by virtualizing the operating system of the computer on which it is installed and running
 
-- Let's work with a simple todo list manager that is running in Node.js. Let's building an app to prove out my MVP (minimum viable product)
+## Exercise of the Day
+
+- **Docker Sample Application**
+
+[x] **Challenge:** Read ==> docker docs (aim to build a simple todo list manager)
+
+- Let's work with a simple todo list manager that is running in Node.js
+- Let's building an app to prove out my MVP (minimum viable product)
 ![Todo List Manager](https://docs.docker.com/get-started/images/todo-list-sample.png)
+
+- **Get the app**
+  - Before I can run the application, I need to get the application source code onto our machine, let's clone the [repo](https://github.com/docker/getting-started/tree/master/app) and open the project.
+  -  I should see the package.json and two subdirectories (src and spec).
 
 - **Build the app's container image**
   - to build app we need to use a **Dockerfile**
   - **Dockerfile** is simply a text-based script of instructions that is used to create a container image
 
+- **step 1**
+- Create a file named **Dockerfile** in the same folder as the file package.json with the following contents:
+
+```dockerfile
+# @filename: ./app/Dockerfile
+# syntax=docker/dockerfile:1
+
+FROM node:12-alpine
+RUN apk add --no-cache python2 g++ make
+WORKDIR /app
+COPY . .
+RUN yarn install --production
+CMD ['node', 'src/index.js']
+EXPOSE 3000
+```
+
 - Please check that the file Dockerfile has no file extension like .txt
 - Some editors may append this file extension automatically and this would result in an error in the next step
 
+- **step 2**
+- open a terminal and go to the app directory with the _Dockerfile_
+- now build the container image using the docker build command
+
 ```bash
-# open a terminal and go to the app directory with the Dockerfile. Now build the container image using the docker build command
 # @filename: ./getting-started/app/Dockerfile
 
 docker build -t getting-started .
@@ -435,7 +466,9 @@ Use 'docker scan' to run Snyk tests against images to find vulnerabilities and l
 # The . at the end of the docker build command tells that Docker should look for the Dockerfile in the current directory.
 ```
 
+- **step 3**
 - **Start an app container**
+  - now I have an image, let's run the application
   - use _docker run_ command to run the application
   - start my container using docker run and specify the name of the image I just created
 
@@ -445,124 +478,662 @@ docker run -dp 3000:3000 getting-started
 # Without the port mapping, we wouldn't be able to access the application
 ```
 
-- After a few seconds, open your web browser to http://localhost:3000. You should see our app
+- After a few seconds, open your web browser to http://localhost:3000
+- I should see our app
+- try add an item or two and see that it works as I expect
+- I can mark items as complete and remove items
+- now my frontend is successfully storing items in the backend
 
-- Go ahead and add an item or two and see that it works as you expect. You can mark items as complete and remove items. Your frontend is successfully storing items in the backend. Pretty quick and easy, huh?
+- At this point, I should have a running todo list manager with a few items. Next, let's make a few changes and learn about managing our containers
+- [take a quick look at the Docker Dashboard, I should see two containers running now](https://i.imgur.com/soxM4ws.png)
 
 - **Update the application**
-  - Let's say to change the "empty text" when we don't have any todo list items. 
+  - Let's say to change the "empty text" when we don't have any todo list items.
   - I would like to change it to the following:
-- You have no todo items yet! Add one above!
+    - _You have no todo items yet! Add one above!_
 
+- **step 1**
 - **Update the source code**
+  - Let's make the change:
 
 ```javascript
-// @filename: src/static/js/app.js
- -                <p className="text-center">No items yet! Add one above!</p>
- +                <p className="text-center">You have no todo items yet! Add one above!</p>
+// @filename: ./app/src/static/js/app.js
+ - <p className="text-center">No items yet! Add one above!</p>
+ + <p className="text-center">You have no todo items yet! Add one above!</p>
  ```
 
- ```bash
-# Let's build our updated version of the image, using the same command we used before.
+- **step 2**
+- now let's build our updated version of the image, using the same command we used before.
 
+ ```bash
  docker build -t getting-started .
  ```
 
- ```bash
-#to start a new container using the updated code.
+- **step 3**
+- let's start a new container using the updated code
 
+ ```bash
  docker run -dp 3000:3000 getting-started
 
 # Uh oh! some error!!!
 eddce7b0051db17ff11b4faf5cecc539cb163aace9e87896627415a4d5fe3491
 docker: Error response from daemon: driver failed programming external connectivity on endpoint intelligent_golick (19c0a4fb21e206f2041d5cf42636abed859da13f9b40f6d217a9f03951f44b18): Bind for 0.0.0.0:3000 failed: port is already allocated.
 
-# what happened? 
-# We aren't able to start the new container because our old container is still running. It is because the container is using the host's port 3000 and only one process on the machine (containers included) can listen to a specific port.
+# so what happened? 
+# We aren't able to start the new container because our old container is still running. It is because the container is using the host's port 3000 and only one process on the machine (containers included) can listen to a specific port
 
 # To fix this, we need to remove the old container.
 ```
 
+- **step 4**
 - **Replace the old container**
-  - To remove a container, it first needs to be stopped
-  - Once it has stopped, it can be removed. We have two ways that we can remove the old container
+  - to remove a container, it first needs to be stopped
+  - once it has stopped, it can be removed
+  - I have two ways to remove the old container
+
+- Way 1: Remove a container using the CLI
 
 ```bash
-# Way 1: Remove a container using the CLI
 # Get the ID of the container by using the docker ps command.
-
  docker ps
 
-# Use the docker stop command to stop the container.
+# Use the docker stop command to stop the container with <the-container-id>
 
 #  Swap out <the-container-id> with the ID from docker ps
  docker stop <the-container-id>
 
 # Once the container has stopped, you can remove it by using the docker rm command.
-
  docker rm <the-container-id>
 
-# also can stop and remove a container in a single command by adding the "force" flag to the docker rm command. 
+# I can stop and remove a container in a single command by adding the "force" flag to the docker rm command. 
 # For example: docker rm -f <the-container-id>
  ```
 
-- way 2:
+- Way 2: The GUI way..
   - Remove a container using the Docker Dashboard
   - open the Docker dashboard, to remove a container with two clicks!
     - With the dashboard, hover over the app container and I'll see a collection of action buttons appear on the right.
     - Click on the trash can
     - delete the container.
-    - Confirm removal and you're done!
+    - Confirm removal and I'm done!
+![docker dashboard example](https://docs.docker.com/get-started/images/dashboard-removing-container.png)
 
+- **step 5**
 - **Start to updated app container**
-  - Let's start the update app
+  - Let's start the updated app
 
 ```bash
 docker run -dp 3000:3000 getting started
 ```
 
 - refresh my browser on http://localhost:3000 and I should see my updated help text
+- [updated todo list manager help text](https://i.imgur.com/2n3FQbi.png)
 
 - **Summary**
-- Recap
-- While we were able to build an update, there were two things you might have noticed:
-  - All of the existing items in our todo list are gone
-  - There were a lot of steps involved for such a small change.
-  - In an upcoming section, Let's talk about how to see code updates without needing to rebuild and start a new container every time we make a change
+- Let's recap:
+- WhileI am able to build an update, there were two things happened:
+  - All of the existing items in the todo list are gone
+  - There were a lot of steps involved for such a small change
+  - Let's see how to code an updates without needing to rebuild and start a new container every time I make a change
 
-- **docker -flags References**
-- [-d] to run container in detached mode (in the background)
-- [-p 80:80] to map port 80 of the host to port 80 in the container
-- [docker/getting-started] the image to use
-- [-t] to flag tags our image
-- [.] to tell docker should look for the Dockerfile in the current directory
-- [-f]  "force" flag
+- **Persist the DB**
+  - Notice that the todo list is being wiped clean every single time I relaunch the container
+  - Why is this?
+  - Let's fins out how the container is working..
 
-- **docker Terminology in laymen terms:**
-  - Docker Image
-    - is a template that contains the application, and all the dependencies required to run that application on Docker
-  - Docker Containers
-    - is a logical entity
-    - It is a running instance of the Docker Image
-    - I can create, start, stop, move, or delete a container using the DockerAPI or CLI
-    - can be run on local machines, virtual machines or deployed to the cloud
-    - is portable (can be run on any OS)
-    - Containers are isolated from each other and run their own software, binaries, and configurations
-  - [chroot](https://www.journaldev.com/38044/chroot-command-in-linux)
-    - The chroot Linux utility can modify the working root directory for a process, limiting access to the rest of the file system.
+  - **The container's filesystem**
+    - When a container runs, it uses the various layers from an image for its filesystem
+    - Each container also gets its own "scratch space" to create/update/remove files
+    - Any changes won't be seen in another container, even if they are using the same image
+
+- **Container volumes**
+  - each container starts from the image definition each time it starts
+  - while containers can create, update, and delete files, those changes are lost when the container is removed and all changes are isolated to that container
+  - with volumes, I can change all of this
+- **Volumes** provide the ability to connect specific filesystem paths of the container back to the host machine
+  - If a directory in the container is mounted, changes in that directory are also seen on the host machine
+  - If I mount that same directory across container restarts, I will see the same files
+
+- There are two main types of volumes:
+  - Let's take a look of named volumes
+
+- **Persist the todo data**
+  - By default, the todo app stores its data in a SQLite Database at /etc/todos/todo.db in the container's filesystem
+  - What is SQLite?
+    - It's a relational database in which all of the data is stored in a single file
+    - While this isn't the best for large-scale applications, it works for small demos
+  - With the database being a single file, if I can persist that file on the host and make it available to the next container, it should be able to pick up where the last one left off
+  - By creating a volume and attaching (often called "mounting") it to the directory the data is stored in, I can persist the data
+  - As our container writes to the todo.db file, it will be persisted to the host in the volume
+  - As mentioned, I'm going to use a _named volume_
+  - Think of a named volume as simply a bucket of data
+  - Docker maintains the physical location on the disk and I only need to remember the name of the volume
+  - Every time I use the volume, Docker will make sure the correct data is provided
+
+  1. Create a volume by using the _docker volume create_ command
+
+```bash
+ docker volume create todo-db
+```
+
+  2. Stop and remove the todo app container once again in the Dashboard (or with docker rm -f <id>), as it is still running without using the persistent volume.
+  3. Start the todo app container, but add the -v flag to specify a volume mount
+    - Use the named volume and mount it to /etc/todos, which will capture all files created at the path.
+
+```bash
+docker run -dp 3000:3000 -v todo-db:/etc/todos getting-started
+```
+
+  4. Once the container starts up, open the app and add a few items to your todo list
+  ![add few items](https://docs.docker.com/get-started/images/items-added.png)
+  5. Stop and remove the container for the todo app
+    - Use the Dashboard or docker ps to get the ID and then docker rm -f <id> to remove it.
+  6. Start a new container using the same command from above.
+  7. Open the app. You should see your items still in your list!
+  8. Go ahead and remove the container when I've done checking out my list
+
+- _While named volumes and bind mounts are the two main types of volumes supported by a default Docker engine installation, there are many volume driver plugins available to support NFS, SFTP, NetApp, and more! This will be especially important once I start running containers on multiple hosts in a clustered environment with Swarm, Kubernetes, etc._
+
+- **Dive into the volume**
+  - So "Where is Docker actually storing my data when I use a named volume?" I can use the _docker volume inspect_ command to find out
+
+```bash
+docker volume inspect todo-db
+[
+    {
+        "CreatedAt": "2022-05-29T16:47:36Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/todo-db/_data",
+        "Name": "todo-db",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+
+# The "Mountpoint" is the actual location on the disk where the data is stored
+# Note that on most machines, I will need to have root access to access this directory from the host
+# But, that's where it is!
+```
+
+- **Recap**
+  - Now I have a functioning application that can survive restarts!
+  - Let's find a better way to make changes without rebuilding images for every change.
+
+- **Use bind mounts**
+  - _Named volumes_ are great if I simply want to store data, as I don't have to worry about where the data is stored
+  - With **bind mounts**, I control the exact mountpoint on the host
+  - I can use this to persist data, but it's often used to provide additional data into containers
+  - When working on an application, I can use a bind mount to mount our source code into the container to let it see code changes, respond, and let me see the changes right away
+- For Node-based applications, [nodemon](https://npmjs.com/package/nodemon) is a great tool to watch for file changes and then restart the application
+- There are equivalent tools in most other languages and frameworks
+
+- [Quick volume type comparisons](https://i.imgur.com/EAVFO6J.png)
+
+- **Start a dev-mode container**
+  - To run our container to support a development workflow, I will do the following:
+    - Mount our source code into the container
+    - Install all dependencies, including the "dev" dependencies
+    - Start nodemon to watch for filesystem changes
+- So, let's do it!
+  1. Make sure I don't have any previous getting-started containers running
+  2. Run the following command from the app directory
+
+```bash
+docker run -dp 3000:3000 \
+     -w /app -v "$(pwd):/app" \
+     node:12-alpine \
+     sh -c "yarn install && yarn run dev"
+```
+
+  3. I can watch the logs using _docker logs_
+
+```bash
+docker logs -f <container-id>
+
+nodemon src/index.js
+[nodemon] 2.0.13
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/index.js`
+Using sqlite database at /etc/todos/todo.db
+Listening on port 3000
+
+# When I'm done watching the logs, exit out by hitting Ctrl+C
+```
+
+4. Now, let's make a change to the app
+
+```javascript
+// In the src/static/js/app.js file, let's change the "Add Item" button to simply say "Add"
+
+ - {submitting ? 'Adding...' : 'Add Item'}
+ + {submitting ? 'Adding...' : 'Add'}
+```
+
+5. Refresh the page (or open it) and I should see the change reflected in the browser almost immediately
+
+- It might take a few seconds for the Node server to restart, so if I get an error, just try refreshing after a few seconds
+https://docs.docker.com/get-started/images/updated-add-button.png
+
+6. I can now make any other changes I like, when done, stop the container and build my new image using this command
+
+```bash
+docker build -t getting-started .
+```
+
+- Using bind mounts is very common for local development setups
+- The advantage is that the dev machine doesn't need to have all of the build tools and environments installed
+- With a single docker run command, the dev environment is pulled and ready to go
+
+- imagine our project has been selected for future development!
+  - In order to prepare for production, I need to migrate the database from working in SQLite to something that can scale a little better
+  - For simplicity, I'll keep with a relational database and switch the application to use MySQL
+    - But, how should we run MySQL?
+    - How do we allow the containers to talk to each other?
+
+- **Multi container apps**
+  - Up to this point, I have been working with single container apps
+  - But, I now want to add MySQL to the application stack
+  - The following question arises:
+    - Where will MySQL run?
+      - Install it in the same container or run it separately?
+    - **In general, each container should do one thing and do it well**
+
+- A few reasons:
+  - There's a good chance I'd have to scale APIs and front-ends differently than databases
+  - Separate containers let me version and update versions in isolation
+  - While I may use a container for the database locally, I may want to use a managed service for the database in production
+  I don't want to ship my database engine with my app
+  - Running multiple processes will require a process manager (the container only starts one process), which adds complexity to container startup/shutdown
+  - And there are more reasons
+  
+- So, we will update our application to work like this:
+https://docs.docker.com/get-started/images/multi-app-architecture.png
+
+- **Container networking**
+  - Remember that containers, by default, run in isolation and don't know anything about other processes or containers on the same machine
+  - So, how do I allow one container to talk to another?
+    - The answer is networking
+- If two containers are on the same network, they can talk to each other. - If they aren't, they can't
+
+- **Start MYSQL**
+  - here are two ways to put a container on a network: 
+    1. Assign it at start or
+    2. connect an existing container
+
+- For now, I will create the network first and attach the MySQL container at startup
+
+  1. Create the network
+
+```bash
+ docker network create todo-app
+```
+
+  2. Start a MySQL container and attach it to the network
+
+  - I'm also going to define a few environment variables that the database will use to initialize the database (see the "Environment Variables" section in the [MySQL Docker Hub listing](https://hub.docker.com/_/mysql/))
+
+```bash
+docker run -d \
+     --network todo-app --network-alias mysql \
+     -v todo-mysql-data:/var/lib/mysql \
+     -e MYSQL_ROOT_PASSWORD=secret \
+     -e MYSQL_DATABASE=todos \
+     mysql:5.7
+
+# I'm using a volume named todo-mysql-data here and mounting it at /var/lib/mysql, which is where MySQL stores its data
+# However, I never ran a docker volume create command
+# Docker recognizes I want to use a named volume and creates one automatically for me.
+```
+
+  3. To confirm I have the database up and running, connect to the database and verify it connects
+
+```bash
+docker exec -it <mysql-container-id> mysql -u root -p
+
+# When the password prompt comes up, type in secret
+# In the MySQL shell, list the databases and verify you see the todos database
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 12
+Server version: 5.7.38 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
+
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| todos              |
++--------------------+
+5 rows in set (0.00 sec)
+
+# Exit the MySQL shell to return to the shell on our machine.
+mysql> exit
+```
+
+- **Connect to MySQL**
+  - Now that I know MySQL is up and running, let's use it! 
+  - But, the question is... how?
+  - If I run another container on the same network, how do we find the container (remember each container has its own IP address)?
+  - To figure it out, I'm going to make use of the **nicolaka/netshoot** container, which ships with a lot of tools that are useful for troubleshooting or debugging networking issues
+
+1. Start a new container using the nicolaka/netshoot image
+
+```bash
+# Make sure to connect it to the same network.
+docker run -it --network todo-app nicolaka/netshoot
+```
+
+2. Inside the container, I'm going to use the _dig_ command, which is a useful DNS tool
+
+```bash
+# I going to look up the IP address for the hostname mysql
+dig mysql
+```
+
+```dockerfile
+# and I'll get an output like this...
+
+; <<>> DiG 9.16.28 <<>> mysql
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25293
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;mysql.				IN	A
+
+;; ANSWER SECTION:
+mysql.			600	IN	A	172.18.0.2
+
+;; Query time: 9 msec
+;; SERVER: 127.0.0.11#53(127.0.0.11)
+;; WHEN: Sun May 29 18:58:20 UTC 2022
+;; MSG SIZE  rcvd: 44
+
+# In the "ANSWER SECTION", I will see an A record for mysql that resolves to 172.18.0.2
+# While mysql isn't normally a valid hostname, Docker was able to resolve it to the IP address of the container that had that network alias (remember the --network-alias flag we used earlier?)
+
+# What this means is... our app only simply needs to connect to a host named mysql and it'll talk to the database!
+```
+
+- **Run your app with MySQL**
+  - The todo app supports the setting of a few environment variables to specify MySQL connection settings
+  - They are:
+    - MYSQL_HOST - the hostname for the running MySQL server
+    - MYSQL_USER - the username to use for the connection
+    - MYSQL_PASSWORD - the password to use for the connection
+    - MYSQL_DB - the database to use once connected
+
+- Setting Connection Settings via Env Vars
+  - While using env vars to set connection settings is generally ok for development, it is HIGHLY DISCOURAGED when running applications in production
+  - A more secure mechanism is to use the secret support provided by your container orchestration framework
+    - In most cases, these secrets are mounted as files in the running container
+    - I'll see many apps (including the MySQL image and the todo app) also support env vars with a _FILE suffix to point to a file containing the variable
+  - As an example, setting the MYSQL_PASSWORD_FILE var will cause the app to use the contents of the referenced file as the connection password
+    - Docker doesn't do anything to support these env vars
+    - My app will need to know to look for the variable and get the file contents
+
+- With all of that explained, let's start our dev-ready container!
+
+1. For MySQL versions 8.0 and higher, make sure to include the following commands in _mysql_
+
+```bash
+mysql> ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'secret';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> flush privileges;
+Query OK, 0 rows affected (0.01 sec)
+```
+
+2. Let's specify each of the environment variables above, as well as connect the container to our app network
+
+```bash
+   docker run -dp 3000:3000 \
+   -w /app -v "$(pwd):/app" \
+   --network todo-app \
+   -e MYSQL_HOST=mysql \
+   -e MYSQL_USER=root \
+   -e MYSQL_PASSWORD=secret \
+   -e MYSQL_DB=todos \
+   node:12-alpine \
+   sh -c "yarn install && yarn run dev"
+```
+
+3. Look at the logs for the container (docker logs <container-id>), I should see a message indicating it's using the mysql database
+
+```bash
+docker logs <container-id>
+
+nodemon src/index.js
+[nodemon] 2.0.13
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/index.js`
+Waiting for mysql:3306.
+Connected!
+Connected to mysql db at host mysql
+Listening on port 3000
+```
+
+4. Open the app in my browser and add a few items to the todo list
+
+5. Connect to the mysql database and prove that the items are being written to the database. Remember, the password is _secret_.
+
+```bash
+docker exec -it <mysql-container-id> mysql -p todos
+
+# in the mysql shell, run the following:
+mysql> select * from todo_items;
+```
+
+- **Share the Application**
+  - To share Docker images, I have to use a Docker registry
+  - The default registry is Docker Hub and is where all of the images I've used come from
+
+- **step 1**
+- **Create a Repo**
+  - To push an image, we first need to create a repository on Docker Hub
+  - [Sign up}(https://www.docker.com/pricing?utm_source=docker&utm_medium=webreferral&utm_campaign=docs_driven_upgrade) or Sign in to [Docker Hub](https://hub.docker.com/)
+  1. Click the Create Repository button
+  2. For the repo name, use _getting-started_
+  3. Make sure the Visibility is Public
+  4. Click the Create button!
+
+- If you look at the image below an example Docker command can be seen. This command will push to this repo
+![docker repo command](https://docs.docker.com/get-started/images/push-command.png)
+
+- **step 2**
+- **Push the Image**
+  1. In the command line, try running the push command you see on Docker Hub
+
+```bash
+docker push craftomecj/getting-started
+Using default tag: latest
+The push refers to repository [docker.io/craftomecj/getting-started]
+An image does not exist locally with the tag: craftomecj/getting-started
+
+# Why did it fail?
+# The push command was looking for an image named craftomecj/getting-started, but didn't find one
+# If I run docker image ls
+docker image ls
+# I won't see one either
+
+# To fix this, I need to "tag" the existing image I've built to give it another name
+```
+
+2. Login to the Docker Hub using the command docker login -u YOUR-USER-NAME.
+
+```bash
+docker login -u craftomecj
+```
+
+3. Use the **docker tag** command to give the _getting-started_ image a new name
+
+```bash
+docker tag getting-started craftomecj/getting-started
+```
+
+4. Now try your push command again
+
+- If I'm copying the value from Docker Hub, I can drop the _:tagname_ portion, as I didn't add a tag to the image name
+- If I don't specify a tag, Docker will use a tag called _latest_
+
+```bash
+docker push craftomecj/getting-started
+```
+
+- **Run the image on a new instance**
+  - Now that our image has been built and pushed into a registry
+    - let's try running our app on a brand new instance that has never seen this container image!
+    - To do this, we will use [Play with Docker](https://labs.play-with-docker.com/) a sandbox environment
+      1. Open the browser to Play with Docker.
+      2. Click Login and then select docker from the drop-down list.
+      3. Connect with Docker Hub account.
+      4. Once I've logged in, click on the **ADD NEW INSTANCE** option on the left side bar. After a few seconds, a terminal window opens in the browser
+      5. In the labs.play-with-docker.com terminal, start my freshly pushed app
+
+```bash
+# @https://labs.play-with-docker.com/p/ca9pf8g9jotg00bbafgg#ca9pf8g9_ca9pfq433d5g0084nfq0
+docker run -dp 3000:3000 craftomecj/getting-started
+```
+
+[I should see the image get pulled down and eventually start up!](https://i.imgur.com/rxpouRf.png)
+
+- Click on the **3000** badge when it comes up and I should see the app with your modifications! Hooray! 
+- If the 3000 badge doesn't show up, I can click on the "Open Port" button and type in 3000
+
+- **Recap**
+  - I learned how to share the _images_ by pushing them to a registry
+  - I then went to a brand new instance and were able to run the freshly pushed image with a sandbox environment
+  - This is quite common in CI pipelines, where the pipeline will create the image and push it to a registry and then the production environment can use the latest version of the image
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
 
-  ### Software Installed
+- **docker -flags References**
+- [-d] - to run container in detached mode (in the background)
+- [-p 80:80] - to map port 80 of the host to port 80 in the container
+- [docker/getting-started] - the image to use
+- [-t] - to flag tags our image
+- [.] - to tell docker should look for the Dockerfile in the current directory
+- [-f] - "force" flag
+- [-dp 3000:3000] - same as before
+  - Run in detached (background) mode and create a port mapping
+- [-w /app] - sets the "working directory" or the current directory that the command will run from
+- [-v "$(pwd):/app"] - bind mount the current directory from the host in the container into the /app directory
+- [node:12-alpine] - the image to use. Note that this is the base image for our app from the Dockerfile
+- [sh -c "yarn install && yarn run dev"] - the command
+  - I'm starting a shell using sh (alpine doesn't have bash) and running yarn install to install all dependencies and then running yarn run dev
+  - If I look in the package.json, I'll see that the _dev_ script is starting nodemon
 
-  - **[DOCKER](https://docs.docker.com/get-started/**
+- **[docker](https://docs.docker.com/get-started/overview/) Terminology in laymen terms:**
+  - **Docker Engine**
+    - is one of the core components of Docker
+    - it is responsible for the overall functioning of the Docker platform
+    - it is a client-server based application and consists of 3 main components
+      - Server
+      - REST API
+      - Client
+  - **Docker daemon**
+    - aka (dockerd) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes
+    - a daemon can also communicate with other daemons to manage Docker services
+  - **Docker client**
+    - aka (docker) is the primary way that many Docker users interact with Docker
+    - When I use commands such as docker run, the client sends these commands to dockerd, which carries them out
+    - The docker command uses the Docker API
+    - The Docker client can communicate with more than one daemon aka helper
+  - **Docker Desktop**
+    - It is an easy-to-install GUI for your Mac or Windows environment that enables mE to build and share containerized applications and microservices
+    - It includes the Docker daemon (dockerd), the Docker client (docker), Docker Compose, Docker Content Trust, Kubernetes, and Credential Helper
+  - **Docker registries**
+    - A registry that stores Docker images
+    - Docker Hub is a public registry that anyone can use
+    - and Docker is configured to look for images on Docker Hub by default
+    - I can even run my own private registry
+    - When I use the docker pull or docker run commands, the required images are pulled from my configured registry
+    - When I use the docker push command, my image is pushed to my configured registry
+  - **Docker objects**
+    - When I use Docker, I'm creating and using images, containers, networks, volumes, plugins, and other objects
+  - **Docker Image**
+    - is a read-only template that contains the application, and all the dependencies required to run that application on Docker
+    - is a read-only template with instructions for creating a Docker container
+    - often, an image is based on another image, with some additional customization
+    - For example:
+      - I may build an image which is based on the ubuntu image, but installs the Apache web server and your application, as well as the configuration details needed to make your application run
+      - I might create my own images or only use those created by others and published in a registry
+      - To build my own image, I create a Dockerfile with a simple syntax for defining the steps needed to create the image and run it
+      - Each instruction in a Dockerfile creates a layer in the image
+      - When I change the Dockerfile and rebuild the image, only those layers which have changed are rebuilt
+      - This is part of what makes images so lightweight, small, and fast, when compared to other virtualization technologies
+  - **Docker Containers**
+    - is a logical entity
+    - it is a running instance of the Docker Image
+    - I can create, start, stop, move, or delete a container using the DockerAPI or CLI
+    - it can be run on local machines, virtual machines or deployed to the cloud
+    - is portable (can be run on any OS)
+    - they are isolated from each other and run their own software, binaries, and configurations
+    - it can connect a container to one or more networks, attach storage to it, or even create a new image based on its current state
+    - it is defined by its image as well as any configuration options you provide to it when you create or start it
+    - when a container is removed, any changes to its state that are not stored in persistent storage disappear
+  - **Docker Dashboard**
+    - gives me a quick view of the containers running on my machine
+    - The Docker Dashboard is available for Mac and Windows
+    - It gives me quick access to container logs, lets me get a shell inside the container, and lets me easily manage container lifecycle (stop, remove, etc.)
+  - **Docker ID**
+    - A Docker ID allows me to access Docker Hub which is the world's largest library and community for container images
+    - [How a Docker Dashboard looks like](https://i.imgur.com/zkRkG1R.png)
+
+To access the dashboard, follow the instructions in the Docker Desktop manual.
+
+- **JARGON in laymen terms:**
+  - [daemons](https://en.wikipedia.org/wiki/Daemon_(computing))
+    - "Daemon" aka "helper" 
+    - A daemon is a process (program) that runs in the background on a multi-tasking operating system
+    - This means that it is detached from a terminal and runs continuously in a non-interactive mode
+    - I can create a daemon by forking a child process and then exiting the parent, which will cause it to be orphaned (on purpose) and adopted by the init process, the grand father of all processes in the system, (which is also a daemon itself)
+    - It is then left to run, waiting silently in the background until it is asked to do something
+  - [API](https://www.guru99.com/what-is-api.html)
+    - Application Programming Interface (API) is a software interface that allows two applications to interact with each other without any user intervention
+    - It is a list of commands as well as the format of those commands that one program can send to another
+    - It is used so that individual programs can communicate with one another directly and use each other's functions
+    - For example:
+      - At a restaurant I have a _menu_, it represents all the different foods that I can order
+      - I _placed an order_ with the waiter and he returns with your choice of _Food_
+        - Menu = API
+        - Placing an Order = Executing an API Call
+        - Food = the System's Response
+  - [chroot](https://www.journaldev.com/38044/chroot-command-in-linux)
+    - The chroot Linux utility can modify the working root directory for a process, limiting access to the rest of the file system
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+### Software Installed
+
+- **[DOCKER](https://docs.docker.com/get-started/**
   - Download and install Docker
   - [Install Docker Desktop on Mac](https://docs.docker.com/desktop/mac/install/)
   - [Install Docker Desktop on Linux](https://docs.docker.com/desktop/linux/install/)
 
-  - run the command to get started with the tutorial
+- run the command to get started with the tutorial
 
   ```bash
   docker run -dp 80:80 docker/getting-started
@@ -572,59 +1143,11 @@ docker run -dp 3000:3000 getting started
 
 ### Development References
 
+- [Docker Container Exit Codes Explained](https://hoangtrinhj.com/docker-container-exit-codes)
+
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
-
-## Exercise of the Day
-
-TypeScript **_Revisited_ Day 2**
-
-[x] **Challenge:** Read ==> TypeScript Quickly (aim to improve TypeScript Implementations)
-
-## Today's Summary
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-## So do I know now?
-
-- **CONCEPTS**
-
-```TypeScript
-// example code
-```
-
-- **TIP**
-
-- **JARGON in laymen terms:**
-  - [JARGON]
-  - in laymen terms
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-## Do you know?
-
-- I can create custom types with the _type_ keyword
-
-- **CONCEPTS**
-
-```TypeScript
-// example code
-```
-
-- **TIP**
-
-- **JARGON in laymen terms:**
-  - [JARGON]
-  - in laymen terms
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
 
 ## Room to improve?
 <!-- This is where I write things I can do to improve my work -->
