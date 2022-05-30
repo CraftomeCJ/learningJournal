@@ -363,7 +363,7 @@ Today till Sunday will be learning and researching upcoming project tech stack. 
   - Deploy Docker applications using multiple containers with a database
   - Running applications using Docker Compose
 
-- learn about the best practices for building images, including instructions on how to scan your images for security vulnerabilities
+- learn about the best practices for building images, including instructions on how to scan my images for security vulnerabilities
 
 - **CONCEPTS**
 - What is Docker?
@@ -385,7 +385,11 @@ Today till Sunday will be learning and researching upcoming project tech stack. 
   - Before I can run the application, I need to get the application source code onto our machine, let's clone the [repo](https://github.com/docker/getting-started/tree/master/app) and open the project.
   - I should see the package.json and two subdirectories (src and spec).
 
-- **Build the app's container image**
+  <p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
+- **CONCEPTS:Build the app's container image**
   - to build app we need to use a **Dockerfile**
   - **Dockerfile** is simply a text-based script of instructions that is used to create a container image
 
