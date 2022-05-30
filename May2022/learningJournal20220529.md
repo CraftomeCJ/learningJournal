@@ -65,8 +65,9 @@ Judge people by their actions and not taking them personally will free me up, he
 <!-- what has holding me back all these years -->
 **How to Approach my Life like the Greats:** <br/>
 Core Traits of a **"SOCIALLY INTELLIGENT PERSON"**: <br/>
-They know that a feeling will not kill them. <br/>
-They have developed enough stamina and awareness to know that all things, even the worse, are transitory. <br/>
+They listen to hear, not respond. <br/>
+While listening to other people speak, they focus on what is being said, not how they going to respond. <br/>
+This is also known as the meta practice of "holding space". <br/>
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
@@ -358,14 +359,14 @@ Today till Sunday will be learning advance state management with useContext to m
 
 - **TOPIC**
   - Building a Custom Express API
-  - ![Markup 1](https://i.imgur.com/o371O7c.png)
-  - ![Markup 2](https://i.imgur.com/OrusW8t.png)
+  - [Markup 1](https://i.imgur.com/o371O7c.png)
+  - [Markup 2](https://i.imgur.com/OrusW8t.png)
 
 - **CONCEPTS: The basic of Express**
-  - ![Logic 1](https://i.imgur.com/sKFBwGF.png)
-  - ![Disclaimer](https://i.imgur.com/BEmyaFj.png)
+  - [Logic 1](https://i.imgur.com/sKFBwGF.png)
+  - [Disclaimer](https://i.imgur.com/BEmyaFj.png)
 
-- **step 1**
+- **step 1: Dependencies & Express setup**
 
 ```bash
 # @filename: Project Folder
@@ -431,7 +432,7 @@ const express = require("express");
 
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/", (res) => {
   res.send('yo yo yo!');
 });
 
@@ -444,18 +445,474 @@ app.listen(4000, () => {
 # @filename: ./ProjectFolder/tracker-server/
 code .
 
+# run the route
 > node src/index.js
 Listening on port 4000
 ```
 
-- ![on browser](https://i.imgur.com/QVTIdR6.png)
-
-
-- **Element References**
+- [port display on browser](https://i.imgur.com/QVTIdR6.png)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
+
+- **step 2: MongoDB setup**
+  - [Logic](https://i.imgur.com/vHC5ZZc.png)
+  - An outside server to store User Data & Location Data
+
+- Go to [MongoDB Cloud Services](cloud.mongodb.com) to set it up
+  - free hosted MongoDB instance
+  - nice UI
+  - [MongoDB Cluster Created](https://i.imgur.com/wAuS8Fn.png)
+
+- **step 3: Connecting to MongoDB**
+  - on [MongoDB Database Deployments](https://cloud.mongodb.com/v2/62949b460132b63ffaa9076d#clusters/connect?clusterId=Cluster0) - Click Connect
+  - [Connect to Cluster0](https://i.imgur.com/EwMDpqz.png)
+  - whitelist my ip address
+    - [Add a connection IP address](https://i.imgur.com/MYokEmU.png)
+  - create username & password
+    - admin
+    - p@55w0rD
+    - [Create a Database User](https://i.imgur.com/AIi5wbi.png)
+  - click choose a connection method
+    - choose option 2 (Connect your application)
+  - copy the connection string & paste into my IDE
+    mongodb+srv://admin:<password>@cluster0.cxviw.mongodb.net/?retryWrites=true&w=majority
+  - replace **<password>** to the password I created
+  - **important** need to convert any special character inside password string to HEX code to avoid following error: _Error connecting to mongo MongoAPIError: URI must include hostname, domain name, and tld_
+  - **Hex code for % = %40**
+
+```bash
+Error connecting to mongo MongoAPIError: URI must include hostname, domain name, and tld
+    at resolveSRVRecord (/home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/tracker-app/tracker-server/node_modules/mongodb/lib/connection_string.js:51:25)
+    at connect (/home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/tracker-app/tracker-server/node_modules/mongodb/lib/operations/connect.js:32:57)
+    at /home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/tracker-app/tracker-server/node_modules/mongodb/lib/mongo_client.js:127:35
+    at maybePromise (/home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/tracker-app/tracker-server/node_modules/mongodb/lib/utils.js:409:5)
+    at MongoClient.connect (/home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/tracker-app/tracker-server/node_modules/mongodb/lib/mongo_client.js:126:41)
+    at /home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/tracker-app/tracker-server/node_modules/mongoose/lib/connection.js:792:12
+    at new Promise (<anonymous>)
+    at NativeConnection.Connection.openUri (/home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/tracker-app/tracker-server/node_modules/mongoose/lib/connection.js:781:19)
+    at /home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/tracker-app/tracker-server/node_modules/mongoose/lib/index.js:342:10
+    at /home/craftome_cj/Desktop/COMPANY-WORK-SPACE/myLearnerFolder/tracker-app/tracker-server/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5 {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+node:internal/process/promises:279
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+```
+
+```javascript
+const express = require("express");
+//3.2 below the express variable import mongoose library
+const mongoose = require("mongoose");
+
+const app = express();
+
+//3.1 paste the string in-between a set of quotes here & assign it to a variable call mongoUri & replace <password> to the password I created so it is now connected to Mongo instance
+const mongoUri = 'mongodb+srv://admin:p%4055w0rD@cluster0.cxviw.mongodb.net/?retryWrites=true&w=majority'
+
+// 3.3 after import the library we call it here with some callback function
+mongoose.connect(mongoUri);
+mongoose.connection.on('connected', () => {
+  console.log('Connected to mongo instance');
+});
+mongoose.connection.on("error", (err) => {
+  console.error("Error connecting to mongo", err);
+});
+
+app.get("/", (res) => {
+  res.send('yo yo yo!');
+});
+
+app.listen(4000, () => {
+  console.log("Listening on port 4000");
+});
+```
+
+```bash
+# 3.4 come to terminal hit ctrl+C to stop the server
+> node src/index.js
+Listening on port 4000
+^C
+
+# 3.5 re-run node src/index.js
+> node src/index.js
+Listening on port 4000
+Connected to mongo instance
+```
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **step 4: Nodemon for Automatic Restarts**
+
+```json
+{
+  "name": "tracker-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    // "test": "echo \"Error: no test specified\" && exit 1" <-- 4.1 delete this script
+    //4.2 add this new script
+    // nodemon is a tools to watch our directory
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.4",
+    "nodemon": "^2.0.16"
+  }
+}
+```
+
+```bash
+# 4.3 come to terminal again, hit ctrl+C to stop the server again
+> node src/index.js
+Listening on port 4000
+^C
+
+# 4.4 re-run with npm run dev, now should restart project automatically for any changes
+> npm run dev
+
+> tracker-server@1.0.0 dev
+> nodemon src/index.js
+
+[nodemon] 2.0.16
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/index.js`
+Listening on port 4000
+Connected to mongo instance
+```
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **step 5: understanding authentication on express API**
+  - [Logic](https://i.imgur.com/Bx4AObt.png)
+
+```bash
+# 5.1 @filename: ./ProjectFolder/tracker-server/src
+mkdir routes
+cd routes
+touch authRoutes.js
+```
+
+```javascript
+// 5.2 to write all request handling logic
+// @filename: ./src/routes/authRoutes.js
+
+const express = require('express');
+
+const router = express.Router();
+
+router.post('/signup', (req, res) => {
+  res.send('You made a post request');
+});
+
+module.exports = router;
+```
+
+```javascript
+// @filename: ./src/index.js
+const express = require("express");
+const mongoose = require("mongoose");
+// 5.3 import authRoutes here
+const authRoutes = require("./routes/authRoutes");
+
+const app = express();
+
+// 5.4 call the component here
+app.use(authRoutes);
+
+const mongoUri = 'mongodb+srv://admin:p%4055w0rD@cluster0.cxviw.mongodb.net/?retryWrites=true&w=majority'
+
+mongoose.connect(mongoUri);
+
+mongoose.connection.on("connected", () => {
+  console.log("Connected to mongo instance");
+});
+mongoose.connection.on("error", (err) => {
+  console.error("Error connecting to mongo", err);
+});
+
+app.get("/", (res) => {
+  res.send('yo yo yo!');
+});
+
+app.listen(4000, () => {
+  console.log("Listening on port 4000");
+});
+```
+
+- **step 6: Test HTTP REST API with Thunder Client**
+  - [Thunder Client](https://github.com/rangav/thunder-client-support)
+    - [How to test HTTP REST API easily with Visual Studio Code - Thunder Client extensions](https://developers.refinitiv.com/en/article-catalog/article/how-to-test-http-rest-api-easily-with-visual-studio-code---thund)
+    - [Thunder Client - An Alternative Way to Test Restful APIs](https://www.freecodecamp.org/news/thunder-client-for-vscode/)
+    - [Thunder Client - Lightweight Rest API Client Extension for VS Code](https://dev.to/ranga_vadhineni/thunder-client-http-client-extension-for-vs-code-30i9)
+    - [How to use Thunder Client for API testing?](https://www.katk.dev/thunder-client)
+    - client for easily testing an API
+    - [POST request with Thunder Client successfully](https://i.imgur.com/udt4XmP.png)
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **step 7: Handling JSON Data**
+  - [Logic](https://i.imgur.com/GYWzbYm.png)
+
+```javascript
+// @filename: ./src/index.js
+const express = require("express");
+const mongoose = require("mongoose");
+// 7.1 import bodyParser module here
+// a helper library for automatic parse information associated with body property of incoming request
+const bodyParser = require("body-parser");
+const authRoutes = require("./routes/authRoutes");
+
+const app = express();
+
+// 7.2 call the module here
+app.use(bodyParser.json());   // sequence is important 
+app.use(authRoutes);
+
+const mongoUri = 'mongodb+srv://admin:p%4055w0rD@cluster0.cxviw.mongodb.net/?retryWrites=true&w=majority'
+
+mongoose.connect(mongoUri);
+
+mongoose.connection.on("connected", () => {
+  console.log("Connected to mongo instance");
+});
+mongoose.connection.on("error", (err) => {
+  console.error("Error connecting to mongo", err);
+});
+
+app.get("/", (res) => {
+  res.send('yo yo yo!');
+});
+
+app.listen(4000, () => {
+  console.log("Listening on port 4000");
+});
+```
+
+```javascript
+// @filename: ./src/routes/authRoutes.js
+
+const express = require('express');
+
+const router = express.Router();
+
+router.post('/signup', (req, res) => {
+  // 7.3 add console.log here
+  console.log(req.body);
+  res.send('You made a post request');
+});
+
+module.exports = router;
+```
+
+@Thunder Client New Request
+**POST localhost:4000/signup**
+
+- 7.4 write some request in thunder client POST-->Body-->Json
+  - {
+    "email": "test@test.com",
+    "password": "mypassword"
+    }
+  - [Json](https://i.imgur.com/8yOOVbo.png)
+- 7.5 thunder client POST-->Header
+  - add Content-Type = application/json
+  - [Http Headers](https://i.imgur.com/Y88zvy1.png)
+- 7.6 test it out by click _send_ button on thunder client
+  - [Result look nice on terminal](https://i.imgur.com/dRCIiP4.png)
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **step 8: Setting up MongoDB, defining a User Schema**
+  - [Logic 1](https://i.imgur.com/OnmLoCL.png)
+  - [Logic 2](https://i.imgur.com/sxHkvKu.png)
+
+```bash
+# 8.1 @filename: ./ProjectFolder/tracker-server/src
+mkdir models
+cd models
+touch User.js
+```
+
+```javascript
+// @filename: ./src/models/User.js
+// 8.2 import mongoose library here
+const mongoose = require("mongoose");
+
+// 8.3 define a schema here
+const userSchema = new mongoose.Schema({
+  email {
+    type: String,
+    unique: true,
+    required: true
+  },
+  password {
+    type: String,
+    required: true
+  }
+});
+
+// 8.4 call the schema here
+mongoose.model('User', userSchema);
+```
+
+```javascript
+// @filename: ./src/index.js
+// 8.5 require in the user file we just created
+require("./models/User");
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const authRoutes = require("./routes/authRoutes");
+
+const app = express();
+
+app.use(bodyParser.json());
+app.use(authRoutes);
+
+const mongoUri = 'mongodb+srv://admin:p%4055w0rD@cluster0.cxviw.mongodb.net/?retryWrites=true&w=majority'
+
+mongoose.connect(mongoUri);
+
+mongoose.connection.on("connected", () => {
+  console.log("Connected to mongo instance");
+});
+mongoose.connection.on("error", (err) => {
+  console.error("Error connecting to mongo", err);
+});
+
+app.get("/", (req, res)=> {
+  res.send('yo yo yo!');
+});
+
+app.listen(4000, () => {
+  console.log("Listening on port 4000");
+});
+```
+
+```javascript
+// @filename: ./src/routes/authRoutes.js
+const express = require('express');
+
+// 8.6 to get a reference to user models we just created we import mongoose here
+const mongoose = require('mongoose');
+
+// 8.7 to get access
+const User = mongoose.model('User');
+
+const router = express.Router();
+
+router.post('/signup', (req, res) => {
+  console.log(req.body);
+  res.send('You made a post request');
+});
+
+module.exports = router;
+```
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **step 9: creating & saving USer**
+  - [Logic](https://i.imgur.com/aNoxfKb.png)
+
+```javascript
+// @filename: ./src/routes/authRoutes.js
+const express = require('express');
+const mongoose = require('mongoose');
+
+const User = mongoose.model('User');
+
+const router = express.Router();
+
+// 9.4a use async/await to initial the save operation
+router.post('/signup', async (req, res) => {
+  // 9.1 do some destructuring here
+  const {email, password} = req.body;
+
+  // 9.2 create a new user here
+  const user = new User({email, password});
+
+  // 9.3 use the new instance User and call a save on it
+//  9.4b await the result
+ await user.save();
+
+  res.send('You made a post request');
+});
+
+module.exports = router;
+```
+
+- 9.5 go to thunder client to create a new user
+  - if no error on thunder client & terminal mean i have created a new user successfully
+  - to verify that i can go back to mongoDB cluster-->collections
+    - i should see [an object](https://i.imgur.com/7eQ3dHT.png) successfully created by me
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **step 10: error handling & password is not store as plain text**
+  - [logic](https://i.imgur.com/294z3Qo.png)
+
+- if we try to send the same email & password on thunder client, I will received a big error (MongoServerError: E11000 duplicate key error collection: test.users index: email_1 dup key: { email: "test@test.com" }
+) [like this](https://i.imgur.com/ujbBQqJ.png)
+- if we remove the email & password in thunder client, I too will receive another big chunk error (ValidationError: User validation failed: email: Path `email` is required., password: Path `password` is required.
+) [like this](https://i.imgur.com/ZsUDmsz.png)
+- why is that?
+  - mongoose unique & required validation are guarding for us
+
+```javascript
+// @filename: ./src/routes/authRoutes.js
+const express = require('express');
+const mongoose = require('mongoose');
+
+const User = mongoose.model('User');
+
+const router = express.Router();
+
+router.post('/signup', async (req, res) => {
+
+  const {email, password} = req.body;
+
+// 10.1 wrap the entire block with try/catch statement
+// this block is for signup handling
+try {
+  const user = new User({email, password});
+
+ await user.save();
+
+  res.send('You made a post request');
+  // 10.2 close off with a catch statement
+
+  } catch (err) {
+    return res.status(422).send(err.message);
+  }
+});
+
+module.exports = router;
+```
+
+- 10.3 let try to send an empty request again on thunder client
+  - this time no big chunk of error, it show [this](https://i.imgur.com/O1yArwo.png) (User validation failed: email: Path `email` is required., password: Path
+`password` is required.)
 
 ### Software Installed
 
@@ -467,6 +924,10 @@ Listening on port 4000
     - [mongoosejs](https://mongoosejs.com/)
     - [nodemon](https://nodemon.io/)
 
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
 ### Development References
 
 - Tracker-Server Folder Structure
@@ -474,63 +935,18 @@ Listening on port 4000
 - package-lock.json
   - src
     - index.js
-
+    - routes
+      - authRoutes.js
+      - trackRoutes.js
+    - models
+      - Track.js
+      - User.js
 - cloud.mongodb.com
   - free hosted MongoDB instance
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
-
-## Exercise of the Day
-
-TypeScript **_Revisited_ Day 2**
-
-[x] **Challenge:** Read ==> TypeScript Quickly (aim to improve TypeScript Implementations)
-
-## Today's Summary
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-## So do I know now?
-
-- **CONCEPTS**
-
-```TypeScript
-// example code
-```
-
-- **TIP**
-
-- **JARGON in laymen terms:**
-  - [JARGON]
-  - in laymen terms
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-## Do you know?
-
-- I can create custom types with the _type_ keyword
-
-- **CONCEPTS**
-
-```TypeScript
-// example code
-```
-
-- **TIP**
-
-- **JARGON in laymen terms:**
-  - [JARGON]
-  - in laymen terms
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
 
 ## Room to improve?
 <!-- This is where I write things I can do to improve my work -->
