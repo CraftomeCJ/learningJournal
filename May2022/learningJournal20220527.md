@@ -383,7 +383,7 @@ Today till Sunday will be learning and researching upcoming project tech stack. 
 
 - **Get the app**
   - Before I can run the application, I need to get the application source code onto our machine, let's clone the [repo](https://github.com/docker/getting-started/tree/master/app) and open the project.
-  -  I should see the package.json and two subdirectories (src and spec).
+  - I should see the package.json and two subdirectories (src and spec).
 
 - **Build the app's container image**
   - to build app we need to use a **Dockerfile**
@@ -487,7 +487,11 @@ docker run -dp 3000:3000 getting-started
 - At this point, I should have a running todo list manager with a few items. Next, let's make a few changes and learn about managing our containers
 - [take a quick look at the Docker Dashboard, I should see two containers running now](https://i.imgur.com/soxM4ws.png)
 
-- **Update the application**
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **CONCEPTS: Update the application**
   - Let's say to change the "empty text" when we don't have any todo list items.
   - I would like to change it to the following:
     - _You have no todo items yet! Add one above!_
@@ -576,7 +580,11 @@ docker run -dp 3000:3000 getting started
   - There were a lot of steps involved for such a small change
   - Let's see how to code an updates without needing to rebuild and start a new container every time I make a change
 
-- **Persist the DB**
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **CONCEPTS: Persist the DB**
   - Notice that the todo list is being wiped clean every single time I relaunch the container
   - Why is this?
   - Let's fins out how the container is working..
@@ -658,9 +666,13 @@ docker volume inspect todo-db
 
 - **Recap**
   - Now I have a functioning application that can survive restarts!
-  - Let's find a better way to make changes without rebuilding images for every change.
+  - Let's find a better way to make changes without rebuilding images for every change
 
-- **Use bind mounts**
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **CONCEPTS: Use bind mounts**
   - _Named volumes_ are great if I simply want to store data, as I don't have to worry about where the data is stored
   - With **bind mounts**, I control the exact mountpoint on the host
   - I can use this to persist data, but it's often used to provide additional data into containers
@@ -733,7 +745,11 @@ docker build -t getting-started .
     - But, how should we run MySQL?
     - How do we allow the containers to talk to each other?
 
-- **Multi container apps**
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **CONCEPTS: Multi container apps**
   - Up to this point, I have been working with single container apps
   - But, I now want to add MySQL to the application stack
   - The following question arises:
@@ -773,7 +789,7 @@ https://docs.docker.com/get-started/images/multi-app-architecture.png
 
   2. Start a MySQL container and attach it to the network
 
-  - I'm also going to define a few environment variables that the database will use to initialize the database (see the "Environment Variables" section in the [MySQL Docker Hub listing](https://hub.docker.com/_/mysql/))
+- I'm also going to define a few environment variables that the database will use to initialize the database (see the "Environment Variables" section in the [MySQL Docker Hub listing](https://hub.docker.com/_/mysql/))
 
 ```bash
 docker run -d \
@@ -940,88 +956,26 @@ docker exec -it <mysql-container-id> mysql -p todos
 
 # in the mysql shell, run the following:
 mysql> select * from todo_items;
+
++--------------------------------------+----------------------------------------------------------------------+-----------+
+| id                                   | name                                                                 | completed |
++--------------------------------------+----------------------------------------------------------------------+-----------+
+| 68e2e074-a69d-4002-919a-5471ed8ca8a2 | Time to sleep                                                        |         1 |
+| 2abfbd9b-bd7e-4648-b0bf-3aa03b299542 | Finish docker tutorial                                               |         0 |
+| 6f19774c-ccc1-49d5-8f1e-6248647c3de1 | React + Recoil - Basic HTTP Authentication Tutorial & Example        |         0 |
+| 1c5dab4d-2ab2-4042-a350-23234a9f6f34 | React + Recoil - Set atom state after async HTTP GET or POST request |         0 |
++--------------------------------------+----------------------------------------------------------------------+-----------+
+4 rows in set (0.00 sec)
+
+# Now I should see the items I key-in are stored there!
 ```
 
-- **Share the Application**
-  - To share Docker images, I have to use a Docker registry
-  - The default registry is Docker Hub and is where all of the images I've used come from
+-**Recap**
 
-- **step 1**
-- **Create a Repo**
-  - To push an image, we first need to create a repository on Docker Hub
-  - [Sign up}(https://www.docker.com/pricing?utm_source=docker&utm_medium=webreferral&utm_campaign=docs_driven_upgrade) or Sign in to [Docker Hub](https://hub.docker.com/)
-  1. Click the Create Repository button
-  2. For the repo name, use _getting-started_
-  3. Make sure the Visibility is Public
-  4. Click the Create button!
-
-- If you look at the image below an example Docker command can be seen. This command will push to this repo
-![docker repo command](https://docs.docker.com/get-started/images/push-command.png)
-
-- **step 2**
-- **Push the Image**
-  1. In the command line, try running the push command you see on Docker Hub
-
-```bash
-docker push craftomecj/getting-started
-Using default tag: latest
-The push refers to repository [docker.io/craftomecj/getting-started]
-An image does not exist locally with the tag: craftomecj/getting-started
-
-# Why did it fail?
-# The push command was looking for an image named craftomecj/getting-started, but didn't find one
-# If I run docker image ls
-docker image ls
-# I won't see one either
-
-# To fix this, I need to "tag" the existing image I've built to give it another name
-```
-
-2. Login to the Docker Hub using the command docker login -u YOUR-USER-NAME.
-
-```bash
-docker login -u craftomecj
-```
-
-3. Use the **docker tag** command to give the _getting-started_ image a new name
-
-```bash
-docker tag getting-started craftomecj/getting-started
-```
-
-4. Now try your push command again
-
-- If I'm copying the value from Docker Hub, I can drop the _:tagname_ portion, as I didn't add a tag to the image name
-- If I don't specify a tag, Docker will use a tag called _latest_
-
-```bash
-docker push craftomecj/getting-started
-```
-
-- **Run the image on a new instance**
-  - Now that our image has been built and pushed into a registry
-    - let's try running our app on a brand new instance that has never seen this container image!
-    - To do this, we will use [Play with Docker](https://labs.play-with-docker.com/) a sandbox environment
-      1. Open the browser to Play with Docker.
-      2. Click Login and then select docker from the drop-down list.
-      3. Connect with Docker Hub account.
-      4. Once I've logged in, click on the **ADD NEW INSTANCE** option on the left side bar. After a few seconds, a terminal window opens in the browser
-      5. In the labs.play-with-docker.com terminal, start my freshly pushed app
-
-```bash
-# @https://labs.play-with-docker.com/p/ca9pf8g9jotg00bbafgg#ca9pf8g9_ca9pfq433d5g0084nfq0
-docker run -dp 3000:3000 craftomecj/getting-started
-```
-
-[I should see the image get pulled down and eventually start up!](https://i.imgur.com/rxpouRf.png)
-
-- Click on the **3000** badge when it comes up and I should see the app with your modifications! Hooray! 
-- If the 3000 badge doesn't show up, I can click on the "Open Port" button and type in 3000
-
-- **Recap**
-  - I learned how to share the _images_ by pushing them to a registry
-  - I then went to a brand new instance and were able to run the freshly pushed image with a sandbox environment
-  - This is quite common in CI pipelines, where the pipeline will create the image and push it to a registry and then the production environment can use the latest version of the image
+- At this point, I have an application that now stores its data in an external database running in a separate container
+  - I learned a little bit about container networking and saw how service discovery can be performed using DNS
+  - I should know by now with everything to do to start up a application
+  - I have to create a network, start containers, specify all of the environment variables, expose ports, and more
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
