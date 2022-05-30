@@ -888,8 +888,8 @@ User                                        // unique what-I-name-it defines a T
 
 function                                    // function statement
 findUserAgeByName(                          // unique name of what-I-name-it new function => method()
-  users: User[],                            // what-I-name-it argument 1 with type Array[]
-  name: string                              // what-I-name-it argument 2 with type String
+  users: User[],                            // what-I-name-it argument aka params 1 with type Array[]
+  name: string                              // what-I-name-it argument aka params 2 with type String
 ): number                                   // return_type Number, it can be any valid data type
 
 {                                           // do something between the { }
@@ -930,7 +930,10 @@ const users = [
 ];
 
 // variable userAge1 is as number
-const userAge1 = findUserAgeByName(users, 'Tom');
+const                                     // variable container keyword
+userAge1                                  // what-I-name-it variable container name
+ =                                        // assign syntax
+ findUserAgeByName(users, 'Tom');         // function call
 console.log(`Tom is ${userAge1 / 12} years old!`);   // <-- swee swee no errors wor
 
 // variable userAge2 is a number too but the function throws you out wor!!
