@@ -311,7 +311,7 @@ end
 
 ## Personal Notes
 
-**Day 58 (Monday) and today's main focus:** <br />
+**Day 59 (Tuesday) and today's main focus:** <br />
 Today till Sunday will be learning advance state management with useContext to manage global state management, work on a Udemy's Blog App. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
