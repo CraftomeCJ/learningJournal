@@ -569,7 +569,7 @@ module.exports = router;
       - Content-Type: application/json + click send
       - [I should see this](https://i.imgur.com/s0LmFza.png)
 
-- **Hooray!!! API is up & running**
+- **Hooray!!! Express API is up & running**
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
