@@ -358,15 +358,18 @@ Today till Sunday will be learning advance state management with useContext to m
 - **What am I Learning/Working on now?**
 
 - **TOPIC**
-  - Building a Custom Express API
+  - Building a Custom Express API **Day 1**
   - [Markup 1](https://i.imgur.com/o371O7c.png)
   - [Markup 2](https://i.imgur.com/OrusW8t.png)
 
 - **CONCEPTS: The basic of Express**
   - [Logic 1](https://i.imgur.com/sKFBwGF.png)
   - [Disclaimer](https://i.imgur.com/BEmyaFj.png)
+  - [Express and MongoDB](https://medium.com/daily-programmer/express-and-mongodb-78cc7266f569)
 
 - **step 1: Dependencies & Express setup**
+  - [Building a REST API with Express, Node, and MongoDB](https://www.mongodb.com/languages/express-mongodb-rest-api-tutorial)
+  - [Node Express MongoDB to build REST APIs](https://hevodata.com/learn/node-express-mongodb/)
 
 ```bash
 # @filename: Project Folder
@@ -458,7 +461,9 @@ Listening on port 4000
 
 - **step 2: MongoDB setup**
   - [Logic](https://i.imgur.com/vHC5ZZc.png)
-  - An outside server to store User Data & Location Data
+    - An outside server to store User Data & Location Data
+  - [What Is MongoDB?](https://www.mongodb.com/what-is-mongodb)
+  - [Getting started with MongoDB](https://geekflare.com/getting-started-mongodb/)
 
 - Go to [MongoDB Cloud Services](cloud.mongodb.com) to set it up
   - free hosted MongoDB instance
@@ -941,8 +946,10 @@ module.exports = router;
     - models
       - Track.js
       - User.js
-- cloud.mongodb.com
+- [cloud.mongodb.com](https://account.mongodb.com/account/login)
   - free hosted MongoDB instance
+- [Thunder Client](https://www.thunderclient.com/)
+  - Rest Client for Testing APIs
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
