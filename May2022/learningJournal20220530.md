@@ -619,12 +619,12 @@ app.listen(4000, () => {
   - we will add one additional step to prevent this attack by [generating a "salt"](https://i.imgur.com/1hTCc1S.png) by concat password with a randomly generated string of chars (salt)
   - [now the attacker must have a very comprehensive list](https://i.imgur.com/TOFGAHj.png)
 
-- **step 1: automate salting & hashing process**
+- **step 13: automate salting & hashing process**
 
 ```javascript
 // @filename: ./src/models/User.js
 const mongoose = require("mongoose");
-// 1.1 import the bcrypt library
+// 13.1 import the bcrypt library
 const bcrypt = require("bcrypt");
 
 const userSchema = new mongoose.Schema({
@@ -641,33 +641,33 @@ const userSchema = new mongoose.Schema({
 
 
 //**THIS IS FOR NEW USER PASSWORD**
-// 1.1 find my userSchema underneath I gonna say userSchema.pre and pass in 2 arguments
+// 13.1 find my userSchema underneath I gonna say userSchema.pre and pass in 2 arguments
 // this is call a pre-save hook
 userSchema.pre('save', function(next) {
 
-// 1.2 let's do something inside here with a if else to check user password if is a plain text password it will generate a "salt"
+// 13.2 let's do something inside here with a if else to check user password if is a plain text password it will generate a "salt"
 // why use function keyword because we are using this; keyword 
   const user = this;
   if (!user.isModified('password')) {
     return next();
   }
 
-// 1.3 generate "salt" with bcrypt and call function
+// 13.3 generate "salt" with bcrypt and call function
   bcrypt.genSalt(10, (err, salt) => {
     if (err) {
       return next(err);
     }
 
-  // 1.4 generate hash with bcrypt with 2 argument user.password password user first sign up & salt a random string of chars to prevent rainbow table attack & 1 callback that be be called when the hashing process is completed. callback will run error object and resulting hash
+  // 13.4 generate hash with bcrypt with 2 argument user.password password user first sign up & salt a random string of chars to prevent rainbow table attack & 1 callback that be be called when the hashing process is completed. callback will run error object and resulting hash
     bcrypt.hash(user.password, salt, (err, hash) => {
 
-// 1.5 use if else to check
+// 13.5 use if else to check
       if (err) {
         return next(err);
       }
-// 1.6 if no error it will update user password
+// 13.6 if no error it will update user password
       user.password = hash;
-// 1.7 call next to save the user
+// 13.7 call next to save the user
       next();
     });
   });
@@ -675,14 +675,14 @@ userSchema.pre('save', function(next) {
 
 
 //**This is for COMPARISON PROVIDE BY USER TO THE ONE STORE IN DB**
-// 1.8 here will write some code to automate the password checking process:
+// 13.8 here will write some code to automate the password checking process:
 userSchema.methods.comparePassword = function(candidatePassword) {
   const user = this;
 
-// 1.9 I use promise here is to make use of async await while comparing password
+// 13.9 I use promise here is to make use of async await while comparing password
 // whenever we use a Promise, we need callback function
 return new Promise((resolve, reject) => {
-  // 1.10 we use bcrypt library to automate 
+  // 13.10 we use bcrypt library to automate 
     bcrypt.compare(candidatePassword, user.password, (err, isMatch) => {
       if (err) {
         return reject(err);
@@ -700,7 +700,7 @@ return new Promise((resolve, reject) => {
 mongoose.model('User', userSchema);
 ```
 
-- **step 2: The Sign-In Route**
+- **step 14: The Sign-In Route**
   - write some code to log our user in
 
 ```javascript
@@ -726,7 +726,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-// 2.1 add in a post request handler 'router.post'
+// 14.1 add in a post request handler 'router.post'
 // whenever someone call sign-in route, it will run this callback function
 // I expect they provide me an email or password so
 router.post(            // router.post() refers to submits data to a specified resource to be processed
@@ -741,7 +741,7 @@ router.post(            // router.post() refers to submits data to a specified r
 
   }
 
-// 2.1 once we get pass the check we can now go through the login process
+// 14.2 once we get pass the check we can now go through the login process
 // we will uses the email supplied by 'const User = mongoose.model('User')' model
   const user =                // and assign to user variable
   await 
@@ -765,7 +765,7 @@ router.post(            // router.post() refers to submits data to a specified r
 module.exports = router;
 ```
 
-- **step 3: Testing Signup & Signin**
+- **step 15: Testing Signup & Signin**
   - go to mongoDB and delete all the users data with plain text password
   - then go to thunder client and test it out
     - POST request --> localhost:4000/signup
@@ -784,6 +784,9 @@ module.exports = router;
 
 - **JARGON in laymen terms:**
   - [JSON Web Tokens](https://www.webopedia.com/definitions/schema/)
+  - [require()](https://flexiple.com/javascript-require-vs-import/)
+    - require() is not part of the standard JavaScript API
+    - But in Node.js, it's a built-in function with a special purpose: _to load modules_
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -806,8 +809,8 @@ module.exports = router;
 ### Development References
 
 - Tracker-Server Folder Structure
-- package.json
-- package-lock.json
+  - package.json
+  - package-lock.json
   - src
     - index.js
     - routes
@@ -816,6 +819,8 @@ module.exports = router;
     - models
       - Track.js
       - User.js
+    - middlewares
+      - requireAuth.js
 - [cloud.mongodb.com](https://account.mongodb.com/account/login)
   - free hosted MongoDB instance
 - [Thunder Client](https://www.thunderclient.com/)
