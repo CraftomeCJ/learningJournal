@@ -312,7 +312,7 @@ end
 ## Personal Notes
 
 **Day 59 (Tuesday) and today's main focus:** <br />
-Today till Sunday will be learning advance state management with useContext to manage global state management, work on a Udemy's Blog App. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
+Today till Sunday will be building tracking app, breakdown SHARE Nx structure, define programming terminology, read on Unit Test. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done. This section is focused about my personal growth and should be an essential part of my work journal. -->
@@ -360,7 +360,7 @@ Today till Sunday will be learning advance state management with useContext to m
 - **What am I Learning/Working on now?**
 
 - **TOPIC**
-  - Building a Custom Express API **Day 2**
+  - Building a Custom Express API **Day 3**
   - [Markup 1](https://i.imgur.com/o371O7c.png)
   - [Markup 2](https://i.imgur.com/OrusW8t.png)
 
