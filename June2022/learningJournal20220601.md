@@ -380,6 +380,10 @@ npm install
 # @filename: projectFolder/tracker
 # React Native Elements is a useful set of reusable components for React Native application
 npm install @rneui/themed @rneui/base
+
+# @filename: projectFolder/tracker
+# Promise based HTTP client for the browser and node.js
+npm install axios
 ```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
@@ -507,6 +511,7 @@ function LoginFLow() {
       <navigator.Screen
        name='Signup'
        component={SignupScreen}
+       options={{ headerShown: false }}
        />
       <navigator.Screen
        name='Signin'
@@ -679,6 +684,10 @@ export default TrackListScreen;
 const styles = StyleSheet.create({});
 ```
 
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
 - **CONCEPTS: building UI with [React Native Elements](https://reactnativeelements.com/docs) Library**
   - [react-native-elements](https://www.npmjs.com/package/react-native-elements)
   - Pre-built set of common components
@@ -686,6 +695,8 @@ const styles = StyleSheet.create({});
   - [Introducing React Native Elements](https://medium.com/react-native-training/introducing-react-native-elements-e3d78389b7ea)
 
 - **step 6: Helper Styling Components**
+  - [How it look like after 6.7](https://i.imgur.com/MwKm2Af.png)
+    - Working well so far.... good job!!!
 
 ```bash
 #  6.1 install react-native-elements library
@@ -698,11 +709,6 @@ added 11 packages, changed 1 package, and audited 1186 packages in 7s
   run `npm fund` for details
 
 found 0 vulnerabilities
-
-# @filename: projectFolder/tracker/src
-mkdir components
-cd components
-touch spacer.tsx
 ```
 
 - [interesting error after install react-native-elements](https://i.imgur.com/PfGHeZU.png)
@@ -711,34 +717,51 @@ touch spacer.tsx
 ```typescript
 // @filename: ./projectFolder/tracker/src/screens/SignupScreen.tsx
 import {
-   StyleSheet,
   //  6.1.1 remove react-native 'Text & Button' elements
-  //  Text,
+   StyleSheet,
    View,
-  // ~~Button~~
  } from 'react-native';
 import React from 'react';
-// 6.1 import Input, Button, Text from react-native-elements library
-import { Input, Button, Text } from "@rneui/themed";
+
+// 6.1 import { Input, Button, Text } from react-native-elements library
+import { Input, Button, Text } from '@rneui/base';
+
+//6.7 import styling helper component Spacer here
+import Spacer from '../components/Spacer';
 
 type Props = {
   navigation: any;
 };
 
 const SignupScreen = ({ navigation }: Props): React.ReactElement => {
+
   return (
     <View>
-      <Text style={{ fontSize: 48 }}>SignupScreen</Text>
 
-      <Button
-        title='Go to Sign-in'
-        onPress={() => navigation.navigate('Signin')}
-      />
+    // 6.7.1 wrap the whole element with <Spacer> component i just created to make the style look a little more neat
+    <Spacer children={undefined} />
+    <Spacer>
+    // 6.2 replace existing Text component with new rneui Text (Text displays words and characters of various sizes.) component with a h3 (Text with Font size 28) prop
+      <Text h3>Sign Up for Tracker</Text>
+    </Spacer>
 
-      <Button
-        title='Go to Main Flow'
-        onPress={() => navigation.navigate('MainFlow')}
-      />
+    // 6.3 use the Input component for Email, and Password
+    // 6.3.1
+      <Input label="Email" />
+
+      //6.7.2
+    <Spacer children={undefined} />
+
+    // 6.3.2
+      <Input label="Password" />
+
+      //6.7.3
+    <Spacer>
+    // 6.4 replace both existing Button component with 1 new rneui Button 
+    // (Buttons are touchable elements used to interact with the screen and to perform and operation. It can displays words, icons or both. It can be styled with several props to look a specific way. Also receives all TouchableNativeFeedback (Android) or TouchableOpacity (iOS) props)
+        <Button title="Sign Up" />
+    </Spacer>
+
     </View>
   );
 };
@@ -747,6 +770,570 @@ export default SignupScreen;
 
 const styles = StyleSheet.create({});
 ```
+
+- [another interesting error](https://i.imgur.com/hOepEad.png)
+  - amazingly i manage to solve it by changing import { Input, Button, Text } from "@rneui/themed"; to ==> "@rneui/base";
+
+```bash
+# 6.5 let's build a helper component
+# @filename: projectFolder/tracker/src
+mkdir components
+cd components
+touch Spacer.tsx
+```
+
+```typescript
+// @filename: ./projectFolder/tracker/src/components/spacer.tsx
+
+// 6.6 the only job to this component is to apply some margin to a child component. nothing else
+import {
+    StyleSheet,
+    View
+    } from 'react-native'
+import React from 'react'
+
+type Props = {
+  children: any
+}
+
+// 6.6.1 pass in {children} props
+const spacer = ({children}: Props) => {
+  return (
+
+  <View
+  // 6.6.2 apply some styling to children component
+   style={styles.spacer}>
+     {children}
+     </View>
+  )
+  
+};
+
+export default spacer;
+
+// 6.6.3 apply some margin styling here
+const styles = StyleSheet.create({
+  spacer: {
+          margin: 15
+  }
+});
+```
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **step 7: Styling Odds & Ends**
+  - [Logic](https://i.imgur.com/ZXCssTX.png)
+  - 7.1 hide header of signup screen
+    - [screenOption](https://reactnavigation.org/docs/screen-options/)
+    - using **options={{ headerShown: false }}** to hide header
+      - instead of adding _headerShown: false_ to each screen's option, I can add screenOptions={{ headerShown: false }} to the navigator to set the option for all of the screens
+    - [Hide Header Bar on Specific Screens](https://www.kindacode.com/article/react-navigation-5-x-hiding-the-header-bar-on-a-specific-screen/)
+  - use <View> instead of <> fragment tag so I can apply some styling
+    - 7.2 style the signupScreen to center the signup screen
+
+```typescript
+// @filename: ./projectFolder/tracker/App.tsx
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+
+import SigninScreen from './src/screens/SigninScreen';
+import SignupScreen from './src/screens/SignupScreen';
+import AccountScreen from './src/screens/AccountScreen';
+import TrackCreateScreen from './src/screens/TrackCreateScreen';
+import TrackDetailScreen from './src/screens/TrackDetailScreen';
+import TrackListScreen from './src/screens/TrackListScreen';
+
+const navigator = createNativeStackNavigator();
+const tab = createBottomTabNavigator();
+
+function LoginFLow(): React.ReactElement {
+  return (
+    <navigator.Navigator>
+      <navigator.Screen
+        name='Signup'
+        component={SignupScreen}
+        // 7.1.3 use options with headerShown to false for hiding screens header
+        options={{ headerShown: false }}
+        />
+      <navigator.Screen
+        name='Signin'
+        component={SigninScreen}
+        />
+    </navigator.Navigator>
+  );
+}
+
+function TrackListFlow(): React.ReactElement {
+  return (
+    <navigator.Navigator>
+      <navigator.Screen
+        name='TrackList'
+        component={TrackListScreen}
+      />
+      <navigator.Screen
+        name='TrackDetail'
+        component={TrackDetailScreen}
+      />
+    </navigator.Navigator>
+  )
+}
+
+function MainFlow(): React.ReactElement {
+  return (
+    <tab.Navigator>
+      <tab.Screen
+        name='TrackListFlow'
+        component={ TrackListFlow}
+        />
+      <tab.Screen
+        name='TrackCreate'
+        component={TrackCreateScreen}
+        />
+        <tab.Screen
+          name='Account'
+          component={AccountScreen}
+        />
+    </tab.Navigator>
+  );
+}
+
+function App(): React.ReactElement {
+  return (
+    <NavigationContainer>
+      <navigator.Navigator>
+        <navigator.Screen
+          name='LoginFLow'
+          component={LoginFLow}
+        // 7.1.1 use options with headerShown to false for hiding screens header
+        options={{ headerShown: false }}
+        />
+        <navigator.Screen
+          name='MainFlow'
+          component={MainFlow}
+        // 7.1.2
+          options={{ headerShown: false }}
+        />
+      </navigator.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
+```
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **step 8 play with some common use Input 'Prop' using useState to handle data side of this form**
+  - wire up some state here
+  - [Input Prop](https://reactnativeelements.com/docs/components/input#props)
+    - 8.3 label: add a label on top of the input
+    - 8.4.1 autoCapitalize: Tells TextInput to automatically capitalize certain characters
+    - 8.4.2 autoCorrect: If false, disables auto-correct. The default value is true
+    - 8.3.1 value: The value to show for the text input.
+    - 8.3.2 onChangeText: Callback that is called when the text input's text changes
+    - 8.4.3 secureTextEntry: If true, the text input obscures the text entered so that sensitive text like passwords stay secure
+
+```typescript
+// @filename: ./projectFolder/tracker/src/screens/SignupScreen.tsx
+import {
+    StyleSheet,
+    View
+    } from 'react-native';
+    // 8.1 import useState hook
+import React, { useState } from 'react';
+
+import { Input, Button, Text } from '@rneui/base';
+
+import Spacer from '../components/Spacer';
+
+type Props = {
+  navigation: any;
+};
+
+const SignupScreen = ({ navigation }: Props): React.ReactElement => {
+  // 8.2 create 2 pieces of state for email and password
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  return (
+
+      // 7.2.1 add inline style attribute
+    <View style={styles.container}>
+      <Spacer children={undefined} />
+      <Spacer>
+        <Text h3>Sign Up for Tracker</Text>
+      </Spacer>
+
+  // 8.3 wire up to my input component
+        <Input
+        label="Email"
+    // 8.3.1 put in a value of email
+        value={email}              //default
+    //8.3.2 whenever user change the value, on on-change text will executed, and call to set new email 
+        onChangeText={setEmail}   //on-Change
+    //8.4.1 set to no autoCapitalize & no autoCorrect
+        autoCapitalize="none"
+        autoCorrect={false}
+
+      />
+
+      <Spacer children={undefined} />
+
+        <Input
+      //8.4.3 obscures the text entered
+         secureTextEntry={true}
+    // 8.5 set more secure input password prop here
+        label='Password'
+    // 8.3.3 put in a value of password
+        value={password}
+    //8.3.4 whenever user change the value, on on-change text will executed, and call to set new password
+        onChangeText={setPassword}
+    //8.4.2 set to no autoCapitalize & no autoCorrect
+        autoCapitalize="none"
+        autoCorrect={false}
+       />
+
+      <Spacer>
+        <Button title='Sign Up' />
+      </Spacer>
+
+    </View>
+
+  );
+};
+
+export default SignupScreen;
+
+//7.2.2 apply some styling here
+const styles = StyleSheet.create({
+    container: {
+    flex: 1,
+    justifyContent: 'center',
+    marginBottom: 250,
+    borderColor: 'red',
+    borderWidth: 10
+  },
+});
+```
+
+- [How it look like after step 8.4](https://i.imgur.com/9a88kae.png)
+- ![after step 8.4](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/after8.4.gif)
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **step 9: Authentication Context with useReducer**
+  - [Logic](https://i.imgur.com/fEtC5hj.png)
+
+```bash
+# 9.1 let's build context folder, with the helper function to help automate the process of creating context
+# @filename: projectFolder/tracker/src
+mkdir context
+cd context
+touch createDataContext.tsx
+
+# # @filename: projectFolder/tracker/src/context
+# 9.10 create a context file so we can work with the actual context
+touch AuthContext.tsx
+```
+
+```typescript
+// @filename: ./projectFolder/tracker/src/context/createDataContext.tsx
+//going to export the function so we don't have to rewrite the function again and again
+// 9.2
+import React, { useReducer } from 'react';
+
+// 9.3 export function with a reducer function, actions object, and a default state
+export default (reducer: any, actions: { [x: string]: (arg0: React.DispatchWithoutAction) => any; }, defaultValue: unknown) => {
+  // 9.4 create a context
+  const Context = React.createContext();
+
+  //9.5 create a helper provider component that takes children as Props
+  const Provider = ({ children }) => {
+    // 9.6 set up  a useReducer call and pass in 2 params: reducer function & default state value
+    const [state, dispatch] = useReducer(reducer, defaultValue);
+
+    // 9.7 loop over different action into our actions object
+    const boundActions = {};
+    for (let key in actions) {
+      boundActions[key] = actions[key](dispatch);
+    }
+
+    // 9.8 return the provider component
+    return (
+      <Context.Provider value={{ state, ...boundActions }}>
+        {children}
+      </Context.Provider>
+    );
+  };
+
+    // 9.9 return an object
+    // Provider is the component that going to make all of our data available to everything else inside our app
+    return {
+      Context,
+      Provider
+    };
+  };
+```
+
+```typescript
+// @filename: ./projectFolder/tracker/src/context/AuthContext.tsx
+// 9.10 work with the actual context
+
+  // 9.11 import the createDataContext helper function
+import { createDataContext } from './createDataContext';
+
+// 9.12 reducer need 2 arguments, first is our state, second is our action
+const authReducer = (state, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+// 9.13 define our different action function since I don't know what yet, I leave it alone and export the context
+
+// 9.14 export the provider & context to be use through out the whole app
+export const { Context, Provider } = createDataContext(
+  authReducer,            // pass in 3 arguments 1. authReducer
+  {},                     // 2. empty object
+  { isSignedIn: false }   // 3. initial state
+);
+```
+
+```typescript
+// @filename: ./projectFolder/tracker/App.tsx
+import React from 'react';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+
+import SigninScreen from './src/screens/SigninScreen';
+import SignupScreen from './src/screens/SignupScreen';
+
+import AccountScreen from './src/screens/AccountScreen';
+import TrackCreateScreen from './src/screens/TrackCreateScreen';
+
+import TrackDetailScreen from './src/screens/TrackDetailScreen';
+import TrackListScreen from './src/screens/TrackListScreen';
+
+// 9.15 import the provider & rename it using 'as' keyword
+import { Provider as AuthProvider } from './src/context/AuthContext';
+
+const navigator = createNativeStackNavigator();
+const tab = createBottomTabNavigator();
+
+function LoginFLow(): React.ReactElement {
+  return (
+    <navigator.Navigator>
+      <navigator.Screen
+        name='Signup'
+        component={SignupScreen}
+        options={{ headerShown: false }}
+        />
+      <navigator.Screen
+        name='Signin'
+        component={SigninScreen}
+        />
+    </navigator.Navigator>
+  );
+}
+
+function TrackListFlow(): React.ReactElement {
+  return (
+    <navigator.Navigator>
+      <navigator.Screen
+        name='TrackList'
+        component={TrackListScreen}
+      />
+      <navigator.Screen
+        name='TrackDetail'
+        component={TrackDetailScreen}
+      />
+    </navigator.Navigator>
+  )
+}
+
+function MainFlow(): React.ReactElement {
+  return (
+    <tab.Navigator>
+      <tab.Screen
+        name='TrackListFlow'
+        component={ TrackListFlow}
+        />
+      <tab.Screen
+        name='TrackCreate'
+        component={TrackCreateScreen}
+        />
+        <tab.Screen
+          name='Account'
+          component={AccountScreen}
+        />
+    </tab.Navigator>
+  );
+}
+
+function App(): React.ReactElement {
+  return (
+    <NavigationContainer>
+      <navigator.Navigator>
+        <navigator.Screen
+          name='LoginFLow'
+          component={LoginFLow}
+          options={{ headerShown: false }}
+        />
+        <navigator.Screen
+          name='MainFlow'
+          component={MainFlow}
+          options={{ headerShown: false }}
+        />
+      </navigator.Navigator>
+    </NavigationContainer>
+  );
+}
+
+// 9.16 export my own custom component
+export default () => {
+  return (
+    <AuthProvider>
+      <App />
+    </AuthProvider>
+  );
+};
+```
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+
+- **CONCEPTS: What's the Context doing?**
+- [Logic](https://i.imgur.com/Ln5Lpc1.png)
+
+- **step 10**
+
+```typescript
+// @filename: ./projectFolder/tracker/src/context/AuthContext.tsx
+// 10.1 here I am going to scaffold 3 different actions
+import createDataContext from './createDataContext';
+
+const authReducer = (state: any, action: { type: any; }) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+// 10.2 create a signup action
+const signup = (dispatch: any) => {
+  return (email: string, password: string) => {
+    // make api request to sign up with that email and password
+    // if we sign up, modify our state, and say that we are authenticated
+    // if signing up fails, we probably need to reflect an error message somewhere
+  };
+};
+
+// 10.3 create a signin action with email
+const signin = (dispatch: any) => {
+  return (email: string, password: string) => {
+    // Try to signin
+    // Handle success by updating state
+    // Handle failure by showing error message (somehow)
+  };
+};
+
+// 10.4 create a signout action
+const signout = (dispatch: any) => {
+  return () => {
+    // somehow sign out!!!
+  };
+};
+
+
+export const { Provider, Context } = createDataContext(
+  authReducer,
+  // 10.5 pass in 3 actions objects
+  { signup, signin, signout },
+  { isSignedIn: false }
+);
+```
+
+- **step 11: Setup and Hook up Axios API**
+  - [Logic](https://i.imgur.com/pjdDk0E.png)
+  - [using Ngrok](https://i.imgur.com/UHK6kWz.png)
+  - [Terminal 1 running Express API](https://i.imgur.com/yMFJb7N.png)
+  - [Terminal 2 running Android bundler](https://i.imgur.com/H31psID.png)
+  - 11.5 [Terminal 3 running Ngrok](https://i.imgur.com/O3FaY0v.png)
+
+```bash
+# 11.1 install axios API
+# @filename: projectFolder/tracker
+# Promise based HTTP client for the browser and node.js
+> npm install axios                          
+
+added 3 packages, and audited 1186 packages in 4s
+
+58 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+
+# 11.2 @filename: projectFolder/tracker/src/
+mkdir api
+cd api
+touch tracker.tsx
+
+# @filename: projectFolder/tracker
+> sudo snap install ngrok  
+[sudo] password for craftome_cj: 
+ngrok (v3/stable) 3.0.2 from Kyle Wenholz (kyle-ngrok) installed
+
+> ngrok -v
+ngrok version 3.0.2
+
+# 11.5 run Ngrok
+> ngrok http 4000
+
+ngrok                                                 (Ctrl+C to quit)
+
+Session Status                online
+Session Expires               1 hour, 59 minutes
+Update                        update available (version 3.0.4, Ctrl-U to update)
+Terms of Service              https://ngrok.com/tos
+Version                       3.0.2
+Region                        Australia (au)
+Latency                       240.308719ms
+Web Interface                 http://127.0.0.1:4040
+Forwarding                    https://7d03-210-10-2-52.au.ngrok.io -> http://localhost:4000
+# 11.6 copy the forwarding https address
+
+Connections                   ttl     opn     rt1     rt5     p50     p90
+                              0       0       0.00    0.00    0.00    0.00
+```
+
+```typescript
+// 11.3 import axios here
+import axios from 'axios';
+
+//11.4
+export default axios.create({
+  // 11.6.1 paste the address here
+  baseURL: 'https://7d03-210-10-2-52.au.ngrok.io',
+}); 
+```
+
+- [to check if Ngrok is working well, paste the address to browser to check, should see something like this:](https://i.imgur.com/va5ZPLS.png)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -768,14 +1355,14 @@ const styles = StyleSheet.create({});
     - api
       - tracker.tsx
     - components
+      - Spacer.tsx
       - AuthForm.tsx
       - Map.tsx
       - NavLink.tsx
-      - Spacer.tsx
       - TrackForm.tsx
     - context
-      - AuthContext.tsx
       - createDataContext.tsx
+      - AuthContext.tsx
       - LocationContext.tsx
       - TrackContext.tsx
     - hooks
@@ -825,6 +1412,9 @@ const styles = StyleSheet.create({});
       - dispatch will send an action up to the router
       - navigate, goBack, etc are available to dispatch actions in a convenient way
   - Navigators can also accept a navigation prop, which they should get from the parent navigator, if there is one
+  - [React Fragment](https://reactjs.org/docs/fragments.html)
+    - A common pattern in React is for a component to return multiple elements
+    - Fragments let you group a list of children without adding extra nodes to the DOM
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
