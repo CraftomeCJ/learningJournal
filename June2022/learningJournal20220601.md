@@ -313,7 +313,7 @@ end
 
 ## Personal Notes
 
-**Day 60 (Wednesday) and today's main focus:** <br />
+**Day 59 (Wednesday) and today's main focus:** <br />
 Today till Sunday will be building tracking app, breakdown SHARE Nx structure, define programming terminology, read on Unit Test. Try to master the workflow first. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
