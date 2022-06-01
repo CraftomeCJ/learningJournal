@@ -588,9 +588,9 @@ export default App;
 - **step 5: Testing the Navigation FLow**
   - [logic](https://i.imgur.com/jLf6jPO.png)
   - [How it look like after 5.3](https://i.imgur.com/BRkLSOT.png)
-  - ![after step 5.3](IMG/GIF/after5.3.gif)
+  - ![after step 5.3](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/after5.3.gif)
   - [How it look like after 5.6](https://i.imgur.com/9SwvAHL.png)
-  - ![after step 5.6](IMG/GIF/after5.6.gif)
+  - ![after step 5.6](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/GIF/after5.6.gif)
 
 ```typescript
 // @filename: ./projectFolder/tracker/src/screens/SignupScreen.tsx
