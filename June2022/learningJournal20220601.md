@@ -384,6 +384,9 @@ npm install @rneui/themed @rneui/base
 # @filename: projectFolder/tracker
 # Promise based HTTP client for the browser and node.js
 npm install axios
+
+# installed globally
+sudo snap install ngrok
 ```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
@@ -1323,12 +1326,13 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 ```
 
 ```typescript
+// @filename: projectFolder/tracker/src/api/tracker.tsx
 // 11.3 import axios here
 import axios from 'axios';
 
 //11.4
 export default axios.create({
-  // 11.6.1 paste the address here
+  // 11.6.1 paste the address here, remember it expired every 2 hour
   baseURL: 'https://7d03-210-10-2-52.au.ngrok.io',
 }); 
 ```
@@ -1379,17 +1383,11 @@ export default axios.create({
     - _mockLocation.js
     - navigationRef.js
 
-==============================================================================
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
 
 ## So do I know now?
-
-- **CONCEPTS**
-
-```TypeScript
-// example code
-```
-
-- **TIP**
 
 - **JARGON in laymen terms:**
   - [export default App;](https://stackoverflow.com/questions/36426521/what-does-export-default-do-in-jsx/36426988#36426988)
@@ -1415,26 +1413,6 @@ export default axios.create({
   - [React Fragment](https://reactjs.org/docs/fragments.html)
     - A common pattern in React is for a component to return multiple elements
     - Fragments let you group a list of children without adding extra nodes to the DOM
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
-
-## Do you know?
-
-- I can create custom types with the _type_ keyword
-
-- **CONCEPTS**
-
-```TypeScript
-// example code
-```
-
-- **TIP**
-
-- **JARGON in laymen terms:**
-  - [JARGON]
-  - in laymen terms
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
