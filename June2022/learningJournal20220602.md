@@ -827,7 +827,7 @@ export const { Provider, Context } = createDataContext(
     - first error is a async syntax type of {} with the help of Willy & Alvin's sharp eye, managed to solve it in the afternoon,
     - in the evening, met more error trying to upgrade v4 to v6 navigation library
 
-- down with flu since Friday, decided to redo the whole step 15 on Saturday and see if I can figure out the difference: what is forwardRef and what is ref, hopefully I can get better for more thinking work done.
+- down with flu, decided to redo the whole step 15 on tomorrow and see if I can figure out the difference: what is forwardRef and what is ref, hopefully I can get better for more thinking work done.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
