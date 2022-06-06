@@ -573,6 +573,10 @@ function TipCalculator(): TipCalculator {
 }
 ``` -->
 
+- FLu day #3 a bit better than yesterday, still didn't do much thinking, except reading the problem solving book.
+- push tracker app task if I feel a bit better better, hopefully by tomorrow...
+- managed to sort out problem solving book's summary, hope it helps me during my programming journey..
+
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 ==============================================================================
