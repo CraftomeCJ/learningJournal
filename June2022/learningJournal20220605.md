@@ -458,6 +458,17 @@ Today till Sunday will be building tracking app, breakdown SHARE Nx structure, d
 
 ==============================================================================
 
+- **What am I Learning/Working on now?**
+
+- Today is Sunday.
+- FLu day #4 seem the TCM medicine work like it said, I should feel better, less runny nose, less cough, less sore throat, no fever on the 3-4th day.
+- Continue recovery, resting my mind and body, took some time to read past 2 months journal, did some editing and updating on my master journal template.
+- push back tracker app task one more day, hopefully by tomorrow my thinking hat is back...
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
 ## Room to improve?
 <!-- This is where I write things I can do to improve my work -->
 <!-- Reflecting and Reviewing My Daily Work Journal
