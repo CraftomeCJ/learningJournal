@@ -48,7 +48,7 @@ Love Unconditionally:
 **Law of Life:** <br/>
 The Law of Giving: **Give, thou shalt Receive** <br/>
 Today, bring whomever I encounter a gift: a smile, a compliment or flower.<br/>
-Gratefully receive gifts. Keep wealth circulating by giving and receiving care, affection, appreciation and love</br>
+Gratefully receive gifts. Keep wealth circulating by giving and receiving care, affection, appreciation and love. </br>
 <!-- I will put the Law of Giving into effect by making a commitment to take the following steps:
   1. Wherever I go, and whoever I encounter, I will bring them a gift. The gift maybe a compliment , a flower, or a prayer. Today, I will give something to everyone I come into contact with, and so I will begin the process of circulating joy, wealth, and affluence in my life and in the lives of others.
   2. Today I will gratefully receive all gifts that life has to offer me. I will receive the gifts of nature; sunlight and the sound of birds singing, or spring showers. I will also be open to receiving from others, whether it be in the form of a material gift, money, a compliment, or a prayer.
@@ -341,7 +341,7 @@ For example: wife need me to run a quick errand or my co-worker needs help
 
 - **REMEMBER: I don't become a programmer from tutorial, reading codes or books. I become a programmer WHEN I AM DOING the coding (It doesn't matter how many line I write, How bad/good each block of code look like)**
 
-**Day 63 (Sunday) and today's main focus:** <br />
+**Day 64 (Monday) and today's main focus:** <br />
 Today till Sunday I will be continue doing tracker app, read on Unit Test, define programming terminology, and try to understand jargon in layman term. Try to master the workflow. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
@@ -362,10 +362,15 @@ This section is focused about my personal growth and should be an essential part
   - **10 steps guidelines which I can use for any [programming problem](https://codeburst.io/10-steps-to-solving-a-programming-problem-8a32d1e96d74):**
 <!-- see day 20220604 notes -->
   1. Read the problem several times until I can explain it to someone else
+
   2. Solve the problem manually test it with 4 sets of sample data
+
   3. Optimize the manual steps, make it better
+
   4. Write the manual steps as pseudo-code or comments
+
   5. Replace the pseudo-code or comments into real code
+
   6. Simplify and optimize the real code
 <!-- - _some questions I can ask myself:_
   - What are my goals for simplifying and optimizing?
@@ -394,6 +399,7 @@ This section is focused about my personal growth and should be an essential part
     - What is it doing?
 -->
   9. Get feedback through code reviews
+  
   10. Practice, practice, practice
 
 - Facing any complex challenge/problems, **writing actual code is only a small part of the process:**
@@ -489,6 +495,49 @@ This section is focused about my personal growth and should be an essential part
   - [Converting class components to functional components (basic structure, state, & life-cycle methods)](https://dev.to/sametweb/converting-class-components-to-function-components-basic-structure-state-life-cycle-methods-50cd)
 
 - **[Helper methods](https://decipher.dev/30-seconds-of-typescript/docs/)**
+- [Google Search Operators when try to find an answer to the bugs](https://ahrefs.com/blog/google-advanced-search-operators/)
+  - intext: "typescript"
+  - intitle: "typescript"
+  - inurl: "typescript"
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
+### Software Installed
+
+- **list of dependencies installed**
+
+```Bash
+# @filename: projectFolder/tracker
+npm install
+@react-navigation/core
+@react-navigation/native
+@react-navigation/native-stack 
+@react-navigation/bottom-tabs
+@react-navigation/stack
+
+
+# @filename: projectFolder/tracker
+# for search icons
+@types/react-native-vector-icons
+
+# @filename: projectFolder/tracker
+# React Native Elements is a useful set of reusable components for React Native application
+npm install @rneui/themed @rneui/base
+
+# @filename: projectFolder/tracker
+# Promise based HTTP client for the browser and node.js
+npm install axios
+
+# installed globally
+sudo snap install ngrok
+
+# @filename: projectFolder/tracker
+# install RN Async Storage: 
+# An asynchronous, unencrypted, persistent, key-value storage system for React Native.
+@react-native-async-storage/async-storage
+```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -497,9 +546,19 @@ This section is focused about my personal growth and should be an essential part
 - **What am I Learning/Working on now?**
 
 - **TOPIC**
-  - instructions
+  - Building a Tracker App **Day 5**
+  - [Markup 1](https://i.imgur.com/o371O7c.png)
+  - [Markup 2](https://i.imgur.com/OrusW8t.png)
 
-- **CONCEPTS**
+- **CONCEPTS: Navigation Design & Setup Navigator Flow**
+  - [logic 1](https://i.imgur.com/o5SV2Iw.png)
+  - [logic 2](https://i.imgur.com/R9kWzsQ.png)
+  - [navigator scaffold 1](https://i.imgur.com/ukxvHRL.png)
+  - [navigator scaffold 2](https://i.imgur.com/kxGvJMT.png)
+  - [navigator scaffold 3](https://i.imgur.com/g9EIjyz.png)
+  - [navigator scaffold 4](https://i.imgur.com/Km8Wcl5.png)
+
+- **Step 16: Navigation to Signin**
 
 The result should be similar to [this](result screenshot link):
 
@@ -507,17 +566,18 @@ The result should be similar to [this](result screenshot link):
 // practice code
 ```
 
-- **Element References**
+- **Elements/Components/Instances/Props References**
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+- **TIP**
 
-=============================================================================
+- **JARGON in laymen terms:**
+  - [JARGON]
+  - in laymen terms
 
-### Software Installed
-
-- **list of dependencies installed**
-
-### Development References
+- FLu day #5 finally the 2 positive case in my household recovered, my flu seem to go away well too, a bit cough and slight runny nose, no more fever and sore throat, can do a bit more house work: have to clean, disinfect and sanitize the whole house. Shag!!
+- Today missed a meeting, being KO'ed after medication, seem to lose some momentum after not much work done this few days too.. not good!!
+- Never expect my immune system can give way so easily... took 5 days to feel better.. "really is long time no fall sick, once fall sick take long time." darn, hate it,  all my momentum!!
+- Seem everything is back to normal, time to put back my think hat and try to conquer the tracker app before syncing up with my Team Lead JunHao on Wednesday and prep for my first sprint.
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
