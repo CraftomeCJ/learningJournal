@@ -562,25 +562,13 @@ export default () => {
   - [What is forwarding ref in react and How we use it and why we use it?](https://medium.com/swlh/refs-and-forward-refs-in-react-be5bcb86fc69)
   - [How to use React Refs and React Forward Refs - including hooks](https://davidpnowak.com/b/how-to-use-react-refs-and-react-forward-refs-with-hooks/)
 
-- another interesting error:
-  - Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?
-  - manage to solve it by change ref to forwardRef, but how it was solved??
-
-- wow...time flies while playing something new
-  - trying to replace v4 {NavigationActions } from 'react-navigation' with v6 CommonActions take some thinking too
-  - unproductive day, got stuck with 2 error:
-    - first error is a async syntax type of {} with the help of Willy & Alvin's sharp eye, managed to solve it in the afternoon,
-    - in the evening, met more error trying to upgrade v4 to v6 navigation library
+- Flu day #2 in the end drifting in and out of coma, didn't do much thinking, so pick up an problem solving book to read.
+- will keep tracker app task if I feel better, hopefully by tomorrow...
+- for problem solving book's summary see tomorrow journal for..
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
-
-- **Step 16: Navigation to Signin**
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-==============================================================================
 
 ## Room to improve?
 <!-- This is where I write things I can do to improve my work -->
