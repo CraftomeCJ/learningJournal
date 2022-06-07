@@ -412,8 +412,11 @@ sudo snap install ngrok
 
 ```bash
 # @filename: projectFolder
-npx react-native init tracker --npm
+npx react-native init tracker --npm  #plain RN project
+npx react-native init whatProjectName --template react-native-template-typescript --npm #RN + TS project
+npx expo-cli init myProjectName --npm   #project with template option
 
+# using npx expo-cli init projectName --npm to init a project
 ? Choose a template: › - Use arrow-keys. Return to submit.
     ----- Managed workflow -----
     blank               a minimal app as clean as an empty canvas
