@@ -344,8 +344,8 @@ For example: wife need me to run a quick errand or my co-worker needs help
 
 - **REMEMBER: I don't become a programmer from tutorial, reading codes or books. I become a programmer WHEN I AM DOING the coding (It doesn't matter how many line I write, How bad/good each block of code look like)**
 
-**Day 63 (Sunday) and today's main focus:** <br />
-Today till Sunday I will be ... ... ... ... ... , read on Unit Test, define programming terminology, and try to understand tech jargon in layman term. Try to master the workflow. Do not rush and chase the pack. Do it at my own pace.
+**Day 66 (Wednesday) and today's main focus:** <br />
+Today till Sunday I will be continue redoing tracker app, read on Unit Test, define programming terminology, and try to understand jargon in layman term. Try to master the workflow. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
 <!-- Throughout the day things may pop-up in my head that I may want to personally get done.
