@@ -506,8 +506,8 @@ This section is focused about my personal growth and should be an essential part
 ==============================================================================
 
 - **What am I Learning/Working on now?**
-Did some research after Janna mentioned using yarn install for SHARE App dependencies setup:
-had a new discoveries for using different dependencies manager. Very interesting finding.
+- Did some research after Janna mentioned using yarn install for SHARE App dependencies setup:
+  - had a new discoveries for using different dependencies manager. Very interesting finding.
   - npm install ==> to install all npm dependencies from node_modules into package-lock.json
   - yarn import ==> to generates yarn.lock file from an npm package-lock.json file in the same directory or an existing npm-stalled node_modules directory.
     - With these CLI, it help to migrate project from npm to yarn and reduces the difference between npm and yarn lockfile and the existing dependency tree as best as it can.
