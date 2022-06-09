@@ -606,7 +606,7 @@ These questions will help me review and unlock areas of improvement (which will 
   - important to understand how React Native + TypeScript works, the more creative ways to solve potential problems.
 - Resourcefulness + independence:
   - able to complete individual tasks and later combine them together with other.
-  - important to remain resourceful and to habe confidence in my own ability to find a solution to any coding problem that might arise.
+  - important to remain resourceful and to have confidence in my own ability to find a solution to any coding problem that might arise.
 - Curiosity:
   - important to remain curious about coding and various languages and technologies.
 - Time-boxing to strict 90 minutes per task with a 20min rest break.
@@ -801,7 +801,7 @@ Created by:
 
 [Gitignore Explained: What is Gitignore and How to Add it to Your Repo](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
 
-[Git Rename Branch – How to Change a Local Branch Name](https://www.freecodecamp.org/news/git-rename-branch-how-to-change-a-local-branch-name/)
+[Git Rename Branch - How to Change a Local Branch Name](https://www.freecodecamp.org/news/git-rename-branch-how-to-change-a-local-branch-name/)
 
 [How to exit a git merge asking for commit message?](https://unix.stackexchange.com/questions/181280/how-to-exit-a-git-merge-asking-for-commit-message)
 
