@@ -49,7 +49,8 @@ Trust that when things don't seem to go my way, there is a reason. <br/>
 <!-- I will put the Law of Intention and Desire into effect by making a commitment to take the following steps:
   1. I will make a list of all my desires. I will carry this list with me whenever I go. I will look at it before I go to sleep at night. I will look at it when I wake up in the morning. 
   2. I will release this list of my desires and surrender it to the womb of creation, trusting that when things don't seem to go my way, there is a reason, and that the cosmic plan has designs for me much grander than even those I have conceived.
-  3. I will remind myself to practice present-moment awareness in all my actions. I will refuse to allow obstacles to consume and dissipate the quality of the attention in the present moment. I will accept the present as it is, and manifest the future through my deepest, most cherished intentions and desires.-->
+  3. I will remind myself to practice present-moment awareness in all my actions. I will refuse to allow obstacles to consume and dissipate the quality of the attention in the present moment. I will accept the present as it is, and manifest the future through my deepest, most cherished intentions and desires.
+-->
 
 **Daily Law:** <br/>
 <!-- JUNE
@@ -1108,7 +1109,7 @@ Created by:
 
 [Gitignore Explained: What is Gitignore and How to Add it to Your Repo](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
 
-[Git Rename Branch – How to Change a Local Branch Name](https://www.freecodecamp.org/news/git-rename-branch-how-to-change-a-local-branch-name/)
+[Git Rename Branch - How to Change a Local Branch Name](https://www.freecodecamp.org/news/git-rename-branch-how-to-change-a-local-branch-name/)
 
 [How to exit a git merge asking for commit message?](https://unix.stackexchange.com/questions/181280/how-to-exit-a-git-merge-asking-for-commit-message)
 
