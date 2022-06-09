@@ -505,34 +505,55 @@ This section is focused about my personal growth and should be an essential part
 
 - **What am I Learning/Working on now?**
 
- **TOPIC**
-  - Building a Tracker App **Day 5**
-  - [Markup 1](https://i.imgur.com/o371O7c.png)
-  - [Markup 2](https://i.imgur.com/OrusW8t.png)
+- **TOPIC**
+  - Build _CRUD REST API_ with Node.js, Express, and PostgreSQL
+  - I'll learn how to create a CRUD RESTful API in a Node.js environment that runs on an Express server and uses a PostgreSQL database
+  - The goal is to allow CRUD operations, GET, POST, PUT, and DELETE, on the API, which will run the corresponding database commands
+  - To do so, I'll set up a route for each endpoint and a function for each query
 
-- **CONCEPTS: Navigation Design & Setup Navigator Flow**
-  - [logic 1](https://i.imgur.com/o5SV2Iw.png)
-  - [logic 2](https://i.imgur.com/R9kWzsQ.png)
-  - [navigator scaffold 1](https://i.imgur.com/ukxvHRL.png)
-  - [navigator scaffold 2](https://i.imgur.com/kxGvJMT.png)
-  - [navigator scaffold 3](https://i.imgur.com/g9EIjyz.png)
-  - [navigator scaffold 4](https://i.imgur.com/Km8Wcl5.png)
+- **CONCEPTS:**
+  - [What is a RESTful API?](https://www.techtarget.com/searchapparchitecture/definition/RESTful-API)
+    - [What Is the Difference Between REST and RESTful APIs?](https://devmountain.com/blog/what-is-the-difference-between-rest-and-restful-apis/)
+    - Representational State Transfer (REST) defines a set of standards for web services
+    - An API is an interface that software programs use to communicate with each other
+    - RESTful API is an API that conforms to the REST architectural style and constraints
+    - REST systems are stateless, scalable, cacheable, and have a uniform interface
+  - [What is a CRUD API?](https://securityboulevard.com/2022/03/what-is-a-crud-api/)
+    - [REST vs CRUD](https://www.logicmonitor.com/blog/rest-vs-crud)
+    - [What is the difference between CRUD and REST API?](https://hevodata.com/learn/crud-vs-rest/)
+    - When building an API, I want the model to provide four basic functionalities
+    - It should be able to create, read, update, and delete resources
+    - This set of essential operations is commonly referred to as CRUD
+      - RESTful APIs most commonly utilize HTTP requests
+      - Four of the most common HTTP methods in a REST environment are GET, POST, PUT, and DELETE, which are the methods by which a developer can create a CRUD system
+  - [What is Express?](https://www.besanttechnologies.com/what-is-expressjs)
+    - [Why Should You Use It?](https://www.makeuseof.com/what-is-express/)
+    - [Express](https://expressjs.com/) is a fast, un-opinionated, minimalist web framework for Node.js
+    - Although Express is minimalist, it is also very flexible, leading to the development of various Express middlewares that I can use to address almost any task or problem imaginable
+  - [What is PostgreSQL?](https://www.postgresql.org)
+    - [SQL Server vs PostgreSQL](https://www.educba.com/sql-server-vs-postgresql/)
+    - PostgreSQL, commonly referred to as Postgres, is a free, open source relational database management system
+    - PostgreSQL is a robust relational database
+    - It is known for stability, extensibility, and standards compliance, it's a popular choice for developers and companies.
+    - It is possible to create a Node.js RESTful CRUD API using Sequelize
+      - Sequelize is a promise-based Node.js ORM for for Postgres, MySQL, MariaDB, SQLite, and Microsoft SQL Server
+  - [What is node-postgres?](https://github.com/brianc/node-postgres)
+    - [Using PostgreSQL with Node.js and node-postgres](https://stackabuse.com/using-postgresql-with-nodejs-and-node-postgres/)
+    - [How to Connect Node Postgres using NPM](https://hevodata.com/learn/node-postgres/)
+    - [Node Postgres tutorial](https://zetcode.com/javascript/nodepostgres/)
+      - node-postgres, or pg, is a nonblocking PostgreSQL client for Node.js
+      - It is a collection of Node.js modules for interfacing with a PostgreSQL database
+      - Among the many features node-postgres supports include callbacks, promises, async/await, connection pooling, prepared statements, cursors, rich type parsing, and C/C++ bindings
 
-- **Step 16: Navigation to Signin**
+## Today's Summary
 
-The result should be similar to [this](result screenshot link):
+I should now able to build a functioning API server that runs on Node.js and is hooked up to an active PostgreSQL database
 
-```TypeScript
-// practice code
-```
+Today I had learned how to install and set up PostgreSQL in the command line, create users, databases, and tables, and run SQL commands
 
-- **Elements/Components/Instances/Props References**
+At the same time also learned how to create an Express server that can handle multiple HTTP methods and use the pg module to connect to PostgreSQL from Node.js
 
-- **TIP**
-
-- **JARGON in laymen terms:**
-  - [JARGON]
-  - in laymen terms
+I hope using this knowledge, I should be able to build on this API and utilize it for the upcoming project: SHARE App...
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -540,63 +561,544 @@ The result should be similar to [this](result screenshot link):
 
 ### Software Installed
 
-- **list of dependencies installed**
+- **list of programs/dependencies installed**
+  - [postgresql](https://www.postgresql.org/docs/current/)
+    - PostgreSQL is an object-relational database management system (ORDBMS)
+  - [pgAdmin](https://www.pgadmin.org)
+  - PostgreSQL Tools
+  - [express](https://www.npmjs.com/package/express)
+    - Fast, unopinionated, minimalist web framework for node.
+  - [pg](https://www.npmjs.com/package/pg)
+    - Non-blocking PostgreSQL client for Node.js
+    - Pure JavaScript and optional native libpq bindings.
 
 ### Development References
+
+- [CRUD REST API  with Node.js, Express, and PostgreSQL](https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/)
+
+- Next Targeted Project Tutorial
+  - [Building a Node.js/TypeScript REST API, Part 1: Express.js](https://www.toptal.com/express-js/nodejs-typescript-rest-api-pt-1)
+  - [Building a Node.js/TypeScript REST API, Part 2: Models, Middleware, and Services](https://www.toptal.com/express-js/nodejs-typescript-rest-api-pt-2)
+
+- Good to Know
+  - [Node.js Error Handling Made Easy: Best Practices On Just About Everything You Need to Know](https://sematext.com/blog/node-js-error-handling/)
+  - [A Comprehensive Guide To Error Handling In Node.js](https://www.honeybadger.io/blog/errors-nodejs/)
+
+- [Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
 =============================================================================
 
-## Exercise of the Day
+- **Step 1: Creating a PostgreSQL database**
+  - installing PostgreSQL, creating a new user, creating a database, and initializing a table with a schema and some data
 
-TypeScript **_Revisited_ Day 2**
+```bash
+# 1.1 install postgresql with brew
+brew install postgresql
 
-[x] **Challenge:** Read ==> TypeScript Quickly (aim to improve TypeScript Implementations)
+# 1.2 get postgresql up and running with services start
+brew services start postgresql
+==> Successfully started `postgresql` (label: homebrew.mxcl.postgresql)
 
-## Today's Summary
+# If at any point I want to stop the postgresql service, I can run brew services stop postgresql.
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+# 1.3 connect to the default postgres database with the default login information and no option flags:
+psql postgres
 
-==============================================================================
+# 1.4 # to denote that I have logged in as the superuser, or root:
+>postgres=#
 
-## So do I know now?
+# Commands within psql start with a backslash \
+# 1.5 \conninfo - can check what database, user, and port I've connected to
+> postgres=# \conninfo
+You are connected to database "postgres" as user "admin" via socket in "/tmp" at port "5432".
 
-- **CONCEPTS**
-
-```TypeScript
-// example code
+# Frequent used commands:
+# \q: Exit psql connection
+# \c: Connect to a new database
+# \dt: List all tables
+# \du: List all roles
+# \list: List databases
 ```
 
-- **TIP**
+- **Step 2: Creating a role in Postgres**
+  - 2.1 Let's create a role called admin and give it a password of 12345. A role can function as a user or a group
 
-- **JARGON in laymen terms:**
-  - [JARGON]
-  - in laymen terms
+```bash
+# 2.1
+postgres=# CREATE ROLE admin WITH LOGIN PASSWORD '12345';
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+# 2.2 I want admin to be able to create a database
+postgres=# ALTER ROLE admin CREATEDB;
 
-==============================================================================
+# 2.3 I can run \du to list all roles and users
+ admin     | Create DB                                                  | {}
+ javierho  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
 
-## Do you know?
+# 2.4 I want to create a database from the admin user. Exit from the default session with \q for quit:
+postgres=# \q
 
-- I can create custom types with the _type_ keyword
+# 2.5 back in our computer's default terminal connection
+# Let's connect postgres with admin
+> psql -d postgres -U admin
+psql (14.3)
+Type "help" for help.
 
-- **CONCEPTS**
-
-```TypeScript
-// example code
+# Instead of postgres=#, our prompt now shows postgres=> , meaning no longer logged in as a superuser.
+> postgres=>
 ```
 
-- **TIP**
+<p align="center">(<a href="#top">back to top</a>)</p>
 
-- **JARGON in laymen terms:**
-  - [JARGON]
-  - in laymen terms
+=============================================================================
+
+- **Step 3: Creating a database**
+
+```bash
+# 3.1 create a database with the SQL command
+postgres=> CREATE DATABASE api;
+CREATE DATABASE
+
+# 3.2 Use the \list command to see the available databases
+postgres=> \list
+ api       | admin    | UTF8     | C       | C     | 
+ postgres  | javierho | UTF8     | C       | C     | 
+ template0 | javierho | UTF8     | C       | C     | =c/javierho          +
+           |          |          |         |       | javierho=CTc/javierho
+ template1 | javierho | UTF8     | C       | C     | =c/javierho          +
+           |          |          |         |       | javierho=CTc/javierho
+
+# 3.3 Let's connect to the new api database with admin using the \c connect command
+postgres=> \c api
+You are now connected to database "api" as user "admin".
+api=>
+# prompt now shows that we're connected to api
+```
+
+- **Step 4: Creating a table**
+  - in the psql command prompt, let's create a table called users with three fields, two VARCHAR types, and an auto-incrementing PRIMARY KEY ID
+
+```bash
+# 4.1
+api=> CREATE TABLE users (ID SERIAL PRIMARY KEY, name VARCHAR(30), email VARCHAR(30));
+CREATE TABLE
+
+# Make sure not to use the backtick ` character when creating and working with tables in PostgreSQL
+# While backticks are allowed in MySQL, they're not valid in PostgreSQL
+# Also ensure that you do not have a trailing comma in the CREATE TABLE command
+
+# 4.2 Let's add some data to work with by adding two entries to users
+api=> INSERT INTO users (name, email) VALUES ('Tom', 'tom@example.com'), ('Jerry', 'jerry@example.com');
+INSERT 0 2
+
+# 4.3 Let's make sure that the information above was correctly added by getting all entries in users
+api=> SELECT * FROM users;
+ id | name  |       email       
+----+-------+-------------------
+  1 | Tom   | tom@example.com
+  2 | Jerry | jerry@example.com
+(2 rows)
+
+# Now, I have a user, database, table, and some data
+```
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
-==============================================================================
+=============================================================================
+
+- **Step 5: Setting up an Express server**
+  - Let's build our Node.js RESTful API to connect to this data, stored in a PostgreSQL database
+
+```bash
+# To set up a Node.js app and Express server, first create a directory for the project to live in
+#5.1 @filename: projectFolder/
+mkdir node-api-postgres
+cd node-api-postgres
+
+# 5.2 run npm init -y to create a package.json file
+npm init -y
+
+# 5.3  install Express for the server and node-postgres to connect to PostgreSQL
+npm install express pg --save
+
+# Now, I have our dependencies loaded into node_modules and package.json
+```
+
+- 5.4 Let's create an index.js file, which we'll use as the entry point for our server
+
+```bash
+# 5.4.1 @filename: ./ProjectFolder/node-api-postgres/
+touch index.js
+```
+
+```javascript
+// 5.4.2 @filename: ./ProjectFolder/node-api-postgres/index.js
+// At the top, I'll require the express module, the built-in body-parser middleware, and I'll set our app and port variables
+
+const                   //variable keyword
+ express                //variable name
+  =                     //assignment operator
+   require              // to use built-in module
+   ('express')          // express module
+const bodyParser = require('body-parser')
+const app = express()
+const port = 3000
+
+app.use(bodyParser.json())
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+)
+
+// 5.5 tell a route to look for a GET request on the root / URL and return some JSON:
+app.get('/', (request, response) => {
+  response.json({ info: 'Node.js, Express, and Postgres API' })
+})
+
+// 5.6 set the app to listen on the port I set:
+app.listen(port, () => {
+  console.log(`App running on port ${port}.`)
+})
+```
+
+```bash
+# 5.7 From CLI, let's start the server by hitting index.js:
+> node index.js
+App running on port 4001.
+```
+
+- 5.8 let's key in http://localhost:4001 in the URL bar of the browser, and it should show the JSON that set earlier
+![browser screenshot 1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ss1.png)
+
+- The Express server is running now, but only sending some static JSON data that we created
+  - Next step is to connect to PostgreSQL from Node.js to be able to make dynamic queries
+  - I can connect to a Postgres database using a **Client** like [pgAdmin](https://www.pgadmin.org/) or from **Node.js**
+
+- **Step 6: Connecting to a Postgres database from Node.js**
+  - Let's use the node-postgres module to create a pool of connections
+  - Therefore, I don't have to open and close a client each time I make a query
+  - A popular option for production pooling would be to use _pgBouncer_, a lightweight connection pooler for PostgreSQL
+
+- // 6.1 Let's create a file called queries.js and set up the configuration of your PostgreSQL connection:
+
+```bash
+# 6.1.1 @filename: ./ProjectFolder/node-api-postgres/
+touch queries.js
+```
+
+```javascript
+// 6.1.2 @filename: ./ProjectFolder/node-api-postgres/queries.js
+const Pool = require('pg').Pool
+const pool = new Pool({
+  user: 'me',
+  host: 'localhost',
+  database: 'api',
+  password: 'password',
+  port: 5432,
+})
+```
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **Step 7: Creating routes for CRUD operations**
+  - Let's set up a route for each endpoint and a function corresponding to each query to allow CRUD operations, GET, POST, PUT, and DELETE on the API, which will run the corresponding database commands
+  - Let's create six functions for six routes, as shown below
+    - First, create all the functions for each route
+    - Then, export the functions so they're accessible:
+      - 7.1 GET: / | displayHome()
+      - 7.2 GET: /users | getUsers()
+      - 7.3 GET: /users/:id | getUserById()
+      - 7.4 POST: /users | createUser()
+      - 7.5 PUT: /users/:id | updateUser()
+      - 7.6 DELETE: /users/:id | deleteUser()
+  - In index.js, I made an app.get() for the root endpoint with a function in it
+  - Now, in queries.js, let's create endpoints that will display all users, display a single user, create a new user, update an existing user, and delete a user
+
+```javascript
+// @filename: ./ProjectFolder/node-api-postgres/queries.js
+
+// GET: / | displayHome()
+// 7.1 GET all users
+// This first endpoint will be a GET request
+// I can put the raw SQL that will touch the api database inside the pool.query()
+// I'll SELECT all users and order by ID.
+
+const                                     // variable keywords
+getUsers                                  // variable whatever-I-name
+ =                                        // assignment operator
+  (request, response)                     // 2 arguments
+    => {                                  // arrow function
+  pool.query                              // query keyword
+  ('SELECT * FROM users ORDER BY id ASC', // SQL query syntax
+     (error, results)                     // 2 arguments
+      => {                                // arrow function
+    if                                    // if statement
+    (error)                               // if error
+    {                                     // start curly brace
+      throw error                         // throw keyword
+    }                                     // end curly brace
+    response.status                       // status keyword
+    (200)                                 // status code
+    .json(results.rows)                   // json keyword and send the results
+    })
+}
+
+// 7.2 GET a single user by ID
+
+// For our /users/:id request, I'll get the custom id parameter by the URL and use a WHERE clause to display the result
+
+// In the SQL query, let's for id=$1
+// In this instance, $1 is a numbered placeholder that PostgreSQL uses natively instead of the ? placeholder that is recognize from other variations of SQL
+
+const getUserById = (request, response) => {
+  const id = parseInt(request.params.id)
+
+  pool.query('SELECT * FROM users WHERE id = $1', [id], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json(results.rows)
+  })
+}
+
+// 7.3 POST a new user
+
+// The API will take a GET and POST request to the /users endpoint
+
+// In the POST request, let's add a new user
+// In this function, let's extracting the name and email properties from the request body and inserting the values with INSERT
+
+const createUser = (request, response) => {
+  const { name, email } = request.body
+
+  pool.query('INSERT INTO users (name, email) VALUES ($1, $2) RETURNING *', [name, email], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(201).send(`User added with ID: ${results.rows[0].id}`)
+  })
+}
+
+// 7.4 PUT updated data in an existing user
+
+// The /users/:id endpoint will also take two HTTP requests, the GET I created for getUserById and a PUT to modify an existing user
+// For this query, let's combine what is learned so far in GET and POST to use the UPDATE clause
+
+// It's worth noting that PUT is idempotent, meaning the exact same call can be made over and over and will produce the same result. PUT is different than POST, in which the exact same call repeated will continuously make new users with the same data:
+
+const updateUser = (request, response) => {
+  const id = parseInt(request.params.id)
+  const { name, email } = request.body
+
+  pool.query(
+    'UPDATE users SET name = $1, email = $2 WHERE id = $3',
+    [name, email, id],
+    (error, results) => {
+      if (error) {
+        throw error
+      }
+      response.status(200).send(`User modified with ID: ${id}`)
+    }
+  )
+}
+
+// 7.5 DELETE a user
+
+// Lastly, let's use the DELETE clause on /users/:id to delete a specific user by ID
+// This call is very similar to our getUserById() function:
+
+const deleteUser = (request, response) => {
+  const id = parseInt(request.params.id)
+
+  pool.query('DELETE FROM users WHERE id = $1', [id], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).send(`User deleted with ID: ${id}`)
+  })
+}
+
+// 7.6 Exporting CRUD functions in a REST API
+
+// To access these functions from index.js, I'll need to export them
+// Let's do so with module.exports, creating an object of functions
+// Since using the ES6 syntax, we can write getUsers instead of getUsers:getUsers and so on:
+
+module.exports = {
+  getUsers,
+  getUserById,
+  createUser,
+  updateUser,
+  deleteUser,
+}
+```
+
+- **Step 8: Setting up CRUD functions in a REST API**
+  - Now that I have all of the queries, but need to pull them into the index.js file and make endpoint routes for all the query functions have created
+
+```javascript
+// @filename: ./ProjectFolder/node-api-postgres/index.js
+
+// 8.1 To get all the exported functions from queries.js, I'll require the file and assign it to a variable:
+const db = require('./queries')
+
+// 8.2 for each endpoint, let's set the HTTP request method, the endpoint URL path, and the relevant function:
+app.get('/users', db.getUsers)
+app.get('/users/:id', db.getUserById)
+app.post('/users', db.createUser)
+app.put('/users/:id', db.updateUser)
+app.delete('/users/:id', db.deleteUser)
+```
+
+- **Step 9: Start up server and test the POST, PUT, and DELETE requests**
+  - With just these two files, I have a server, database, and our API all set up
+
+```bash
+# 9.1 Let's start up the server by hitting index.js again:
+> node index.js
+App running on port 4001.
+```
+
+- 9.2 go to http://localhost:4001/users or http://localhost:4001/users/1, I'll see the JSON response of the two GET requests
+![browser screenshot 2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ss2.png)
+
+- To test the POST, PUT, and DELETE requests, let's use a tool like Postman or a VS Code extension like Thunder Client to send the HTTP requests
+- Using a Postman or Thunder Client tool makes it simple to query endpoints with different HTTP methods
+  - Simply enter your URL, choose the specific HTTP method, insert JSON value if the endpoint is a PUT or POST route, and hit send:
+- GET request
+![browser screenshot 3](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ss3.png)
+- POST request
+![browser screenshot 4](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ss4.png)
+
+- The example above shows sending a POST/GET request to the specified route
+- The POST option suggests that it is a POST request
+- The URL beside the method is the API endpoint, and the JSON content is the data to be sent to the endpoint
+- I can hit the different routes similarly.. Let's have fun with the PUT and DELETE requests....
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
+
+- **Elements/Components/Instances/Props References**
+  - **Create:** Use the HTTP POST method to create a resource in a REST environment
+  - **Read:** Use the GET method to read a resource, retrieving data without altering it
+  - **Update:** Use the PUT method to update a resource
+  - **Delete:** Use the DELETE method to remove a resource from the system
+  - **PostgreSQL command prompt**
+    - _psql_ is the PostgreSQL interactive terminal
+    - Running _psql_ will connect me to a PostgreSQL host
+    - _psql --help_ will give me more information about the available options for connecting with _psql_
+      - _-h: --host=HOSTNAME:_ The database server host or socket directory; the default is local socket
+      - _-p: --port=PORT:_ The database server port; the default is 5432
+      - _-U: --username=USERNAME:_ The database username; the default is your_username
+      - _-w: --no-password:_ Never prompt for password
+      - _-W: --password:_ Force password prompt, which should happen automatically
+
+- **TIP**
+  - [API Best Practices](https://blogs.mulesoft.com/dev-guides/api-design/api-best-practices-series-intro/)
+  - In a production environment, It would better to put the configuration details in a separate file with restrictive permissions so that it is not accessible from version control
+
+- **JARGON in laymen terms:**
+  - [Sequelize](https://sequelize.org)
+  - [Introduction to Sequelize ORM for Node.js](https://www.section.io/engineering-education/introduction-to-sequalize-orm-for-nodejs/)
+    - **Sequelize** is a modern TypeScript and Node.js ORM for Postgres, MySQL, MariaDB, SQLite and SQL Server, and more
+  - [ORM](https://www.altexsoft.com/blog/object-relational-mapping/)
+    - **Object-relational mapping (ORM)** is a technique that creates a layer between the language and the database, helping programmers work with data without the OOP paradigm
+  - [required()](https://flexiple.com/javascript-require-vs-import/)
+    - require() is not part of the standard JavaScript API. But in Node.js, it's a built-in function with a special purpose: **to load modules**
+  - ['express' module](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
+    - A module is a JavaScript library/file that you can import into other code using Node's require() function
+    - Express itself is a module, as are the middleware and database libraries that we use in our Express applications
+  - ['body-parser'module](https://www.educative.io/edpresso/what-is-express-body-parser)
+  - Express body-parser is an npm library used to process data sent through an HTTP request body
+  - It exposes four express middlewares for parsing text, JSON, url-encoded and raw data set through an HTTP request body
+  - These middlewares are functions that process incoming requests before they reach the target controller
+  - [express()](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
+    - Express provides methods to specify what function is called for a particular HTTP verb ( GET , POST , SET , etc.) and URL pattern ("Route"), and methods to specify what template ("view") engine is used, where template files are located, and what template to use to render a response
+  - [const app = express()](https://stackoverflow.com/questions/27599614/var-express-requireexpress-var-app-express-what-is-express-is-it)
+    - Calls the express function "express()" and puts new Express application inside the app variable (to start a new Express application)
+    - It's something like I am creating an object of a class
+  - [app.use()](https://www.geeksforgeeks.org/express-js-app-use-function/)
+    - **use()**: The app.use() function is used to mount the specified middleware function (are the functions that have access to the request object and response object, or we can call it a response-request cycle) at the path which is being specified
+    - [Difference between app.use() and app.get() in Express.js](https://www.geeksforgeeks.org/difference-between-app-use-and-app-get-in-express-js/)
+  - [bodyParser.json()](https://expressjs.com/en/resources/middleware/body-parser.html)
+    - bodyParser.json returns middleware that only parses json
+    - This parser accepts any Unicode encoding of the body and supports automatic inflation of gzip and deflate encodings
+    - A new body object containing the parsed data is populated on the request object after the middleware (i.e. req.body)
+    - _app.use(bodyParser.json())_ basically tells the system that I want json to be used
+    - _bodyParser.urlencoded({extended: ...})_ basically tells the system whether I want to use a simple algorithm for shallow parsing (i.e. false) or complex algorithm for deep parsing that can deal with nested objects (i.e. true)
+  - [app.get('/', (request, response)](https://expressjs.com/en/guide/routing.html)
+    - [Express' app.get()](https://masteringjs.io/tutorials/express/app-get) function lets me define a route handler for GET requests to a given URL
+  - [response.json([selector])](https://developer.mozilla.org/en-US/docs/Web/API/Response/json)
+    - The json() method of the [Response interface](https://k6.io/docs/javascript-api/k6-http/response/response-json/) takes a Response stream and reads it to completion
+    - It returns a promise which resolves with the result of parsing the body text as JSON
+  - [pgBouncer](https://www.pgbouncer.org)
+    - PgBouncer is an open-source, lightweight, single-binary connection pooler for PostgreSQL
+    - It can pool connections to one or more databases (on possibly different servers) and serve clients over TCP and Unix domain sockets
+    - PgBouncer maintains a pool of connections for each unique user, database pair
+    - There are 3 reasons why it is be used:
+      - It reduces PostgreSQL resource consumption (memory, backends, fork)
+      - It supports online restart/upgrade without dropping client connections
+      - It allows PostgreSQL restart/upgrade without dropping client connections
+  - [(req, res) => {}](https://www.digitalocean.com/community/tutorials/nodejs-res-object-in-expressjs)
+    - _res_ object in Express. Short for response, the res object is one half of the request and response cycle to send data from the server to the client-side through HTTP requests
+      - used as callback **arguments**
+      - _The res_ object can also specify HTTP status codes with the .status() method: **_res.status(404)**
+      - The _res_ object holds methods to facilitate data and file transfer as part of your response cycle from your Express server to the client-side.
+    - _req_ object in Express. Short for request, the req object is one half of the request and response cycle to examine calls from the client side, make HTTP requests, and handle incoming data whether in a string or JSON object
+      - The _[req](https://www.digitalocean.com/community/tutorials/nodejs-req-object-in-expressjs)_ object as part of the request cycle to handle HTTP requests and data from the client side
+  - [pool.query()](https://node-postgres.com/api/pool)
+    - Often we only need to run a single query on the database, so as convenience the pool has a method to run a query on the first available idle client and return its result.
+  - [(error, results) => {}](https://www.geeksforgeeks.org/error-first-callback-in-node-js/)
+    - Error-First Callback in Node.js is a function which either returns an error object or any successful data returned by the function
+      - The first argument in the function is reserved for the error object
+      - If any error has occurred during the execution of the function, it will be returned by the first argument
+      - The second argument of the callback function is reserved for any successful data returned by the function
+      - If no error occurred then the error object will be set to null
+  - [if (error) { throw error } exception(error) handling control flow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#throw_statement)
+    - [What is exception handling?](https://www.quora.com/What-is-exception-handling)
+      - Exception handling is the process of responding to unwanted or unexpected events
+    - [throw keywords](https://www.w3schools.com/jsref/jsref_throw.asp)
+      - The throw statement allows you to create a custom error.
+      - The throw statement throws (generates) an error.
+        - The technical term for this is: 
+        - The throw statement throws an exception.
+        - The exception can be a JavaScript String, a Number, a Boolean or an Object
+  - **res.status(200).json(results.rows)**
+    - integrate the .status() method on the res object and pass in an HTTP status code as an argument
+    - [res.status(200) method](https://developer.mozilla.org/en-US/docs/Web/API/Response/status)
+      - The status read-only property of the Response interface contains the HTTP status codes of the response
+        - For example, 200 for success, 404 if the resource could not be found
+    - [res.status(code_element)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+      - HTTP response status codes indicate whether a specific HTTP request has been successfully completed
+      - The [Status-Code element](https://www.tutorialspoint.com/http/http_status_codes.htm#) in a server response, is a 3-digit integer where the first digit of the Status-Code defines the class of response and the last two digits do not have any categorization role.
+    - [res.json(results.rows) method](https://developer.mozilla.org/en-US/docs/Web/API/Response/json)
+      - **json()**
+        - The json() method of the Response interface takes a Response stream and reads it to completion
+        - It returns a promise which resolves with the result of parsing the body text as JSON
+      - JSON (Java Script Object Notation) is a lightweight text-based data format that helps to interchange data easily between modern applications
+  - [How do I return JSON in HTTP response?](https://reqbin.com/req/gzezk8d5/json-response-example)
+    - [.send(`User modified with ID: ${id})](https://www.geeksforgeeks.org/express-js-res-send-function/)
+      - The res.send() function basically sends the HTTP response
+      - The body _(`User modified with ID: ${id})_ parameter can be a String or a Buffer object or an object or an Array
+      - **Parameter:** This function accepts a single parameter body that describe the body which is to be sent in the response
+  - [parseInt(req.params.id)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+    - The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems)
+    - [(req.params.id) property](https://www.geeksforgeeks.org/express-js-req-params-property/)
+      - The req.params property is an object containing properties mapped to the named route "parameters"
+        - For example, if I have the route /users/:id, then the "id" property is available as req.params.id
+        - This object defaults to {}.
+  - [idempotent](https://www.mscharhag.com/api-design/http-idempotent-safe)
+  - Idempotence, in programming and mathematics, is a property of some operations such that no matter how many times you execute them, you achieve the same result
+  - In programming, idempotence can be a property of many different code elements, including functions, methods, requests and statements
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+=============================================================================
 
 ## Room to improve?
 <!-- This is where I write things I can do to improve my work -->
