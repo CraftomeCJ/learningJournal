@@ -97,8 +97,8 @@ I find myself full of energy or completely exhausted, and with little in between
 -->
 **Questions/Reflections of the day?**
 
-- [x] Ask myself: How have I helped someone else recently? <br/>
-- [x] What is my favorite thing to do during my free time? <br/>
+- [x] Ask myself: How am I pursuing my dreams right now? <br/>
+- [x] What bores me to death the most? <br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -541,7 +541,7 @@ This section is focused about my personal growth and should be an essential part
     - [Using PostgreSQL with Node.js and node-postgres](https://stackabuse.com/using-postgresql-with-nodejs-and-node-postgres/)
     - [How to Connect Node Postgres using NPM](https://hevodata.com/learn/node-postgres/)
     - [Node Postgres tutorial](https://zetcode.com/javascript/nodepostgres/)
-      - node-postgres, or pg, is a nonblocking PostgreSQL client for Node.js
+      - node-postgres, or pg, is a non-blocking PostgreSQL client for Node.js
       - It is a collection of Node.js modules for interfacing with a PostgreSQL database
       - Among the many features node-postgres supports include callbacks, promises, async/await, connection pooling, prepared statements, cursors, rich type parsing, and C/C++ bindings
 
@@ -769,7 +769,7 @@ app.listen(port, () => {
 App running on port 4001.
 ```
 
-- 5.8 let's key in http://localhost:4001 in the URL bar of the browser, and it should show the JSON that set earlier
+- 5.8 let's key in <http://localhost:4001> in the URL bar of the browser, and it should show the JSON that set earlier
 ![browser screenshot 1](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ss1.png)
 
 - The Express server is running now, but only sending some static JSON data that we created
@@ -963,7 +963,7 @@ app.delete('/users/:id', db.deleteUser)
 App running on port 4001.
 ```
 
-- 9.2 go to http://localhost:4001/users or http://localhost:4001/users/1, I'll see the JSON response of the two GET requests
+- 9.2 go to <http://localhost:4001/users> or <http://localhost:4001/users/1>, I'll see the JSON response of the two GET requests
 ![browser screenshot 2](https://github.com/CraftomeCJ/learningJournal/blob/main/IMG/PNG/ss2.png)
 
 - To test the POST, PUT, and DELETE requests, let's use a tool like Postman or a VS Code extension like Thunder Client to send the HTTP requests
@@ -1065,7 +1065,7 @@ App running on port 4001.
     - [throw keywords](https://www.w3schools.com/jsref/jsref_throw.asp)
       - The throw statement allows you to create a custom error.
       - The throw statement throws (generates) an error.
-        - The technical term for this is: 
+        - The technical term for this is:
         - The throw statement throws an exception.
         - The exception can be a JavaScript String, a Number, a Boolean or an Object
   - **res.status(200).json(results.rows)**
