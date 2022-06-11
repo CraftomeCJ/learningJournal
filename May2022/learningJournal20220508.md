@@ -466,7 +466,7 @@ include ':app'
 # Open the ~/.bash_profile
 gedit ~/.bash_profile
 
-# Add the below variables. Then Save and close the file.
+# Add the below variables. Then Save and close the file. (NOT VALID NEED UPDATE CHECK DOCS)
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
