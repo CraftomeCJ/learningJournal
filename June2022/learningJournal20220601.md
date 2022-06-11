@@ -503,6 +503,9 @@ touch SignupScreen.tsx SigninScreen.tsx AccountScreen.tsx TrackCreateScreen.tsx 
         - lazy: If its value is true, then the tab is rendered when it becomes active for the first time. Its default value is true.
         - tabBarComponent: It is an optional prop. It overrides the component which is used as a tab bar.
         - tabBarOptions: It is an object of many properties like tabStyle , showLabel, showIcon, style, etc…
+
+============= HAVE REFACTOR STEP 4 & 5 SEE STEP 16 ===================
+
 - see example below:
 
 ```TypeScript
@@ -718,7 +721,7 @@ const styles = StyleSheet.create({});
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
-=============================================================================
+============= HAVE REFACTOR STEP 4 & 5 SEE STEP 16 ===================
 
 - **CONCEPTS: building UI with [React Native Elements](https://reactnativeelements.com/docs) Library**
   - [react-native-elements](https://www.npmjs.com/package/react-native-elements)
