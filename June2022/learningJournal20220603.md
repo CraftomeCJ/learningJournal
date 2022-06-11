@@ -544,10 +544,12 @@ export default () => {
   return (
     <AuthProvider>
     // 15.5 pass in a prop call ref={} to setNavigator inside <App /> component
-      <App ref={
-        (navigatorRef) => {
-          setNavigator(navigatorRef);
-      }} />
+      <App 
+      ref=
+      ((navigator)=> {
+        setNavigator(navigator)
+        })
+        />
     </AuthProvider>
   );
 };

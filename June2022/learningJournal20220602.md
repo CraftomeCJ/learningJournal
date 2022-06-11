@@ -456,7 +456,7 @@ export default axios.create({
 // @filename: projectFolder/tracker/src/src/context/AuthContext.tsx
 import createDataContext from './createDataContext';
 // 12.3 import the API
-import { trackerApi } from '../api/tracker';
+import trackerApi from '../api/tracker';
 
 const authReducer = (state: any, action: { type: any; }) => {
   switch (action.type) {
@@ -504,7 +504,7 @@ export const { Provider, Context } = createDataContext(
 ```
 
 ```typescript
-// @filename: projectFolder/tracker/src/src/components/Signup.tsx
+// @filename: projectFolder/tracker/src/src/components/SignupScreen.tsx
 
 // 12.6 to access any context object, i need to import in order to access the action function
 import {
