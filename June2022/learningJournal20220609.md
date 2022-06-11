@@ -1,6 +1,6 @@
 <div id='top'><div>
 
-<h1 align="center">Learning Journal 07 June 2022 (Thursday)</h1>
+<h1 align="center">Learning Journal 09 June 2022 (Thursday)</h1>
 <!-- June 2022 CJ's Dictum -->
 <h1 align="center">No Progress?? Keep Tapping That Stone with Hammer!</h1>
 <p align="center">My passion to be a programmer came late in life
@@ -501,14 +501,60 @@ This section is focused about my personal growth and should be an essential part
 
 ==============================================================================
 
+### Software Installed
+
+- **list of dependencies installed**
+
+```Bash
+# @filename: projectFolder/tracker
+npm install
+@react-navigation/core
+@react-navigation/native
+@react-navigation/native-stack 
+@react-navigation/bottom-tabs
+@react-navigation/stack
+
+
+# @filename: projectFolder/tracker
+# for search icons
+@types/react-native-vector-icons
+
+# @filename: projectFolder/tracker
+# React Native Elements is a useful set of reusable components for React Native application
+npm install @rneui/themed @rneui/base
+
+# @filename: projectFolder/tracker
+# Promise based HTTP client for the browser and node.js
+npm install axios
+
+# installed globally
+sudo snap install ngrok
+
+# @filename: projectFolder/tracker
+# install RN Async Storage: An asynchronous, unencrypted, persistent, key-value storage system for React Native.
+@react-native-async-storage/async-storage
+```
+
+<p align="center">(<a href="#top">back to top</a>)</p>
+
+==============================================================================
+
 - **What am I Learning/Working on now?**
 
 - **TOPIC**
-  - instructions
+  - Building a Tracker App **Day 5**
+  - [Markup 1](https://i.imgur.com/o371O7c.png)
+  - [Markup 2](https://i.imgur.com/OrusW8t.png)
 
-- **CONCEPTS**
+- **CONCEPTS: Navigation Design & Setup Navigator Flow**
+  - [logic 1](https://i.imgur.com/o5SV2Iw.png)
+  - [logic 2](https://i.imgur.com/R9kWzsQ.png)
+  - [navigator scaffold 1](https://i.imgur.com/ukxvHRL.png)
+  - [navigator scaffold 2](https://i.imgur.com/kxGvJMT.png)
+  - [navigator scaffold 3](https://i.imgur.com/g9EIjyz.png)
+  - [navigator scaffold 4](https://i.imgur.com/Km8Wcl5.png)
 
-The result should be similar to [this](result screenshot link):
+- **Step 16: Navigation yo Signin**
 
 ```TypeScript
 // practice code
@@ -521,16 +567,6 @@ The result should be similar to [this](result screenshot link):
 - **JARGON in laymen terms:**
   - [JARGON]
   - in laymen terms
-
-<p align="center">(<a href="#top">back to top</a>)</p>
-
-=============================================================================
-
-### Software Installed
-
-- **list of dependencies installed**
-
-### Development References
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
