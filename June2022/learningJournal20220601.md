@@ -363,6 +363,32 @@ Today till Sunday will be building tracking app, breakdown SHARE Nx structure, d
 
 - **list of dependencies installed**
 
+```bash
+trackerapp@1.0.0 /Users/javierho/Desktop/Training_Folder/TrackerApp/tracker
+├── @babel/core@7.18.2
+├── @react-native-async-storage/async-storage@1.17.6
+├── @react-navigation/bottom-tabs@6.3.1
+├── @react-navigation/core@6.2.1
+├── @react-navigation/native-stack@6.6.2
+├── @react-navigation/native@6.0.10
+├── @rneui/base@4.0.0-rc.4
+├── @rneui/themed@4.0.0-rc.4
+├── @types/react-native-vector-icons@6.4.10
+├── @types/react-native@0.66.18
+├── @types/react@17.0.45
+├── axios@0.27.2
+├── expo-status-bar@1.3.0
+├── expo@45.0.4
+├── react-dom@17.0.2
+├── react-native-paper@4.12.1
+├── react-native-screens@3.13.1
+├── react-native-vector-icons@9.1.0
+├── react-native-web@0.17.7
+├── react-native@0.68.2
+├── react@17.0.2
+└── typescript@4.3.5
+```
+
 ```Bash
 # @filename: projectFolder/tracker
 npm install
@@ -372,16 +398,16 @@ npm install
 @react-navigation/bottom-tabs
 @react-navigation/stack
 
+# Cross-platform Material Design for React Native
+# Paper is a collection of customizable and production-ready components for React Native
+npm install react-native-paper
 
-# @filename: projectFolder/tracker
 # for search icons
-@types/react-native-vector-icons
+npm install @types/react-native-vector-icons
 
-# @filename: projectFolder/tracker
 # React Native Elements is a useful set of reusable components for React Native application
 npm install @rneui/themed @rneui/base
 
-# @filename: projectFolder/tracker
 # Promise based HTTP client for the browser and node.js
 npm install axios
 
