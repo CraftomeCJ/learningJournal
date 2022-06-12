@@ -504,9 +504,16 @@ touch SignupScreen.tsx SigninScreen.tsx AccountScreen.tsx TrackCreateScreen.tsx 
         - tabBarComponent: It is an optional prop. It overrides the component which is used as a tab bar.
         - tabBarOptions: It is an object of many properties like tabStyle , showLabel, showIcon, style, etc…
 
-============= HAVE REFACTOR STEP 4 & 5 SEE STEP 16 ===================
+=================== HAVE REFACTOR STEP 4 & 5 =========================
 
 - see example below:
+
+```bash
+# // @filename: ./projectFolder/tracker
+mkdir routes
+cd routes
+touch createRootNavigator.tsx
+```
 
 ```TypeScript
 // @filename: ./projectFolder/tracker/App.tsx
@@ -516,6 +523,23 @@ import React from 'react';
 
 // 4.2 import React Navigation v6 components
 import { NavigationContainer } from '@react-navigation/native';
+
+// 4.3 import createNativeStackNavigator function
+import RootNavigator from './src/routes/createRootNavigator';
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <RootNavigator></RootNavigator>
+    </NavigationContainer>
+  );
+}
+```
+
+```TypeScript
+// @filename: ./projectFolder/tracker/routes/createRootNavigator.tsx
+import React from 'react'
+
 // 4.3 import Native Stack Navigator
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 // 4.4 import Bottom Tabs Navigator
@@ -523,99 +547,74 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
 // 3.1 import from screens folder to here
-import SigninScreen from './src/screens/SigninScreen';
-import SignupScreen from './src/screens/SignupScreen';
-import AccountScreen from './src/screens/AccountScreen';
-import TrackCreateScreen from './src/screens/TrackCreateScreen';
-import TrackDetailScreen from './src/screens/TrackDetailScreen';
-import TrackListScreen from './src/screens/TrackListScreen';
+import SignInScreen from '../screens/SignInScreen';
+import SignUpScreen from '../screens/SignUpScreen';
 
+import AccountScreen from '../screens/AccountScreen';
+
+import TrackCreateScreen from '../screens/TrackCreateScreen';
+import TrackDetailScreen from '../screens/TrackDetailScreen';
+import TrackListScreen from '../screens/TrackListScreen';
 
 // 4.5 create an instance = assign createNativeStackNavigator function to the whatever-i-name-it variable/instance
-const Navigator = createNativeStackNavigator();
+const loginFlowStack = createNativeStackNavigator();
+const trackListStack = createNativeStackNavigator();
 
 // 4.6 create an instance = assign createBottomTabNavigator function to the whatever-i-name-it variable/instance
-const Tab = createBottomTabNavigator();
+const mainFlowBottomTabNavigator = createBottomTabNavigator()
 
-//4.5.1 create a function call LoginFlow
-// Using navigator.Navigator I can define the structure of the routes and use navigator.Screen I can define each of the routes
-// Let's define Navigator routes for: Signup and Signin
-function LoginFLow() {
+//4.5.1 create 2 function call TrackListStackNavigator & RootNavigator
+function TrackListStackNavigator(): JSX.Element {
   return (
-    <navigator.Navigator>
-      <navigator.Screen
-       name='Signup'
-       component={SignupScreen}
-       options={{ headerShown: false }}
-       />
-      <navigator.Screen
-       name='Signin'
-       component={SigninScreen}
-       />
-    </navigator.Navigator>
-  );
-}
-
-// 4.5.2 create a function call TrackListFlow
-function TrackListFlow(): React.ReactElement {
-  return (
-    <navigator.Navigator>
-      <navigator.Screen
+    <trackListStack.Navigator>
+      <trackListStack.Screen
         name='TrackList'
         component={TrackListScreen}
       />
-      <navigator.Screen
+      <trackListStack.Screen
         name='TrackDetail'
         component={TrackDetailScreen}
       />
-    </navigator.Navigator>
+    </trackListStack.Navigator>
   )
 }
 
-//4.6.1 create a tab function call MainFlow
-// Using tab.Navigator I can define the structure of the routes and use tab.Screen I can define each of the routes
-// Let's define tab routes for: TrackList and TrackDetail
-function MainFlow(): React.ReactElement {
-  return (
-    <tab.Navigator>
-      <tab.Screen
-        name='TrackListFlow'
-        component={ TrackListFlow}
-        />
-      <tab.Screen
-        name='TrackCreate'
-        component={TrackCreateScreen}
-        />
-        <tab.Screen
-          name='Account'
-          component={AccountScreen}
-        />
-    </tab.Navigator>
-  );
-}
-
-function App(): React.ReactElement {
-  return (
-    <NavigationContainer>
-      <navigator.Navigator>
-// 4.5.2 Now, in the App(), let's pass the {LoginFlow} & assign a whatever-i-name-it name
-        <navigator.Screen
-          name='LoginFLow'
-          component={LoginFLow}
-          options={{ title: 'Tracker App' }}
-        />
-// 4.6.2 Now, in the App(), let's pass the {MainFlow} & assign a whatever-i-name-it name to show bottom tabs
-        <navigator.Screen
-          name='MainFlow'
-          component={MainFlow}
+const RootNavigator = (_signedIn = false): JSX.Element => {
+  if (!_signedIn) {
+    return (
+      <loginFlowStack.Navigator>
+        <loginFlowStack.Screen
+         name="SignUp"
+          component={SignUpScreen}
+           />
+        <loginFlowStack.Screen
+         name="SignIn"
+          component={SignInScreen}
+           />
+      </loginFlowStack.Navigator>
+    );
+  } else {
+    return (
+      <mainFlowBottomTabNavigator.Navigator>
+        <mainFlowBottomTabNavigator.Screen
+          name="trackListStackNavigator"
+          component={TrackListStackNavigator}
           options={{ headerShown: false }}
         />
-      </navigator.Navigator>
-    </NavigationContainer>
-  );
+        <mainFlowBottomTabNavigator.Screen
+          name="TrackCreate"
+          component={TrackCreateScreen}
+        />
+        <mainFlowBottomTabNavigator.Screen
+          name="Account"
+          component={AccountScreen}
+        />
+      </mainFlowBottomTabNavigator.Navigator>
+    );
+  }
 }
 
-//4.7 export the App() modules
+//4.6 export the App() modules
 export default App;
 ```
 
@@ -721,7 +720,7 @@ const styles = StyleSheet.create({});
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
-============= HAVE REFACTOR STEP 4 & 5 SEE STEP 16 ===================
+=================== HAVE REFACTOR STEP 4 & 5 =========================
 
 - **CONCEPTS: building UI with [React Native Elements](https://reactnativeelements.com/docs) Library**
   - [react-native-elements](https://www.npmjs.com/package/react-native-elements)
