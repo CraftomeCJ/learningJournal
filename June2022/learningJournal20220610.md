@@ -76,7 +76,7 @@ When they ooze greed, appeal to their greed. When they want to look charitable a
 **How to Approach my Life like the Greats:** <br/>
 Uncomfortable Feelings that Actually Indicate I'm on the Right Path <br/>
 _A life-changing event is taking place or just has_ <br/>
-I suddenly having to move, getting divorced, losing a job, having a car break down, etc. <br/>
+For example: I suddenly having to move, getting divorced, losing a job, having a car break down, etc. <br/>
 
 <!-- for daily reflections -->
 <!-- Critical Thinking Training:
@@ -95,8 +95,8 @@ I suddenly having to move, getting divorced, losing a job, having a car break do
 -->
 **Questions/Reflections of the day?**
 
-- [x] Ask myself: What's the next big step I need to take? <br/>
-- [x] What are the three natural phenomena that I find most fascinating? <br/>
+- [x] Ask myself: If today was the last day of my life, would I want to do what I am about to do today? <br/>When I need to make the choices in my life, asking myself: "will this simplify my life, get me closer to my goals, inspire someone or bring happiness". The answer should leads the way.<br/>
+- [x] What was the worst punishment that I had during my childhood? <br/>
 
 <p align="center">(<a href="#top">back to top</a>)</p>
 
@@ -342,7 +342,7 @@ For example: wife need me to run a quick errand or my co-worker needs help
 
 - **REMEMBER: I don't become a programmer from tutorial, reading codes or books. I become a programmer WHEN I AM DOING the coding (It doesn't matter how many line I write, How bad/good each block of code look like)**
 
-**Day 67 (Thursday) and today's main focus:** <br />
+**Day 68 (Friday) and today's main focus:** <br />
 Today till Sunday I will be continue redoing tracker app, read on Unit Test, define programming terminology, and try to understand tech jargon in layman term, so study more on how to split the screen into sub components and how to do state management, that's is more important. Try to master the workflow. Do not rush and chase the pack. Do it at my own pace.
 
 ## What I had learned today?
