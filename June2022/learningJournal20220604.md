@@ -49,7 +49,8 @@ Using my unique talents and serving others bring unlimited bliss and abundance. 
 <!-- I will put the Law of Dharma into effect by making a commitment to take the following steps:
   1. Today I will lovingly nurture the god and goddess in embryo that lies deep within my soul. I will pay attention to the spirit within me that animated both my body and my mind. I will awaken myself to this deep stillness within my heart. I will carry the consciousness of timeless, eternal Being in the midst of time-bound experience. 
   2. I will make a list of my unique talents. Then I will list all the things that I love to do while expressing my unique talents. When I express my unique talents and use them in the service of humanity, i lose track of time and create abundance in my life as well as in the lives of others. 
-  3. I will ask myself daily, "How can I serve?" and "How can I help?" The answers to these questions will allow me to help and serve my fellow human beings with love. -->
+  3. I will ask myself daily, "How can I serve?" and "How can I help?" The answers to these questions will allow me to help and serve my fellow human beings with love.
+-->
 
 **Daily Law:** <br/>
 <!-- JUNE
