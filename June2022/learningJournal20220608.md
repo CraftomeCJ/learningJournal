@@ -53,7 +53,8 @@ Relinquish the need to defend my point of view. <br/>
 <!-- I will put the Law of Least Effort into effect by making a commitment to take the following steps:
   1. I will practice Acceptance. Today I will accept people, situations and events as they occur. I will know that this moment is as it should be, because the whole universe is as it should be. I will not struggle against the whole universe by struggling against this moment. My acceptance is total and complete. I accept things as they are this moment, not as I wish they were.
   2. Having accepted things as they are, I will take Responsibility for my situation and for all those events I see as problems. I know that taking responsibility means not blaming anyone or anything for my situation (and this includes myself). I also know that every problem is an opportunity in disguise, and this alertness to opportunities allows me to take this moment and transform it into a greater benefit.
-  3. Today my awareness will remain established in Defenselessness. I will give up the need to defend my point of view. I will feel no need to convince or persuade others to accept my point of view. I will remain open to all view and not be rigidly attached to any one of them.-->
+  3. Today my awareness will remain established in Defenselessness. I will give up the need to defend my point of view. I will feel no need to convince or persuade others to accept my point of view. I will remain open to all view and not be rigidly attached to any one of them.
+-->
 
 **Daily Law:** <br/>
 <!-- JUNE 2022: The Divine Craft
